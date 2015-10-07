@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- From: file:/Users/NewUser/AndroidStudioProjects/MFisa/app/src/main/res/values/color.xml -->
+    <eat-comment/>
+    <color name="black">#000000</color>
+    <color name="blue">#1D99D4</color>
+    <color name="btn_green">#0E4864</color>
+    <color name="green">#79a717</color>
+    <color name="orange">#FF7D00</color>
+    <color name="red">#FF0000</color>
+    <color name="theme">#1d99d4</color>
+    <color name="theme_deep">#1779A7</color>
+    <color name="white">#FFFFFF</color>
+    <color name="yellow">#FFFF00</color>
+    <!-- From: file:/Users/NewUser/AndroidStudioProjects/MFisa/app/src/main/res/values/dimens.xml -->
+    <eat-comment/>
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_horizontal_padding">8dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="activity_vertical_padding">16dp</dimen>
+    <dimen name="btn_height">58dp</dimen>
+    <dimen name="btn_separator">5dp</dimen>
+    <dimen name="btn_width1">120dp</dimen>
+    <dimen name="input_font_size">20dp</dimen>
+    <dimen name="input_height">44dp</dimen>
+    <dimen name="tiny_font">15dp</dimen>
+    <dimen name="title_font_size">24dp</dimen>
+    <!-- From: file:/Users/NewUser/AndroidStudioProjects/MFisa/app/src/main/res/values/strings.xml -->
+    <eat-comment/>
+    <string name="action_settings">Settings</string>
+    <string name="amount_hint">Amount</string>
+    <string name="app_name">MATS</string>
+    <string name="back">Go Back</string>
+    <string name="bill_payment">Bill Payment</string>
+    <string name="cancel">Cancel</string>
+    <string name="code_hint">Code</string>
+    <string name="complete_deposit_float">Complete Previous Float(OTP)</string>
+    <string name="confirm">Confirm</string>
+    <string name="confirm_float">Confirm Float Transfer Transaction</string>
+    <string name="copyright">Copyright 2015. Swifta Systems.</string>
+    <string name="dealer_account">Dealer Account</string>
+    <string name="dealer_confirmation">Enter OTP</string>
+    <string name="dealer_confirmation_title">Dealer OTP Confirmation</string>
+    <string name="dealer_hint">Dealer ID</string>
+    <string name="deposit">Deposit</string>
+    <string name="deposit_float">Deposit Float</string>
+    <string name="description_hint">Description</string>
+    <string name="dummy">Dummy</string>
+    <string name="empty"/>
+    <string name="enter_password">Enter Password</string>
+    <string name="enter_username">Enter Username</string>
+    <string name="fets">FETS</string>
+    <string name="float_transfer">Float Transfer</string>
+    <string name="float_transfer_options_title">Float Transfer Options</string>
+    <string name="help">Help</string>
+    <string name="live_chat">Live Chat</string>
+    <string name="login_title">Secured Login Area</string>
+    <string name="logout">Logout</string>
+    <string name="marchant_payment">Marchant Payment</string>
+    <string name="mats_inflow_account">MATS Inflow Account</string>
+    <string name="mm_operatos_title">Select MM Operator</string>
+    <string name="my_account">My Account</string>
+    <string name="ok">Okay</string>
+    <string name="paga">Paga</string>
+    <string name="pin_hint">Customer PIN</string>
+    <string name="please_wait">please wait ....</string>
+    <string name="provide_otp">Provide Dealer OTP</string>
+    <string name="ready_cash">Ready Cash</string>
+    <string name="resume_deposit_float">Complete Deposit Float</string>
+    <string name="return_float">Return Float</string>
+    <string name="sell_airtime">Sell Airtime</string>
+    <string name="service_name">MATS</string>
+    <string name="show_password">Show Password</string>
+    <string name="sign_in">Sign In</string>
+    <string name="subscriber_number_hint">Subscriber Number</string>
+    <string name="teasy_mobile">Teasy Mobile</string>
+    <string name="title_activity_complete_deposit_float">CompleteDepositFloatActivity</string>
+    <string name="title_activity_deposit_float">DepositFloatActivity</string>
+    <string name="title_activity_float_transfer">FloatTransferActivity</string>
+    <string name="title_activity_home">Welcome </string>
+    <string name="title_activity_mmoperators">MMOperatorsActivity</string>
+    <string name="title_activity_withdraw_mm">WithdrawMMActivity</string>
+    <string name="title_activity_withdrawal">WithdrawalActivity</string>
+    <string name="token">Token</string>
+    <string name="token_hint">Token or Voucher</string>
+    <string name="verify_withdrawal">Verify Withdrawal</string>
+    <string name="withdraw_from_title">Withdrawal From</string>
+    <string name="withdrawal">Withdrawal</string>
+    <!-- From: file:/Users/NewUser/AndroidStudioProjects/MFisa/app/src/main/res/values/styles.xml -->
+    <eat-comment/>
+    <style name="AppBaseTheme" parent="android:Theme.Light">
+        <!--
+            Theme customizations available in newer API levels can go in
+            res/values-vXX/styles.xml, while customizations related to
+            backward-compatibility can go here.
+        -->
+	    
+	    <!--   darker variant for the status bar and contextual app bars -->
+    
+    </style>
+    <style name="AppTheme" parent="AppBaseTheme">
+        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+        <item name="android:actionBarStyle">@style/MyActionBar</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+    <style name="MyActionBar" parent="android:style/Widget.Holo.Light.ActionBar">
+    <item name="android:background">@color/theme_deep</item>
+    <item name="android:textColor">@color/white</item>
+</style>
+</resources>

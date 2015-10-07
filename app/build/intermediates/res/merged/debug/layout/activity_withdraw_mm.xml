@@ -1,0 +1,340 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/theme"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.swifta.mats.forms.WithdrawMMActivity" >
+    
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:layout_alignParentStart="true"
+            android:gravity="left"
+            android:drawableStart="@drawable/ic_payment_black_24dp"
+            android:drawablePadding="@dimen/activity_horizontal_padding"
+            android:textSize="@dimen/title_font_size"
+            android:text="@string/empty" />
+
+<LinearLayout
+    android:layout_margin="@dimen/activity_horizontal_padding"
+    android:id="@+id/ready_cash"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_centerInParent="true"
+    android:gravity="center"
+    android:visibility="gone"
+    android:orientation="vertical" >
+    
+    <EditText
+        android:id="@+id/subscriber_number_rc"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/input_height"
+        android:textSize="@dimen/input_font_size"
+        android:inputType="numberSigned"
+        android:layout_marginTop="@dimen/activity_vertical_padding"
+        android:background="@color/white"
+        android:hint="@string/subscriber_number_hint"
+        android:ems="10" >
+
+        <requestFocus />
+    </EditText>
+    
+    <EditText
+        android:id="@+id/amount_rc"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/input_height"
+        android:textSize="@dimen/input_font_size"
+        android:inputType="numberSigned"
+        android:layout_marginTop="@dimen/activity_vertical_padding"
+        android:background="@color/white"
+        android:hint="@string/amount_hint"
+        android:ems="10" />
+    
+    <EditText
+        android:id="@+id/token_rc"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/input_height"
+        android:textSize="@dimen/input_font_size"
+        android:inputType="numberSigned"
+        android:layout_marginTop="@dimen/activity_vertical_padding"
+        android:background="@color/white"
+        android:hint="@string/token_hint"
+        android:ems="10" />
+    
+    <EditText
+        android:id="@+id/description_rc"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/input_height"
+        android:textSize="@dimen/input_font_size"
+        android:inputType="text"
+        android:layout_marginTop="@dimen/activity_vertical_padding"
+        android:background="@color/white"
+        android:hint="@string/description_hint"
+        android:ems="10" />
+</LinearLayout>
+
+
+
+<LinearLayout
+    android:layout_margin="@dimen/activity_horizontal_padding"
+    android:id="@+id/fets"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_centerInParent="true"
+    android:gravity="center"
+    android:visibility="gone"
+    android:orientation="vertical" >
+    
+    <EditText
+        android:id="@+id/subscriber_number_fets"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/input_height"
+        android:textSize="@dimen/input_font_size"
+        android:inputType="numberSigned"
+        android:layout_marginTop="@dimen/activity_vertical_padding"
+        android:background="@color/white"
+        android:hint="@string/subscriber_number_hint"
+        android:ems="10" >
+
+        <requestFocus />
+    </EditText>
+    
+    <EditText
+        android:id="@+id/amount_fets"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/input_height"
+        android:textSize="@dimen/input_font_size"
+        android:inputType="numberSigned"
+        android:layout_marginTop="@dimen/activity_vertical_padding"
+        android:background="@color/white"
+        android:hint="@string/amount_hint"
+        android:ems="10" />
+    
+    <EditText
+        android:id="@+id/pin_fets"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/input_height"
+        android:textSize="@dimen/input_font_size"
+        android:inputType="numberSigned"
+        android:layout_marginTop="@dimen/activity_vertical_padding"
+        android:background="@color/white"
+        android:hint="@string/pin_hint"
+        android:ems="10" />
+    
+    <EditText
+        android:id="@+id/description_fets"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/input_height"
+        android:textSize="@dimen/input_font_size"
+        android:inputType="text"
+        android:layout_marginTop="@dimen/activity_vertical_padding"
+        android:background="@color/white"
+        android:hint="@string/description_hint"
+        android:ems="10" />
+</LinearLayout>
+
+<LinearLayout
+    android:layout_margin="@dimen/activity_horizontal_padding"
+    android:id="@+id/teasy_mobile"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_centerInParent="true"
+    android:gravity="center"
+    android:visibility="gone"
+    android:orientation="vertical" >
+    
+    <EditText
+        android:id="@+id/subscriber_number_tm"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/input_height"
+        android:textSize="@dimen/input_font_size"
+        android:inputType="numberSigned"
+        android:layout_marginTop="@dimen/activity_vertical_padding"
+        android:background="@color/white"
+        android:hint="@string/subscriber_number_hint"
+        android:ems="10" >
+
+        <requestFocus />
+    </EditText>
+    
+    <EditText
+        android:id="@+id/amount_tm"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/input_height"
+        android:textSize="@dimen/input_font_size"
+        android:inputType="numberSigned"
+        android:layout_marginTop="@dimen/activity_vertical_padding"
+        android:background="@color/white"
+        android:hint="@string/amount_hint"
+        android:ems="10" />
+    
+    <EditText
+        android:id="@+id/pin_tm"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/input_height"
+        android:textSize="@dimen/input_font_size"
+        android:inputType="numberSigned"
+        android:layout_marginTop="@dimen/activity_vertical_padding"
+        android:background="@color/white"
+        android:hint="@string/pin_hint"
+        android:ems="10" />
+    
+    <EditText
+        android:id="@+id/description_tm"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/input_height"
+        android:textSize="@dimen/input_font_size"
+        android:inputType="text"
+        android:layout_marginTop="@dimen/activity_vertical_padding"
+        android:background="@color/white"
+        android:hint="@string/description_hint"
+        android:ems="10" />
+</LinearLayout>
+
+<LinearLayout
+    android:layout_margin="@dimen/activity_horizontal_padding"
+    android:id="@+id/paga"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_centerInParent="true"
+    android:gravity="center"
+    android:visibility="gone"
+    android:orientation="vertical" >
+    
+    <EditText
+        android:id="@+id/subscriber_number_paga"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/input_height"
+        android:textSize="@dimen/input_font_size"
+        android:inputType="numberSigned"
+        android:layout_marginTop="@dimen/activity_vertical_padding"
+        android:background="@color/white"
+        android:hint="@string/subscriber_number_hint"
+        android:ems="10" >
+
+        <requestFocus />
+    </EditText>
+    
+    <EditText
+        android:id="@+id/amount_paga"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/input_height"
+        android:textSize="@dimen/input_font_size"
+        android:inputType="numberSigned"
+        android:layout_marginTop="@dimen/activity_vertical_padding"
+        android:background="@color/white"
+        android:hint="@string/amount_hint"
+        android:ems="10" />
+    
+    <EditText
+        android:id="@+id/code_paga"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/input_height"
+        android:textSize="@dimen/input_font_size"
+        android:inputType="numberSigned"
+        android:layout_marginTop="@dimen/activity_vertical_padding"
+        android:background="@color/white"
+        android:hint="@string/code_hint"
+        android:ems="10" />
+    
+    <EditText
+        android:id="@+id/description_paga"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/input_height"
+        android:textSize="@dimen/input_font_size"
+        android:inputType="text"
+        android:layout_marginTop="@dimen/activity_vertical_padding"
+        android:background="@color/white"
+        android:hint="@string/description_hint"
+        android:ems="10" />
+</LinearLayout>
+
+<LinearLayout
+    android:layout_margin="@dimen/activity_horizontal_padding"
+    android:id="@+id/loading"
+    android:visibility="gone"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_centerInParent="true"
+    android:gravity="center"
+    android:orientation="vertical" >
+    
+<ProgressBar
+   android:id="@+id/wait"
+   style="?android:attr/progressBarStyleLarge"
+   android:layout_width="wrap_content"
+   android:layout_height="wrap_content"
+   android:layout_gravity="center"
+   android:gravity="center"/>
+
+    <TextView
+        android:id="@+id/wait_txt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/input_font_size"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:textColor="@color/green"
+        android:hint="@string/please_wait"
+        android:ems="10" />
+
+</LinearLayout>
+
+    <LinearLayout 
+        android:id="@+id/confirm_btns"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="@dimen/activity_horizontal_padding"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:orientation="horizontal">
+        
+        <Button 
+            android:id="@+id/ok_btn"
+            android:text="@string/ok"
+            android:background="@drawable/button"
+            android:layout_width="@dimen/btn_width1"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:layout_marginRight="@dimen/btn_separator"/>
+        <Button 
+            android:id="@+id/cancel_btn"
+            android:text="@string/cancel"
+            android:layout_width="@dimen/btn_width1"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button"
+            android:textColor="@color/white"
+            android:layout_marginLeft="@dimen/btn_separator"/>
+    </LinearLayout>
+
+   <LinearLayout 
+        android:id="@+id/done_btns"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="@dimen/activity_horizontal_padding"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:visibility="gone"
+        android:orientation="horizontal">
+        
+        <Button 
+            android:id="@+id/okay_done"
+            android:text="@string/ok"
+            android:background="@drawable/button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:layout_margin="@dimen/btn_separator"/>
+
+    </LinearLayout>
+    
+</RelativeLayout>
+<!-- From: file:/Users/NewUser/AndroidStudioProjects/MFisa/app/src/main/res/layout/activity_withdraw_mm.xml -->
