@@ -1,76 +1,78 @@
 package com.swifta.mats;
 
-import com.swifta.mats.util.Contants;
-
-import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 
-public class WithdrawalActivity extends Activity {
+import com.swifta.mats.util.Contants;
 
-	private WithdrawalActivity self = this;
-	private String myName = "";
-	private boolean btn_clicked = true;
-	
-	private Button dealer;
-	@Override
-	protected void onCreate(Bundle savedInstanceState) {
-		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_withdrawal);
-		SharedPreferences sharedPref = self.getSharedPreferences(Contants.STORE_USERNAME_KEY, 
-				Context.MODE_PRIVATE);
-		myName = sharedPref.getString("username", "UNKNOWN").toUpperCase();
-		self.setTitle("Welcome "+myName);
-		self.getActionBar().setLogo(R.drawable.ic_person_pin_black_24dp);
-		initEvents();
-		btn_clicked = false;
-	}
+public class WithdrawalActivity extends AppCompatActivity {
 
-	private void initEvents(){
-		dealer = (Button) findViewById(R.id.dealer_account);
-		dealer.setOnClickListener(new OnClickListener(){
+    private WithdrawalActivity self = this;
+    private String myName = "";
+    private boolean btn_clicked = true;
 
-			@Override
-			public void onClick(View v) {
-				// TODO Auto-generated method stub
-				btn_clicked = true;
-				Intent actIntent = new Intent(self, MMOperatorsActivity.class);
-				self.startActivity(actIntent);
-			}
-			
-		});
-	}
-	
-	@Override
-	public boolean onCreateOptionsMenu(Menu menu) {
-		// Inflate the menu; this adds items to the action bar if it is present.
-		getMenuInflater().inflate(R.menu.home, menu);
-		return true;
-	}
+    private Button dealer;
 
-	public boolean onOptionsItemSelected(MenuItem item) {
-		// Handle action bar item clicks here. The action bar will
-		// automatically handle clicks on the Home/Up button, so long
-		// as you specify a parent activity in AndroidManifest.xml.
-		int id = item.getItemId();
-		//System.out.println("Back was pressed with ID:"+item.getTitle());
-		if (id == R.id.logout) {
-			//logout clicked
-			onLogoutPressed();
-			return true;
-		}
-		return super.onOptionsItemSelected(item);
-	}
-	
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_withdrawal);
+        SharedPreferences sharedPref = self.getSharedPreferences(Contants.STORE_USERNAME_KEY,
+                Context.MODE_PRIVATE);
+        myName = sharedPref.getString("username", "UNKNOWN").toUpperCase();
+
+        getSupportActionBar();
+        setTitle("Welcome " + myName);
+        initEvents();
+        btn_clicked = false;
+    }
+
+    private void initEvents() {
+        dealer = (Button) findViewById(R.id.dealer_account);
+        dealer.setOnClickListener(new OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                // TODO Auto-generated method stub
+                btn_clicked = true;
+                Intent actIntent = new Intent(self, MMOperatorsActivity.class);
+                startActivity(actIntent);
+            }
+
+        });
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.home, menu);
+        return true;
+    }
+
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // Handle action bar item clicks here. The action bar will
+        // automatically handle clicks on the Home/Up button, so long
+        // as you specify a parent activity in AndroidManifest.xml.
+        int id = item.getItemId();
+        //System.out.println("Back was pressed with ID:"+item.getTitle());
+        if (id == R.id.logout) {
+            //logout clicked
+            onLogoutPressed();
+            return true;
+        }
+        return super.onOptionsItemSelected(item);
+    }
+
 /*	@Override
 	public void onDestroy(){
 		super.onDestroy();
@@ -78,36 +80,36 @@ public class WithdrawalActivity extends Activity {
 			logout();
 		}
 	}*/
-	
 
-    public void onLogoutPressed(){
-    	AlertDialog.Builder builder = new AlertDialog.Builder(this);
-    	builder.setMessage("Do you want to logout?")
-    	.setPositiveButton("Yes", new DialogInterface.OnClickListener(){
 
-			@Override
-			public void onClick(DialogInterface dialog, int which) {
-				// TODO Auto-generated method stub
-				logout();
-			}
-    		
-    	})
-    	.setNegativeButton("No", new DialogInterface.OnClickListener(){
+    public void onLogoutPressed() {
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setMessage("Do you want to logout?")
+                .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
 
-			@Override
-			public void onClick(DialogInterface dialog, int which) {
-				// TODO Auto-generated method stub
-				//builder
-			}
-    		
-    	}).show();
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        // TODO Auto-generated method stub
+                        logout();
+                    }
+
+                })
+                .setNegativeButton("No", new DialogInterface.OnClickListener() {
+
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        // TODO Auto-generated method stub
+                        //builder
+                    }
+
+                }).show();
     }
-   
-    private void logout(){
-		 Intent actIntent = new Intent(self, MainActivity.class);
-		 actIntent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-		 startActivity(actIntent);
-		 finish();
+
+    private void logout() {
+        Intent actIntent = new Intent(self, MainActivity.class);
+        actIntent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        startActivity(actIntent);
+        finish();
     }
-   
+
 }

@@ -3,11 +3,18 @@
     <color name="red">#FF0000</color>
     <color name="orange">#FF7D00</color>
     <color name="yellow">#FFFF00</color>
-    <color name="green">#79a717</color>
     <color name="btn_green">#0E4864</color>
     <color name="blue">#1D99D4</color>
     <color name="black">#000000</color>
     <color name="white">#FFFFFF</color>
-    <color name="theme">#1d99d4</color>
-    <color name="theme_deep">#1779A7</color>
+
+    <!-- Material Design Color Scheme -->
+    <color name="colorPrimary">#03A9F4</color>
+    <color name="colorPrimaryDark">#0288D1</color>
+    <color name="colorPrimaryLight">#B3E5FC</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="colorAccentLight">#FF80AB</color>
+    <color name="colorDivider">#cacaca</color>
+    <color name="colorDividerLight">#f7f7f7</color>
+    <color name="colorDividerDark">#a6a6a6</color>
 </resources>

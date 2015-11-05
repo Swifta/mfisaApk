@@ -1,23 +1,23 @@
 package com.swifta.mats;
 
-import com.swifta.mats.forms.WithdrawMMActivity;
-import com.swifta.mats.util.Contants;
-import com.swifta.mats.util.Dealers;
-
-import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 
-public class MMOperatorsActivity extends Activity {
+import com.swifta.mats.forms.WithdrawMMActivity;
+import com.swifta.mats.util.Contants;
+import com.swifta.mats.util.Dealers;
+
+public class MMOperatorsActivity extends AppCompatActivity {
 
 	private MMOperatorsActivity self = this;
 	private String myName = "";
@@ -35,11 +35,11 @@ public class MMOperatorsActivity extends Activity {
 		SharedPreferences sharedPref = self.getSharedPreferences(Contants.STORE_USERNAME_KEY, 
 				Context.MODE_PRIVATE);
 		myName = sharedPref.getString("username", "UNKNOWN").toUpperCase();
-		self.setTitle("Welcome "+myName);
-		self.getActionBar().setLogo(R.drawable.ic_person_pin_black_24dp);
-		initEvents();
-		btn_clicked = false;
-	}
+        getSupportActionBar();
+        setTitle("Welcome " + myName);
+        initEvents();
+        btn_clicked = false;
+    }
 
 	private void initEvents(){
 		ready_cash = (Button) findViewById(R.id.ready_cash);

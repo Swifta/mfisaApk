@@ -19,7 +19,7 @@
     <string name="float_transfer">Float Transfer</string>
     <string name="verify_withdrawal">Verify Withdrawal</string>
     <string name="deposit">Deposit</string>
-    <string name="marchant_payment">Marchant Payment</string>
+    <string name="marchant_payment">Merchant Payment</string>
     <string name="bill_payment">Bill Payment</string>
     <string name="sell_airtime">Sell Airtime</string>
     <string name="my_account">My Account</string>
@@ -60,5 +60,6 @@
     <string name="title_activity_complete_deposit_float">CompleteDepositFloatActivity</string>
     <string name="resume_deposit_float">Complete Deposit Float</string>
     <string name="provide_otp">Provide Dealer OTP</string>
+    <string name="title_activity_test">TestActivity</string>
 
 </resources>

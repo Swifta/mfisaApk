@@ -1,32 +1,23 @@
 package com.swifta.mats.service;
 
-import java.util.ArrayList;
-import java.util.List;
+import android.annotation.SuppressLint;
+import android.app.IntentService;
+import android.content.Intent;
+import android.util.Log;
 
-import org.apache.http.HttpEntity;
+import com.swifta.mats.util.ApiJobs;
+import com.swifta.mats.util.Contants;
+
 import org.apache.http.HttpResponse;
-import org.apache.http.NameValuePair;
 import org.apache.http.client.HttpClient;
-import org.apache.http.client.entity.UrlEncodedFormEntity;
-import org.apache.http.client.methods.HttpGet;
 import org.apache.http.client.methods.HttpPost;
-import org.apache.http.impl.client.BasicResponseHandler;
 import org.apache.http.impl.client.DefaultHttpClient;
-import org.apache.http.message.BasicNameValuePair;
 import org.apache.http.params.BasicHttpParams;
 import org.apache.http.params.HttpConnectionParams;
 import org.apache.http.params.HttpParams;
 import org.apache.http.util.EntityUtils;
 import org.json.JSONException;
 import org.json.JSONObject;
-
-import com.swifta.mats.util.ApiJobs;
-import com.swifta.mats.util.Contants;
-
-import android.annotation.SuppressLint;
-import android.app.IntentService;
-import android.content.Intent;
-import android.util.Log;
 
 public class BackgroundServices extends IntentService{
 
@@ -79,10 +70,10 @@ public class BackgroundServices extends IntentService{
 	
 	@SuppressWarnings("deprecation")
 	private void performLogin(JSONObject obj){
-		String url = Contants.API_URL+"perform/authentication?";
-		HttpParams httpParameters = new BasicHttpParams(); 
-		int timeoutConnection = 10000;
-		HttpConnectionParams.setConnectionTimeout(httpParameters, timeoutConnection);
+        String url = Contants.API_URL + "service/authentication?";
+        HttpParams httpParameters = new BasicHttpParams();
+        int timeoutConnection = 10000;
+        HttpConnectionParams.setConnectionTimeout(httpParameters, timeoutConnection);
 		int timeoutSocket = 5000;
 		HttpConnectionParams.setSoTimeout(httpParameters, timeoutSocket);
 		
@@ -90,7 +81,14 @@ public class BackgroundServices extends IntentService{
 		
 	    try {
 	    	url+="username="+obj.getString("username")+"&password="+obj.getString("password");
-	        HttpResponse response = httpclient.execute(new HttpGet(url));
+//	        HttpResponse response = httpclient.execute(new HttpPost(url));
+
+            HttpPost httpPost = new HttpPost(url);
+            //httpPost.setEntity(new UrlEncodedFormEntity(nameValuePair));
+
+            HttpResponse response = httpclient.execute(httpPost);
+
+
 	        int status = response.getStatusLine().getStatusCode();
 	        String result = "";
 	        if (status == 200) {

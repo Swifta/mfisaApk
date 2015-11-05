@@ -2,23 +2,22 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.swifta.mats"
     android:versionCode="1"
-    android:versionName="1.0" >
-
-    <uses-sdk
-        android:minSdkVersion="14"
-        android:targetSdkVersion="22" />
+    android:versionName="1.0">
 
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <application
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
-        android:theme="@style/AppTheme" >
+        android:theme="@style/AppTheme">
         <activity
             android:name=".MainActivity"
-            android:label="@string/app_name" >
+            android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -29,13 +28,12 @@
         <service
             android:name=".service.BackgroundServices"
             android:icon="@drawable/ic_launcher"
-            android:label="@string/service_name" >
-        </service>
+            android:label="@string/service_name" />
 
         <activity
             android:name=".HomeActivity"
             android:label="@string/title_activity_home"
-            android:parentActivityName=".MainActivity" >
+            android:parentActivityName=".MainActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.swifta.mats.MainActivity" />
@@ -43,7 +41,7 @@
         <activity
             android:name=".WithdrawalActivity"
             android:label="@string/title_activity_withdrawal"
-            android:parentActivityName=".HomeActivity" >
+            android:parentActivityName=".HomeActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.swifta.mats.HomeActivity" />
@@ -51,7 +49,7 @@
         <activity
             android:name=".MMOperatorsActivity"
             android:label="@string/title_activity_mmoperators"
-            android:parentActivityName=".WithdrawalActivity" >
+            android:parentActivityName=".WithdrawalActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.swifta.mats.WithdrawalActivity" />
@@ -59,7 +57,7 @@
         <activity
             android:name=".forms.WithdrawMMActivity"
             android:label="@string/title_activity_withdraw_mm"
-            android:parentActivityName=".MMOperatorsActivity" >
+            android:parentActivityName=".MMOperatorsActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.swifta.mats.MMOperatorsActivity" />
@@ -67,7 +65,7 @@
         <activity
             android:name=".FloatTransferActivity"
             android:label="@string/title_activity_float_transfer"
-            android:parentActivityName=".HomeActivity" >
+            android:parentActivityName=".HomeActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.swifta.mats.HomeActivity" />
@@ -75,19 +73,22 @@
         <activity
             android:name=".forms.DepositFloatActivity"
             android:label="@string/title_activity_deposit_float"
-            android:parentActivityName=".FloatTransferActivity" >
+            android:parentActivityName=".FloatTransferActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.swifta.mats.FloatTransferActivity" />
         </activity>
         <activity
-            android:name="com.swifta.mats.forms.CompleteDepositFloatActivity"
+            android:name=".forms.CompleteDepositFloatActivity"
             android:label="@string/title_activity_complete_deposit_float"
-            android:parentActivityName=".FloatTransferActivity" >
+            android:parentActivityName=".FloatTransferActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.swifta.mats.FloatTransferActivity" />
         </activity>
+        <activity
+            android:name=".TestActivity"
+            android:label="@string/title_activity_test" />
     </application>
 
 </manifest>
