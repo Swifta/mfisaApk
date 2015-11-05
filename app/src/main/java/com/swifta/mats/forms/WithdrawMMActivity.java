@@ -23,7 +23,7 @@ import com.swifta.mats.MainActivity;
 import com.swifta.mats.R;
 import com.swifta.mats.service.BackgroundServices;
 import com.swifta.mats.util.ApiJobs;
-import com.swifta.mats.util.Contants;
+import com.swifta.mats.util.Constants;
 import com.swifta.mats.util.Dealers;
 
 import org.json.JSONException;
@@ -84,14 +84,14 @@ public class WithdrawMMActivity extends AppCompatActivity {
             try {
                 Bundle bundle = intent.getExtras();
 
-                JSONObject responseJson = new JSONObject(bundle.getString(Contants.JOB_RESPONSE, "{}"));
+                JSONObject responseJson = new JSONObject(bundle.getString(Constants.JOB_RESPONSE, "{}"));
                 System.out.println(responseJson.toString());
-                if (responseJson.getInt("request") == Contants.CASH_OUT_COMPLETED) {
+                if (responseJson.getInt("request") == Constants.CASH_OUT_COMPLETED) {
                     if (responseJson.getBoolean("success")) {
                         JSONObject psaResponse = responseJson.getJSONObject("psa");
                         JSONObject psaTranResponse = psaResponse.getJSONObject("TransactionResponses")
                                 .getJSONObject("TransactionResponse");
-                        if (psaTranResponse.getString("responsemessage").equals(Contants.TRANSACTION_WAS_SUCCESSFUL)) {
+                        if (psaTranResponse.getString("responsemessage").equals(Constants.TRANSACTION_WAS_SUCCESSFUL)) {
                             //uiDisplaySummary();
                         } else {
                             Toast.makeText(self, "PSA Rejected Request : " + psaTranResponse.getString("responsemessage"), Toast.LENGTH_LONG).show();
@@ -128,7 +128,7 @@ public class WithdrawMMActivity extends AppCompatActivity {
         processFormView();
         //Toast.makeText(this, "I see :"+operator, Toast.LENGTH_LONG).show();
 
-        SharedPreferences sharedPref = self.getSharedPreferences(Contants.STORE_USERNAME_KEY,
+        SharedPreferences sharedPref = self.getSharedPreferences(Constants.STORE_USERNAME_KEY,
                 Context.MODE_PRIVATE);
         myName = sharedPref.getString("username", "UNKNOWN").toUpperCase();
         myPassword = sharedPref.getString("password", "UNKNOWN");
@@ -141,7 +141,7 @@ public class WithdrawMMActivity extends AppCompatActivity {
     @Override
     protected void onResume() {
         super.onResume();
-        registerReceiver(receiver, new IntentFilter(Contants.SERVICE_NOTIFICATION));
+        registerReceiver(receiver, new IntentFilter(Constants.SERVICE_NOTIFICATION));
     }
 
     @Override
@@ -190,8 +190,8 @@ public class WithdrawMMActivity extends AppCompatActivity {
                         e.printStackTrace();
                     }
                     Intent intent = new Intent(self, BackgroundServices.class);
-                    intent.putExtra(Contants.JOB_IDENTITY, ApiJobs.WITHDRAWAL_DEALER_ACCOUNT);
-                    intent.putExtra(Contants.JOB_DATA, data.toString());
+                    intent.putExtra(Constants.JOB_IDENTITY, ApiJobs.WITHDRAWAL_DEALER_ACCOUNT);
+                    intent.putExtra(Constants.JOB_DATA, data.toString());
                     startService(intent);
                     busy = true;
                 } catch (Exception eX) {

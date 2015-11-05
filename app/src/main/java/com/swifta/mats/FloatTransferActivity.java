@@ -16,7 +16,7 @@ import android.widget.Toast;
 
 import com.swifta.mats.forms.CompleteDepositFloatActivity;
 import com.swifta.mats.forms.DepositFloatActivity;
-import com.swifta.mats.util.Contants;
+import com.swifta.mats.util.Constants;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -36,7 +36,7 @@ public class FloatTransferActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_float_transfer);
-        sharedPref = self.getSharedPreferences(Contants.STORE_USERNAME_KEY,
+        sharedPref = self.getSharedPreferences(Constants.STORE_USERNAME_KEY,
                 Context.MODE_PRIVATE);
         myName = sharedPref.getString("username", "UNKNOWN").toUpperCase();
 
@@ -68,7 +68,7 @@ public class FloatTransferActivity extends AppCompatActivity {
             public void onClick(View v) {
                 // TODO Auto-generated method stub
                 try {
-                    JSONObject obj = new JSONObject(sharedPref.getString(Contants.TMP_DEPOSIT_FLOAT_DATA, "{}"));
+                    JSONObject obj = new JSONObject(sharedPref.getString(Constants.TMP_DEPOSIT_FLOAT_DATA, "{}"));
                     if (obj.has("transaction_id")) {
                         //resume transaction
                         btn_clicked = true;

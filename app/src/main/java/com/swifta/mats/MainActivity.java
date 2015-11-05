@@ -25,7 +25,7 @@ import android.widget.Toast;
 
 import com.swifta.mats.service.BackgroundServices;
 import com.swifta.mats.util.ApiJobs;
-import com.swifta.mats.util.Contants;
+import com.swifta.mats.util.Constants;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -52,14 +52,14 @@ public class MainActivity extends AppCompatActivity {
             try {
                 Bundle bundle = intent.getExtras();
 
-                JSONObject responseJson = new JSONObject(bundle.getString(Contants.JOB_RESPONSE, "{}"));
+                JSONObject responseJson = new JSONObject(bundle.getString(Constants.JOB_RESPONSE, "{}"));
                 JSONObject responseJson2 = responseJson.getJSONObject("TransactionResponses");
                 JSONObject finalJson = responseJson2.getJSONObject("TransactionResponse");
                 status = finalJson.getBoolean("responsemessage");
                 Toast.makeText(self, String.valueOf(status), Toast.LENGTH_LONG).show();
 
                 if (status) {
-                    SharedPreferences sharedPref = self.getSharedPreferences(Contants.STORE_USERNAME_KEY,
+                    SharedPreferences sharedPref = self.getSharedPreferences(Constants.STORE_USERNAME_KEY,
                             Context.MODE_PRIVATE);
                     Editor edit = sharedPref.edit();
                     edit.putString("username", usernameTxt.getText().toString());
@@ -127,8 +127,8 @@ public class MainActivity extends AppCompatActivity {
                             e.printStackTrace();
                         }
                         Intent intent = new Intent(self, BackgroundServices.class);
-                        intent.putExtra(Contants.JOB_IDENTITY, ApiJobs.LOGIN);
-                        intent.putExtra(Contants.JOB_DATA, data.toString());
+                        intent.putExtra(Constants.JOB_IDENTITY, ApiJobs.LOGIN);
+                        intent.putExtra(Constants.JOB_DATA, data.toString());
                         startService(intent);
                         busy = true;
                     }
@@ -179,7 +179,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onResume() {
         super.onResume();
-        registerReceiver(receiver, new IntentFilter(Contants.SERVICE_NOTIFICATION));
+        registerReceiver(receiver, new IntentFilter(Constants.SERVICE_NOTIFICATION));
     }
 
     @Override

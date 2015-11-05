@@ -25,7 +25,7 @@ import com.swifta.mats.R;
 import com.swifta.mats.adapters.PreviewListAdapter;
 import com.swifta.mats.service.BackgroundServices;
 import com.swifta.mats.util.ApiJobs;
-import com.swifta.mats.util.Contants;
+import com.swifta.mats.util.Constants;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -74,14 +74,14 @@ public class CompleteDepositFloatActivity extends AppCompatActivity {
             try {
                 Bundle bundle = intent.getExtras();
 
-                JSONObject responseJson = new JSONObject(bundle.getString(Contants.JOB_RESPONSE, "{}"));
+                JSONObject responseJson = new JSONObject(bundle.getString(Constants.JOB_RESPONSE, "{}"));
                 System.out.println(responseJson.toString());
-                if (responseJson.getInt("request") == Contants.OTP_COMPLETE_REQUEST) {
+                if (responseJson.getInt("request") == Constants.OTP_COMPLETE_REQUEST) {
                     if (responseJson.getBoolean("success")) {
                         JSONObject psaResponse = responseJson.getJSONObject("psa");
                         JSONObject psaTranResponse = psaResponse.getJSONObject("TransactionResponses")
                                 .getJSONObject("TransactionResponse");
-                        if (psaTranResponse.getString("responsemessage").equals(Contants.TRANSACTION_WAS_SUCCESSFUL)) {
+                        if (psaTranResponse.getString("responsemessage").equals(Constants.TRANSACTION_WAS_SUCCESSFUL)) {
                             uiDisplaySummary();
                         } else {
                             Toast.makeText(self, "PSA Rejected Request : " + psaTranResponse.getString("responsemessage"), Toast.LENGTH_LONG).show();
@@ -110,12 +110,12 @@ public class CompleteDepositFloatActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_complete_deposit_float);
-        sharedPref = self.getSharedPreferences(Contants.STORE_USERNAME_KEY,
+        sharedPref = self.getSharedPreferences(Constants.STORE_USERNAME_KEY,
                 Context.MODE_PRIVATE);
         myName = sharedPref.getString("username", "UNKNOWN").toUpperCase();
         myPassword = sharedPref.getString("password", "UNKNOWN");
         try {
-            resumedData = new JSONObject(sharedPref.getString(Contants.TMP_DEPOSIT_FLOAT_DATA, "{}"));
+            resumedData = new JSONObject(sharedPref.getString(Constants.TMP_DEPOSIT_FLOAT_DATA, "{}"));
             if (resumedData.has("transaction_id")) {
                 transaction_id = resumedData.getInt("transaction_id");
             }
@@ -139,7 +139,7 @@ public class CompleteDepositFloatActivity extends AppCompatActivity {
     @Override
     protected void onResume() {
         super.onResume();
-        registerReceiver(receiver, new IntentFilter(Contants.SERVICE_NOTIFICATION));
+        registerReceiver(receiver, new IntentFilter(Constants.SERVICE_NOTIFICATION));
     }
 
     @Override
@@ -157,7 +157,7 @@ public class CompleteDepositFloatActivity extends AppCompatActivity {
             //clear all the stored cache of uncompleted float transfer.
             if (canClear) {
                 Editor edit = sharedPref.edit();
-                edit.remove(Contants.TMP_DEPOSIT_FLOAT_DATA);
+                edit.remove(Constants.TMP_DEPOSIT_FLOAT_DATA);
                 edit.commit();
             }
             this.finishActivity(0);
@@ -209,8 +209,8 @@ public class CompleteDepositFloatActivity extends AppCompatActivity {
                     e.printStackTrace();
                 }
                 Intent intent = new Intent(self, BackgroundServices.class);
-                intent.putExtra(Contants.JOB_IDENTITY, ApiJobs.COMPLETE_DEPOSIT_FLOAT);
-                intent.putExtra(Contants.JOB_DATA, data.toString());
+                intent.putExtra(Constants.JOB_IDENTITY, ApiJobs.COMPLETE_DEPOSIT_FLOAT);
+                intent.putExtra(Constants.JOB_DATA, data.toString());
                 startService(intent);
                 busy = true;
             }

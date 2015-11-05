@@ -13,7 +13,7 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 
-import com.swifta.mats.util.Contants;
+import com.swifta.mats.util.Constants;
 
 public class WithdrawalActivity extends AppCompatActivity {
 
@@ -27,7 +27,7 @@ public class WithdrawalActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_withdrawal);
-        SharedPreferences sharedPref = self.getSharedPreferences(Contants.STORE_USERNAME_KEY,
+        SharedPreferences sharedPref = self.getSharedPreferences(Constants.STORE_USERNAME_KEY,
                 Context.MODE_PRIVATE);
         myName = sharedPref.getString("username", "UNKNOWN").toUpperCase();
 

@@ -26,7 +26,7 @@ import com.swifta.mats.R;
 import com.swifta.mats.adapters.PreviewListAdapter;
 import com.swifta.mats.service.BackgroundServices;
 import com.swifta.mats.util.ApiJobs;
-import com.swifta.mats.util.Contants;
+import com.swifta.mats.util.Constants;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -82,14 +82,14 @@ public class DepositFloatActivity extends AppCompatActivity {
             try {
                 Bundle bundle = intent.getExtras();
 
-                JSONObject responseJson = new JSONObject(bundle.getString(Contants.JOB_RESPONSE, "{}"));
+                JSONObject responseJson = new JSONObject(bundle.getString(Constants.JOB_RESPONSE, "{}"));
                 //System.out.println(responseJson.toString());
-                if (responseJson.getInt("request") == Contants.OTP_REQUEST) {
+                if (responseJson.getInt("request") == Constants.OTP_REQUEST) {
                     if (responseJson.getBoolean("success")) {
                         JSONObject psaResponse = responseJson.getJSONObject("psa");
                         JSONObject psaTranResponse = psaResponse.getJSONObject("TransactionResponses")
                                 .getJSONObject("TransactionResponse");
-                        if (psaTranResponse.getString("responsemessage").equals(Contants.FLOAT_TRANSFER_REQUEST_TOKEN_SUCCESS)) {
+                        if (psaTranResponse.getString("responsemessage").equals(Constants.FLOAT_TRANSFER_REQUEST_TOKEN_SUCCESS)) {
                             //means PSA confirmed that the process was successful
                             //then write the transaction ID in memory.
                             int transaction_id = psaTranResponse.getInt("TransactionId");
@@ -103,12 +103,12 @@ public class DepositFloatActivity extends AppCompatActivity {
                         uiHandleFailed();
                         Toast.makeText(self, "Request Failed : " + showReport, Toast.LENGTH_LONG).show();
                     }
-                } else if (responseJson.getInt("request") == Contants.OTP_COMPLETE_REQUEST) {
+                } else if (responseJson.getInt("request") == Constants.OTP_COMPLETE_REQUEST) {
                     if (responseJson.getBoolean("success")) {
                         JSONObject psaResponse = responseJson.getJSONObject("psa");
                         JSONObject psaTranResponse = psaResponse.getJSONObject("TransactionResponses")
                                 .getJSONObject("TransactionResponse");
-                        if (psaTranResponse.getString("responsemessage").equals(Contants.TRANSACTION_WAS_SUCCESSFUL)) {
+                        if (psaTranResponse.getString("responsemessage").equals(Constants.TRANSACTION_WAS_SUCCESSFUL)) {
                             uiDisplaySummary();
                         } else {
                             Toast.makeText(self, "PSA Rejected Request : " + psaTranResponse.getString("responsemessage"), Toast.LENGTH_LONG).show();
@@ -137,7 +137,7 @@ public class DepositFloatActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_deposit_float);
-        sharedPref = self.getSharedPreferences(Contants.STORE_USERNAME_KEY,
+        sharedPref = self.getSharedPreferences(Constants.STORE_USERNAME_KEY,
                 Context.MODE_PRIVATE);
         myName = sharedPref.getString("username", "UNKNOWN").toUpperCase();
         myPassword = sharedPref.getString("password", "UNKNOWN");
@@ -150,7 +150,7 @@ public class DepositFloatActivity extends AppCompatActivity {
     @Override
     protected void onResume() {
         super.onResume();
-        registerReceiver(receiver, new IntentFilter(Contants.SERVICE_NOTIFICATION));
+        registerReceiver(receiver, new IntentFilter(Constants.SERVICE_NOTIFICATION));
     }
 
     @Override
@@ -168,7 +168,7 @@ public class DepositFloatActivity extends AppCompatActivity {
             //clear all the stored cache of uncompleted float transfer.
             if (canClear) {
                 Editor edit = sharedPref.edit();
-                edit.remove(Contants.TMP_DEPOSIT_FLOAT_DATA);
+                edit.remove(Constants.TMP_DEPOSIT_FLOAT_DATA);
                 edit.commit();
             }
             this.finishActivity(0);
@@ -266,8 +266,8 @@ public class DepositFloatActivity extends AppCompatActivity {
                     e.printStackTrace();
                 }
                 Intent intent = new Intent(self, BackgroundServices.class);
-                intent.putExtra(Contants.JOB_IDENTITY, ApiJobs.DEPOSIT_FLOAT);
-                intent.putExtra(Contants.JOB_DATA, data.toString());
+                intent.putExtra(Constants.JOB_IDENTITY, ApiJobs.DEPOSIT_FLOAT);
+                intent.putExtra(Constants.JOB_DATA, data.toString());
                 startService(intent);
                 busy = true;
             }
@@ -300,7 +300,7 @@ public class DepositFloatActivity extends AppCompatActivity {
                 loading.setVisibility(View.VISIBLE);
                 JSONObject data = new JSONObject();
                 try {
-                    JSONObject dt = new JSONObject(sharedPref.getString(Contants.TMP_DEPOSIT_FLOAT_DATA,
+                    JSONObject dt = new JSONObject(sharedPref.getString(Constants.TMP_DEPOSIT_FLOAT_DATA,
                             "{}"));
                     data.put("username", myName);
                     data.put("password", myPassword);
@@ -313,8 +313,8 @@ public class DepositFloatActivity extends AppCompatActivity {
                     e.printStackTrace();
                 }
                 Intent intent = new Intent(self, BackgroundServices.class);
-                intent.putExtra(Contants.JOB_IDENTITY, ApiJobs.COMPLETE_DEPOSIT_FLOAT);
-                intent.putExtra(Contants.JOB_DATA, data.toString());
+                intent.putExtra(Constants.JOB_IDENTITY, ApiJobs.COMPLETE_DEPOSIT_FLOAT);
+                intent.putExtra(Constants.JOB_DATA, data.toString());
                 startService(intent);
                 busy = true;
             }
@@ -416,7 +416,7 @@ public class DepositFloatActivity extends AppCompatActivity {
             data.put("dealer", dealer_id.getText().toString());
             data.put("amount", amount.getText().toString());
             data.put("transaction_id", transaction_id);
-            edit.putString(Contants.TMP_DEPOSIT_FLOAT_DATA, data.toString());
+            edit.putString(Constants.TMP_DEPOSIT_FLOAT_DATA, data.toString());
             edit.commit();
             TextView transaction_idTxt = (TextView) findViewById(R.id.transaction_id);
             title.setText("Dealer OTP Confirmation");
