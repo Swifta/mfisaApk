@@ -126,7 +126,6 @@ public class WithdrawMMActivity extends AppCompatActivity {
         title.setText(operator.replace("_", " ") + " [WITHDRAWAL]");
 
         processFormView();
-        //Toast.makeText(this, "I see :"+operator, Toast.LENGTH_LONG).show();
 
         SharedPreferences sharedPref = self.getSharedPreferences(Constants.STORE_USERNAME_KEY,
                 Context.MODE_PRIVATE);
@@ -171,7 +170,6 @@ public class WithdrawMMActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 // TODO Auto-generated method stub
-                System.out.println("I got clicked");
                 try {
                     processEditText();
                     hideForm();
@@ -196,10 +194,9 @@ public class WithdrawMMActivity extends AppCompatActivity {
                     busy = true;
                 } catch (Exception eX) {
                     eX.printStackTrace();
-                    Toast.makeText(self, "Cannot process this kind of request", Toast.LENGTH_LONG).show();
+                    Toast.makeText(self, "Please fill in all the fields", Toast.LENGTH_LONG).show();
                 }
             }
-
         });
 
         cancelBtn.setOnClickListener(new OnClickListener() {
@@ -209,7 +206,6 @@ public class WithdrawMMActivity extends AppCompatActivity {
                 // TODO Auto-generated method stub
                 self.onBackPressed();
             }
-
         });
     }
 
@@ -221,7 +217,7 @@ public class WithdrawMMActivity extends AppCompatActivity {
     }
 
 /*	@Override
-	public void onDestroy(){
+    public void onDestroy(){
 		super.onDestroy();
 		if(!btn_clicked){
 			logout();
@@ -318,10 +314,7 @@ public class WithdrawMMActivity extends AppCompatActivity {
             mmo = "pagatech";
             reference = description_paga.getText().toString();
             teasyPin = Integer.parseInt(code_paga.getText().toString());
-            ;
         }
-        System.out.println("Ref:" + refCode + " and amount:" + amount + " and mmo:" + mmo + " and reference:" +
-                reference + " and PIN:" + teasyPin);
     }
 
     private void showForm() {

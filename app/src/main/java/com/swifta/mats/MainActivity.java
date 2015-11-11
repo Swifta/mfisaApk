@@ -1,5 +1,6 @@
 package com.swifta.mats;
 
+import android.app.ProgressDialog;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
@@ -34,13 +35,12 @@ import org.json.JSONObject;
 public class MainActivity extends AppCompatActivity {
 
     private MainActivity self = this;
-    private Button sign_in;
-    private LinearLayout form_frame;
-    private LinearLayout loading;
-    private EditText usernameTxt;
-    private EditText passwordTxt;
-    private CheckBox show_pwd;
-
+    private Button signIn;
+    private LinearLayout formFrame;
+    private EditText usernameText;
+    private EditText passwordText;
+    private CheckBox showPassword;
+    private ProgressDialog progressDialog;
 
     private boolean busy = false;
     private boolean status = false;
@@ -56,29 +56,34 @@ public class MainActivity extends AppCompatActivity {
                 JSONObject responseJson2 = responseJson.getJSONObject("TransactionResponses");
                 JSONObject finalJson = responseJson2.getJSONObject("TransactionResponse");
                 status = finalJson.getBoolean("responsemessage");
-                Toast.makeText(self, String.valueOf(status), Toast.LENGTH_LONG).show();
 
                 if (status) {
                     SharedPreferences sharedPref = self.getSharedPreferences(Constants.STORE_USERNAME_KEY,
                             Context.MODE_PRIVATE);
                     Editor edit = sharedPref.edit();
-                    edit.putString("username", usernameTxt.getText().toString());
-                    edit.putString("password", passwordTxt.getText().toString());
-                    edit.commit();
-                    //after commiting... then change activity
+                    edit.putString("username", usernameText.getText().toString());
+                    edit.putString("password", passwordText.getText().toString());
+                    edit.apply();
+
+                    Toast.makeText(self, String.valueOf("Logged in as " + usernameText.getText().toString()),
+                            Toast.LENGTH_LONG).show();
+
+                    // Changes activity after saving the username and password
                     Intent actIntent = new Intent(self, HomeActivity.class);
                     self.startActivity(actIntent);
                     self.finish();
+                } else {
+                    Toast.makeText(self, "Login unsuccessful. Please try again.",
+                            Toast.LENGTH_LONG).show();
                 }
-
             } catch (JSONException e) {
                 // TODO Auto-generated catch block
                 e.printStackTrace();
-                Toast.makeText(self, "Request cannot be completed, Try again", Toast.LENGTH_LONG).show();
+                Toast.makeText(self, "Request cannot be completed, please try again.", Toast.LENGTH_LONG).show();
             } finally {
                 if (!status) {
-                    form_frame.setVisibility(View.VISIBLE);
-                    loading.setVisibility(View.GONE);
+                    formFrame.setVisibility(View.VISIBLE);
+                    progressDialog.hide();
                     busy = false;
                 }
             }
@@ -93,35 +98,37 @@ public class MainActivity extends AppCompatActivity {
 
         // Setting this makes sure we draw fullscreen
         Window window = getWindow();
-        window.setFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS, WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
+        window.setFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS,
+                WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
 
         getSupportActionBar().hide();
 
-        form_frame = (LinearLayout) findViewById(R.id.form_frame);
-        loading = (LinearLayout) findViewById(R.id.loading);
+        formFrame = (LinearLayout) findViewById(R.id.form_frame);
+        showPassword = (CheckBox) findViewById(R.id.show_pwd);
+        usernameText = (EditText) findViewById(R.id.username);
+        passwordText = (EditText) findViewById(R.id.password);
 
-        show_pwd = (CheckBox) findViewById(R.id.show_pwd);
-
-        usernameTxt = (EditText) findViewById(R.id.username);
-        passwordTxt = (EditText) findViewById(R.id.password);
-
-        sign_in = (Button) findViewById(R.id.sign_in);
-        sign_in.setOnClickListener(new OnClickListener() {
+        signIn = (Button) findViewById(R.id.sign_in);
+        signIn.setOnClickListener(new OnClickListener() {
 
             @Override
             public void onClick(View v) {
                 // TODO Auto-generated method stub
                 if (com.swifta.mats.util.InternetCheck.isNetworkAvailable(self)) {
-                    if (usernameTxt.getText().toString().isEmpty() ||
-                            passwordTxt.getText().toString().isEmpty()) {
+                    if (usernameText.getText().toString().isEmpty() ||
+                            passwordText.getText().toString().isEmpty()) {
                         Toast.makeText(self, "Please supply your credentials", Toast.LENGTH_LONG).show();
                     } else {
-                        form_frame.setVisibility(View.GONE);
-                        loading.setVisibility(View.VISIBLE);
+                        formFrame.setVisibility(View.GONE);
+
+                        progressDialog = new ProgressDialog(self);
+                        progressDialog.setMessage("Logging you in...");
+                        progressDialog.show();
+
                         JSONObject data = new JSONObject();
                         try {
-                            data.put("username", usernameTxt.getText().toString());
-                            data.put("password", passwordTxt.getText().toString());
+                            data.put("username", usernameText.getText().toString());
+                            data.put("password", passwordText.getText().toString());
                         } catch (JSONException e) {
                             // TODO Auto-generated catch block
                             e.printStackTrace();
@@ -133,28 +140,26 @@ public class MainActivity extends AppCompatActivity {
                         busy = true;
                     }
                 } else {
-                    Toast.makeText(self, "Please connect to the Internet", Toast.LENGTH_LONG).show();
+                    Toast.makeText(self, "You are not connected to the internet", Toast.LENGTH_LONG).show();
                 }
             }
 
         });
 
-        show_pwd.setOnCheckedChangeListener(new OnCheckedChangeListener() {
+        showPassword.setOnCheckedChangeListener(new OnCheckedChangeListener() {
 
             @Override
             public void onCheckedChanged(CompoundButton buttonView,
                                          boolean isChecked) {
                 // TODO Auto-generated method stub
                 if (isChecked) {
-                    passwordTxt.setInputType(InputType.TYPE_CLASS_TEXT);
-                    show_pwd.setEnabled(false);
-                    show_pwd.setClickable(false);
+                    passwordText.setInputType(InputType.TYPE_CLASS_TEXT);
+                    showPassword.setEnabled(false);
+                    showPassword.setClickable(false);
                 }
-
             }
 
         });
-
     }
 
     @Override
@@ -189,15 +194,11 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void onBackPressed() {
-        // do something here and don't write super.onBackPressed()
         if (busy) {
-            Toast.makeText(self, "Currently Processing a request, Please wait..", Toast.LENGTH_LONG).show();
+            Toast.makeText(self, "Currently processing a request. Please wait...", Toast.LENGTH_LONG).show();
         } else {
-            //super.onBackPressed();
             this.finishActivity(0);
             finish();
-            //System.exit(0);
-
         }
     }
 }

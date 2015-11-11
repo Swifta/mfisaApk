@@ -120,7 +120,6 @@ public class DepositFloatActivity extends AppCompatActivity {
                         Toast.makeText(self, "Request Failed : " + showReport, Toast.LENGTH_LONG).show();
                     }
                 }
-
             } catch (JSONException e) {
                 // TODO Auto-generated catch block
                 uiHandleFailed();
@@ -162,18 +161,16 @@ public class DepositFloatActivity extends AppCompatActivity {
     public void onBackPressed() {
         // do something here and don't write super.onBackPressed()
         if (busy) {
-            Toast.makeText(self, "Currently Processing a request, Please wait..", Toast.LENGTH_LONG).show();
+            Toast.makeText(self, "Currently processing a request. Please wait..", Toast.LENGTH_LONG).show();
         } else {
             //super.onBackPressed();
             //clear all the stored cache of uncompleted float transfer.
             if (canClear) {
                 Editor edit = sharedPref.edit();
                 edit.remove(Constants.TMP_DEPOSIT_FLOAT_DATA);
-                edit.commit();
+                edit.apply();
             }
-            this.finishActivity(0);
             finish();
-            //System.exit(0);
 
         }
     }
@@ -339,14 +336,6 @@ public class DepositFloatActivity extends AppCompatActivity {
         return true;
     }
 
-/*	@Override
-    public void onDestroy(){
-		super.onDestroy();
-		if(!btn_clicked){
-			logout();
-		}
-	}*/
-
     public boolean onOptionsItemSelected(MenuItem item) {
         // Handle action bar item clicks here. The action bar will
         // automatically handle clicks on the Home/Up button, so long
@@ -386,7 +375,7 @@ public class DepositFloatActivity extends AppCompatActivity {
 
     private void logout() {
         if (busy) {
-            Toast.makeText(self, "Currently Processing a request, Please wait..", Toast.LENGTH_LONG).show();
+            Toast.makeText(self, "Currently processing a request. Please wait...", Toast.LENGTH_LONG).show();
         } else {
             Intent actIntent = new Intent(self, MainActivity.class);
             actIntent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
@@ -417,7 +406,7 @@ public class DepositFloatActivity extends AppCompatActivity {
             data.put("amount", amount.getText().toString());
             data.put("transaction_id", transaction_id);
             edit.putString(Constants.TMP_DEPOSIT_FLOAT_DATA, data.toString());
-            edit.commit();
+            edit.apply();
             TextView transaction_idTxt = (TextView) findViewById(R.id.transaction_id);
             title.setText("Dealer OTP Confirmation");
             transaction_idTxt.setText("Transaction ID: " + transaction_id);

@@ -241,13 +241,13 @@
     <dimen name="abc_text_size_title_material_toolbar">20dp</dimen>
     <!-- From: file:/Users/moyinoluwa/Documents/SwiftaAndroidStudioProjects/mfisaApk/app/src/main/res/values/dimens.xml -->
     <eat-comment/>
-    <dimen name="activity_horizontal_margin">16sp</dimen>
-    <dimen name="activity_horizontal_padding">8sp</dimen>
-    <dimen name="activity_vertical_margin">16sp</dimen>
-    <dimen name="activity_vertical_padding">16sp</dimen>
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_horizontal_padding">8dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="activity_vertical_padding">16dp</dimen>
     <dimen name="btn_height">58sp</dimen>
-    <dimen name="btn_separator">5sp</dimen>
-    <dimen name="btn_width1">120sp</dimen>
+    <dimen name="btn_separator">5dp</dimen>
+    <dimen name="btn_width1">120dp</dimen>
     <!-- From: file:/Users/moyinoluwa/Documents/SwiftaAndroidStudioProjects/mfisaApk/app/build/intermediates/exploded-aar/com.android.support/cardview-v7/23.1.0/res/values/values.xml -->
     <eat-comment/>
     <dimen name="cardview_compat_inset_shadow">1dp</dimen>
@@ -370,6 +370,7 @@
     <string name="back">Go Back</string>
     <string name="bill_payment">Bill Payment</string>
     <string name="cancel">Cancel</string>
+    <string name="change_password">Change your password</string>
     <!-- From: file:/Users/moyinoluwa/Documents/SwiftaAndroidStudioProjects/mfisaApk/app/build/intermediates/exploded-aar/com.android.support/design/23.1.0/res/values/values.xml -->
     <eat-comment/>
     <string name="character_counter_pattern" translatable="false">%1$d/%2$d</string>
@@ -389,6 +390,7 @@
     <string name="description_hint">Description</string>
     <string name="dummy">Dummy</string>
     <string name="empty"/>
+    <string name="enter_new_password">Enter new password</string>
     <string name="enter_password">Enter Password</string>
     <string name="enter_username">Enter Username</string>
     <string name="fets">FETS</string>
@@ -396,17 +398,19 @@
     <string name="float_transfer_options_title">Float Transfer Options</string>
     <string name="help">Help</string>
     <string name="live_chat">Live Chat</string>
-    <string name="login_title">Secured Login Area</string>
+    <string name="login_title">Welcome to MATS.\nPlease Login.</string>
     <string name="logout">Logout</string>
-    <string name="marchant_payment">Merchant Payment</string>
     <string name="mats_inflow_account">MATS Inflow Account</string>
+    <string name="merchant_payment">Merchant Payment</string>
     <string name="mm_operatos_title">Select MM Operator</string>
     <string name="my_account">My Account</string>
+    <string name="no_statement">No Mini Statements are available. Please check back later.</string>
     <string name="ok">Okay</string>
     <string name="paga">Paga</string>
     <string name="pin_hint">Customer PIN</string>
     <string name="please_wait">please wait ....</string>
     <string name="provide_otp">Provide Dealer OTP</string>
+    <string name="read_mini_statement">Read Mini Statement</string>
     <string name="ready_cash">Ready Cash</string>
     <string name="resume_deposit_float">Complete Deposit Float</string>
     <string name="return_float">Return Float</string>
@@ -419,12 +423,15 @@
     <string name="status_bar_notification_info_overflow">999+</string>
     <!-- From: file:/Users/moyinoluwa/Documents/SwiftaAndroidStudioProjects/mfisaApk/app/src/main/res/values/strings.xml -->
     <eat-comment/>
+    <string name="submit_password">Submit</string>
     <string name="subscriber_number_hint">Subscriber Number</string>
     <string name="teasy_mobile">Teasy Mobile</string>
+    <string name="title_activity_account">My Account</string>
     <string name="title_activity_complete_deposit_float">CompleteDepositFloatActivity</string>
     <string name="title_activity_deposit_float">DepositFloatActivity</string>
     <string name="title_activity_float_transfer">FloatTransferActivity</string>
     <string name="title_activity_home">Welcome </string>
+    <string name="title_activity_mini_statement">Mini Statement</string>
     <string name="title_activity_mmoperators">MMOperatorsActivity</string>
     <string name="title_activity_test">TestActivity</string>
     <string name="title_activity_withdraw_mm">WithdrawMMActivity</string>
@@ -1412,6 +1419,13 @@
     </style>
     <style name="CardView.Light">
         <item name="cardBackgroundColor">@color/cardview_light_background</item>
+    </style>
+    <!-- From: file:/Users/moyinoluwa/Documents/SwiftaAndroidStudioProjects/mfisaApk/app/src/main/res/values/styles.xml -->
+    <eat-comment/>
+    <style name="Divider">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">1dp</item>
+        <item name="android:background">?android:attr/listDivider</item>
     </style>
     <!-- From: file:/Users/moyinoluwa/Documents/SwiftaAndroidStudioProjects/mfisaApk/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.0/res/values/values.xml -->
     <eat-comment/>

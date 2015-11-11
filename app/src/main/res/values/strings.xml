@@ -2,7 +2,7 @@
 <resources>
 
     <string name="app_name">MATS</string>
-    <string name="login_title">Secured Login Area</string>
+    <string name="login_title">Welcome to MATS.\nPlease Login.</string>
     <string name="enter_username">Enter Username</string>
     <string name="enter_password">Enter Password</string>
     <string name="show_password">Show Password</string>
@@ -19,7 +19,7 @@
     <string name="float_transfer">Float Transfer</string>
     <string name="verify_withdrawal">Verify Withdrawal</string>
     <string name="deposit">Deposit</string>
-    <string name="marchant_payment">Merchant Payment</string>
+    <string name="merchant_payment">Merchant Payment</string>
     <string name="bill_payment">Bill Payment</string>
     <string name="sell_airtime">Sell Airtime</string>
     <string name="my_account">My Account</string>
@@ -61,5 +61,12 @@
     <string name="resume_deposit_float">Complete Deposit Float</string>
     <string name="provide_otp">Provide Dealer OTP</string>
     <string name="title_activity_test">TestActivity</string>
+    <string name="title_activity_account">My Account</string>
+    <string name="change_password">Change your password</string>
+    <string name="submit_password">Submit</string>
+    <string name="enter_new_password">Enter new password</string>
+    <string name="read_mini_statement">Read Mini Statement</string>
+    <string name="title_activity_mini_statement">Mini Statement</string>
+    <string name="no_statement">No Mini Statements are available. Please check back later.</string>
 
 </resources>

@@ -19,7 +19,6 @@ public class WithdrawalActivity extends AppCompatActivity {
 
     private WithdrawalActivity self = this;
     private String myName = "";
-    private boolean btn_clicked = true;
 
     private Button dealer;
 
@@ -34,7 +33,6 @@ public class WithdrawalActivity extends AppCompatActivity {
         getSupportActionBar();
         setTitle("Welcome " + myName);
         initEvents();
-        btn_clicked = false;
     }
 
     private void initEvents() {
@@ -44,7 +42,6 @@ public class WithdrawalActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 // TODO Auto-generated method stub
-                btn_clicked = true;
                 Intent actIntent = new Intent(self, MMOperatorsActivity.class);
                 startActivity(actIntent);
             }
@@ -72,15 +69,6 @@ public class WithdrawalActivity extends AppCompatActivity {
         }
         return super.onOptionsItemSelected(item);
     }
-
-/*	@Override
-	public void onDestroy(){
-		super.onDestroy();
-		if(!btn_clicked){
-			logout();
-		}
-	}*/
-
 
     public void onLogoutPressed() {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);

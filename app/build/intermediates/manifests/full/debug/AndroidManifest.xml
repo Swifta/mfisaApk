@@ -36,12 +36,7 @@
 
         <activity
             android:name="com.swifta.mats.HomeActivity"
-            android:label="@string/title_activity_home"
-            android:parentActivityName="com.swifta.mats.MainActivity" >
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.swifta.mats.MainActivity" />
-        </activity>
+            android:label="@string/title_activity_home" />
         <activity
             android:name="com.swifta.mats.WithdrawalActivity"
             android:label="@string/title_activity_withdrawal"
@@ -91,8 +86,16 @@
                 android:value="com.swifta.mats.FloatTransferActivity" />
         </activity>
         <activity
-            android:name="com.swifta.mats.TestActivity"
-            android:label="@string/title_activity_test" />
+            android:name="com.swifta.mats.AccountActivity"
+            android:label="@string/title_activity_account"
+            android:parentActivityName="com.swifta.mats.HomeActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.swifta.mats.HomeActivity" />
+        </activity>
+        <activity
+            android:name="com.swifta.mats.MiniStatementActivity"
+            android:label="@string/title_activity_mini_statement" />
     </application>
 
 </manifest>

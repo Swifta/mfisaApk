@@ -22,7 +22,6 @@
         android:text="@string/resume_deposit_float"
         android:textColor="@color/colorDividerDark"
         android:textSize="@dimen/title_font_size" />
-    
     <LinearLayout
         android:id="@+id/otp_layout"
         android:layout_width="match_parent"
@@ -68,7 +67,6 @@
         </android.support.design.widget.TextInputLayout>
 
     </LinearLayout>
-
 
     <LinearLayout
         android:id="@+id/tranx_success_list"
