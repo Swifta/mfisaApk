@@ -10,7 +10,6 @@ public class Constants {
 	
 	public static final String STORE_USERNAME_KEY = "com.swifta.mats.store.username";
 	
-	
 	/*
 	 * below for deposit float constant
 	 */

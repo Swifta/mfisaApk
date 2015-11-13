@@ -41,7 +41,7 @@ public class FloatTransferActivity extends AppCompatActivity {
         myName = sharedPref.getString("username", "UNKNOWN").toUpperCase();
 
         getSupportActionBar();
-        setTitle("Welcome " + myName);
+        setTitle(myName);
         initEvents();
         btn_clicked = false;
     }
@@ -75,13 +75,12 @@ public class FloatTransferActivity extends AppCompatActivity {
                         Intent actIntent = new Intent(self, CompleteDepositFloatActivity.class);
                         self.startActivity(actIntent);
                     } else {
-                        Toast.makeText(self, "You do not have an UNCOMPLETED Transaction", Toast.LENGTH_LONG).show();
+                        Toast.makeText(self, "You do not have an uncompleted transaction", Toast.LENGTH_LONG).show();
                     }
                 } catch (JSONException jE) {
-                    Toast.makeText(self, "Error Resuming Previos Transaction", Toast.LENGTH_LONG).show();
+                    Toast.makeText(self, "Error resuming previous transactions", Toast.LENGTH_LONG).show();
                     jE.printStackTrace();
                 }
-
             }
 
         });
@@ -107,15 +106,6 @@ public class FloatTransferActivity extends AppCompatActivity {
         }
         return super.onOptionsItemSelected(item);
     }
-
-/*	@Override
-    public void onDestroy(){
-		super.onDestroy();
-		if(!btn_clicked){
-			logout();
-		}
-	}*/
-
 
     public void onLogoutPressed() {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);

@@ -132,7 +132,7 @@ public class WithdrawMMActivity extends AppCompatActivity {
         myName = sharedPref.getString("username", "UNKNOWN").toUpperCase();
         myPassword = sharedPref.getString("password", "UNKNOWN");
         getSupportActionBar();
-        setTitle("Welcome " + myName);
+        setTitle(myName);
         initEvents();
         btn_clicked = false;
     }

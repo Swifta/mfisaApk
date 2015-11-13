@@ -68,8 +68,6 @@ public class DepositFloatActivity extends AppCompatActivity {
     private LinearLayout tranx_success_list;
 
     private TextView title;
-
-    //private boolean status = false;
     private boolean busy = false;
 
     private SharedPreferences sharedPref;
@@ -81,27 +79,28 @@ public class DepositFloatActivity extends AppCompatActivity {
             // TODO Auto-generated method stub
             try {
                 Bundle bundle = intent.getExtras();
-
                 JSONObject responseJson = new JSONObject(bundle.getString(Constants.JOB_RESPONSE, "{}"));
-                //System.out.println(responseJson.toString());
+
                 if (responseJson.getInt("request") == Constants.OTP_REQUEST) {
                     if (responseJson.getBoolean("success")) {
                         JSONObject psaResponse = responseJson.getJSONObject("psa");
                         JSONObject psaTranResponse = psaResponse.getJSONObject("TransactionResponses")
                                 .getJSONObject("TransactionResponse");
                         if (psaTranResponse.getString("responsemessage").equals(Constants.FLOAT_TRANSFER_REQUEST_TOKEN_SUCCESS)) {
-                            //means PSA confirmed that the process was successful
-                            //then write the transaction ID in memory.
+                            // means PSA confirmed that the process was successful
+                            // then write the transaction ID in memory.
                             int transaction_id = psaTranResponse.getInt("TransactionId");
                             uiHandleSuccess(transaction_id);
                         } else {
-                            Toast.makeText(self, "PSA Rejected Request : " + psaTranResponse.getString("responsemessage"), Toast.LENGTH_LONG).show();
+                            String errorMessage = psaTranResponse.getString("responsemessage");
+                            Toast.makeText(self, "Your request was rejected because " + errorMessage.replace("_", " ")
+                                    .toLowerCase(), Toast.LENGTH_LONG).show();
                             uiHandleFailed();
                         }
                     } else {
                         String showReport = responseJson.getString("message");
                         uiHandleFailed();
-                        Toast.makeText(self, "Request Failed : " + showReport, Toast.LENGTH_LONG).show();
+                        Toast.makeText(self, "Your request failed: " + showReport, Toast.LENGTH_LONG).show();
                     }
                 } else if (responseJson.getInt("request") == Constants.OTP_COMPLETE_REQUEST) {
                     if (responseJson.getBoolean("success")) {
@@ -111,20 +110,22 @@ public class DepositFloatActivity extends AppCompatActivity {
                         if (psaTranResponse.getString("responsemessage").equals(Constants.TRANSACTION_WAS_SUCCESSFUL)) {
                             uiDisplaySummary();
                         } else {
-                            Toast.makeText(self, "PSA Rejected Request : " + psaTranResponse.getString("responsemessage"), Toast.LENGTH_LONG).show();
+                            String errorMessage = psaTranResponse.getString("responsemessage");
+                            Toast.makeText(self, "Your request was rejected because " + errorMessage.replace("_", " ")
+                                    .toLowerCase(), Toast.LENGTH_LONG).show();
                             reEnterOTP();
                         }
                     } else {
                         String showReport = responseJson.getString("message");
                         reEnterOTP();
-                        Toast.makeText(self, "Request Failed : " + showReport, Toast.LENGTH_LONG).show();
+                        Toast.makeText(self, "Your request failed: " + showReport, Toast.LENGTH_LONG).show();
                     }
                 }
             } catch (JSONException e) {
                 // TODO Auto-generated catch block
                 uiHandleFailed();
                 e.printStackTrace();
-                Toast.makeText(self, "Request cannot be completed, Try again", Toast.LENGTH_LONG).show();
+                Toast.makeText(self, "Your request cannot be completed, please try again.", Toast.LENGTH_LONG).show();
             } finally {
                 busy = false;
             }
@@ -141,7 +142,7 @@ public class DepositFloatActivity extends AppCompatActivity {
         myName = sharedPref.getString("username", "UNKNOWN").toUpperCase();
         myPassword = sharedPref.getString("password", "UNKNOWN");
         getSupportActionBar();
-        setTitle("Welcome " + myName);
+        setTitle(myName);
         initEvents();
         btn_clicked = false;
     }
@@ -209,7 +210,7 @@ public class DepositFloatActivity extends AppCompatActivity {
             public void onClick(View v) {
                 if (amount.getText().toString().isEmpty() || dealer_id.getText().toString().isEmpty()
                         || amount.getText().toString().isEmpty()) {
-                    Toast.makeText(self, "Missing Required Information", Toast.LENGTH_LONG).show();
+                    Toast.makeText(self, "Please fill in the correct details.", Toast.LENGTH_LONG).show();
                 } else {
                     // TODO Auto-generated method stub
                     String left[] = {"Amount", "Dealer ID", "Description"};
@@ -415,7 +416,7 @@ public class DepositFloatActivity extends AppCompatActivity {
             done_btns.setVisibility(View.VISIBLE);
         } catch (JSONException jE) {
             jE.printStackTrace();
-            Toast.makeText(self, "Data Issue : " + jE.getMessage(), Toast.LENGTH_LONG).show();
+            Toast.makeText(self, "Data issue : " + jE.getMessage(), Toast.LENGTH_LONG).show();
             uiHandleFailed();
         }
     }

@@ -46,52 +46,58 @@ public class MiniStatementActivity extends AppCompatActivity {
                 JSONObject responseJson = new JSONObject(bundle.getString(Constants.JOB_RESPONSE, "{}"));
                 JSONObject responseJson2 = responseJson.getJSONObject("TransactionResponses");
 
-                if (!responseJson2.toString().equals("null")) {
-                    JSONArray finalJson = responseJson2.getJSONArray("TransactionResponse");
+                JSONArray finalJson = responseJson2.getJSONArray("TransactionResponse");
 
-                    if (finalJson.length() != 0) {
-                        // Automatically populates the trailers with data from the JSON response
-                        for (int i = 0; i < finalJson.length(); i++) {
-                            JSONObject arrayValue = finalJson.getJSONObject(i);
+                if (finalJson.length() != 0) {
+                    // Automatically populates the trailers with data from the JSON response
+                    for (int i = 0; i < finalJson.length(); i++) {
+                        JSONObject arrayValue = finalJson.getJSONObject(i);
 
-                            // Sets up the layout to display the data from the JSON response
-                            generalLayout.setVisibility(View.GONE);
-                            View v = getLayoutInflater().inflate(R.layout.mini_statement_item, null);
-                            container.addView(v);
+                        // Sets up the layout to display the data from the JSON response
+                        generalLayout.setVisibility(View.GONE);
+                        View v = getLayoutInflater().inflate(R.layout.mini_statement_item, null);
+                        container.addView(v);
 
-                            String transactionTypeValue = arrayValue.getString("transactiontype");
-                            String date = arrayValue.getString("date");
+                        String transactionTypeValue = arrayValue.getString("transactiontype");
+                        String date = arrayValue.getString("date");
 
-                            TextView transactionType = (TextView) v.findViewById(R.id.transactiontype);
-                            transactionType.setText(transactionTypeValue.replace("_", " ") + " on "
-                                    + getDayFromDate(date) + " at " + getTimeFromDate(date));
+                        TextView transactionType = (TextView) v.findViewById(R.id.transactiontype);
+                        transactionType.setText(transactionTypeValue.replace("_", " ") + " on "
+                                + getDayFromDate(date) + " at " + getTimeFromDate(date));
 
-                            TextView amount = (TextView) v.findViewById(R.id.amount);
-                            amount.setText("Amount: " + arrayValue.getInt("amount"));
+                        TextView amount = (TextView) v.findViewById(R.id.amount);
+                        amount.setText("Amount: " + arrayValue.getInt("amount"));
 
-                            TextView receiver = (TextView) v.findViewById(R.id.receiver);
-                            receiver.setText("Receiver: " + arrayValue.getString("receiver"));
+                        TextView receiver = (TextView) v.findViewById(R.id.receiver);
+                        receiver.setText("Receiver: " + arrayValue.getString("receiver"));
 
-                            // If the status failed, creates a visual cue by setting the text color to red,
-                            // and sets the text color to green otherwise
-                            TextView status = (TextView) v.findViewById(R.id.status);
-                            if (arrayValue.getString("status").equals("FAILED")) {
-                                status.setTextColor(ContextCompat.getColor(self, android.R.color.holo_red_dark));
-                            } else {
+                        // If the status failed, creates a visual cue by setting the text color to red,
+                        // sets the text color to green if successful and to yellow if pending
+                        TextView status = (TextView) v.findViewById(R.id.status);
+                        switch (arrayValue.getString("status")) {
+                            case "SUCCESSFUL":
                                 status.setTextColor(ContextCompat.getColor(self, android.R.color.holo_green_dark));
-                            }
-                            status.setText(arrayValue.getString("status"));
-
-                            busy = false;
+                                break;
+                            case "PENDING":
+                                status.setTextColor(ContextCompat.getColor(self, R.color.yellow));
+                                break;
+                            case "FAILED":
+                                status.setTextColor(ContextCompat.getColor(self, android.R.color.holo_red_dark));
+                                break;
+                            default:
+                                status.setTextColor(ContextCompat.getColor(self, android.R.color.black));
                         }
-                    } else {
-                        noStatement.setVisibility(View.VISIBLE);
+                        status.setText(arrayValue.getString("status"));
+                        busy = false;
                     }
                 }
             } catch (JSONException e) {
                 // TODO Auto-generated catch block
                 e.printStackTrace();
-                Toast.makeText(self, "Your request cannot be completed now, please try again.", Toast.LENGTH_LONG).show();
+                // Sets up the layout to handle null response
+                generalLayout.setVisibility(View.GONE);
+                noStatement.setVisibility(View.VISIBLE);
+                busy = false;
             }
         }
     };
@@ -200,7 +206,7 @@ public class MiniStatementActivity extends AppCompatActivity {
         String dateValue = date.substring(11, 19);
 
         // Determines whether to append a "PM" prefix or "AM"
-        if (Integer.parseInt(dateValue.substring(0, 2)) <= 12) {
+        if (Integer.parseInt(dateValue.substring(0, 2)) >= 12) {
             return dateValue += " PM";
         } else {
             return dateValue += " AM";

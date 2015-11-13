@@ -84,21 +84,22 @@ public class CompleteDepositFloatActivity extends AppCompatActivity {
                         if (psaTranResponse.getString("responsemessage").equals(Constants.TRANSACTION_WAS_SUCCESSFUL)) {
                             uiDisplaySummary();
                         } else {
-                            Toast.makeText(self, "PSA Rejected Request : " + psaTranResponse.getString("responsemessage"), Toast.LENGTH_LONG).show();
+                            String errorMessage = psaTranResponse.getString("responsemessage");
+                            Toast.makeText(self, "Your request was rejected because " + errorMessage.replace("_", " ")
+                                    .toLowerCase(), Toast.LENGTH_LONG).show();
                             reEnterOTP();
                         }
                     } else {
                         String showReport = responseJson.getString("message");
                         reEnterOTP();
-                        Toast.makeText(self, "Request Failed : " + showReport, Toast.LENGTH_LONG).show();
+                        Toast.makeText(self, "Your request failed : " + showReport, Toast.LENGTH_LONG).show();
                     }
                 }
-
             } catch (JSONException e) {
                 // TODO Auto-generated catch block
                 reEnterOTP();
                 e.printStackTrace();
-                Toast.makeText(self, "Request cannot be completed, Try again", Toast.LENGTH_LONG).show();
+                Toast.makeText(self, "Your request cannot be completed, please try again.", Toast.LENGTH_LONG).show();
             } finally {
                 busy = false;
             }
@@ -131,7 +132,7 @@ public class CompleteDepositFloatActivity extends AppCompatActivity {
         }
 
         getSupportActionBar();
-        setTitle("Welcome " + myName);
+        setTitle(myName);
         initEvents();
         btn_clicked = false;
     }
@@ -151,19 +152,16 @@ public class CompleteDepositFloatActivity extends AppCompatActivity {
     public void onBackPressed() {
         // do something here and don't write super.onBackPressed()
         if (busy) {
-            Toast.makeText(self, "Currently Processing a request, Please wait..", Toast.LENGTH_LONG).show();
+            Toast.makeText(self, "Currently processing a request, please wait..", Toast.LENGTH_LONG).show();
         } else {
             //super.onBackPressed();
             //clear all the stored cache of uncompleted float transfer.
             if (canClear) {
                 Editor edit = sharedPref.edit();
                 edit.remove(Constants.TMP_DEPOSIT_FLOAT_DATA);
-                edit.commit();
+                edit.apply();
             }
-            this.finishActivity(0);
             finish();
-            //System.exit(0);
-
         }
     }
 
@@ -282,7 +280,7 @@ public class CompleteDepositFloatActivity extends AppCompatActivity {
 
     private void logout() {
         if (busy) {
-            Toast.makeText(self, "Currently Processing a request, Please wait..", Toast.LENGTH_LONG).show();
+            Toast.makeText(self, "Currently processing a request, please wait..", Toast.LENGTH_LONG).show();
         } else {
             Intent actIntent = new Intent(self, MainActivity.class);
             actIntent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
@@ -299,7 +297,7 @@ public class CompleteDepositFloatActivity extends AppCompatActivity {
 
     private void uiDisplaySummary() {
         canClear = true;
-        //the display of successful status.
+        // Displays successful status.
         String left[] = {""};
         String right[] = {"TRANSACTION SUCCESSFUL"};
         successAdapter = new PreviewListAdapter(self, left, right);

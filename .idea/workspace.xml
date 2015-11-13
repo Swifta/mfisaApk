@@ -28,38 +28,18 @@
     </layouts>
   </component>
   <component name="AndroidLogFilters">
-    <option name="TOOL_WINDOW_LOG_LEVEL" value="ERROR" />
+    <option name="TOOL_WINDOW_CUSTOM_FILTER" value="result" />
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8248682e-831d-4bae-bfe1-031d2128f1b4" name="Default" comment="Updated the Login and dashboard&#10;Implemented change password and mini statements&#10;">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable-hdpi/ic_acccount_white.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable-mdpi/ic_acccount_white.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable-xhdpi/ic_acccount_white.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable-xxhdpi/ic_acccount_white.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable-hdpi/ic_settings_white.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable-mdpi/ic_settings_white.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable-xhdpi/ic_settings_white.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable-xxhdpi/ic_settings_white.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/swifta/mats/AccountActivity.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/swifta/mats/MiniStatementActivity.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/menu/account.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_account.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_mini_statement.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/menu/mini_statement.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/layout/mini_statement_item.xml" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/drawable-hdpi/ic_settings_power_black_24dp.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/drawable-mdpi/ic_settings_power_black_24dp.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/drawable-xhdpi/ic_settings_power_black_24dp.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/drawable-xxhdpi/ic_settings_power_black_24dp.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/drawable-xxxhdpi/ic_settings_power_black_24dp.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/res/drawable-hdpi/ic_settings_power_black_24dp.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/res/drawable-mdpi/ic_settings_power_black_24dp.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/res/drawable-xhdpi/ic_settings_power_black_24dp.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/res/drawable-xxhdpi/ic_settings_power_black_24dp.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/res/drawable-xxxhdpi/ic_settings_power_black_24dp.png" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/swifta/mats/util/ApiJobs.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/swifta/mats/util/ApiJobs.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/swifta/mats/service/BackgroundServices.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/swifta/mats/service/BackgroundServices.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/swifta/mats/forms/CompleteDepositFloatActivity$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/swifta/mats/forms/CompleteDepositFloatActivity$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/swifta/mats/forms/CompleteDepositFloatActivity$2.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/swifta/mats/forms/CompleteDepositFloatActivity$2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/swifta/mats/forms/CompleteDepositFloatActivity$3.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/swifta/mats/forms/CompleteDepositFloatActivity$3.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/swifta/mats/forms/CompleteDepositFloatActivity$4.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/swifta/mats/forms/CompleteDepositFloatActivity$4.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/swifta/mats/forms/CompleteDepositFloatActivity$5.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/swifta/mats/forms/CompleteDepositFloatActivity$5.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/swifta/mats/forms/CompleteDepositFloatActivity$6.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/swifta/mats/forms/CompleteDepositFloatActivity$6.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/swifta/mats/forms/CompleteDepositFloatActivity.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/swifta/mats/forms/CompleteDepositFloatActivity.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/swifta/mats/forms/DepositFloatActivity$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/swifta/mats/forms/DepositFloatActivity$1.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/swifta/mats/forms/DepositFloatActivity$2.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/swifta/mats/forms/DepositFloatActivity$2.class" />
@@ -71,51 +51,25 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/swifta/mats/forms/DepositFloatActivity$8.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/swifta/mats/forms/DepositFloatActivity$8.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/swifta/mats/forms/DepositFloatActivity$9.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/swifta/mats/forms/DepositFloatActivity$9.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/swifta/mats/forms/DepositFloatActivity.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/swifta/mats/forms/DepositFloatActivity.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/swifta/mats/FloatTransferActivity$2.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/swifta/mats/FloatTransferActivity$2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/swifta/mats/FloatTransferActivity$3.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/swifta/mats/FloatTransferActivity$3.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/swifta/mats/FloatTransferActivity$4.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/swifta/mats/FloatTransferActivity$4.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/swifta/mats/FloatTransferActivity.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/swifta/mats/FloatTransferActivity.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/swifta/mats/HomeActivity$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/swifta/mats/HomeActivity$1.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/swifta/mats/HomeActivity$2.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/swifta/mats/HomeActivity$2.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/swifta/mats/HomeActivity$3.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/swifta/mats/HomeActivity$3.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/swifta/mats/HomeActivity$4.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/swifta/mats/HomeActivity$4.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/swifta/mats/HomeActivity$5.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/swifta/mats/HomeActivity$5.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/swifta/mats/HomeActivity.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/swifta/mats/HomeActivity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/swifta/mats/MMOperatorsActivity$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/swifta/mats/MMOperatorsActivity$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/swifta/mats/MMOperatorsActivity$2.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/swifta/mats/MMOperatorsActivity$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/swifta/mats/MMOperatorsActivity$3.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/swifta/mats/MMOperatorsActivity$3.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/swifta/mats/MMOperatorsActivity$4.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/swifta/mats/MMOperatorsActivity$4.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/swifta/mats/MMOperatorsActivity$5.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/swifta/mats/MMOperatorsActivity$5.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/swifta/mats/MMOperatorsActivity$6.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/swifta/mats/MMOperatorsActivity$6.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/swifta/mats/MMOperatorsActivity.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/swifta/mats/MMOperatorsActivity.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/swifta/mats/MainActivity$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/swifta/mats/MainActivity$1.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/swifta/mats/MainActivity$2.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/swifta/mats/MainActivity$2.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/swifta/mats/MainActivity$3.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/swifta/mats/MainActivity$3.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/swifta/mats/MainActivity.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/swifta/mats/MainActivity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/swifta/mats/adapters/PreviewListAdapter.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/swifta/mats/adapters/PreviewListAdapter.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/android/support/design/R$drawable.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/android/support/design/R$drawable.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/android/support/v7/appcompat/R$drawable.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/android/support/v7/appcompat/R$drawable.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/swifta/mats/R$drawable.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/swifta/mats/R$drawable.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/android/support/design/R$id.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/android/support/design/R$id.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/android/support/v7/appcompat/R$id.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/android/support/v7/appcompat/R$id.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/swifta/mats/R$id.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/swifta/mats/R$id.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/swifta/mats/R$integer.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/swifta/mats/R$integer.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/android/support/design/R$layout.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/android/support/design/R$layout.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/android/support/v7/appcompat/R$layout.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/android/support/v7/appcompat/R$layout.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/swifta/mats/R$layout.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/swifta/mats/R$layout.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/swifta/mats/R$menu.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/swifta/mats/R$menu.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/android/support/design/R$string.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/android/support/design/R$string.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/swifta/mats/R$string.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/swifta/mats/R$string.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/android/support/design/R$style.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/android/support/design/R$style.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/android/support/v7/appcompat/R$style.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/android/support/v7/appcompat/R$style.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/swifta/mats/R$style.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/swifta/mats/R$style.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/swifta/mats/R$styleable.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/swifta/mats/R$styleable.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/swifta/mats/R.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/swifta/mats/R.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/swifta/mats/forms/WithdrawMMActivity$2.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/swifta/mats/forms/WithdrawMMActivity$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/swifta/mats/forms/WithdrawMMActivity$3.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/swifta/mats/forms/WithdrawMMActivity$3.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/swifta/mats/forms/WithdrawMMActivity$4.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/swifta/mats/forms/WithdrawMMActivity$4.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/swifta/mats/forms/WithdrawMMActivity$5.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/swifta/mats/forms/WithdrawMMActivity$5.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/swifta/mats/MiniStatementActivity$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/swifta/mats/MiniStatementActivity$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/swifta/mats/MiniStatementActivity$2.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/swifta/mats/MiniStatementActivity$2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/swifta/mats/MiniStatementActivity$3.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/swifta/mats/MiniStatementActivity$3.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/swifta/mats/MiniStatementActivity.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/swifta/mats/MiniStatementActivity.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/swifta/mats/forms/WithdrawMMActivity.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/swifta/mats/forms/WithdrawMMActivity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/swifta/mats/WithdrawalActivity$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/swifta/mats/WithdrawalActivity$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/swifta/mats/WithdrawalActivity$2.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/swifta/mats/WithdrawalActivity$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/swifta/mats/WithdrawalActivity$3.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/swifta/mats/WithdrawalActivity$3.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/swifta/mats/WithdrawalActivity.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/swifta/mats/WithdrawalActivity.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.4/taskArtifacts/cache.properties.lock" afterPath="$PROJECT_DIR$/.gradle/2.4/taskArtifacts/cache.properties.lock" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.4/taskArtifacts/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/2.4/taskArtifacts/fileHashes.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.4/taskArtifacts/fileSnapshots.bin" afterPath="$PROJECT_DIR$/.gradle/2.4/taskArtifacts/fileSnapshots.bin" />
@@ -123,41 +77,22 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/resources-debug-androidTest.ap_" afterPath="$PROJECT_DIR$/app/build/intermediates/res/resources-debug-androidTest.ap_" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/resources-debug.ap_" afterPath="$PROJECT_DIR$/app/build/intermediates/res/resources-debug.ap_" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.4/taskArtifacts/taskArtifacts.bin" afterPath="$PROJECT_DIR$/.gradle/2.4/taskArtifacts/taskArtifacts.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/manifests/full/debug/AndroidManifest.xml" afterPath="$PROJECT_DIR$/app/build/intermediates/manifests/full/debug/AndroidManifest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/swifta/mats/util/ApiJobs.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/swifta/mats/util/ApiJobs.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/swifta/mats/service/BackgroundServices.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/swifta/mats/service/BackgroundServices.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/swifta/mats/util/Dealers.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/swifta/mats/util/Dealers.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/swifta/mats/forms/CompleteDepositFloatActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/swifta/mats/forms/CompleteDepositFloatActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/swifta/mats/util/Constants.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/swifta/mats/util/Constants.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/swifta/mats/forms/DepositFloatActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/swifta/mats/forms/DepositFloatActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/swifta/mats/HomeActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/swifta/mats/HomeActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/swifta/mats/MMOperatorsActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/swifta/mats/MMOperatorsActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/swifta/mats/FloatTransferActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/swifta/mats/FloatTransferActivity.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/swifta/mats/MainActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/swifta/mats/MainActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/r/debug/android/support/design/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/debug/android/support/design/R.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/r/debug/android/support/v7/appcompat/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/debug/android/support/v7/appcompat/R.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/swifta/mats/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/swifta/mats/R.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/symbols/debug/R.txt" afterPath="$PROJECT_DIR$/app/build/intermediates/symbols/debug/R.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/swifta/mats/MiniStatementActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/swifta/mats/MiniStatementActivity.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/swifta/mats/forms/WithdrawMMActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/swifta/mats/forms/WithdrawMMActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/swifta/mats/WithdrawalActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/swifta/mats/WithdrawalActivity.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout/activity_complete_deposit_float.xml" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout/activity_complete_deposit_float.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_complete_deposit_float.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_complete_deposit_float.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout/activity_home.xml" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout/activity_home.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_home.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_home.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout/activity_main.xml" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout/activity_main.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout/activity_mini_statement.xml" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout/activity_mini_statement.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_mini_statement.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_mini_statement.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/dex-cache/cache.xml" afterPath="$PROJECT_DIR$/build/intermediates/dex-cache/cache.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/menu/deposit_float.xml" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/menu/deposit_float.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/menu/deposit_float.xml" afterPath="$PROJECT_DIR$/app/src/main/res/menu/deposit_float.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/values/dimens.xml" afterPath="$PROJECT_DIR$/app/src/main/res/values/dimens.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/menu/float_transfer.xml" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/menu/float_transfer.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/menu/float_transfer.xml" afterPath="$PROJECT_DIR$/app/src/main/res/menu/float_transfer.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/menu/home.xml" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/menu/home.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/menu/home.xml" afterPath="$PROJECT_DIR$/app/src/main/res/menu/home.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/values/color.xml" afterPath="$PROJECT_DIR$/app/src/main/res/values/color.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/menu/main.xml" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/menu/main.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/menu/main.xml" afterPath="$PROJECT_DIR$/app/src/main/res/menu/main.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/outputs/logs/manifest-merger-debug-report.txt" afterPath="$PROJECT_DIR$/app/build/outputs/logs/manifest-merger-debug-report.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeResourcesdebug/merger.xml" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeResourcesdebug/merger.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/values/styles.xml" afterPath="$PROJECT_DIR$/app/src/main/res/values/styles.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values/values.xml" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values/values.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -192,35 +127,33 @@
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/swifta/mats/service/BackgroundServices.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="79" column="44" selection-start-line="79" selection-start-column="42" selection-end-line="79" selection-end-column="44" />
+              <caret line="4" column="30" selection-start-line="4" selection-start-column="30" selection-end-line="4" selection-end-column="30" />
               <folding>
-                <element signature="imports" expanded="false" />
-                <element signature="method#withdrawalDealerAccount#0;class#BackgroundServices#0" expanded="false" />
+                <element signature="e#701#733#0" expanded="true" />
+                <element signature="method#publishResults#0;class#BackgroundServices#0" expanded="false" />
+                <element signature="e#2459#2491#0" expanded="true" />
+                <element signature="method#performLogin#0;class#BackgroundServices#0" expanded="false" />
+                <element signature="e#3767#3799#0" expanded="true" />
+                <element signature="e#6107#6139#0" expanded="true" />
                 <element signature="method#performCompleteDepositFloat#0;class#BackgroundServices#0" expanded="false" />
-                <element signature="method#performDepositFloat#0;class#BackgroundServices#0" expanded="false" />
+                <element signature="e#8162#8194#0" expanded="true" />
+                <element signature="e#10518#10550#0" expanded="true" />
                 <element signature="method#changePassword#0;class#BackgroundServices#0" expanded="false" />
+                <element signature="e#12136#12168#0" expanded="true" />
                 <element signature="method#getMiniStatement#0;class#BackgroundServices#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DepositFloatActivity.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/swifta/mats/forms/DepositFloatActivity.java">
+      <file leaf-file-name="WithdrawMMActivity.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/swifta/mats/forms/WithdrawMMActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.10176991">
-              <caret line="402" column="42" selection-start-line="402" selection-start-column="42" selection-end-line="402" selection-end-column="42" />
+            <state vertical-scroll-proportion="0.7643979">
+              <caret line="211" column="13" selection-start-line="211" selection-start-column="13" selection-end-line="211" selection-end-column="13" />
               <folding>
-                <element signature="method#onCreate#0;class#DepositFloatActivity#0" expanded="false" />
-                <element signature="method#onResume#0;class#DepositFloatActivity#0" expanded="false" />
-                <element signature="method#onPause#0;class#DepositFloatActivity#0" expanded="false" />
-                <element signature="method#onBackPressed#0;class#DepositFloatActivity#0" expanded="false" />
-                <element signature="method#onCreateOptionsMenu#0;class#DepositFloatActivity#0" expanded="false" />
-                <element signature="method#onOptionsItemSelected#0;class#DepositFloatActivity#0" expanded="false" />
-                <element signature="method#onLogoutPressed#0;class#DepositFloatActivity#0" expanded="false" />
-                <element signature="method#logout#0;class#DepositFloatActivity#0" expanded="false" />
-                <element signature="method#uiHandleFailed#0;class#DepositFloatActivity#0" expanded="false" />
-                <element signature="method#reEnterOTP#0;class#DepositFloatActivity#0" expanded="false" />
+                <element signature="method#showForm#0;class#WithdrawMMActivity#0" expanded="false" />
+                <element signature="method#hideForm#0;class#WithdrawMMActivity#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -1711,27 +1644,19 @@
         <option value="$PROJECT_DIR$/app/build.gradle" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/custom_checkbox.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/drawable/accent_button_selector.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/swifta/mats/FloatTransferActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_float_transfer.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_mmoperators.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_withdrawal.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/drawable/white_button_selector.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/swifta/mats/forms/CompleteDepositFloatActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_deposit_float.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/values/color.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_withdraw_mm.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/swifta/mats/util/InternetCheck.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/swifta/mats/util/Constants.java" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_complete_deposit_float.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/swifta/mats/WithdrawalActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/swifta/mats/util/Dealers.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/swifta/mats/MMOperatorsActivity.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/swifta/mats/forms/WithdrawMMActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/menu/float_transfer.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/menu/main.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/menu/home.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/swifta/mats/MainActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/values/dimens.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/menu/account.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/menu/deposit_float.xml" />
@@ -1740,24 +1665,41 @@
         <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/swifta/mats/util/ApiJobs.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/swifta/mats/AccountActivity.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/swifta/mats/service/BackgroundServices.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/values/styles.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/swifta/mats/HomeActivity.java" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_mini_statement.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/mini_statement_item.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_account.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/swifta/mats/MiniStatementActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/swifta/mats/WithdrawalActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/swifta/mats/FloatTransferActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/swifta/mats/forms/DepositFloatActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/values/color.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/swifta/mats/util/Constants.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_mini_statement.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/swifta/mats/forms/CompleteDepositFloatActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/swifta/mats/MainActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/swifta/mats/MiniStatementActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/swifta/mats/forms/WithdrawMMActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/swifta/mats/service/BackgroundServices.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_complete_deposit_float.xml" />
       </list>
+    </option>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="Bundled (Maven 3)" />
+      </MavenGeneralSettings>
     </option>
   </component>
   <component name="NamedScopeManager">
     <order />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="width" value="1280" />
-    <option name="height" value="800" />
+    <option name="x" value="267" />
+    <option name="y" value="23" />
+    <option name="width" value="1013" />
+    <option name="height" value="717" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -1782,6 +1724,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="Scope" />
       <pane id="ProjectPane" />
       <pane id="AndroidView">
@@ -1816,74 +1759,12 @@
               <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="res" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidResFolderNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="layout" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidResFolderTypeNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="mfisaApk" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="java" />
               <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidSourceTypeNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="mats" />
               <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="mfisaApk" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidSourceTypeNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="mats" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="service" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="mfisaApk" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidSourceTypeNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="mats" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="forms" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
@@ -1898,7 +1779,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
       <pane id="Scratches" />
     </panes>
   </component>
@@ -2121,15 +2001,17 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1280" height="800" extended-state="0" />
+    <frame x="267" y="23" width="1013" height="717" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3286119" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Android Model" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
-      <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.7437604" sideWeight="0.8473344" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32853717" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.47920132" sideWeight="0.8473344" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32749742" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.40266222" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.59773374" sideWeight="0.15266559" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33221477" sideWeight="0.5110132" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3286119" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -2141,15 +2023,13 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.21308017" sideWeight="0.4889868" order="1" side_tool="false" content_ui="combo" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19361483" sideWeight="0.4889868" order="1" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3286119" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.328125" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.38472834" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
@@ -2206,15 +2086,12 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="47" />
+      <option name="time" value="61" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_withdraw_mm.xml">
-      <provider selected="true" editor-type-id="android-designer">
-        <state />
-      </provider>
       <provider editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -2227,6 +2104,9 @@
             <element signature="e#15740#16469#0" expanded="false" />
           </folding>
         </state>
+      </provider>
+      <provider selected="true" editor-type-id="android-designer">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/values/color.xml">
@@ -2255,116 +2135,35 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.39050537">
           <caret line="17" column="11" selection-start-line="17" selection-start-column="11" selection-end-line="17" selection-end-column="11" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/my_list.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_mmoperators.xml">
       <provider editor-type-id="android-designer">
         <state />
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_mmoperators.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.5839754">
           <caret line="57" column="47" selection-start-line="57" selection-start-column="47" selection-end-line="57" selection-end-column="47" />
           <folding />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_float_transfer.xml">
-      <provider selected="true" editor-type-id="android-designer">
+      <provider editor-type-id="android-designer">
         <state />
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="46" column="43" selection-start-line="46" selection-start-column="43" selection-end-line="46" selection-end-column="43" />
-          <folding />
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/white_button_selector.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.044247787">
           <caret line="2" column="39" selection-start-line="2" selection-start-column="39" selection-end-line="2" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_deposit_float.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="2.2187982">
-          <caret line="277" column="5" selection-start-line="277" selection-start-column="5" selection-end-line="277" selection-end-column="5" />
-          <folding>
-            <element signature="e#283#316#0" expanded="true" />
-            <element signature="e#341#376#0" expanded="true" />
-            <element signature="e#402#437#0" expanded="true" />
-            <element signature="e#461#494#0" expanded="true" />
-            <element signature="e#564#1164#0" expanded="false" />
-            <element signature="e#882#918#0" expanded="true" />
-            <element signature="e#1036#1059#0" expanded="true" />
-            <element signature="e#1137#1161#0" expanded="true" />
-            <element signature="e#1170#3455#0" expanded="false" />
-            <element signature="e#1379#1415#0" expanded="true" />
-            <element signature="e#1853#1887#0" expanded="true" />
-            <element signature="e#1950#1971#0" expanded="true" />
-            <element signature="e#2054#2078#0" expanded="true" />
-            <element signature="e#2504#2538#0" expanded="true" />
-            <element signature="e#2601#2622#0" expanded="true" />
-            <element signature="e#2697#2721#0" expanded="true" />
-            <element signature="e#3152#3186#0" expanded="true" />
-            <element signature="e#3249#3275#0" expanded="true" />
-            <element signature="e#3350#3374#0" expanded="true" />
-            <element signature="e#3461#4777#0" expanded="false" />
-            <element signature="e#3713#3749#0" expanded="true" />
-            <element signature="e#4013#4035#0" expanded="true" />
-            <element signature="e#4075#4097#0" expanded="true" />
-            <element signature="e#4226#4242#0" expanded="true" />
-            <element signature="e#4482#4504#0" expanded="true" />
-            <element signature="e#4544#4566#0" expanded="true" />
-            <element signature="e#4696#4708#0" expanded="true" />
-            <element signature="e#4783#6476#0" expanded="false" />
-            <element signature="e#5038#5074#0" expanded="true" />
-            <element signature="e#5498#5534#0" expanded="true" />
-            <element signature="e#5671#5686#0" expanded="true" />
-            <element signature="e#5772#5796#0" expanded="true" />
-            <element signature="e#6161#6195#0" expanded="true" />
-            <element signature="e#6258#6287#0" expanded="true" />
-            <element signature="e#6370#6394#0" expanded="true" />
-            <element signature="e#6482#7071#0" expanded="false" />
-            <element signature="e#6745#6781#0" expanded="true" />
-            <element signature="e#7077#7660#0" expanded="false" />
-            <element signature="e#7334#7370#0" expanded="true" />
-            <element signature="e#7877#7913#0" expanded="true" />
-            <element signature="e#8324#8739#0" expanded="false" />
-            <element signature="e#8605#8626#0" expanded="true" />
-            <element signature="e#8712#8736#0" expanded="true" />
-            <element signature="e#9026#9062#0" expanded="true" />
-            <element signature="e#9267#9286#0" expanded="true" />
-            <element signature="e#9373#9395#0" expanded="true" />
-            <element signature="e#9435#9457#0" expanded="true" />
-            <element signature="e#9586#9602#0" expanded="true" />
-            <element signature="e#9745#9764#0" expanded="true" />
-            <element signature="e#9852#9874#0" expanded="true" />
-            <element signature="e#9914#9936#0" expanded="true" />
-            <element signature="e#10066#10083#0" expanded="true" />
-            <element signature="e#10414#10450#0" expanded="true" />
-            <element signature="e#10805#10817#0" expanded="true" />
-            <element signature="e#11148#11184#0" expanded="true" />
-            <element signature="e#11538#11552#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -2375,37 +2174,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/swifta/mats/forms/CompleteDepositFloatActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="32" column="13" selection-start-line="32" selection-start-column="13" selection-end-line="32" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/swifta/mats/adapters/PreviewListAdapter.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.088495575">
           <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_complete_deposit_float.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5084746">
-          <caret line="22" column="10" selection-start-line="22" selection-start-column="10" selection-end-line="22" selection-end-column="10" />
-          <folding>
-            <element signature="e#2343#2989#0" expanded="false" />
-            <element signature="e#3016#3538#0" expanded="false" />
-            <element signature="e#3544#4638#0" expanded="false" />
-            <element signature="e#4644#5983#0" expanded="false" />
-            <element signature="e#5989#6725#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -2438,22 +2210,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.33211678">
           <caret line="3054" column="19" selection-start-line="3054" selection-start-column="19" selection-end-line="3054" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/color.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.6097561">
-          <caret line="4" column="40" selection-start-line="4" selection-start-column="40" selection-end-line="4" selection-end-column="40" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_withdraw_mm.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.113680154">
           <caret line="4" column="23" selection-start-line="4" selection-start-column="23" selection-end-line="4" selection-end-column="23" />
@@ -2467,27 +2227,30 @@
           </folding>
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_withdrawal.xml">
-      <provider selected="true" editor-type-id="android-designer">
+      <provider editor-type-id="android-designer">
         <state />
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_withdrawal.xml">
       <provider editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="21" column="50" selection-start-line="21" selection-start-column="50" selection-end-line="21" selection-end-column="50" />
           <folding />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
-      <provider editor-type-id="android-designer">
+      <provider selected="true" editor-type-id="android-designer">
         <state />
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.028901733">
           <caret line="1" column="4" selection-start-line="1" selection-start-column="4" selection-end-line="1" selection-end-column="61" />
           <folding />
         </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/values/dimens.xml">
@@ -2502,7 +2265,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.35433072">
           <caret line="18778" column="0" selection-start-line="18778" selection-start-column="0" selection-end-line="18778" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2524,6 +2286,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.33333334">
           <caret line="66" column="0" selection-start-line="66" selection-start-column="0" selection-end-line="66" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -2531,16 +2294,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.3323124">
           <caret line="111" column="0" selection-start-line="111" selection-start-column="0" selection-end-line="111" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/swifta/mats/MainActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6460177">
-          <caret line="195" column="0" selection-start-line="195" selection-start-column="0" selection-end-line="195" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -2601,14 +2354,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/swifta/mats/util/Constants.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.55309737">
-          <caret line="25" column="35" selection-start-line="25" selection-start-column="35" selection-end-line="25" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.71246004">
@@ -2626,151 +2371,120 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_home.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.42307693">
           <caret line="118" column="53" selection-start-line="118" selection-start-column="53" selection-end-line="118" selection-end-column="53" />
           <folding />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/swifta/mats/HomeActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.55130166">
-          <caret line="65" column="11" selection-start-line="65" selection-start-column="11" selection-end-line="65" selection-end-column="11" />
-          <folding>
-            <element signature="e#1477#1767#0" expanded="true" />
-            <element signature="e#1766#1767#0" expanded="true" />
-            <element signature="e#1818#2111#0" expanded="true" />
-            <element signature="e#2110#2111#0" expanded="true" />
-            <element signature="e#2166#2395#0" expanded="true" />
-            <element signature="e#2394#2395#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/mini_statement_item.xml">
       <provider editor-type-id="android-designer">
         <state />
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/mini_statement_item.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.5769231">
           <caret line="24" column="38" selection-start-line="24" selection-start-column="38" selection-end-line="24" selection-end-column="38" />
           <folding />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_mini_statement.xml">
       <provider editor-type-id="android-designer">
         <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.52884614">
-          <caret line="22" column="42" selection-start-line="22" selection-start-column="42" selection-end-line="22" selection-end-column="42" />
-          <folding>
-            <element signature="e#1235#1268#0" expanded="true" />
-            <element signature="e#1298#1320#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/swifta/mats/WithdrawalActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.21898928">
-          <caret line="65" column="28" selection-start-line="65" selection-start-column="28" selection-end-line="65" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/swifta/mats/MMOperatorsActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.39050537">
-          <caret line="82" column="25" selection-start-line="82" selection-start-column="17" selection-end-line="82" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/swifta/mats/forms/WithdrawMMActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="125" column="27" selection-start-line="125" selection-start-column="27" selection-end-line="125" selection-end-column="27" />
-          <folding>
-            <element signature="method#showForm#0;class#WithdrawMMActivity#0" expanded="false" />
-            <element signature="method#hideForm#0;class#WithdrawMMActivity#0" expanded="false" />
-          </folding>
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/swifta/mats/AccountActivity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.022970904">
           <caret line="75" column="24" selection-start-line="75" selection-start-column="20" selection-end-line="75" selection-end-column="24" />
-          <folding>
-            <element signature="method#onOptionsItemSelected#0;class#AccountActivity#0" expanded="false" />
-            <element signature="method#confirmLogout#0;class#AccountActivity#0" expanded="false" />
-            <element signature="method#logout#0;class#AccountActivity#0" expanded="false" />
-            <element signature="method#processEditText#0;class#AccountActivity#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_account.xml">
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_float_transfer.xml">
+      <provider editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="46" column="43" selection-start-line="46" selection-start-column="43" selection-end-line="46" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
       <provider selected="true" editor-type-id="android-designer">
         <state />
       </provider>
-      <provider editor-type-id="text-editor">
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_deposit_float.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.670262">
+          <caret line="277" column="5" selection-start-line="277" selection-start-column="5" selection-end-line="277" selection-end-column="5" />
+          <folding>
+            <element signature="e#564#1164#0" expanded="false" />
+            <element signature="e#1170#3455#0" expanded="false" />
+            <element signature="e#3461#4777#0" expanded="false" />
+            <element signature="e#4783#6476#0" expanded="false" />
+            <element signature="e#6482#7071#0" expanded="false" />
+            <element signature="e#7077#7660#0" expanded="false" />
+            <element signature="e#8324#8739#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/swifta/mats/HomeActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5514834">
+          <caret line="65" column="0" selection-start-line="65" selection-start-column="0" selection-end-line="65" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/swifta/mats/WithdrawalActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="6" column="43" selection-start-line="6" selection-start-column="43" selection-end-line="6" selection-end-column="43" />
-          <folding />
+          <caret line="84" column="34" selection-start-line="84" selection-start-column="34" selection-end-line="84" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/swifta/mats/MMOperatorsActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="82" column="25" selection-start-line="82" selection-start-column="17" selection-end-line="82" selection-end-column="25" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/swifta/mats/FloatTransferActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33158812">
+        <state vertical-scroll-proportion="0.6202144">
           <caret line="46" column="5" selection-start-line="46" selection-start-column="5" selection-end-line="46" selection-end-column="5" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/swifta/mats/MiniStatementActivity.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/color.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.0820245">
-          <caret line="57" column="62" selection-start-line="57" selection-start-column="62" selection-end-line="57" selection-end-column="62" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#onCreateOptionsMenu#0;class#MiniStatementActivity#0" expanded="false" />
-            <element signature="method#onOptionsItemSelected#0;class#MiniStatementActivity#0" expanded="false" />
-            <element signature="e#7001#7002#0" expanded="true" />
-            <element signature="method#logout#0;class#MiniStatementActivity#0" expanded="false" />
-            <element signature="method#onPause#0;class#MiniStatementActivity#0" expanded="false" />
-          </folding>
+        <state vertical-scroll-proportion="0.091883615">
+          <caret line="4" column="40" selection-start-line="4" selection-start-column="40" selection-end-line="4" selection-end-column="40" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/swifta/mats/service/BackgroundServices.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_mini_statement.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="79" column="44" selection-start-line="79" selection-start-column="42" selection-end-line="79" selection-end-column="44" />
+        <state vertical-scroll-proportion="0.60096157">
+          <caret line="25" column="20" selection-start-line="25" selection-start-column="20" selection-end-line="25" selection-end-column="20" />
           <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="method#withdrawalDealerAccount#0;class#BackgroundServices#0" expanded="false" />
-            <element signature="method#performCompleteDepositFloat#0;class#BackgroundServices#0" expanded="false" />
-            <element signature="method#performDepositFloat#0;class#BackgroundServices#0" expanded="false" />
-            <element signature="method#changePassword#0;class#BackgroundServices#0" expanded="false" />
-            <element signature="method#getMiniStatement#0;class#BackgroundServices#0" expanded="false" />
+            <element signature="e#1235#1268#0" expanded="true" />
+            <element signature="e#1294#1316#0" expanded="true" />
           </folding>
         </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/swifta/mats/forms/DepositFloatActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.10176991">
-          <caret line="402" column="42" selection-start-line="402" selection-start-column="42" selection-end-line="402" selection-end-column="42" />
+        <state vertical-scroll-proportion="0.34031415">
+          <caret line="88" column="59" selection-start-line="88" selection-start-column="59" selection-end-line="88" selection-end-column="59" />
           <folding>
-            <element signature="method#onCreate#0;class#DepositFloatActivity#0" expanded="false" />
             <element signature="method#onResume#0;class#DepositFloatActivity#0" expanded="false" />
             <element signature="method#onPause#0;class#DepositFloatActivity#0" expanded="false" />
             <element signature="method#onBackPressed#0;class#DepositFloatActivity#0" expanded="false" />
@@ -2779,7 +2493,127 @@
             <element signature="method#onLogoutPressed#0;class#DepositFloatActivity#0" expanded="false" />
             <element signature="method#logout#0;class#DepositFloatActivity#0" expanded="false" />
             <element signature="method#uiHandleFailed#0;class#DepositFloatActivity#0" expanded="false" />
-            <element signature="method#reEnterOTP#0;class#DepositFloatActivity#0" expanded="false" />
+            <element signature="method#uiHandleSuccess#0;class#DepositFloatActivity#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_account.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.16544117">
+          <caret line="6" column="33" selection-start-line="6" selection-start-column="33" selection-end-line="6" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/swifta/mats/util/Constants.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.2617801">
+          <caret line="10" column="85" selection-start-line="10" selection-start-column="85" selection-end-line="10" selection-end-column="85" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/swifta/mats/MiniStatementActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="4.3193717">
+          <caret line="204" column="34" selection-start-line="204" selection-start-column="34" selection-end-line="204" selection-end-column="34" />
+          <folding>
+            <element signature="method#getTimeFromDate#0;class#MiniStatementActivity#0" expanded="false" />
+            <element signature="method#onBackPressed#0;class#MiniStatementActivity#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/swifta/mats/MainActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.2809774">
+          <caret line="81" column="44" selection-start-line="81" selection-start-column="44" selection-end-line="81" selection-end-column="44" />
+          <folding>
+            <element signature="e#4341#6066#0" expanded="true" />
+            <element signature="e#6065#6066#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/swifta/mats/service/BackgroundServices.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="4" column="30" selection-start-line="4" selection-start-column="30" selection-end-line="4" selection-end-column="30" />
+          <folding>
+            <element signature="e#701#733#0" expanded="true" />
+            <element signature="method#publishResults#0;class#BackgroundServices#0" expanded="false" />
+            <element signature="e#2459#2491#0" expanded="true" />
+            <element signature="method#performLogin#0;class#BackgroundServices#0" expanded="false" />
+            <element signature="e#3767#3799#0" expanded="true" />
+            <element signature="e#6107#6139#0" expanded="true" />
+            <element signature="method#performCompleteDepositFloat#0;class#BackgroundServices#0" expanded="false" />
+            <element signature="e#8162#8194#0" expanded="true" />
+            <element signature="e#10518#10550#0" expanded="true" />
+            <element signature="method#changePassword#0;class#BackgroundServices#0" expanded="false" />
+            <element signature="e#12136#12168#0" expanded="true" />
+            <element signature="method#getMiniStatement#0;class#BackgroundServices#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_complete_deposit_float.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.41360295">
+          <caret line="71" column="17" selection-start-line="71" selection-start-column="17" selection-end-line="71" selection-end-column="17" />
+          <folding>
+            <element signature="e#572#1180#0" expanded="false" />
+            <element signature="e#1186#3011#0" expanded="false" />
+            <element signature="e#2344#2990#0" expanded="false" />
+            <element signature="e#3538#4632#0" expanded="false" />
+            <element signature="e#3749#3785#0" expanded="true" />
+            <element signature="e#4477#4498#0" expanded="true" />
+            <element signature="e#4584#4608#0" expanded="true" />
+            <element signature="e#4638#5977#0" expanded="false" />
+            <element signature="e#4898#4934#0" expanded="true" />
+            <element signature="e#5201#5223#0" expanded="true" />
+            <element signature="e#5263#5285#0" expanded="true" />
+            <element signature="e#5414#5428#0" expanded="true" />
+            <element signature="e#5571#5590#0" expanded="true" />
+            <element signature="e#5678#5700#0" expanded="true" />
+            <element signature="e#5740#5762#0" expanded="true" />
+            <element signature="e#6240#6276#0" expanded="true" />
+            <element signature="e#6631#6645#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/swifta/mats/forms/CompleteDepositFloatActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.71428573">
+          <caret line="172" column="17" selection-start-line="172" selection-start-column="8" selection-end-line="172" selection-end-column="17" />
+          <folding>
+            <element signature="method#onCreate#0;class#CompleteDepositFloatActivity#0" expanded="false" />
+            <element signature="method#onResume#0;class#CompleteDepositFloatActivity#0" expanded="false" />
+            <element signature="method#onPause#0;class#CompleteDepositFloatActivity#0" expanded="false" />
+            <element signature="method#onBackPressed#0;class#CompleteDepositFloatActivity#0" expanded="false" />
+            <element signature="method#onCreateOptionsMenu#0;class#CompleteDepositFloatActivity#0" expanded="false" />
+            <element signature="method#onOptionsItemSelected#0;class#CompleteDepositFloatActivity#0" expanded="false" />
+            <element signature="method#onLogoutPressed#0;class#CompleteDepositFloatActivity#0" expanded="false" />
+            <element signature="method#logout#0;class#CompleteDepositFloatActivity#0" expanded="false" />
+            <element signature="method#reEnterOTP#0;class#CompleteDepositFloatActivity#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/swifta/mats/forms/WithdrawMMActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7643979">
+          <caret line="211" column="13" selection-start-line="211" selection-start-column="13" selection-end-line="211" selection-end-column="13" />
+          <folding>
+            <element signature="method#showForm#0;class#WithdrawMMActivity#0" expanded="false" />
+            <element signature="method#hideForm#0;class#WithdrawMMActivity#0" expanded="false" />
           </folding>
         </state>
       </provider>

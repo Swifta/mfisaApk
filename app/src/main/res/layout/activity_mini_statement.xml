@@ -23,16 +23,16 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginTop="30dp" />
-
-            <TextView
-                android:id="@+id/no_statement"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_margin="@dimen/activity_vertical_margin"
-                android:text="@string/no_statement"
-                android:visibility="gone" />
         </LinearLayout>
+
+        <TextView
+            android:id="@+id/no_statement"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/activity_vertical_margin"
+            android:text="@string/no_statement"
+            android:visibility="gone" />
     </LinearLayout>
 
 

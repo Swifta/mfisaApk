@@ -3,7 +3,6 @@ package com.swifta.mats.service;
 import android.annotation.SuppressLint;
 import android.app.IntentService;
 import android.content.Intent;
-import android.util.Log;
 
 import com.swifta.mats.util.ApiJobs;
 import com.swifta.mats.util.Constants;
@@ -88,11 +87,7 @@ public class BackgroundServices extends IntentService {
 
         try {
             url += "username=" + obj.getString("username") + "&password=" + obj.getString("password");
-            // HttpResponse response = httpclient.execute(new HttpPost(url));
-
             HttpPost httpPost = new HttpPost(url);
-            //httpPost.setEntity(new UrlEncodedFormEntity(nameValuePair));
-
             HttpResponse response = httpclient.execute(httpPost);
 
             int status = response.getStatusLine().getStatusCode();
@@ -100,11 +95,9 @@ public class BackgroundServices extends IntentService {
             if (status == 200) {
                 result = EntityUtils.toString(response.getEntity());
             } else {
-                result = "Cannot Process Request, Try again(" + status + ")";
+                result = "Cannot process your request. Please try again";
             }
             this.reponseContent = result;
-            //System.out.println("Status = "+status+" and "+result);
-
         } catch (Exception e) {
             // TODO Auto-generated catch block
             e.printStackTrace();
@@ -116,15 +109,8 @@ public class BackgroundServices extends IntentService {
     @SuppressLint("DefaultLocale")
     @SuppressWarnings("deprecation")
     private void withdrawalDealerAccount(JSONObject obj) {
-        String url = Constants.API_URL + "perform/cashoutrequest";
+        String url = Constants.API_URL + "service/cashoutrequest";
         try {
-            //url+="?receiver="+obj.getString("receiver").toLowerCase()+"&amount="+
-            //		obj.getInt("amount")+"&orginatingresourceid="+obj.getString("mmo")+
-            //		"&reference="+obj.getString("reference").replace(" ", "%20")+
-            //		"&agentId="+obj.getString("agentId")+
-            //		"&agentPin="+obj.getString("agentPin")+
-            //		"&teasypin="+obj.getInt("teasypin")+
-            //		"&transactionType=cashout";
 
             url += "?orginatingresourceid=" + obj.getString("mmo") +
                     "&destinationresourceid=" + obj.getString("agentId") +
@@ -135,8 +121,6 @@ public class BackgroundServices extends IntentService {
                     "&paymentreference=" + obj.getString("receiver") +
                     "&teasypin=" + obj.getInt("teasypin");
 
-            System.out.println(url);
-
             HttpParams httpParameters = new BasicHttpParams();
             int timeoutConnection = 10000;
             HttpConnectionParams.setConnectionTimeout(httpParameters, timeoutConnection);
@@ -144,12 +128,8 @@ public class BackgroundServices extends IntentService {
             HttpConnectionParams.setSoTimeout(httpParameters, timeoutSocket);
 
             httpclient = new DefaultHttpClient(httpParameters);
-
             HttpPost httpPost = new HttpPost(url);
-            //httpPost.setEntity(new UrlEncodedFormEntity(nameValuePair));
-
             HttpResponse response = httpclient.execute(httpPost);
-            Log.d("Http Post Response:", response.toString());
 
             int status = response.getStatusLine().getStatusCode();
             String result = "";
@@ -180,7 +160,7 @@ public class BackgroundServices extends IntentService {
     @SuppressLint("DefaultLocale")
     @SuppressWarnings("deprecation")
     private void performCompleteDepositFloat(JSONObject obj) {
-        String url = Constants.API_URL + "perform/depositcompleterequest";
+        String url = Constants.API_URL + "service/floatrequestcompleted";
         try {
             url += "?orginatingresourceid=" + obj.getString("username").toLowerCase() + "&destinationresourceid=" +
                     obj.getString("dealer") + "&amount=" + obj.getString("amount") +
@@ -197,10 +177,7 @@ public class BackgroundServices extends IntentService {
             httpclient = new DefaultHttpClient(httpParameters);
 
             HttpPost httpPost = new HttpPost(url);
-            //httpPost.setEntity(new UrlEncodedFormEntity(nameValuePair));
-
             HttpResponse response = httpclient.execute(httpPost);
-            Log.d("Http Post Response:", response.toString());
 
             int status = response.getStatusLine().getStatusCode();
             String result = "";
@@ -212,14 +189,12 @@ public class BackgroundServices extends IntentService {
                 myResponse.put("message", "okay");
                 myResponse.put("psa", new JSONObject(result));
             } else {
-                result = "Cannot Process Request, Try again(" + status + ") and " + EntityUtils.toString(response.getEntity());
+                result = "Cannot process your request, please try again.";
                 myResponse.put("success", false);
                 myResponse.put("message", result);
                 myResponse.put("psa", "{}");
             }
             this.reponseContent = myResponse.toString();
-            System.out.println("Status = " + status + " and " + result);
-
         } catch (Exception e) {
             // TODO Auto-generated catch block
             e.printStackTrace();
@@ -230,23 +205,9 @@ public class BackgroundServices extends IntentService {
 
     @SuppressWarnings("deprecation")
     private void performDepositFloat(JSONObject obj) {
-        String url = Constants.API_URL + "perform/generateotp";
+        String url = Constants.API_URL + "service/floattransfer";
 
         try {
-/*			List<NameValuePair> nameValuePair = new ArrayList<NameValuePair>(10);
-            nameValuePair.add(new BasicNameValuePair("orginatingresourceid", obj.getString("username").toLowerCase()));
-			nameValuePair.add(new BasicNameValuePair("destinationresourceid", obj.getString("dealer")));
-			nameValuePair.add(new BasicNameValuePair("amount", obj.getString("amount")));			
-			nameValuePair.add(new BasicNameValuePair("sendingdescription", 
-					obj.getString("description").replace(" ", "%20")));
-			nameValuePair.add(new BasicNameValuePair("receivingdescription", 
-					Constants.RECEIVING_DESCRIPTION.replace(" ", "%20")));
-			nameValuePair.add(new BasicNameValuePair("agentpassword", obj.getString("password")));
-			nameValuePair.add(new BasicNameValuePair("transactiontypeid", Constants.TRANSACTION_TYPE_ID));
-			nameValuePair.add(new BasicNameValuePair("transactionid", Constants.TRANSACTION_ID));
-			nameValuePair.add(new BasicNameValuePair("transactionchannelid", Constants.TRANSACTION_CHANNEL_ID));
-			nameValuePair.add(new BasicNameValuePair("transactionstatusid", Constants.TRANSACTION_STATUS_ID));*/
-
             url += "?orginatingresourceid=" + obj.getString("username").toLowerCase() + "&destinationresourceid=" +
                     obj.getString("dealer") + "&amount=" + obj.getString("amount") + "&sendingdescription=" +
                     obj.getString("description").replace(" ", "%20") + "&receivingdescription=" +
@@ -263,10 +224,8 @@ public class BackgroundServices extends IntentService {
             httpclient = new DefaultHttpClient(httpParameters);
 
             HttpPost httpPost = new HttpPost(url);
-            //httpPost.setEntity(new UrlEncodedFormEntity(nameValuePair));
 
             HttpResponse response = httpclient.execute(httpPost);
-            Log.d("Http Post Response:", response.toString());
 
             int status = response.getStatusLine().getStatusCode();
             String result = "";
@@ -278,14 +237,12 @@ public class BackgroundServices extends IntentService {
                 myResponse.put("message", "okay");
                 myResponse.put("psa", new JSONObject(result));
             } else {
-                result = "Cannot Process Request, Try again(" + status + ") and " + EntityUtils.toString(response.getEntity());
+                result = "We cannot process your request, please try again.";
                 myResponse.put("success", false);
                 myResponse.put("message", result);
                 myResponse.put("psa", "{}");
             }
             this.reponseContent = myResponse.toString();
-            //System.out.println("Status = "+status+" and "+result);
-
         } catch (Exception e) {
             // TODO Auto-generated catch block
             e.printStackTrace();
@@ -347,11 +304,7 @@ public class BackgroundServices extends IntentService {
 
         try {
             url += "?orginatingresourceid=" + obj.getString("username");
-            // HttpResponse response = httpclient.execute(new HttpPost(url));
-
             HttpPost httpPost = new HttpPost(url);
-            //httpPost.setEntity(new UrlEncodedFormEntity(nameValuePair));
-
             HttpResponse response = httpclient.execute(httpPost);
 
             int status = response.getStatusLine().getStatusCode();
@@ -362,8 +315,6 @@ public class BackgroundServices extends IntentService {
                 result = "Cannot process request. Please try again(" + status + ")";
             }
             this.reponseContent = result;
-            //System.out.println("Status = "+status+" and "+result);
-
         } catch (Exception e) {
             // TODO Auto-generated catch block
             e.printStackTrace();

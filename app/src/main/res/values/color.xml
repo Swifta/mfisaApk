@@ -2,7 +2,7 @@
 <resources>
     <color name="red">#FF0000</color>
     <color name="orange">#FF7D00</color>
-    <color name="yellow">#FFFF00</color>
+    <color name="yellow">#dede03</color>
     <color name="btn_green">#0E4864</color>
     <color name="blue">#1D99D4</color>
     <color name="black">#000000</color>

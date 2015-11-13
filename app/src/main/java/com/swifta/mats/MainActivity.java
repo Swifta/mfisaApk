@@ -79,7 +79,7 @@ public class MainActivity extends AppCompatActivity {
             } catch (JSONException e) {
                 // TODO Auto-generated catch block
                 e.printStackTrace();
-                Toast.makeText(self, "Request cannot be completed, please try again.", Toast.LENGTH_LONG).show();
+                Toast.makeText(self, "Your request cannot be completed, please try again.", Toast.LENGTH_LONG).show();
             } finally {
                 if (!status) {
                     formFrame.setVisibility(View.VISIBLE);
