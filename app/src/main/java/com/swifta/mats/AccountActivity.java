@@ -51,6 +51,8 @@ public class AccountActivity extends AppCompatActivity {
         public void onReceive(Context context, Intent intent) {
             // TODO Auto-generated method stub
 
+            progressDialog.hide();
+
             try {
                 Bundle bundle = intent.getExtras();
 
@@ -59,7 +61,7 @@ public class AccountActivity extends AppCompatActivity {
                 JSONObject finalJson = responseJson2.getJSONObject("TransactionResponse");
                 status = finalJson.getString("responsemessage");
 
-                if (status.equals("PASSWORD_RESET_WAS_SUCCESSFUL")) {
+                if (status.equals(Constants.PASSWORD_RESET_WAS_SUCCESSFUL)) {
                     SharedPreferences sharedPref = self.getSharedPreferences(Constants.STORE_USERNAME_KEY,
                             Context.MODE_PRIVATE);
                     SharedPreferences.Editor edit = sharedPref.edit();
@@ -67,21 +69,22 @@ public class AccountActivity extends AppCompatActivity {
                     edit.apply();
 
                     // Changes activity after saving the username and password
-                    progressDialog.hide();
                     frame.setVisibility(View.GONE);
 
-                    Toast.makeText(self, String.valueOf("Your password has been changed successfully.\n Your new password is " + newpassword),
+                    Toast.makeText(self, getResources().getString(R.string.successful_password_change) + newpassword,
                             Toast.LENGTH_LONG).show();
                     changePassword.setVisibility(View.VISIBLE);
                     busy = false;
                 } else {
-                    Toast.makeText(self, "Password change was unsuccessful. Please try again.",
+                    Toast.makeText(self, getResources().getString(R.string.unsuccessful_password_change),
                             Toast.LENGTH_LONG).show();
                 }
             } catch (JSONException e) {
                 // TODO Auto-generated catch block
                 e.printStackTrace();
-                Toast.makeText(self, "Request cannot be completed, please try again.", Toast.LENGTH_LONG).show();
+                Toast.makeText(self, getResources().getString(R.string.retry_uncompleted_request), Toast.LENGTH_LONG).show();
+            } finally {
+                busy = false;
             }
         }
     };
@@ -106,13 +109,12 @@ public class AccountActivity extends AppCompatActivity {
 
         SharedPreferences sharedPref = self.getSharedPreferences(Constants.STORE_USERNAME_KEY,
                 Context.MODE_PRIVATE);
-        username = sharedPref.getString("username", "UNKNOWN");
-        oldpassword = sharedPref.getString("password", "UNKNOWN");
+        username = sharedPref.getString("username", Constants.UNKNOWN);
+        oldpassword = sharedPref.getString("password", Constants.UNKNOWN);
 
         accountName.setText(username);
 
         changePassword.setOnClickListener(new View.OnClickListener() {
-
             @Override
             public void onClick(View v) {
                 // TODO Auto-generated method stub
@@ -126,25 +128,28 @@ public class AccountActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (processEditText()) {
+                    if (com.swifta.mats.util.InternetCheck.isNetworkAvailable(self)) {
+                        progressDialog = new ProgressDialog(self);
+                        progressDialog.setMessage("Changing password...");
+                        progressDialog.show();
 
-                    progressDialog = new ProgressDialog(self);
-                    progressDialog.setMessage("Changing password...");
-                    progressDialog.show();
-
-                    JSONObject data = new JSONObject();
-                    try {
-                        data.put("username", username);
-                        data.put("newpassword", newpassword);
-                        data.put("oldpassword", oldpassword);
-                    } catch (JSONException e) {
-                        // TODO Auto-generated catch block
-                        e.printStackTrace();
+                        JSONObject data = new JSONObject();
+                        try {
+                            data.put("username", username);
+                            data.put("newpassword", newpassword);
+                            data.put("oldpassword", oldpassword);
+                        } catch (JSONException e) {
+                            // TODO Auto-generated catch block
+                            e.printStackTrace();
+                        }
+                        Intent intent = new Intent(self, BackgroundServices.class);
+                        intent.putExtra(Constants.JOB_IDENTITY, ApiJobs.CHANGE_PASSWORD);
+                        intent.putExtra(Constants.JOB_DATA, data.toString());
+                        startService(intent);
+                        busy = true;
+                    } else {
+                        Toast.makeText(self, getResources().getString(R.string.internet_connection_error), Toast.LENGTH_LONG).show();
                     }
-                    Intent intent = new Intent(self, BackgroundServices.class);
-                    intent.putExtra(Constants.JOB_IDENTITY, ApiJobs.CHANGE_PASSWORD);
-                    intent.putExtra(Constants.JOB_DATA, data.toString());
-                    startService(intent);
-                    busy = true;
                 }
             }
         });
@@ -200,7 +205,7 @@ public class AccountActivity extends AppCompatActivity {
     }
 
     private void logout() {
-        Intent actIntent = new Intent(self, MainActivity.class);
+        Intent actIntent = new Intent(self, LoginActivity.class);
         actIntent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
         startActivity(actIntent);
         finish();
@@ -213,13 +218,13 @@ public class AccountActivity extends AppCompatActivity {
         newpassword = passwordText.getText().toString();
 
         if (newpassword.matches("")) {
-            passwordError.setError("Please type your new password.");
+            passwordError.setError(getResources().getString(R.string.empty_credentials));
             return false;
         } else if (newpassword.length() < 5) {
-            passwordError.setError("Your password length should be greater than 5. Please check and try again.");
+            passwordError.setError(getResources().getString(R.string.short_password));
             return false;
         } else if (newpassword.length() > 30) {
-            passwordError.setError("Your password length should be less than 30. Please check and try again.");
+            passwordError.setError(getResources().getString(R.string.long_password));
             return false;
         } else {
             return true;
@@ -241,7 +246,7 @@ public class AccountActivity extends AppCompatActivity {
     @Override
     public void onBackPressed() {
         if (busy) {
-            Toast.makeText(self, "Currently processing a request. Please wait...", Toast.LENGTH_LONG).show();
+            Toast.makeText(self, getResources().getString(R.string.processing_request), Toast.LENGTH_LONG).show();
         } else {
             finish();
         }

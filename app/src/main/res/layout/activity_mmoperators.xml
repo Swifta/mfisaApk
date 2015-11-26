@@ -80,6 +80,18 @@
                 android:background="@drawable/accent_button_selector"
                 android:text="@string/paga"
                 android:textColor="@color/white" />
+
+            <Button
+                android:id="@+id/fortis"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/btn_height"
+                android:layout_marginBottom="@dimen/btn_separator"
+                android:layout_marginEnd="@dimen/btn_separator"
+                android:layout_marginRight="@dimen/btn_separator"
+                android:background="@drawable/accent_button_selector"
+                android:text="@string/fortis"
+                android:textColor="@color/white" />
+
         </LinearLayout>
 
     </ScrollView>

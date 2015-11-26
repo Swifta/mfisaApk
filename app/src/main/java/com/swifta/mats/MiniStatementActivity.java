@@ -39,10 +39,8 @@ public class MiniStatementActivity extends AppCompatActivity {
         @Override
         public void onReceive(Context context, Intent intent) {
             // TODO Auto-generated method stub
-
             try {
                 Bundle bundle = intent.getExtras();
-
                 JSONObject responseJson = new JSONObject(bundle.getString(Constants.JOB_RESPONSE, "{}"));
                 JSONObject responseJson2 = responseJson.getJSONObject("TransactionResponses");
 
@@ -84,6 +82,9 @@ public class MiniStatementActivity extends AppCompatActivity {
                             case "FAILED":
                                 status.setTextColor(ContextCompat.getColor(self, android.R.color.holo_red_dark));
                                 break;
+                            case "NOT_ENOUGH_FUNDS":
+                                status.setTextColor(ContextCompat.getColor(self, android.R.color.holo_red_dark));
+                                break;
                             default:
                                 status.setTextColor(ContextCompat.getColor(self, android.R.color.black));
                         }
@@ -119,7 +120,7 @@ public class MiniStatementActivity extends AppCompatActivity {
 
         SharedPreferences sharedPref = self.getSharedPreferences(Constants.STORE_USERNAME_KEY,
                 Context.MODE_PRIVATE);
-        String username = sharedPref.getString("username", "UNKNOWN");
+        String username = sharedPref.getString("username", Constants.UNKNOWN);
 
         JSONObject data = new JSONObject();
         try {
@@ -164,7 +165,7 @@ public class MiniStatementActivity extends AppCompatActivity {
      */
     public void confirmLogout() {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        builder.setMessage("Do you want to logout?")
+        builder.setMessage(getResources().getString(R.string.logout_confirmation))
                 .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
 
                     @Override
@@ -186,7 +187,7 @@ public class MiniStatementActivity extends AppCompatActivity {
     }
 
     private void logout() {
-        Intent actIntent = new Intent(self, MainActivity.class);
+        Intent actIntent = new Intent(self, LoginActivity.class);
         actIntent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
         startActivity(actIntent);
         finish();
@@ -228,7 +229,7 @@ public class MiniStatementActivity extends AppCompatActivity {
     @Override
     public void onBackPressed() {
         if (busy) {
-            Toast.makeText(self, "Currently processing a request. Please wait...", Toast.LENGTH_LONG).show();
+            Toast.makeText(self, getResources().getString(R.string.processing_request), Toast.LENGTH_LONG).show();
         } else {
             finish();
         }

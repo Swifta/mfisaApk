@@ -38,6 +38,21 @@
             android:layout_height="wrap_content">
 
             <EditText
+                android:id="@+id/dealer_rc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_vertical_padding"
+                android:ems="10"
+                android:hint="@string/dealer_account"
+                android:inputType="text"
+                android:textSize="@dimen/input_font_size" />
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
                 android:id="@+id/subscriber_number_rc"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -112,6 +127,21 @@
             android:layout_height="wrap_content">
 
             <EditText
+                android:id="@+id/dealer_fets"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_vertical_padding"
+                android:ems="10"
+                android:hint="@string/dealer_account"
+                android:inputType="text"
+                android:textSize="@dimen/input_font_size" />
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
                 android:id="@+id/subscriber_number_fets"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -179,6 +209,21 @@
         android:gravity="center"
         android:orientation="vertical"
         android:visibility="gone">
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/dealer_teasy"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_vertical_padding"
+                android:ems="10"
+                android:hint="@string/dealer_account"
+                android:inputType="text"
+                android:textSize="@dimen/input_font_size" />
+        </android.support.design.widget.TextInputLayout>
 
         <android.support.design.widget.TextInputLayout
             android:layout_width="match_parent"
@@ -260,6 +305,21 @@
             android:layout_height="wrap_content">
 
             <EditText
+                android:id="@+id/dealer_paga"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_vertical_padding"
+                android:ems="10"
+                android:hint="@string/dealer_account"
+                android:inputType="text"
+                android:textSize="@dimen/input_font_size" />
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
                 android:id="@+id/subscriber_number_paga"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -309,6 +369,96 @@
 
             <EditText
                 android:id="@+id/description_paga"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_vertical_padding"
+                android:ems="10"
+                android:hint="@string/description_hint"
+                android:inputType="text"
+                android:textSize="@dimen/input_font_size" />
+
+        </android.support.design.widget.TextInputLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/fortis"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_margin="@dimen/activity_horizontal_padding"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/dealer_fortis"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_vertical_padding"
+                android:ems="10"
+                android:hint="@string/dealer_account"
+                android:inputType="text"
+                android:textSize="@dimen/input_font_size" />
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/subscriber_number_fortis"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_vertical_padding"
+                android:ems="10"
+                android:hint="@string/subscriber_number_hint"
+                android:inputType="numberSigned"
+                android:textSize="@dimen/input_font_size" />
+
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/amount_fortis"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_vertical_padding"
+                android:ems="10"
+                android:hint="@string/amount_hint"
+                android:inputType="numberSigned"
+                android:textSize="@dimen/input_font_size" />
+
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/code_fortis"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_vertical_padding"
+                android:ems="10"
+                android:hint="@string/code_hint"
+                android:inputType="numberSigned"
+                android:textSize="@dimen/input_font_size" />
+
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/description_fortis"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/activity_vertical_padding"

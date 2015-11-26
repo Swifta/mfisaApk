@@ -21,12 +21,13 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.swifta.mats.MainActivity;
+import com.swifta.mats.LoginActivity;
 import com.swifta.mats.R;
 import com.swifta.mats.adapters.PreviewListAdapter;
 import com.swifta.mats.service.BackgroundServices;
 import com.swifta.mats.util.ApiJobs;
 import com.swifta.mats.util.Constants;
+import com.swifta.mats.util.InternetCheck;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -111,7 +112,8 @@ public class DepositFloatActivity extends AppCompatActivity {
                             uiDisplaySummary();
                         } else {
                             String errorMessage = psaTranResponse.getString("responsemessage");
-                            Toast.makeText(self, "Your request was rejected because " + errorMessage.replace("_", " ")
+                            Toast.makeText(self, getResources().getString(R.string.request_rejection_reason)
+                                    + errorMessage.replace("_", " ")
                                     .toLowerCase(), Toast.LENGTH_LONG).show();
                             reEnterOTP();
                         }
@@ -125,7 +127,7 @@ public class DepositFloatActivity extends AppCompatActivity {
                 // TODO Auto-generated catch block
                 uiHandleFailed();
                 e.printStackTrace();
-                Toast.makeText(self, "Your request cannot be completed, please try again.", Toast.LENGTH_LONG).show();
+                Toast.makeText(self, getResources().getString(R.string.retry_uncompleted_request), Toast.LENGTH_LONG).show();
             } finally {
                 busy = false;
             }
@@ -139,8 +141,8 @@ public class DepositFloatActivity extends AppCompatActivity {
         setContentView(R.layout.activity_deposit_float);
         sharedPref = self.getSharedPreferences(Constants.STORE_USERNAME_KEY,
                 Context.MODE_PRIVATE);
-        myName = sharedPref.getString("username", "UNKNOWN").toUpperCase();
-        myPassword = sharedPref.getString("password", "UNKNOWN");
+        myName = sharedPref.getString("username", Constants.UNKNOWN).toUpperCase();
+        myPassword = sharedPref.getString("password", Constants.UNKNOWN);
         getSupportActionBar();
         setTitle(myName);
         initEvents();
@@ -162,7 +164,7 @@ public class DepositFloatActivity extends AppCompatActivity {
     public void onBackPressed() {
         // do something here and don't write super.onBackPressed()
         if (busy) {
-            Toast.makeText(self, "Currently processing a request. Please wait..", Toast.LENGTH_LONG).show();
+            Toast.makeText(self, getResources().getString(R.string.processing_request), Toast.LENGTH_LONG).show();
         } else {
             //super.onBackPressed();
             //clear all the stored cache of uncompleted float transfer.
@@ -210,7 +212,7 @@ public class DepositFloatActivity extends AppCompatActivity {
             public void onClick(View v) {
                 if (amount.getText().toString().isEmpty() || dealer_id.getText().toString().isEmpty()
                         || amount.getText().toString().isEmpty()) {
-                    Toast.makeText(self, "Please fill in the correct details.", Toast.LENGTH_LONG).show();
+                    Toast.makeText(self, getResources().getString(R.string.empty_credentials), Toast.LENGTH_LONG).show();
                 } else {
                     // TODO Auto-generated method stub
                     String left[] = {"Amount", "Dealer ID", "Description"};
@@ -227,7 +229,7 @@ public class DepositFloatActivity extends AppCompatActivity {
                     loading.setVisibility(View.GONE);
                     confirm_list.setVisibility(View.VISIBLE);
                     confirm_btns.setVisibility(View.VISIBLE);
-                    title.setText("Confirm Float Transfer Transaction");
+                    title.setText(getResources().getString(R.string.confirm_float_transfer));
                 }
             }
 
@@ -248,28 +250,31 @@ public class DepositFloatActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 // TODO Auto-generated method stub
-                confirm_list.setVisibility(View.GONE);
-                confirm_btns.setVisibility(View.GONE);
-                loading.setVisibility(View.GONE);
-                loading.setVisibility(View.VISIBLE);
-                JSONObject data = new JSONObject();
-                try {
-                    data.put("username", myName);
-                    data.put("password", myPassword);
-                    data.put("amount", amount.getText().toString());
-                    data.put("dealer", dealer_id.getText().toString());
-                    data.put("description", description.getText().toString());
-                } catch (JSONException e) {
-                    // TODO Auto-generated catch block
-                    e.printStackTrace();
+                if (InternetCheck.isNetworkAvailable(self)) {
+                    confirm_list.setVisibility(View.GONE);
+                    confirm_btns.setVisibility(View.GONE);
+                    loading.setVisibility(View.GONE);
+                    loading.setVisibility(View.VISIBLE);
+                    JSONObject data = new JSONObject();
+                    try {
+                        data.put("username", myName);
+                        data.put("password", myPassword);
+                        data.put("amount", amount.getText().toString());
+                        data.put("dealer", dealer_id.getText().toString());
+                        data.put("description", description.getText().toString());
+                    } catch (JSONException e) {
+                        // TODO Auto-generated catch block
+                        e.printStackTrace();
+                    }
+                    Intent intent = new Intent(self, BackgroundServices.class);
+                    intent.putExtra(Constants.JOB_IDENTITY, ApiJobs.DEPOSIT_FLOAT);
+                    intent.putExtra(Constants.JOB_DATA, data.toString());
+                    startService(intent);
+                    busy = true;
+                } else {
+                    Toast.makeText(self, getResources().getString(R.string.internet_connection_error), Toast.LENGTH_LONG).show();
                 }
-                Intent intent = new Intent(self, BackgroundServices.class);
-                intent.putExtra(Constants.JOB_IDENTITY, ApiJobs.DEPOSIT_FLOAT);
-                intent.putExtra(Constants.JOB_DATA, data.toString());
-                startService(intent);
-                busy = true;
             }
-
         });
 
         confirm_cancelBtn.setOnClickListener(new OnClickListener() {
@@ -293,30 +298,33 @@ public class DepositFloatActivity extends AppCompatActivity {
             public void onClick(View v) {
                 // TODO Auto-generated method stub
                 //communicate with the background service
-                otp_layout.setVisibility(View.GONE);
-                done_btns.setVisibility(View.GONE);
-                loading.setVisibility(View.VISIBLE);
-                JSONObject data = new JSONObject();
-                try {
-                    JSONObject dt = new JSONObject(sharedPref.getString(Constants.TMP_DEPOSIT_FLOAT_DATA,
-                            "{}"));
-                    data.put("username", myName);
-                    data.put("password", myPassword);
-                    data.put("dealer", dt.getString("dealer"));
-                    data.put("amount", dt.getInt("amount"));
-                    data.put("transaction_id", dt.getInt("transaction_id"));
-                    data.put("otp", otpTxt.getText().toString());
-                } catch (JSONException e) {
-                    // TODO Auto-generated catch block
-                    e.printStackTrace();
+                if (com.swifta.mats.util.InternetCheck.isNetworkAvailable(self)) {
+                    otp_layout.setVisibility(View.GONE);
+                    done_btns.setVisibility(View.GONE);
+                    loading.setVisibility(View.VISIBLE);
+                    JSONObject data = new JSONObject();
+                    try {
+                        JSONObject dt = new JSONObject(sharedPref.getString(Constants.TMP_DEPOSIT_FLOAT_DATA,
+                                "{}"));
+                        data.put("username", myName);
+                        data.put("password", myPassword);
+                        data.put("dealer", dt.getString("dealer"));
+                        data.put("amount", dt.getInt("amount"));
+                        data.put("transaction_id", dt.getInt("transaction_id"));
+                        data.put("otp", otpTxt.getText().toString());
+                    } catch (JSONException e) {
+                        // TODO Auto-generated catch block
+                        e.printStackTrace();
+                    }
+                    Intent intent = new Intent(self, BackgroundServices.class);
+                    intent.putExtra(Constants.JOB_IDENTITY, ApiJobs.COMPLETE_DEPOSIT_FLOAT);
+                    intent.putExtra(Constants.JOB_DATA, data.toString());
+                    startService(intent);
+                    busy = true;
+                } else {
+                    Toast.makeText(self, getResources().getString(R.string.internet_connection_error), Toast.LENGTH_LONG).show();
                 }
-                Intent intent = new Intent(self, BackgroundServices.class);
-                intent.putExtra(Constants.JOB_IDENTITY, ApiJobs.COMPLETE_DEPOSIT_FLOAT);
-                intent.putExtra(Constants.JOB_DATA, data.toString());
-                startService(intent);
-                busy = true;
             }
-
         });
 
         back_done.setOnClickListener(new OnClickListener() {
@@ -333,7 +341,7 @@ public class DepositFloatActivity extends AppCompatActivity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.home, menu);
+        getMenuInflater().inflate(R.menu.account, menu);
         return true;
     }
 
@@ -342,7 +350,6 @@ public class DepositFloatActivity extends AppCompatActivity {
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
-        //System.out.println("Back was pressed with ID:"+item.getTitle());
         if (id == R.id.logout) {
             //logout clicked
             onLogoutPressed();
@@ -353,9 +360,8 @@ public class DepositFloatActivity extends AppCompatActivity {
 
     public void onLogoutPressed() {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        builder.setMessage("Do you want to logout?")
+        builder.setMessage(getResources().getString(R.string.logout_confirmation))
                 .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
-
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                         // TODO Auto-generated method stub
@@ -376,9 +382,9 @@ public class DepositFloatActivity extends AppCompatActivity {
 
     private void logout() {
         if (busy) {
-            Toast.makeText(self, "Currently processing a request. Please wait...", Toast.LENGTH_LONG).show();
+            Toast.makeText(self, getResources().getString(R.string.processing_request), Toast.LENGTH_LONG).show();
         } else {
-            Intent actIntent = new Intent(self, MainActivity.class);
+            Intent actIntent = new Intent(self, LoginActivity.class);
             actIntent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
             startActivity(actIntent);
             finish();

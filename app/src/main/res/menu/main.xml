@@ -1,5 +1,5 @@
 <menu xmlns:tools="http://schemas.android.com/tools"
-    tools:context="com.swifta.mats.MainActivity">
+    tools:context=".LoginActivity">
 
 
 </menu>

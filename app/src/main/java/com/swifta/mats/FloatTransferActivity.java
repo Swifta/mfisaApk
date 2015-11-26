@@ -38,7 +38,7 @@ public class FloatTransferActivity extends AppCompatActivity {
         setContentView(R.layout.activity_float_transfer);
         sharedPref = self.getSharedPreferences(Constants.STORE_USERNAME_KEY,
                 Context.MODE_PRIVATE);
-        myName = sharedPref.getString("username", "UNKNOWN").toUpperCase();
+        myName = sharedPref.getString("username", Constants.UNKNOWN).toUpperCase();
 
         getSupportActionBar();
         setTitle(myName);
@@ -75,10 +75,10 @@ public class FloatTransferActivity extends AppCompatActivity {
                         Intent actIntent = new Intent(self, CompleteDepositFloatActivity.class);
                         self.startActivity(actIntent);
                     } else {
-                        Toast.makeText(self, "You do not have an uncompleted transaction", Toast.LENGTH_LONG).show();
+                        Toast.makeText(self, getResources().getString(R.string.no_uncompleted_transactions), Toast.LENGTH_LONG).show();
                     }
                 } catch (JSONException jE) {
-                    Toast.makeText(self, "Error resuming previous transactions", Toast.LENGTH_LONG).show();
+                    Toast.makeText(self, getResources().getString(R.string.error_resuming_transactions), Toast.LENGTH_LONG).show();
                     jE.printStackTrace();
                 }
             }
@@ -89,7 +89,7 @@ public class FloatTransferActivity extends AppCompatActivity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.home, menu);
+        getMenuInflater().inflate(R.menu.account, menu);
         return true;
     }
 
@@ -98,7 +98,6 @@ public class FloatTransferActivity extends AppCompatActivity {
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
-        //System.out.println("Back was pressed with ID:"+item.getTitle());
         if (id == R.id.logout) {
             //logout clicked
             onLogoutPressed();
@@ -109,7 +108,7 @@ public class FloatTransferActivity extends AppCompatActivity {
 
     public void onLogoutPressed() {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        builder.setMessage("Do you want to logout?")
+        builder.setMessage(getResources().getString(R.string.logout_confirmation))
                 .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
 
                     @Override
@@ -131,8 +130,8 @@ public class FloatTransferActivity extends AppCompatActivity {
     }
 
     private void logout() {
-        Intent actIntent = new Intent(self, MainActivity.class);
-        actIntent.setFlags(actIntent.FLAG_ACTIVITY_NEW_TASK | actIntent.FLAG_ACTIVITY_CLEAR_TOP);
+        Intent actIntent = new Intent(self, LoginActivity.class);
+        actIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TOP);
         startActivity(actIntent);
         finish();
     }

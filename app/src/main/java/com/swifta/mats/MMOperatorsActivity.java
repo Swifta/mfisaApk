@@ -13,6 +13,8 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 
+import com.swifta.mats.forms.CashInActivity;
+import com.swifta.mats.forms.CashOutUnregisteredCustomerActivity;
 import com.swifta.mats.forms.WithdrawMMActivity;
 import com.swifta.mats.util.Constants;
 import com.swifta.mats.util.Dealers;
@@ -26,6 +28,7 @@ public class MMOperatorsActivity extends AppCompatActivity {
     private Button fets;
     private Button teasy_mobile;
     private Button paga;
+    private Button fortis;
     private Bundle bundle = new Bundle();
 
     @Override
@@ -34,9 +37,9 @@ public class MMOperatorsActivity extends AppCompatActivity {
         setContentView(R.layout.activity_mmoperators);
         SharedPreferences sharedPref = self.getSharedPreferences(Constants.STORE_USERNAME_KEY,
                 Context.MODE_PRIVATE);
-        myName = sharedPref.getString("username", "UNKNOWN").toUpperCase();
+        myName = sharedPref.getString("username", Constants.UNKNOWN).toUpperCase();
         getSupportActionBar();
-        setTitle("Welcome " + myName);
+        setTitle(myName);
         initEvents();
     }
 
@@ -45,13 +48,14 @@ public class MMOperatorsActivity extends AppCompatActivity {
         fets = (Button) findViewById(R.id.fets);
         teasy_mobile = (Button) findViewById(R.id.teasy_mobile);
         paga = (Button) findViewById(R.id.paga);
+        fortis = (Button) findViewById(R.id.fortis);
 
         ready_cash.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
                 // TODO Auto-generated method stub
                 bundle.putString("dealer", Dealers.READY_CASH.name());
-                openForm();
+                openForm(Dealers.READY_CASH.name());
             }
         });
         fets.setOnClickListener(new OnClickListener() {
@@ -59,7 +63,7 @@ public class MMOperatorsActivity extends AppCompatActivity {
             public void onClick(View v) {
                 // TODO Auto-generated method stub
                 bundle.putString("dealer", Dealers.FETS.name());
-                openForm();
+                openForm(Dealers.FETS.name());
             }
         });
         teasy_mobile.setOnClickListener(new OnClickListener() {
@@ -67,7 +71,7 @@ public class MMOperatorsActivity extends AppCompatActivity {
             public void onClick(View v) {
                 // TODO Auto-generated method stub
                 bundle.putString("dealer", Dealers.TEASY_MOBILE.name());
-                openForm();
+                openForm(Dealers.TEASY_MOBILE.name());
             }
         });
         paga.setOnClickListener(new OnClickListener() {
@@ -75,21 +79,48 @@ public class MMOperatorsActivity extends AppCompatActivity {
             public void onClick(View v) {
                 // TODO Auto-generated method stub
                 bundle.putString("dealer", Dealers.PAGA.name());
-                openForm();
+                openForm(Dealers.PAGA.name());
+            }
+        });
+        fortis.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // TODO Auto-generated method stub
+                bundle.putString("dealer", Dealers.FORTIS.name());
+                openForm(Dealers.FORTIS.name());
             }
         });
     }
 
-    private void openForm() {
-        Intent actIntent = new Intent(self, WithdrawMMActivity.class);
-        actIntent.putExtras(bundle);
-        startActivity(actIntent);
+    /**
+     * Determines what activity to open based on the previous activity.
+     **/
+    private void openForm(String mmo) {
+        String previousActivity = getIntent().getStringExtra(Constants.PREVIOUS_ACTIVITY);
+
+        switch (previousActivity) {
+            case (Constants.CASH_IN):
+                Intent cashInIntent = new Intent(self, CashInActivity.class);
+                cashInIntent.putExtra("dealer", mmo);
+                startActivity(cashInIntent);
+                break;
+            case (Constants.DEALER_ACCOUNT):
+                Intent actIntent = new Intent(self, WithdrawMMActivity.class);
+                actIntent.putExtras(bundle);
+                startActivity(actIntent);
+                break;
+            case (Constants.UNREGISTERED_CUSTOMER):
+                Intent unregisteredIntent = new Intent(self, CashOutUnregisteredCustomerActivity.class);
+                unregisteredIntent.putExtra("dealer", mmo);
+                startActivity(unregisteredIntent);
+                break;
+        }
     }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.home, menu);
+        getMenuInflater().inflate(R.menu.account, menu);
         return true;
     }
 
@@ -109,9 +140,8 @@ public class MMOperatorsActivity extends AppCompatActivity {
 
     public void onLogoutPressed() {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        builder.setMessage("Do you want to logout?")
+        builder.setMessage(getResources().getString(R.string.logout_confirmation))
                 .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
-
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                         // TODO Auto-generated method stub
@@ -120,7 +150,6 @@ public class MMOperatorsActivity extends AppCompatActivity {
 
                 })
                 .setNegativeButton("No", new DialogInterface.OnClickListener() {
-
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                         // TODO Auto-generated method stub
@@ -131,7 +160,7 @@ public class MMOperatorsActivity extends AppCompatActivity {
     }
 
     private void logout() {
-        Intent actIntent = new Intent(self, MainActivity.class);
+        Intent actIntent = new Intent(self, LoginActivity.class);
         actIntent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
         startActivity(actIntent);
         finish();

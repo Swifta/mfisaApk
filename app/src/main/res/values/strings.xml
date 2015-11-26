@@ -18,7 +18,8 @@
     <string name="withdrawal">Withdrawal</string>
     <string name="float_transfer">Float Transfer</string>
     <string name="verify_withdrawal">Verify Withdrawal</string>
-    <string name="deposit">Deposit</string>
+    <string name="cash_in">Cash in</string>
+    <string name="cash_out">Cash out</string>
     <string name="merchant_payment">Merchant Payment</string>
     <string name="bill_payment">Bill Payment</string>
     <string name="sell_airtime">Sell Airtime</string>
@@ -26,15 +27,18 @@
     <string name="live_chat">Live Chat</string>
     <string name="title_activity_withdrawal">WithdrawalActivity</string>
     <string name="dealer_account">Dealer Account</string>
-    <string name="mats_inflow_account">MATS Inflow Account</string>
+    <string name="unregistered_customer">Unregistered Customer</string>
+    <string name="complete_previous_cashout">Complete previous cashout (With OTP)</string>
     <string name="token">Token</string>
     <string name="withdraw_from_title">Withdrawal From</string>
     <string name="title_activity_mmoperators">MMOperatorsActivity</string>
+    <string name="mmo_operator">MM Operator</string>
     <string name="mm_operatos_title">Select MM Operator</string>
     <string name="ready_cash">Ready Cash</string>
     <string name="fets">FETS</string>
     <string name="teasy_mobile">Teasy Mobile</string>
     <string name="paga">Paga</string>
+    <string name="fortis">Fortis</string>
     <string name="title_activity_withdraw_mm">WithdrawMMActivity</string>
     <string name="subscriber_number_hint">Subscriber Number</string>
     <string name="amount_hint">Amount</string>
@@ -49,7 +53,7 @@
     <string name="title_activity_float_transfer">FloatTransferActivity</string>
     <string name="deposit_float">Deposit Float</string>
     <string name="return_float">Return Float</string>
-    <string name="complete_deposit_float">Complete Previous Float(OTP)</string>
+    <string name="complete_deposit_float">Complete Previous Float(WITH OTP)</string>
     <string name="title_activity_deposit_float">DepositFloatActivity</string>
     <string name="dealer_hint">Dealer ID</string>
     <string name="dummy">Dummy</string>
@@ -60,13 +64,31 @@
     <string name="title_activity_complete_deposit_float">CompleteDepositFloatActivity</string>
     <string name="resume_deposit_float">Complete Deposit Float</string>
     <string name="provide_otp">Provide Dealer OTP</string>
-    <string name="title_activity_test">TestActivity</string>
-    <string name="title_activity_account">My Account</string>
+    <string name="reference_number">Reference Number</string>
+    <string name="payment_reference">Payment reference</string>
     <string name="change_password">Change your password</string>
     <string name="submit_password">Submit</string>
     <string name="enter_new_password">Enter new password</string>
+    <string name="title_activity_account">My Account</string>
     <string name="read_mini_statement">Read Mini Statement</string>
     <string name="title_activity_mini_statement">Mini Statement</string>
     <string name="no_statement">No Mini Statements are available. Please check back later.</string>
-
+    <string name="redeem_code">Redeem code</string>
+    <string name="wait">Please wait…</string>
+    <string name="empty_credentials">Please fill in the empty fields.</string>
+    <string name="internet_connection_error">Unable to connect. Please check your internet connection and try again.</string>
+    <string name="short_password">Your password length should be greater than 5. Please check and try again.</string>
+    <string name="long_password">Your password length should be less than 30. Please check and try again.</string>
+    <string name="processing_request">Currently processing a request, please wait…</string>
+    <string name="retry_uncompleted_request">Your request cannot be completed, please try again.</string>
+    <string name="unsuccessful_password_change">Password change was unsuccessful. Please try again.</string>
+    <string name="successful_password_change">Your password has been changed successfully.
+Your new password is </string>
+    <string name="no_uncompleted_transactions">You do not have an uncompleted transaction</string>
+    <string name="error_resuming_transactions">Error resuming previous transactions</string>
+    <string name="logout_confirmation">Do you want to logout?</string>
+    <string name="unprocessed_request">We cannot process your request, please try again.</string>
+    <string name="request_rejection_reason">Your request was rejected because </string>
+    <string name="confirm_float_transfer">Confirm Float Transfer Transaction</string>
+    <string name="empty_reference_number">Please fill in the reference number.</string>
 </resources>

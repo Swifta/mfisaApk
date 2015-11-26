@@ -12,6 +12,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
+import android.widget.Toast;
 
 import com.swifta.mats.util.Constants;
 
@@ -22,6 +23,7 @@ public class HomeActivity extends AppCompatActivity {
     private Button withdrawalButton;
     private Button floatTransferButton;
     private Button readMiniStatementButton;
+    private Button cashInButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,7 +32,7 @@ public class HomeActivity extends AppCompatActivity {
 
         SharedPreferences sharedPref = self.getSharedPreferences(Constants.STORE_USERNAME_KEY,
                 Context.MODE_PRIVATE);
-        myName = sharedPref.getString("username", "UNKNOWN").toUpperCase();
+        myName = sharedPref.getString("username", Constants.UNKNOWN).toUpperCase();
 
         getSupportActionBar();
         setTitle(myName);
@@ -41,6 +43,7 @@ public class HomeActivity extends AppCompatActivity {
         withdrawalButton = (Button) findViewById(R.id.withdrawal);
         floatTransferButton = (Button) findViewById(R.id.float_transfer);
         readMiniStatementButton = (Button) findViewById(R.id.mini_statement);
+        cashInButton = (Button) findViewById(R.id.cash_in);
 
         withdrawalButton.setOnClickListener(new OnClickListener() {
 
@@ -67,7 +70,21 @@ public class HomeActivity extends AppCompatActivity {
         readMiniStatementButton.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(self, MiniStatementActivity.class);
+                if (com.swifta.mats.util.InternetCheck.isNetworkAvailable(self)) {
+                    Intent intent = new Intent(self, MiniStatementActivity.class);
+                    startActivity(intent);
+                } else {
+                    Toast.makeText(self, getResources().getString(R.string.internet_connection_error),
+                            Toast.LENGTH_LONG).show();
+                }
+            }
+        });
+
+        cashInButton.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(HomeActivity.this, MMOperatorsActivity.class);
+                intent.putExtra(Constants.PREVIOUS_ACTIVITY, Constants.CASH_IN);
                 startActivity(intent);
             }
         });
@@ -101,9 +118,10 @@ public class HomeActivity extends AppCompatActivity {
     /**
      * Confirms that the user really wants to logout
      */
+
     public void confirmLogout() {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        builder.setMessage("Do you want to logout?")
+        builder.setMessage(getResources().getString(R.string.logout_confirmation))
                 .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
 
                     @Override
@@ -125,7 +143,7 @@ public class HomeActivity extends AppCompatActivity {
     }
 
     private void logout() {
-        Intent actIntent = new Intent(self, MainActivity.class);
+        Intent actIntent = new Intent(self, LoginActivity.class);
         actIntent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
         startActivity(actIntent);
         finish();
@@ -134,8 +152,5 @@ public class HomeActivity extends AppCompatActivity {
     private void openAccountActivity() {
         Intent actIntent = new Intent(self, AccountActivity.class);
         startActivity(actIntent);
-        finish();
     }
-
-
 }

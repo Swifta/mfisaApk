@@ -4,6 +4,7 @@ import android.annotation.SuppressLint;
 import android.app.IntentService;
 import android.content.Intent;
 
+import com.swifta.mats.R;
 import com.swifta.mats.util.ApiJobs;
 import com.swifta.mats.util.Constants;
 
@@ -58,13 +59,20 @@ public class BackgroundServices extends IntentService {
             case ApiJobs.GET_MINI_STATEMENT:
                 getMiniStatement(data);
                 break;
-
+            case ApiJobs.CASH_IN_REQUEST:
+                processCashInRequest(data);
+                break;
+            case ApiJobs.COMPLETE_CASHOUT_REQUEST:
+                processCompleteCashOutRequest(data);
+                break;
+            case ApiJobs.CASH_OUT_UNREGISTERED_CUSTOMER:
+                processUnregisteredCashout(data);
+                break;
             default:
                 //do nothing
                 break;
         }
         // TODO Auto-generated method stub
-
     }
 
     private void publishResults() {
@@ -95,7 +103,7 @@ public class BackgroundServices extends IntentService {
             if (status == 200) {
                 result = EntityUtils.toString(response.getEntity());
             } else {
-                result = "Cannot process your request. Please try again";
+                result = getResources().getString(R.string.unprocessed_request);
             }
             this.reponseContent = result;
         } catch (Exception e) {
@@ -110,24 +118,24 @@ public class BackgroundServices extends IntentService {
     @SuppressWarnings("deprecation")
     private void withdrawalDealerAccount(JSONObject obj) {
         String url = Constants.API_URL + "service/cashoutrequest";
-        try {
+        HttpParams httpParameters = new BasicHttpParams();
+        int timeoutConnection = 15000;
+        HttpConnectionParams.setConnectionTimeout(httpParameters, timeoutConnection);
+        int timeoutSocket = 15000;
+        HttpConnectionParams.setSoTimeout(httpParameters, timeoutSocket);
 
-            url += "?orginatingresourceid=" + obj.getString("mmo") +
-                    "&destinationresourceid=" + obj.getString("agentId") +
-                    "&amount=" + obj.getInt("amount") +
+        httpclient = new DefaultHttpClient(httpParameters);
+
+        try {
+            url += "?orginatingresourceid=" + obj.getString("agentId").toLowerCase() +
+                    "&destinationresourceid=" + obj.getString("dealerId") +
+                    "&amount=" + obj.getString("amount") +
                     "&agentpassword=" + obj.getString("agentPin") +
                     "&transactionid=" + Constants.TRANSACTION_ID +
                     "&mmo=" + obj.getString("mmo") +
                     "&paymentreference=" + obj.getString("receiver") +
-                    "&teasypin=" + obj.getInt("teasypin");
+                    "&teasypin=" + obj.getString("teasypin");
 
-            HttpParams httpParameters = new BasicHttpParams();
-            int timeoutConnection = 10000;
-            HttpConnectionParams.setConnectionTimeout(httpParameters, timeoutConnection);
-            int timeoutSocket = 5000;
-            HttpConnectionParams.setSoTimeout(httpParameters, timeoutSocket);
-
-            httpclient = new DefaultHttpClient(httpParameters);
             HttpPost httpPost = new HttpPost(url);
             HttpResponse response = httpclient.execute(httpPost);
 
@@ -141,14 +149,12 @@ public class BackgroundServices extends IntentService {
                 myResponse.put("message", "okay");
                 myResponse.put("psa", new JSONObject(result));
             } else {
-                result = "Cannot process request. Please try again(" + status + ") and " + EntityUtils.toString(response.getEntity());
+                result = getResources().getString(R.string.unprocessed_request);
                 myResponse.put("success", false);
                 myResponse.put("message", result);
                 myResponse.put("psa", "{}");
             }
             this.reponseContent = myResponse.toString();
-            System.out.println("Status = " + status + " and " + result);
-
         } catch (Exception e) {
             // TODO Auto-generated catch block
             e.printStackTrace();
@@ -189,7 +195,7 @@ public class BackgroundServices extends IntentService {
                 myResponse.put("message", "okay");
                 myResponse.put("psa", new JSONObject(result));
             } else {
-                result = "Cannot process your request, please try again.";
+                result = getResources().getString(R.string.unprocessed_request);
                 myResponse.put("success", false);
                 myResponse.put("message", result);
                 myResponse.put("psa", "{}");
@@ -222,9 +228,7 @@ public class BackgroundServices extends IntentService {
             HttpConnectionParams.setSoTimeout(httpParameters, timeoutSocket);
 
             httpclient = new DefaultHttpClient(httpParameters);
-
             HttpPost httpPost = new HttpPost(url);
-
             HttpResponse response = httpclient.execute(httpPost);
 
             int status = response.getStatusLine().getStatusCode();
@@ -237,7 +241,7 @@ public class BackgroundServices extends IntentService {
                 myResponse.put("message", "okay");
                 myResponse.put("psa", new JSONObject(result));
             } else {
-                result = "We cannot process your request, please try again.";
+                result = getResources().getString(R.string.unprocessed_request);
                 myResponse.put("success", false);
                 myResponse.put("message", result);
                 myResponse.put("psa", "{}");
@@ -266,11 +270,8 @@ public class BackgroundServices extends IntentService {
             url += "?orginatingresourceid=" + obj.getString("username")
                     + "&newpassword=" + obj.getString("newpassword")
                     + "&oldpassword=" + obj.getString("oldpassword");
-            // HttpResponse response = httpclient.execute(new HttpPost(url));
 
             HttpPost httpPost = new HttpPost(url);
-            //httpPost.setEntity(new UrlEncodedFormEntity(nameValuePair));
-
             HttpResponse response = httpclient.execute(httpPost);
 
             int status = response.getStatusLine().getStatusCode();
@@ -278,11 +279,9 @@ public class BackgroundServices extends IntentService {
             if (status == 200) {
                 result = EntityUtils.toString(response.getEntity());
             } else {
-                result = "Cannot process request. Please try again(" + status + ")";
+                result = getResources().getString(R.string.unprocessed_request);
             }
             this.reponseContent = result;
-            //System.out.println("Status = "+status+" and "+result);
-
         } catch (Exception e) {
             // TODO Auto-generated catch block
             e.printStackTrace();
@@ -312,9 +311,150 @@ public class BackgroundServices extends IntentService {
             if (status == 200) {
                 result = EntityUtils.toString(response.getEntity());
             } else {
-                result = "Cannot process request. Please try again(" + status + ")";
+                result = getResources().getString(R.string.unprocessed_request);
             }
             this.reponseContent = result;
+        } catch (Exception e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        } finally {
+            publishResults();
+        }
+    }
+
+    @SuppressWarnings("deprecation")
+    private void processCashInRequest(JSONObject obj) {
+        String url = Constants.API_URL + "service/cashinrequest";
+        HttpParams httpParameters = new BasicHttpParams();
+        int timeoutConnection = 10000;
+        HttpConnectionParams.setConnectionTimeout(httpParameters, timeoutConnection);
+        int timeoutSocket = 5000;
+        HttpConnectionParams.setSoTimeout(httpParameters, timeoutSocket);
+
+        httpclient = new DefaultHttpClient(httpParameters);
+
+        try {
+            url += "?orginatingresourceid=" + obj.getString("orginatingresourceid").toLowerCase() +
+                    "&destinationresourceid=" + obj.getString("destinationresourceid") +
+                    "&amount=" + obj.getInt("amount") +
+                    "&frommessage=" + obj.getString("frommessage") +
+                    "&transactionid=" + obj.getString("transactionid") +
+                    "&mmo=" + obj.getString("mmo") +
+                    "&paymentreference=" + obj.getString("paymentreference");
+
+            HttpPost httpPost = new HttpPost(url);
+            HttpResponse response = httpclient.execute(httpPost);
+
+            int status = response.getStatusLine().getStatusCode();
+            String result = "";
+            JSONObject myResponse = new JSONObject();
+            myResponse.put("request", Constants.CASH_IN_COMPLETED);
+            if (status == 200) {
+                result = EntityUtils.toString(response.getEntity());
+                myResponse.put("success", true);
+                myResponse.put("message", "okay");
+                myResponse.put("psa", new JSONObject(result));
+            } else {
+                result = getResources().getString(R.string.unprocessed_request);
+                myResponse.put("success", false);
+                myResponse.put("message", result);
+                myResponse.put("psa", "{}");
+            }
+            this.reponseContent = myResponse.toString();
+        } catch (Exception e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        } finally {
+            publishResults();
+        }
+    }
+
+    @SuppressWarnings("deprecation")
+    private void processCompleteCashOutRequest(JSONObject obj) {
+        String url = Constants.API_URL + "service/verifycashoutcompleted";
+        HttpParams httpParameters = new BasicHttpParams();
+        int timeoutConnection = 10000;
+        HttpConnectionParams.setConnectionTimeout(httpParameters, timeoutConnection);
+        int timeoutSocket = 5000;
+        HttpConnectionParams.setSoTimeout(httpParameters, timeoutSocket);
+
+        httpclient = new DefaultHttpClient(httpParameters);
+
+        try {
+            url += "?orginatingresourceid=" + obj.getString("orginatingresourceid").toLowerCase() +
+                    "&destinationresourceid=" + obj.getString("destinationresourceid") +
+                    "&amount=" + obj.getInt("amount") +
+                    "&agentpassword=" + obj.getString("agentpassword") +
+                    "&mmo=" + obj.getString("mmo") +
+                    "&paymentreference=" + obj.getString("paymentreference") +
+                    "&referencenumber=" + obj.getInt("referencenumber");
+
+            HttpPost httpPost = new HttpPost(url);
+            HttpResponse response = httpclient.execute(httpPost);
+
+            int status = response.getStatusLine().getStatusCode();
+            String result = "";
+            JSONObject myResponse = new JSONObject();
+            myResponse.put("request", Constants.COMPLETE_CASH_OUT_COMPLETED);
+            if (status == 200) {
+                result = EntityUtils.toString(response.getEntity());
+                myResponse.put("success", true);
+                myResponse.put("message", "okay");
+                myResponse.put("psa", new JSONObject(result));
+            } else {
+                result = getResources().getString(R.string.unprocessed_request);
+                myResponse.put("success", false);
+                myResponse.put("message", result);
+                myResponse.put("psa", "{}");
+            }
+            this.reponseContent = myResponse.toString();
+        } catch (Exception e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        } finally {
+            publishResults();
+        }
+    }
+
+    @SuppressWarnings("deprecation")
+    private void processUnregisteredCashout(JSONObject obj) {
+        String url = Constants.API_URL + "service/cashoutunregisteredcustomer";
+        HttpParams httpParameters = new BasicHttpParams();
+        int timeoutConnection = 10000;
+        HttpConnectionParams.setConnectionTimeout(httpParameters, timeoutConnection);
+        int timeoutSocket = 5000;
+        HttpConnectionParams.setSoTimeout(httpParameters, timeoutSocket);
+
+        httpclient = new DefaultHttpClient(httpParameters);
+
+        try {
+            url += "?orginatingresourceid=" + obj.getString("orginatingresourceid").toLowerCase() +
+                    "&destinationresourceid=" + obj.getString("destinationresourceid") +
+                    "&amount=" + obj.getString("amount") +
+                    "&redeemcode=" + obj.getString("redeemcode") +
+                    "&mmo=" + obj.getString("mmo") +
+                    "&paymentreference=" + obj.getString("paymentreference") +
+                    "&referencenumber=" + obj.getString("referencenumber");
+
+            HttpPost httpPost = new HttpPost(url);
+            HttpResponse response = httpclient.execute(httpPost);
+
+            int status = response.getStatusLine().getStatusCode();
+            String result = "";
+            JSONObject myResponse = new JSONObject();
+            myResponse.put("request", Constants.UNREGISTERED_CASH_OUT);
+            if (status == 200) {
+                result = EntityUtils.toString(response.getEntity());
+                myResponse.put("success", true);
+                myResponse.put("message", "okay");
+                myResponse.put("psa", new JSONObject(result));
+            } else {
+                result = getResources().getString(R.string.unprocessed_request);
+                myResponse.put("success", false);
+                myResponse.put("message", result);
+                myResponse.put("psa", "{}");
+            }
+            this.reponseContent = myResponse.toString();
         } catch (Exception e) {
             // TODO Auto-generated catch block
             e.printStackTrace();

@@ -16,19 +16,6 @@
         android:paddingRight="@dimen/activity_horizontal_padding">
 
         <Button
-            android:id="@+id/withdrawal"
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/btn_height"
-            android:layout_marginBottom="@dimen/btn_separator"
-            android:layout_marginEnd="@dimen/btn_separator"
-            android:layout_marginLeft="@dimen/btn_separator"
-            android:layout_marginRight="@dimen/btn_separator"
-            android:layout_marginStart="@dimen/btn_separator"
-            android:background="@drawable/accent_button_selector"
-            android:text="@string/withdrawal"
-            android:textColor="@color/white" />
-
-        <Button
             android:id="@+id/float_transfer"
             android:layout_width="match_parent"
             android:layout_height="@dimen/btn_height"
@@ -42,7 +29,7 @@
             android:textColor="@color/white" />
 
         <Button
-            android:id="@+id/verify_withdrawal"
+            android:id="@+id/cash_in"
             android:layout_width="match_parent"
             android:layout_height="@dimen/btn_height"
             android:layout_marginBottom="@dimen/btn_separator"
@@ -51,11 +38,11 @@
             android:layout_marginRight="@dimen/btn_separator"
             android:layout_marginStart="@dimen/btn_separator"
             android:background="@drawable/accent_button_selector"
-            android:text="@string/verify_withdrawal"
+            android:text="@string/cash_in"
             android:textColor="@color/white" />
 
         <Button
-            android:id="@+id/deposit"
+            android:id="@+id/withdrawal"
             android:layout_width="match_parent"
             android:layout_height="@dimen/btn_height"
             android:layout_marginBottom="@dimen/btn_separator"
@@ -64,20 +51,7 @@
             android:layout_marginRight="@dimen/btn_separator"
             android:layout_marginStart="@dimen/btn_separator"
             android:background="@drawable/accent_button_selector"
-            android:text="@string/deposit"
-            android:textColor="@color/white" />
-
-        <Button
-            android:id="@+id/marchant_payment"
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/btn_height"
-            android:layout_marginBottom="@dimen/btn_separator"
-            android:layout_marginEnd="@dimen/btn_separator"
-            android:layout_marginLeft="@dimen/btn_separator"
-            android:layout_marginRight="@dimen/btn_separator"
-            android:layout_marginStart="@dimen/btn_separator"
-            android:background="@drawable/accent_button_selector"
-            android:text="@string/merchant_payment"
+            android:text="@string/cash_out"
             android:textColor="@color/white" />
 
         <Button
@@ -94,19 +68,6 @@
             android:textColor="@color/white" />
 
         <Button
-            android:id="@+id/sell_airtime"
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/btn_height"
-            android:layout_marginBottom="@dimen/btn_separator"
-            android:layout_marginEnd="@dimen/btn_separator"
-            android:layout_marginLeft="@dimen/btn_separator"
-            android:layout_marginRight="@dimen/btn_separator"
-            android:layout_marginStart="@dimen/btn_separator"
-            android:background="@drawable/accent_button_selector"
-            android:text="@string/sell_airtime"
-            android:textColor="@color/white" />
-
-        <Button
             android:id="@+id/mini_statement"
             android:layout_width="match_parent"
             android:layout_height="@dimen/btn_height"
@@ -119,18 +80,6 @@
             android:text="@string/read_mini_statement"
             android:textColor="@color/white" />
 
-        <Button
-            android:id="@+id/live_chat"
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/btn_height"
-            android:layout_marginBottom="@dimen/btn_separator"
-            android:layout_marginEnd="@dimen/btn_separator"
-            android:layout_marginLeft="@dimen/btn_separator"
-            android:layout_marginRight="@dimen/btn_separator"
-            android:layout_marginStart="@dimen/btn_separator"
-            android:background="@drawable/white_button_selector"
-            android:text="@string/live_chat"
-            android:textColor="@color/colorAccent" />
     </LinearLayout>
 
 </ScrollView>

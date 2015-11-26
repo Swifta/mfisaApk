@@ -20,7 +20,7 @@ import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.Toast;
 
-import com.swifta.mats.MainActivity;
+import com.swifta.mats.LoginActivity;
 import com.swifta.mats.R;
 import com.swifta.mats.adapters.PreviewListAdapter;
 import com.swifta.mats.service.BackgroundServices;
@@ -37,7 +37,6 @@ public class CompleteDepositFloatActivity extends AppCompatActivity {
     private String myPassword = "";
     private boolean btn_clicked = true;
 
-    //private boolean status = false;
     private boolean busy = false;
 
     private SharedPreferences sharedPref;
@@ -85,7 +84,7 @@ public class CompleteDepositFloatActivity extends AppCompatActivity {
                             uiDisplaySummary();
                         } else {
                             String errorMessage = psaTranResponse.getString("responsemessage");
-                            Toast.makeText(self, "Your request was rejected because " + errorMessage.replace("_", " ")
+                            Toast.makeText(self, getResources().getString(R.string.request_rejection_reason) + errorMessage.replace("_", " ")
                                     .toLowerCase(), Toast.LENGTH_LONG).show();
                             reEnterOTP();
                         }
@@ -99,7 +98,7 @@ public class CompleteDepositFloatActivity extends AppCompatActivity {
                 // TODO Auto-generated catch block
                 reEnterOTP();
                 e.printStackTrace();
-                Toast.makeText(self, "Your request cannot be completed, please try again.", Toast.LENGTH_LONG).show();
+                Toast.makeText(self, getResources().getString(R.string.retry_uncompleted_request), Toast.LENGTH_LONG).show();
             } finally {
                 busy = false;
             }
@@ -113,8 +112,8 @@ public class CompleteDepositFloatActivity extends AppCompatActivity {
         setContentView(R.layout.activity_complete_deposit_float);
         sharedPref = self.getSharedPreferences(Constants.STORE_USERNAME_KEY,
                 Context.MODE_PRIVATE);
-        myName = sharedPref.getString("username", "UNKNOWN").toUpperCase();
-        myPassword = sharedPref.getString("password", "UNKNOWN");
+        myName = sharedPref.getString("username", Constants.UNKNOWN).toUpperCase();
+        myPassword = sharedPref.getString("password", Constants.UNKNOWN);
         try {
             resumedData = new JSONObject(sharedPref.getString(Constants.TMP_DEPOSIT_FLOAT_DATA, "{}"));
             if (resumedData.has("transaction_id")) {
@@ -152,7 +151,7 @@ public class CompleteDepositFloatActivity extends AppCompatActivity {
     public void onBackPressed() {
         // do something here and don't write super.onBackPressed()
         if (busy) {
-            Toast.makeText(self, "Currently processing a request, please wait..", Toast.LENGTH_LONG).show();
+            Toast.makeText(self, getResources().getString(R.string.processing_request), Toast.LENGTH_LONG).show();
         } else {
             //super.onBackPressed();
             //clear all the stored cache of uncompleted float transfer.
@@ -191,28 +190,31 @@ public class CompleteDepositFloatActivity extends AppCompatActivity {
             public void onClick(View v) {
                 // TODO Auto-generated method stub
                 //attempt to use the data to communicate with psa
-                otp_layout.setVisibility(View.GONE);
-                confirm_btns.setVisibility(View.GONE);
-                loading.setVisibility(View.VISIBLE);
-                JSONObject data = new JSONObject();
-                try {
-                    data.put("username", myName);
-                    data.put("password", myPassword);
-                    data.put("dealer", dealer);
-                    data.put("amount", amount);
-                    data.put("transaction_id", transaction_id);
-                    data.put("otp", otpTxt.getText().toString());
-                } catch (JSONException e) {
-                    // TODO Auto-generated catch block
-                    e.printStackTrace();
+                if (com.swifta.mats.util.InternetCheck.isNetworkAvailable(self)) {
+                    otp_layout.setVisibility(View.GONE);
+                    confirm_btns.setVisibility(View.GONE);
+                    loading.setVisibility(View.VISIBLE);
+                    JSONObject data = new JSONObject();
+                    try {
+                        data.put("username", myName);
+                        data.put("password", myPassword);
+                        data.put("dealer", dealer);
+                        data.put("amount", amount);
+                        data.put("transaction_id", transaction_id);
+                        data.put("otp", otpTxt.getText().toString());
+                    } catch (JSONException e) {
+                        // TODO Auto-generated catch block
+                        e.printStackTrace();
+                    }
+                    Intent intent = new Intent(self, BackgroundServices.class);
+                    intent.putExtra(Constants.JOB_IDENTITY, ApiJobs.COMPLETE_DEPOSIT_FLOAT);
+                    intent.putExtra(Constants.JOB_DATA, data.toString());
+                    startService(intent);
+                    busy = true;
+                } else {
+                    Toast.makeText(self, getResources().getString(R.string.internet_connection_error), Toast.LENGTH_LONG).show();
                 }
-                Intent intent = new Intent(self, BackgroundServices.class);
-                intent.putExtra(Constants.JOB_IDENTITY, ApiJobs.COMPLETE_DEPOSIT_FLOAT);
-                intent.putExtra(Constants.JOB_DATA, data.toString());
-                startService(intent);
-                busy = true;
             }
-
         });
 
         backBtn.setOnClickListener(new OnClickListener() {
@@ -239,7 +241,7 @@ public class CompleteDepositFloatActivity extends AppCompatActivity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.home, menu);
+        getMenuInflater().inflate(R.menu.account, menu);
         return true;
     }
 
@@ -257,7 +259,7 @@ public class CompleteDepositFloatActivity extends AppCompatActivity {
 
     public void onLogoutPressed() {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        builder.setMessage("Do you want to logout?")
+        builder.setMessage(getResources().getString(R.string.logout_confirmation))
                 .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
 
                     @Override
@@ -280,9 +282,9 @@ public class CompleteDepositFloatActivity extends AppCompatActivity {
 
     private void logout() {
         if (busy) {
-            Toast.makeText(self, "Currently processing a request, please wait..", Toast.LENGTH_LONG).show();
+            Toast.makeText(self, getResources().getString(R.string.processing_request), Toast.LENGTH_LONG).show();
         } else {
-            Intent actIntent = new Intent(self, MainActivity.class);
+            Intent actIntent = new Intent(self, LoginActivity.class);
             actIntent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
             startActivity(actIntent);
             finish();

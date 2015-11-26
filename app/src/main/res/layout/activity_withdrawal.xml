@@ -49,29 +49,27 @@
                 android:textColor="@color/white" />
 
             <Button
-                android:id="@+id/mats_inflow_account"
+                android:id="@+id/unregistered_customer"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/btn_height"
                 android:layout_marginBottom="@dimen/btn_separator"
                 android:layout_marginEnd="@dimen/btn_separator"
                 android:layout_marginRight="@dimen/btn_separator"
                 android:background="@drawable/accent_button_selector"
-                android:text="@string/mats_inflow_account"
+                android:text="@string/unregistered_customer"
                 android:textColor="@color/white" />
 
             <Button
-                android:id="@+id/token"
+                android:id="@+id/complete_cash_out"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/btn_height"
                 android:layout_marginBottom="@dimen/btn_separator"
                 android:layout_marginEnd="@dimen/btn_separator"
                 android:layout_marginRight="@dimen/btn_separator"
                 android:background="@drawable/accent_button_selector"
-                android:text="@string/token"
+                android:text="@string/complete_previous_cashout"
                 android:textColor="@color/white" />
 
         </LinearLayout>
-
     </ScrollView>
-
 </RelativeLayout>
