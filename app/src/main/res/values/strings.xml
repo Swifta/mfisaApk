@@ -83,12 +83,12 @@
     <string name="retry_uncompleted_request">Your request cannot be completed, please try again.</string>
     <string name="unsuccessful_password_change">Password change was unsuccessful. Please try again.</string>
     <string name="successful_password_change">Your password has been changed successfully.
-Your new password is </string>
+Your new password is &#160;</string>
     <string name="no_uncompleted_transactions">You do not have an uncompleted transaction</string>
     <string name="error_resuming_transactions">Error resuming previous transactions</string>
     <string name="logout_confirmation">Do you want to logout?</string>
     <string name="unprocessed_request">We cannot process your request, please try again.</string>
-    <string name="request_rejection_reason">Your request was rejected because </string>
+    <string name="request_rejection_reason">Your request was rejected because &#160;</string>
     <string name="confirm_float_transfer">Confirm Float Transfer Transaction</string>
     <string name="empty_reference_number">Please fill in the reference number.</string>
 </resources>
