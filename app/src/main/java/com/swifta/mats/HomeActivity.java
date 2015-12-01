@@ -15,6 +15,7 @@ import android.widget.Button;
 import android.widget.Toast;
 
 import com.swifta.mats.util.Constants;
+import com.swifta.mats.util.InternetCheck;
 
 public class HomeActivity extends AppCompatActivity {
 
@@ -24,6 +25,7 @@ public class HomeActivity extends AppCompatActivity {
     private Button floatTransferButton;
     private Button readMiniStatementButton;
     private Button cashInButton;
+    private Button billPaymentButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,6 +46,7 @@ public class HomeActivity extends AppCompatActivity {
         floatTransferButton = (Button) findViewById(R.id.float_transfer);
         readMiniStatementButton = (Button) findViewById(R.id.mini_statement);
         cashInButton = (Button) findViewById(R.id.cash_in);
+        billPaymentButton = (Button) findViewById(R.id.bill_payment);
 
         withdrawalButton.setOnClickListener(new OnClickListener() {
 
@@ -51,9 +54,8 @@ public class HomeActivity extends AppCompatActivity {
             public void onClick(View v) {
                 // TODO Auto-generated method stub
                 Intent actIntent = new Intent(self, WithdrawalActivity.class);
-                self.startActivity(actIntent);
+                startActivity(actIntent);
             }
-
         });
 
         floatTransferButton.setOnClickListener(new OnClickListener() {
@@ -62,7 +64,7 @@ public class HomeActivity extends AppCompatActivity {
             public void onClick(View v) {
                 // TODO Auto-generated method stub
                 Intent actIntent = new Intent(self, FloatTransferActivity.class);
-                self.startActivity(actIntent);
+                startActivity(actIntent);
             }
 
         });
@@ -70,7 +72,7 @@ public class HomeActivity extends AppCompatActivity {
         readMiniStatementButton.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (com.swifta.mats.util.InternetCheck.isNetworkAvailable(self)) {
+                if (InternetCheck.isNetworkAvailable(self)) {
                     Intent intent = new Intent(self, MiniStatementActivity.class);
                     startActivity(intent);
                 } else {
@@ -85,6 +87,14 @@ public class HomeActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(HomeActivity.this, MMOperatorsActivity.class);
                 intent.putExtra(Constants.PREVIOUS_ACTIVITY, Constants.CASH_IN);
+                startActivity(intent);
+            }
+        });
+
+        billPaymentButton.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(HomeActivity.this, BillPaymentActivity.class);
                 startActivity(intent);
             }
         });

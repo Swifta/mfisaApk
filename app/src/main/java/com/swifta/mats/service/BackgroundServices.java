@@ -68,6 +68,12 @@ public class BackgroundServices extends IntentService {
             case ApiJobs.CASH_OUT_UNREGISTERED_CUSTOMER:
                 processUnregisteredCashout(data);
                 break;
+            case ApiJobs.GET_SERVICE_PROVIDER_DETAILS:
+                getServiceProviderDetails(data);
+                break;
+            case ApiJobs.PAYBILL_REQUEST:
+                payBillRequest(data);
+                break;
             default:
                 //do nothing
                 break;
@@ -88,7 +94,7 @@ public class BackgroundServices extends IntentService {
         HttpParams httpParameters = new BasicHttpParams();
         int timeoutConnection = 10000;
         HttpConnectionParams.setConnectionTimeout(httpParameters, timeoutConnection);
-        int timeoutSocket = 5000;
+        int timeoutSocket = 10000;
         HttpConnectionParams.setSoTimeout(httpParameters, timeoutSocket);
 
         httpclient = new DefaultHttpClient(httpParameters);
@@ -443,6 +449,95 @@ public class BackgroundServices extends IntentService {
             String result = "";
             JSONObject myResponse = new JSONObject();
             myResponse.put("request", Constants.UNREGISTERED_CASH_OUT);
+            if (status == 200) {
+                result = EntityUtils.toString(response.getEntity());
+                myResponse.put("success", true);
+                myResponse.put("message", "okay");
+                myResponse.put("psa", new JSONObject(result));
+            } else {
+                result = getResources().getString(R.string.unprocessed_request);
+                myResponse.put("success", false);
+                myResponse.put("message", result);
+                myResponse.put("psa", "{}");
+            }
+            this.reponseContent = myResponse.toString();
+        } catch (Exception e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        } finally {
+            publishResults();
+        }
+    }
+
+    @SuppressWarnings("deprecation")
+    private void getServiceProviderDetails(JSONObject obj) {
+        String url = Constants.API_URL + "service/getserviceproviderdetails";
+        HttpParams httpParameters = new BasicHttpParams();
+        int timeoutConnection = 10000;
+        HttpConnectionParams.setConnectionTimeout(httpParameters, timeoutConnection);
+        int timeoutSocket = 5000;
+        HttpConnectionParams.setSoTimeout(httpParameters, timeoutSocket);
+
+        httpclient = new DefaultHttpClient(httpParameters);
+
+        try {
+            url += "?serviceprovidercode=" + obj.getString(Constants.VENDOR_ID);
+
+            HttpPost httpPost = new HttpPost(url);
+            HttpResponse response = httpclient.execute(httpPost);
+
+            int status = response.getStatusLine().getStatusCode();
+            String result = "";
+            JSONObject myResponse = new JSONObject();
+            myResponse.put("request", Constants.GET_SERVICE_PROVIDER_DETAILS);
+            if (status == 200) {
+                result = EntityUtils.toString(response.getEntity());
+                myResponse.put("success", true);
+                myResponse.put("message", "okay");
+                myResponse.put("psa", new JSONObject(result));
+            } else {
+                result = getResources().getString(R.string.unprocessed_request);
+                myResponse.put("success", false);
+                myResponse.put("message", result);
+                myResponse.put("psa", "{}");
+            }
+            this.reponseContent = myResponse.toString();
+        } catch (Exception e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        } finally {
+            publishResults();
+        }
+    }
+
+    @SuppressWarnings("deprecation")
+    private void payBillRequest(JSONObject obj) {
+        String url = Constants.API_URL + "service/paybillrequest";
+        HttpParams httpParameters = new BasicHttpParams();
+        int timeoutConnection = 10000;
+        HttpConnectionParams.setConnectionTimeout(httpParameters, timeoutConnection);
+        int timeoutSocket = 5000;
+        HttpConnectionParams.setSoTimeout(httpParameters, timeoutSocket);
+
+        httpclient = new DefaultHttpClient(httpParameters);
+
+        try {
+            url += "?orginatingresourceid=" + obj.getString("orginatingresourceid").toLowerCase() +
+                    "&amount=" + obj.getString("amount") +
+                    "&frommessage=" + obj.getString("frommessage") +
+                    "&vendorid=" + obj.getString("vendorid") +
+                    "&vendoraccount=" + obj.getString("vendoraccount") +
+                    "&vendorservicename=" + obj.getString("vendorservicename") +
+                    "&vendorparam1=" + obj.getString("vendorparam1") +
+                    "&vendorparam2=" + obj.getString("vendorparam2");
+
+            HttpPost httpPost = new HttpPost(url);
+            HttpResponse response = httpclient.execute(httpPost);
+
+            int status = response.getStatusLine().getStatusCode();
+            String result = "";
+            JSONObject myResponse = new JSONObject();
+            myResponse.put("request", Constants.PAY_BILL_REQUEST);
             if (status == 200) {
                 result = EntityUtils.toString(response.getEntity());
                 myResponse.put("success", true);

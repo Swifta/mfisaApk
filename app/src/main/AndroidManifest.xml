@@ -89,7 +89,10 @@
             android:label="@string/title_activity_mini_statement" />
         <activity android:name=".forms.CashInActivity" />
         <activity android:name=".forms.CompleteCashOutActivity" />
-        <activity android:name=".forms.CashOutUnregisteredCustomerActivity"></activity>
+        <activity android:name=".forms.CashOutUnregisteredCustomerActivity" />
+        <activity android:name=".BillPaymentActivity" />
+        <activity android:name=".ServiceProviderDetailsActivity" />
+        <activity android:name=".forms.ProcessServiceProviderActivity" />
     </application>
 
 </manifest>

@@ -10,5 +10,6 @@ public class ApiJobs {
     public static final int CASH_IN_REQUEST = 7;
     public static final int COMPLETE_CASHOUT_REQUEST = 8;
     public static final int CASH_OUT_UNREGISTERED_CUSTOMER = 9;
-
+    public static final int GET_SERVICE_PROVIDER_DETAILS = 10;
+    public static final int PAYBILL_REQUEST = 11;
 }

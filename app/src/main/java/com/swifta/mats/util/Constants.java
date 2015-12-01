@@ -26,11 +26,25 @@ public class Constants {
     public static final int CASH_IN_COMPLETED = 4;
     public static final int COMPLETE_CASH_OUT_COMPLETED = 5;
     public static final int UNREGISTERED_CASH_OUT = 6;
+    public static final int GET_SERVICE_PROVIDER_DETAILS = 7;
+    public static final int PAY_BILL_REQUEST = 8;
     public static final String TMP_DEPOSIT_FLOAT_DATA = "tmp_deposit_float";
     public static final String TRANSACTION_WAS_SUCCESSFUL = "TRANSACTION WAS SUCCESSFUL";
     public static final String PASSWORD_RESET_WAS_SUCCESSFUL = "PASSWORD_RESET_WAS_SUCCESSFUL";
     public static final String CASHOUT_TRANSACTION_WAS_SUCCESSFUL = "Redeem cash-out request save and sent to customer successfully!";
+    public static final String PAYBILL_REQUEST_WAS_SUCCESSFUL = "Your request is submitted for processing. Please wait for a status confirmation via SMS, and you can check your ministatement for confirmation";
 
+    /*
+     * Vendor IDs for Bill Payment
+     */
+    public static final String DSTV_VENDOR_ID = "BILL001";
+    public static final String GOTV_VENDOR_ID = "BILL002";
+    public static final String MTN_VENDOR_ID = "BILL009";
+    public static final String GLO_VENDOR_ID = "BILL010";
+    public static final String ETISALAT_VENDOR_ID = "BILL011";
+    public static final String AIRTEL_VENDOR_ID = "BILL012";
+    public static final String VENDOR_ID = "VENDOR_ID";
+    public static final String NONE = "none";
 
     public static final String PREVIOUS_ACTIVITY = "previous_activity";
     public static final String CASH_IN = "cash_in";

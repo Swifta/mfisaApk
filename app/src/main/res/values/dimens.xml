@@ -13,5 +13,6 @@
     <dimen name="tiny_font">15sp</dimen>
     <dimen name="btn_separator">5dp</dimen>
     <dimen name="btn_width1">120dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
 
 </resources>

@@ -8,7 +8,7 @@
     <string name="show_password">Show Password</string>
     <string name="sign_in">Sign In</string>
     <string name="help">Help</string>
-    <string name="empty"></string>
+    <string name="empty" />
     <string name="please_wait">please wait ....</string>
     <string name="service_name">MATS</string>
     <string name="copyright">Copyright 2015. Swifta Systems.</string>
@@ -50,6 +50,7 @@
     <string name="cancel">Cancel</string>
     <string name="confirm">Confirm</string>
     <string name="float_transfer_options_title">Float Transfer Options</string>
+    <string name="bill_payment_options_title">Bill Payment Options</string>
     <string name="title_activity_float_transfer">FloatTransferActivity</string>
     <string name="deposit_float">Deposit Float</string>
     <string name="return_float">Return Float</string>
@@ -91,4 +92,16 @@ Your new password is &#160;</string>
     <string name="request_rejection_reason">Your request was rejected because &#160;</string>
     <string name="confirm_float_transfer">Confirm Float Transfer Transaction</string>
     <string name="empty_reference_number">Please fill in the reference number.</string>
+    <string name="dstv">DSTV</string>
+    <string name="gotv">GoTV</string>
+    <string name="mtn">MTN</string>
+    <string name="glo">GLO</string>
+    <string name="etisalat">Etisalat</string>
+    <string name="airtel">Airtel</string>
+    <string name="title_activity_bill_payment_form">BillPaymentFormActivity</string>
+    <string name="action_search">Search</string>
+    <string name="service_phone_number_hint">Phone Number</string>
+    <string name="service_acc_number_hint">Account Number</string>
+    <string name="service_firstname">First name</string>
+    <string name="service_lastname">Last name</string>
 </resources>
