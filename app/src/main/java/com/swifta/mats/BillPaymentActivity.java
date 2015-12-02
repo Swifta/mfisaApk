@@ -67,7 +67,15 @@ public class BillPaymentActivity extends AppCompatActivity {
                         }
                     } else {
                         String showReport = responseJson.getString("message");
-                        Toast.makeText(self, "Request failed : " + showReport, Toast.LENGTH_LONG).show();
+                        AlertDialog.Builder dialog = new AlertDialog.Builder(self);
+                        dialog.setMessage("Request failed : " + showReport);
+                        dialog.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                dialog.cancel();
+                            }
+                        });
+                        dialog.show();
                     }
                 }
             } catch (JSONException ex) {

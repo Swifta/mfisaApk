@@ -84,14 +84,31 @@ public class CompleteDepositFloatActivity extends AppCompatActivity {
                             uiDisplaySummary();
                         } else {
                             String errorMessage = psaTranResponse.getString("responsemessage");
-                            Toast.makeText(self, getResources().getString(R.string.request_rejection_reason) + errorMessage.replace("_", " ")
-                                    .toLowerCase(), Toast.LENGTH_LONG).show();
+
+                            AlertDialog.Builder dialog = new AlertDialog.Builder(self);
+                            dialog.setMessage(getResources().getString(R.string.request_rejection_reason) + errorMessage.replace("_", " ")
+                                    .toLowerCase());
+                            dialog.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                                @Override
+                                public void onClick(DialogInterface dialog, int which) {
+                                    dialog.cancel();
+                                }
+                            });
+                            dialog.show();
                             reEnterOTP();
                         }
                     } else {
                         String showReport = responseJson.getString("message");
                         reEnterOTP();
-                        Toast.makeText(self, "Your request failed : " + showReport, Toast.LENGTH_LONG).show();
+                        AlertDialog.Builder dialog = new AlertDialog.Builder(self);
+                        dialog.setMessage("Your request failed : " + showReport);
+                        dialog.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                dialog.cancel();
+                            }
+                        });
+                        dialog.show();
                     }
                 }
             } catch (JSONException e) {

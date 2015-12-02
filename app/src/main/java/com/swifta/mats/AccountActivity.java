@@ -68,16 +68,31 @@ public class AccountActivity extends AppCompatActivity {
                     edit.putString("password", newpassword);
                     edit.apply();
 
-                    // Changes activity after saving the username and password
+                    // Clears the fields and changes display after saving the username and password successfully
+                    passwordText.setText("");
                     frame.setVisibility(View.GONE);
+                    AlertDialog.Builder dialog = new AlertDialog.Builder(self);
+                    dialog.setMessage(getResources().getString(R.string.successful_password_change) + newpassword);
+                    dialog.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
+                            dialog.cancel();
+                        }
+                    });
+                    dialog.show();
 
-                    Toast.makeText(self, getResources().getString(R.string.successful_password_change) + newpassword,
-                            Toast.LENGTH_LONG).show();
                     changePassword.setVisibility(View.VISIBLE);
                     busy = false;
                 } else {
-                    Toast.makeText(self, getResources().getString(R.string.unsuccessful_password_change),
-                            Toast.LENGTH_LONG).show();
+                    AlertDialog.Builder dialog = new AlertDialog.Builder(self);
+                    dialog.setMessage(getResources().getString(R.string.unsuccessful_password_change));
+                    dialog.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
+                            dialog.cancel();
+                        }
+                    });
+                    dialog.show();
                 }
             } catch (JSONException e) {
                 // TODO Auto-generated catch block

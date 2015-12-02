@@ -94,14 +94,31 @@ public class DepositFloatActivity extends AppCompatActivity {
                             uiHandleSuccess(transaction_id);
                         } else {
                             String errorMessage = psaTranResponse.getString("responsemessage");
-                            Toast.makeText(self, "Your request was rejected because " + errorMessage.replace("_", " ")
-                                    .toLowerCase(), Toast.LENGTH_LONG).show();
+
+                            AlertDialog.Builder dialog = new AlertDialog.Builder(self);
+                            dialog.setMessage("Your request was rejected because " + errorMessage.replace("_", " ")
+                                    .toLowerCase());
+                            dialog.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                                @Override
+                                public void onClick(DialogInterface dialog, int which) {
+                                    dialog.cancel();
+                                }
+                            });
+                            dialog.show();
                             uiHandleFailed();
                         }
                     } else {
                         String showReport = responseJson.getString("message");
                         uiHandleFailed();
-                        Toast.makeText(self, "Your request failed: " + showReport, Toast.LENGTH_LONG).show();
+                        AlertDialog.Builder dialog = new AlertDialog.Builder(self);
+                        dialog.setMessage("Your request failed: " + showReport);
+                        dialog.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                dialog.cancel();
+                            }
+                        });
+                        dialog.show();
                     }
                 } else if (responseJson.getInt("request") == Constants.OTP_COMPLETE_REQUEST) {
                     if (responseJson.getBoolean("success")) {
@@ -112,15 +129,31 @@ public class DepositFloatActivity extends AppCompatActivity {
                             uiDisplaySummary();
                         } else {
                             String errorMessage = psaTranResponse.getString("responsemessage");
-                            Toast.makeText(self, getResources().getString(R.string.request_rejection_reason)
+                            AlertDialog.Builder dialog = new AlertDialog.Builder(self);
+                            dialog.setMessage(getResources().getString(R.string.request_rejection_reason)
                                     + errorMessage.replace("_", " ")
-                                    .toLowerCase(), Toast.LENGTH_LONG).show();
+                                    .toLowerCase());
+                            dialog.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                                @Override
+                                public void onClick(DialogInterface dialog, int which) {
+                                    dialog.cancel();
+                                }
+                            });
+                            dialog.show();
                             reEnterOTP();
                         }
                     } else {
                         String showReport = responseJson.getString("message");
                         reEnterOTP();
-                        Toast.makeText(self, "Your request failed: " + showReport, Toast.LENGTH_LONG).show();
+                        AlertDialog.Builder dialog = new AlertDialog.Builder(self);
+                        dialog.setMessage("Your request failed: " + showReport);
+                        dialog.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                dialog.cancel();
+                            }
+                        });
+                        dialog.show();
                     }
                 }
             } catch (JSONException e) {
@@ -422,7 +455,15 @@ public class DepositFloatActivity extends AppCompatActivity {
             done_btns.setVisibility(View.VISIBLE);
         } catch (JSONException jE) {
             jE.printStackTrace();
-            Toast.makeText(self, "Data issue : " + jE.getMessage(), Toast.LENGTH_LONG).show();
+            AlertDialog.Builder dialog = new AlertDialog.Builder(self);
+            dialog.setMessage("Data issue : " + jE.getMessage());
+            dialog.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialog, int which) {
+                    dialog.cancel();
+                }
+            });
+            dialog.show();
             uiHandleFailed();
         }
     }

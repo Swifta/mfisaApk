@@ -15,7 +15,6 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.LinearLayout;
 import android.widget.Toast;
 
 import com.swifta.mats.LoginActivity;
@@ -68,15 +67,39 @@ public class CashInActivity extends AppCompatActivity {
                         JSONObject psaTranResponse = psaResponse.getJSONObject("TransactionResponses")
                                 .getJSONObject("TransactionResponse");
                         if (psaTranResponse.getString("responsemessage").equals(Constants.TRANSACTION_WAS_SUCCESSFUL)) {
-                            Toast.makeText(self, (Constants.TRANSACTION_WAS_SUCCESSFUL).toLowerCase(), Toast.LENGTH_LONG).show();
+                            AlertDialog.Builder dialog = new AlertDialog.Builder(self);
+                            dialog.setMessage(Constants.TRANSACTION_WAS_SUCCESSFUL);
+                            dialog.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                                @Override
+                                public void onClick(DialogInterface dialog, int which) {
+                                    dialog.cancel();
+                                }
+                            });
+                            dialog.show();
                         } else {
                             String errorMessage = psaTranResponse.getString("responsemessage");
-                            Toast.makeText(self, getResources().getString(R.string.request_rejection_reason) + errorMessage.replace("_", " ")
-                                    .toLowerCase(), Toast.LENGTH_LONG).show();
+                            AlertDialog.Builder dialog = new AlertDialog.Builder(self);
+                            dialog.setMessage(getResources().getString(R.string.request_rejection_reason) + errorMessage.replace("_", " ")
+                                    .toLowerCase());
+                            dialog.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                                @Override
+                                public void onClick(DialogInterface dialog, int which) {
+                                    dialog.cancel();
+                                }
+                            });
+                            dialog.show();
                         }
                     } else {
                         String showReport = responseJson.getString("message");
-                        Toast.makeText(self, "Request failed : " + showReport, Toast.LENGTH_LONG).show();
+                        AlertDialog.Builder dialog = new AlertDialog.Builder(self);
+                        dialog.setMessage("Request failed : " + showReport);
+                        dialog.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                dialog.cancel();
+                            }
+                        });
+                        dialog.show();
                     }
                 }
             } catch (JSONException e) {

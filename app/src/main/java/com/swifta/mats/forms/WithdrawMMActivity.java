@@ -108,7 +108,15 @@ public class WithdrawMMActivity extends AppCompatActivity {
                         JSONObject psaTranResponse = psaResponse.getJSONObject("TransactionResponses")
                                 .getJSONObject("TransactionResponse");
                         if (psaTranResponse.getString("responsemessage").equals(Constants.CASHOUT_TRANSACTION_WAS_SUCCESSFUL)) {
-                            Toast.makeText(self, "Transaction was successful. Please wait for your OTP to complete this process.", Toast.LENGTH_LONG).show();
+                            AlertDialog.Builder dialog = new AlertDialog.Builder(self);
+                            dialog.setMessage("Transaction was successful. Please wait for your OTP to complete this process.");
+                            dialog.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                                @Override
+                                public void onClick(DialogInterface dialog, int which) {
+                                    dialog.cancel();
+                                }
+                            });
+                            dialog.show();
                             showForm();
 
                             SharedPreferences sharedPref = self.getSharedPreferences(Constants.STORE_CASHOUT_DATA,
@@ -126,13 +134,29 @@ public class WithdrawMMActivity extends AppCompatActivity {
                             startActivity(i);
                         } else {
                             String errorMessage = psaTranResponse.getString("responsemessage");
-                            Toast.makeText(self, getResources().getString(R.string.request_rejection_reason)
+                            AlertDialog.Builder dialog = new AlertDialog.Builder(self);
+                            dialog.setMessage(getResources().getString(R.string.request_rejection_reason)
                                     + errorMessage.replace("_", " ")
-                                    .toLowerCase(), Toast.LENGTH_LONG).show();
+                                    .toLowerCase());
+                            dialog.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                                @Override
+                                public void onClick(DialogInterface dialog, int which) {
+                                    dialog.cancel();
+                                }
+                            });
+                            dialog.show();
                         }
                     } else {
                         String showReport = responseJson.getString("message");
-                        Toast.makeText(self, "Request Failed : " + showReport, Toast.LENGTH_LONG).show();
+                        AlertDialog.Builder dialog = new AlertDialog.Builder(self);
+                        dialog.setMessage("Request Failed : " + showReport);
+                        dialog.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                dialog.cancel();
+                            }
+                        });
+                        dialog.show();
                     }
                 }
             } catch (JSONException e) {
