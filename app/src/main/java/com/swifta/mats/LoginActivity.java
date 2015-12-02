@@ -34,7 +34,6 @@ public class LoginActivity extends AppCompatActivity {
 
     private LoginActivity self = this;
     private Button signIn;
-    private LinearLayout formFrame;
     private EditText usernameText;
     private EditText passwordText;
     private CheckBox showPassword;
@@ -80,7 +79,6 @@ public class LoginActivity extends AppCompatActivity {
                 Toast.makeText(self, getResources().getString(R.string.retry_uncompleted_request), Toast.LENGTH_LONG).show();
             } finally {
                 if (!status) {
-                    formFrame.setVisibility(View.VISIBLE);
                     progressDialog.hide();
                     busy = false;
                 }
@@ -101,10 +99,11 @@ public class LoginActivity extends AppCompatActivity {
 
         getSupportActionBar().hide();
 
-        formFrame = (LinearLayout) findViewById(R.id.form_frame);
         showPassword = (CheckBox) findViewById(R.id.show_pwd);
         usernameText = (EditText) findViewById(R.id.username);
         passwordText = (EditText) findViewById(R.id.password);
+
+        progressDialog = new ProgressDialog(self);
 
         signIn = (Button) findViewById(R.id.sign_in);
         signIn.setOnClickListener(new OnClickListener() {
@@ -117,10 +116,7 @@ public class LoginActivity extends AppCompatActivity {
                     Toast.makeText(self, getResources().getString(R.string.empty_credentials), Toast.LENGTH_LONG).show();
                 } else {
                     if (com.swifta.mats.util.InternetCheck.isNetworkAvailable(self)) {
-                        formFrame.setVisibility(View.GONE);
-
-                        progressDialog = new ProgressDialog(self);
-                        progressDialog.setMessage("Logging you in...");
+                        progressDialog.setMessage(getResources().getString(R.string.wait));
                         progressDialog.show();
 
                         JSONObject data = new JSONObject();
