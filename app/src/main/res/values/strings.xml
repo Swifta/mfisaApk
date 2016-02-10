@@ -2,14 +2,14 @@
 <resources>
 
     <string name="app_name">MATS</string>
-    <string name="login_title">Welcome to MATS.\nPlease Login.</string>
-    <string name="enter_username">Enter Username</string>
-    <string name="enter_password">Enter Password</string>
+    <string name="enter_username">Username</string>
+    <string name="enter_password">Password</string>
     <string name="show_password">Show Password</string>
     <string name="sign_in">Sign In</string>
     <string name="help">Help</string>
     <string name="empty" />
     <string name="please_wait">please wait ....</string>
+    <string name="last_transaction">Last Transaction</string>
     <string name="service_name">MATS</string>
     <string name="copyright">Copyright 2015. Swifta Systems.</string>
     <string name="title_activity_home">Welcome </string>
@@ -18,8 +18,8 @@
     <string name="withdrawal">Withdrawal</string>
     <string name="float_transfer">Float Transfer</string>
     <string name="verify_withdrawal">Verify Withdrawal</string>
-    <string name="cash_in">Cash in</string>
-    <string name="cash_out">Cash out</string>
+    <string name="cash_in">Cash In</string>
+    <string name="cash_out">Cash Out</string>
     <string name="merchant_payment">Merchant Payment</string>
     <string name="bill_payment">Bill Payment</string>
     <string name="sell_airtime">Sell Airtime</string>

@@ -9,12 +9,12 @@
     <color name="white">#FFFFFF</color>
 
     <!-- Material Design Color Scheme -->
-    <color name="colorPrimary">#03A9F4</color>
-    <color name="colorPrimaryDark">#0288D1</color>
+    <color name="colorPrimary">#2e73b9</color>
+    <color name="colorPrimaryDark">#1f5d9b</color>
     <color name="colorPrimaryLight">#B3E5FC</color>
-    <color name="colorAccent">#FF4081</color>
-    <color name="colorAccentLight">#FF80AB</color>
+    <color name="colorAccent">#ed1c24</color>
+    <color name="colorAccentLight">#e7575c</color>
     <color name="colorDivider">#cacaca</color>
-    <color name="colorDividerLight">#f7f7f7</color>
+    <color name="colorDividerLight">#ececec</color>
     <color name="colorDividerDark">#a6a6a6</color>
 </resources>

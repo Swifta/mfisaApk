@@ -8,8 +8,8 @@ import android.content.Intent;
 import android.content.IntentFilter;
 import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.CardView;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -25,6 +25,8 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.util.ArrayList;
+
 public class MiniStatementActivity extends AppCompatActivity {
 
     private MiniStatementActivity self = this;
@@ -33,6 +35,22 @@ public class MiniStatementActivity extends AppCompatActivity {
     private TextView noStatement;
     private LinearLayout generalLayout;
     private LinearLayout container;
+
+    private CardView countCardView;
+    private TextView floatTextView;
+    private TextView cashInTextView;
+    private TextView cashOutTextView;
+    private TextView paymentTextView;
+
+    private LinearLayout floatLayout;
+    private LinearLayout cashInLayout;
+    private LinearLayout cashOutLayout;
+    private LinearLayout paymentLayout;
+
+    ArrayList<Statement> floatList = new ArrayList<Statement>();
+    ArrayList<Statement> cashInList = new ArrayList<Statement>();
+    ArrayList<Statement> cashOutList = new ArrayList<Statement>();
+    ArrayList<Statement> paymentList = new ArrayList<Statement>();
 
     private BroadcastReceiver receiver = new BroadcastReceiver() {
 
@@ -46,57 +64,52 @@ public class MiniStatementActivity extends AppCompatActivity {
 
                 JSONArray finalJson = responseJson2.getJSONArray("TransactionResponse");
 
+
                 if (finalJson.length() != 0) {
-                    // Automatically populates the trailers with data from the JSON response
+                    // Automatically populates with data from the JSON response
                     for (int i = 0; i < finalJson.length(); i++) {
                         JSONObject arrayValue = finalJson.getJSONObject(i);
 
-                        // Sets up the layout to display the data from the JSON response
-                        generalLayout.setVisibility(View.GONE);
-                        View v = getLayoutInflater().inflate(R.layout.mini_statement_item, null);
-                        container.addView(v);
-
                         String transactionTypeValue = arrayValue.getString("transactiontype");
                         String date = arrayValue.getString("date");
+                        int amount = arrayValue.getInt("amount");
+                        String receiver = arrayValue.getString("receiver");
+                        String status = arrayValue.getString("status");
 
-                        TextView transactionType = (TextView) v.findViewById(R.id.transactiontype);
-                        transactionType.setText(transactionTypeValue.replace("_", " ") + " on "
-                                + getDayFromDate(date) + " at " + getTimeFromDate(date));
-
-                        TextView amount = (TextView) v.findViewById(R.id.amount);
-                        amount.setText("Amount: " + arrayValue.getInt("amount"));
-
-                        TextView receiver = (TextView) v.findViewById(R.id.receiver);
-                        receiver.setText("Receiver: " + arrayValue.getString("receiver"));
-
-                        // If the status failed, creates a visual cue by setting the text color to red,
-                        // sets the text color to green if successful and to yellow if pending
-                        TextView status = (TextView) v.findViewById(R.id.status);
-                        switch (arrayValue.getString("status")) {
-                            case "SUCCESSFUL":
-                                status.setTextColor(ContextCompat.getColor(self, android.R.color.holo_green_dark));
+                        // Adds to the respective arraylist based on the type of transaction being performed
+                        switch (transactionTypeValue) {
+                            case "FLOAT_TRANSFER":
+                                floatList.add(new Statement(transactionTypeValue, date, amount, receiver, status));
                                 break;
-                            case "PENDING":
-                                status.setTextColor(ContextCompat.getColor(self, R.color.yellow));
+                            case "CASH_IN":
+                                cashInList.add(new Statement(transactionTypeValue, date, amount, receiver, status));
                                 break;
-                            case "FAILED":
-                                status.setTextColor(ContextCompat.getColor(self, android.R.color.holo_red_dark));
+                            case "CASH_OUT":
+                                cashOutList.add(new Statement(transactionTypeValue, date, amount, receiver, status));
                                 break;
-                            case "NOT_ENOUGH_FUNDS":
-                                status.setTextColor(ContextCompat.getColor(self, android.R.color.holo_red_dark));
+                            case "PAYMENT":
+                                paymentList.add(new Statement(transactionTypeValue, date, amount, receiver, status));
                                 break;
-                            default:
-                                status.setTextColor(ContextCompat.getColor(self, android.R.color.black));
                         }
-                        status.setText(arrayValue.getString("status"));
-                        busy = false;
                     }
+
+                    busy = false;
+                    generalLayout.setVisibility(View.GONE);
+                    noStatement.setVisibility(View.GONE);
+                    countCardView.setVisibility(View.VISIBLE);
+
+                    // Sets the numeric values beside each transaction type
+                    floatTextView.setText(" (" + String.valueOf(floatList.size()) + ")");
+                    cashInTextView.setText(" (" + String.valueOf(cashInList.size()) + ")");
+                    cashOutTextView.setText(" (" + String.valueOf(cashOutList.size()) + ")");
+                    paymentTextView.setText(" (" + String.valueOf(paymentList.size()) + ")");
                 }
             } catch (JSONException e) {
                 // TODO Auto-generated catch block
                 e.printStackTrace();
                 // Sets up the layout to handle null response
                 generalLayout.setVisibility(View.GONE);
+                countCardView.setVisibility(View.GONE);
                 noStatement.setVisibility(View.VISIBLE);
                 busy = false;
             }
@@ -118,6 +131,17 @@ public class MiniStatementActivity extends AppCompatActivity {
         generalLayout = (LinearLayout) findViewById(R.id.general_layout);
         container = (LinearLayout) findViewById(R.id.container);
 
+        countCardView = (CardView) findViewById(R.id.count_cardview);
+        floatTextView = (TextView) findViewById(R.id.float_transfer_count);
+        cashInTextView = (TextView) findViewById(R.id.cash_in_count);
+        cashOutTextView = (TextView) findViewById(R.id.withdrawal_count);
+        paymentTextView = (TextView) findViewById(R.id.payment_count);
+
+        floatLayout = (LinearLayout) findViewById(R.id.float_layout);
+        cashInLayout = (LinearLayout) findViewById(R.id.cash_in_layout);
+        cashOutLayout = (LinearLayout) findViewById(R.id.withdrawal_layout);
+        paymentLayout = (LinearLayout) findViewById(R.id.payment_layout);
+
         SharedPreferences sharedPref = self.getSharedPreferences(Constants.STORE_USERNAME_KEY,
                 Context.MODE_PRIVATE);
         String username = sharedPref.getString("username", Constants.UNKNOWN);
@@ -129,6 +153,34 @@ public class MiniStatementActivity extends AppCompatActivity {
             // TODO Auto-generated catch block
             e.printStackTrace();
         }
+
+        floatLayout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                transactionsClickAction(floatList, "Float Transfer");
+            }
+        });
+
+        cashInLayout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                transactionsClickAction(cashInList, "Cash In");
+            }
+        });
+
+        cashOutLayout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                transactionsClickAction(cashOutList, "Cash Out");
+            }
+        });
+
+        paymentLayout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                transactionsClickAction(paymentList, "Bill Payment");
+            }
+        });
 
         Intent intent = new Intent(self, BackgroundServices.class);
         intent.putExtra(Constants.JOB_IDENTITY, ApiJobs.GET_MINI_STATEMENT);
@@ -158,6 +210,18 @@ public class MiniStatementActivity extends AppCompatActivity {
             return true;
         }
         return super.onOptionsItemSelected(item);
+    }
+
+    private void transactionsClickAction(ArrayList<Statement> arrayList, String string) {
+        if (arrayList.size() > 0) {
+            Intent i = new Intent(this, TransactionActivity.class);
+            i.putExtra("name", string);
+            i.putExtra("amount", arrayList.size());
+            i.putParcelableArrayListExtra("arraylist", arrayList);
+            startActivity(i);
+        } else {
+            Toast.makeText(MiniStatementActivity.this, "No " + string + " transaction available", Toast.LENGTH_SHORT).show();
+        }
     }
 
     /**
@@ -191,27 +255,6 @@ public class MiniStatementActivity extends AppCompatActivity {
         actIntent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
         startActivity(actIntent);
         finish();
-    }
-
-    /**
-     * Retrieves the transaction day from the date
-     */
-    private String getDayFromDate(String date) {
-        return date.substring(0, 10);
-    }
-
-    /**
-     * Retrieves the transaction time from the date
-     */
-    private String getTimeFromDate(String date) {
-        String dateValue = date.substring(11, 19);
-
-        // Determines whether to append a "PM" prefix or "AM"
-        if (Integer.parseInt(dateValue.substring(0, 2)) >= 12) {
-            return dateValue += " PM";
-        } else {
-            return dateValue += " AM";
-        }
     }
 
     @Override
