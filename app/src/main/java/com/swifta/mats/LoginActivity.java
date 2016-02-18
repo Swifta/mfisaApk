@@ -65,7 +65,7 @@ public class LoginActivity extends AppCompatActivity {
                             Toast.LENGTH_LONG).show();
 
                     // Changes activity after saving the username and password
-                    Intent actIntent = new Intent(self, HomeActivity.class);
+                    Intent actIntent = new Intent(self, MainActivity.class);
                     self.startActivity(actIntent);
                     self.finish();
                 } else {
@@ -89,7 +89,7 @@ public class LoginActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_login);
 
         // Setting this makes sure we draw fullscreen
         Window window = getWindow();

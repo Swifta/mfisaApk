@@ -13,6 +13,7 @@
     <string name="service_name">MATS</string>
     <string name="copyright">Copyright 2015. Swifta Systems.</string>
     <string name="title_activity_home">Welcome </string>
+    <string name="home">Home</string>
     <string name="action_settings">Settings</string>
     <string name="logout">Logout</string>
     <string name="withdrawal">Withdrawal</string>
@@ -104,4 +105,11 @@ Your new password is &#160;</string>
     <string name="service_acc_number_hint">Account Number</string>
     <string name="service_firstname">First name</string>
     <string name="service_lastname">Last name</string>
+    <string name="title_activity_main2">Main2Activity</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

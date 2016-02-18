@@ -8,11 +8,15 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.content.SharedPreferences;
+import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.Toast;
 
@@ -26,9 +30,9 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-public class BillPaymentActivity extends AppCompatActivity {
+public class BillPaymentFragment extends Fragment {
 
-    private BillPaymentActivity self = this;
+    private BillPaymentFragment self = this;
     private boolean busy = false;
     private String myName;
     private Button dstvButton;
@@ -53,21 +57,21 @@ public class BillPaymentActivity extends AppCompatActivity {
 
                         // If the service provider is a telco, go straight to the form
                         if (json instanceof JSONObject) {
-                            Intent objectIntent = new Intent(self, ProcessServiceProviderActivity.class);
+                            Intent objectIntent = new Intent(getActivity(), ProcessServiceProviderActivity.class);
                             objectIntent.putExtra("type", "telco");
                             objectIntent.putExtra("vendorid", vendorId);
                             objectIntent.putExtra("servicename", psaTranResponse.getJSONObject("getserviceproviderdetail").getString("servicename"));
                             startActivity(objectIntent);
                         } else if (json instanceof JSONArray) {
                             // If not, open up a list of searchable service names with prefixed prices
-                            Intent newIntent = new Intent(self, ServiceProviderDetailsActivity.class);
+                            Intent newIntent = new Intent(getActivity(), ServiceProviderDetailsActivity.class);
                             newIntent.putExtra("data", json.toString());
                             newIntent.putExtra("vendorid", vendorId);
                             startActivity(newIntent);
                         }
                     } else {
                         String showReport = responseJson.getString("message");
-                        AlertDialog.Builder dialog = new AlertDialog.Builder(self);
+                        AlertDialog.Builder dialog = new AlertDialog.Builder(getActivity());
                         dialog.setMessage("Request failed : " + showReport);
                         dialog.setPositiveButton("OK", new DialogInterface.OnClickListener() {
                             @Override
@@ -80,7 +84,7 @@ public class BillPaymentActivity extends AppCompatActivity {
                 }
             } catch (JSONException ex) {
                 ex.printStackTrace();
-                Toast.makeText(self, getResources().getString(R.string.retry_uncompleted_request), Toast.LENGTH_LONG).show();
+                Toast.makeText(getActivity(), getResources().getString(R.string.retry_uncompleted_request), Toast.LENGTH_LONG).show();
             } finally {
                 busy = false;
             }
@@ -88,31 +92,39 @@ public class BillPaymentActivity extends AppCompatActivity {
     };
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_bill_payment);
+        setHasOptionsMenu(true);
+    }
 
-        SharedPreferences sharedPref = self.getSharedPreferences(Constants.STORE_USERNAME_KEY,
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                             Bundle savedInstanceState) {
+        // Inflate the layout for this fragment
+        View v = inflater.inflate(R.layout.activity_bill_payment, container, false);
+
+        SharedPreferences sharedPref = getActivity().getSharedPreferences(Constants.STORE_USERNAME_KEY,
                 Context.MODE_PRIVATE);
         myName = sharedPref.getString("username", Constants.UNKNOWN).toUpperCase();
 
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        setTitle(myName);
-        initEvents();
+        ((AppCompatActivity) getActivity()).getSupportActionBar().setTitle(getResources().getString(R.string.bill_payment));
+        initEvents(v);
+
+        return v;
     }
 
-    private void initEvents() {
-        dstvButton = (Button) findViewById(R.id.dstv);
-        gotvButton = (Button) findViewById(R.id.gotv);
-        mtn = (Button) findViewById(R.id.mtn);
-        progressDialog = new ProgressDialog(self);
+    private void initEvents(View v) {
+        dstvButton = (Button) v.findViewById(R.id.dstv);
+        gotvButton = (Button) v.findViewById(R.id.gotv);
+        mtn = (Button) v.findViewById(R.id.mtn);
+        progressDialog = new ProgressDialog(getActivity());
 
         dstvButton.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View v) {
                 // TODO Auto-generated method stub
-                if (InternetCheck.isNetworkAvailable(self)) {
+                if (InternetCheck.isNetworkAvailable(getActivity())) {
 
                     progressDialog.setMessage(getResources().getString(R.string.wait));
                     progressDialog.show();
@@ -126,13 +138,13 @@ public class BillPaymentActivity extends AppCompatActivity {
                         e.printStackTrace();
                     }
 
-                    Intent intent = new Intent(self, BackgroundServices.class);
+                    Intent intent = new Intent(getActivity(), BackgroundServices.class);
                     intent.putExtra(Constants.JOB_IDENTITY, ApiJobs.GET_SERVICE_PROVIDER_DETAILS);
                     intent.putExtra(Constants.JOB_DATA, data.toString());
-                    startService(intent);
+                    getActivity().startService(intent);
                     busy = true;
                 } else {
-                    Toast.makeText(self, getResources().getString(R.string.internet_connection_error),
+                    Toast.makeText(getActivity(), getResources().getString(R.string.internet_connection_error),
                             Toast.LENGTH_LONG).show();
                 }
             }
@@ -143,7 +155,7 @@ public class BillPaymentActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 // TODO Auto-generated method stub
-                if (InternetCheck.isNetworkAvailable(self)) {
+                if (InternetCheck.isNetworkAvailable(getActivity())) {
 
                     progressDialog.setMessage(getResources().getString(R.string.wait));
                     progressDialog.show();
@@ -157,13 +169,13 @@ public class BillPaymentActivity extends AppCompatActivity {
                         e.printStackTrace();
                     }
 
-                    Intent intent = new Intent(self, BackgroundServices.class);
+                    Intent intent = new Intent(getActivity(), BackgroundServices.class);
                     intent.putExtra(Constants.JOB_IDENTITY, ApiJobs.GET_SERVICE_PROVIDER_DETAILS);
                     intent.putExtra(Constants.JOB_DATA, data.toString());
-                    startService(intent);
+                    getActivity().startService(intent);
                     busy = true;
                 } else {
-                    Toast.makeText(self, getResources().getString(R.string.internet_connection_error),
+                    Toast.makeText(getActivity(), getResources().getString(R.string.internet_connection_error),
                             Toast.LENGTH_LONG).show();
                 }
             }
@@ -174,7 +186,7 @@ public class BillPaymentActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 // TODO Auto-generated method stub
-                if (InternetCheck.isNetworkAvailable(self)) {
+                if (InternetCheck.isNetworkAvailable(getActivity())) {
 
                     progressDialog.setMessage(getResources().getString(R.string.wait));
                     progressDialog.show();
@@ -188,13 +200,13 @@ public class BillPaymentActivity extends AppCompatActivity {
                         e.printStackTrace();
                     }
 
-                    Intent intent = new Intent(self, BackgroundServices.class);
+                    Intent intent = new Intent(getActivity(), BackgroundServices.class);
                     intent.putExtra(Constants.JOB_IDENTITY, ApiJobs.GET_SERVICE_PROVIDER_DETAILS);
                     intent.putExtra(Constants.JOB_DATA, data.toString());
-                    startService(intent);
+                    getActivity().startService(intent);
                     busy = true;
                 } else {
-                    Toast.makeText(self, getResources().getString(R.string.internet_connection_error),
+                    Toast.makeText(getActivity(), getResources().getString(R.string.internet_connection_error),
                             Toast.LENGTH_LONG).show();
                 }
             }
@@ -202,22 +214,21 @@ public class BillPaymentActivity extends AppCompatActivity {
     }
 
     @Override
-    protected void onResume() {
+    public void onResume() {
         super.onResume();
-        registerReceiver(receiver, new IntentFilter(Constants.SERVICE_NOTIFICATION));
+        getActivity().registerReceiver(receiver, new IntentFilter(Constants.SERVICE_NOTIFICATION));
     }
 
     @Override
-    protected void onPause() {
+    public void onPause() {
         super.onPause();
-        unregisterReceiver(receiver);
+        getActivity().unregisterReceiver(receiver);
     }
 
     @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
+    public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.account, menu);
-        return true;
+        inflater.inflate(R.menu.account, menu);
     }
 
     @Override
@@ -226,10 +237,7 @@ public class BillPaymentActivity extends AppCompatActivity {
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
-        if (id == android.R.id.home) {
-            onBackPressed();
-            return true;
-        } else if (id == R.id.logout) {
+        if (id == R.id.logout) {
             confirmLogout();
             return true;
         }
@@ -241,7 +249,7 @@ public class BillPaymentActivity extends AppCompatActivity {
      */
 
     public void confirmLogout() {
-        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
         builder.setMessage(getResources().getString(R.string.logout_confirmation))
                 .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
 
@@ -264,18 +272,8 @@ public class BillPaymentActivity extends AppCompatActivity {
     }
 
     private void logout() {
-        Intent actIntent = new Intent(self, LoginActivity.class);
+        Intent actIntent = new Intent(getActivity(), LoginActivity.class);
         actIntent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
         startActivity(actIntent);
-        finish();
-    }
-
-    @Override
-    public void onBackPressed() {
-        if (busy) {
-            Toast.makeText(self, getResources().getString(R.string.processing_request), Toast.LENGTH_LONG).show();
-        } else {
-            finish();
-        }
     }
 }

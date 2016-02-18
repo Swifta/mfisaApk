@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/home_layout"
+            android:checked="true"
+            android:icon="@drawable/ic_action_home"
+            android:title="@string/home" />
+
+        <item
+            android:id="@+id/float_transfer"
+            android:icon="@drawable/ic_action_transfer"
+            android:title="@string/float_transfer" />
+        <item
+            android:id="@+id/cash_in"
+            android:icon="@drawable/ic_action_cash_in"
+            android:title="@string/cash_in" />
+        <item
+            android:id="@+id/cash_out"
+            android:icon="@drawable/ic_action_cash_out"
+            android:title="@string/cash_out" />
+        <item
+            android:id="@+id/bill_payment"
+            android:icon="@drawable/ic_action_payment"
+            android:title="@string/bill_payment" />
+
+        <item
+            android:id="@+id/mini_statement"
+            android:icon="@drawable/ic_action_receipt"
+            android:title="@string/read_mini_statement" />
+    </group>
+
+</menu>

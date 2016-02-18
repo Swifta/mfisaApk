@@ -21,7 +21,7 @@ import android.widget.Toast;
 
 import com.swifta.mats.LoginActivity;
 import com.swifta.mats.R;
-import com.swifta.mats.WithdrawalActivity;
+import com.swifta.mats.WithdrawalFragment;
 import com.swifta.mats.service.BackgroundServices;
 import com.swifta.mats.util.ApiJobs;
 import com.swifta.mats.util.Constants;
@@ -130,7 +130,7 @@ public class WithdrawMMActivity extends AppCompatActivity {
                             edit.putString("paymentreference", data.getString("reference"));
                             edit.apply();
 
-                            Intent i = new Intent(self, WithdrawalActivity.class);
+                            Intent i = new Intent(self, WithdrawalFragment.class);
                             startActivity(i);
                         } else {
                             String errorMessage = psaTranResponse.getString("responsemessage");

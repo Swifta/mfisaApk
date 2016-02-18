@@ -32,69 +32,73 @@
             android:label="@string/service_name" />
 
         <activity
-            android:name=".HomeActivity"
+            android:name=".HomeFragment"
             android:label="@string/title_activity_home" />
         <activity
-            android:name=".WithdrawalActivity"
+            android:name=".WithdrawalFragment"
             android:label="@string/title_activity_withdrawal"
-            android:parentActivityName=".HomeActivity">
+            android:parentActivityName=".HomeFragment">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.swifta.mats.HomeActivity" />
+                android:value=".HomeFragment" />
         </activity>
         <activity
-            android:name=".MMOperatorsActivity"
+            android:name=".MMOperatorsFragment"
             android:label="@string/title_activity_mmoperators"
-            android:parentActivityName=".WithdrawalActivity">
+            android:parentActivityName=".WithdrawalFragment">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.swifta.mats.WithdrawalActivity" />
+                android:value=".WithdrawalFragment" />
         </activity>
         <activity
             android:name=".forms.WithdrawMMActivity"
             android:label="@string/title_activity_withdraw_mm"
-            android:parentActivityName=".MMOperatorsActivity">
+            android:parentActivityName=".MMOperatorsFragment">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.swifta.mats.MMOperatorsActivity" />
+                android:value=".MMOperatorsFragment" />
         </activity>
         <activity
-            android:name=".FloatTransferActivity"
+            android:name=".FloatTransferFragment"
             android:label="@string/title_activity_float_transfer"
-            android:parentActivityName=".HomeActivity">
+            android:parentActivityName=".HomeFragment">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.swifta.mats.HomeActivity" />
+                android:value=".HomeFragment" />
         </activity>
         <activity
             android:name=".forms.DepositFloatActivity"
             android:label="@string/title_activity_deposit_float"
-            android:parentActivityName=".FloatTransferActivity">
+            android:parentActivityName=".FloatTransferFragment">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.swifta.mats.FloatTransferActivity" />
+                android:value=".FloatTransferFragment" />
         </activity>
         <activity
             android:name=".forms.CompleteDepositFloatActivity"
             android:label="@string/title_activity_complete_deposit_float"
-            android:parentActivityName=".FloatTransferActivity">
+            android:parentActivityName=".FloatTransferFragment">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.swifta.mats.FloatTransferActivity" />
+                android:value=".FloatTransferFragment" />
         </activity>
         <activity
             android:name=".AccountActivity"
             android:label="@string/title_activity_account" />
         <activity
-            android:name=".MiniStatementActivity"
+            android:name=".MiniStatementFragment"
             android:label="@string/title_activity_mini_statement" />
         <activity android:name=".forms.CashInActivity" />
         <activity android:name=".forms.CompleteCashOutActivity" />
         <activity android:name=".forms.CashOutUnregisteredCustomerActivity" />
-        <activity android:name=".BillPaymentActivity" />
+        <activity android:name=".BillPaymentFragment" />
         <activity android:name=".ServiceProviderDetailsActivity" />
         <activity android:name=".forms.ProcessServiceProviderActivity" />
-        <activity android:name=".TransactionActivity"></activity>
+        <activity android:name=".TransactionActivity" />
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/title_activity_main2"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>

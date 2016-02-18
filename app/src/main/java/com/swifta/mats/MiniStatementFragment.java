@@ -8,11 +8,15 @@ import android.content.Intent;
 import android.content.IntentFilter;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.CardView;
+import android.view.LayoutInflater;
 import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -27,9 +31,9 @@ import org.json.JSONObject;
 
 import java.util.ArrayList;
 
-public class MiniStatementActivity extends AppCompatActivity {
+public class MiniStatementFragment extends Fragment {
 
-    private MiniStatementActivity self = this;
+    private MiniStatementFragment self = this;
     private boolean busy = false;
 
     private TextView noStatement;
@@ -117,32 +121,41 @@ public class MiniStatementActivity extends AppCompatActivity {
     };
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_mini_statement);
-
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-
-        initEvent();
+        setHasOptionsMenu(true);
     }
 
-    private void initEvent() {
-        noStatement = (TextView) findViewById(R.id.no_statement);
-        generalLayout = (LinearLayout) findViewById(R.id.general_layout);
-        container = (LinearLayout) findViewById(R.id.container);
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                             Bundle savedInstanceState) {
+        // Inflate the layout for this fragment
+        View v = inflater.inflate(R.layout.activity_mini_statement, container, false);
 
-        countCardView = (CardView) findViewById(R.id.count_cardview);
-        floatTextView = (TextView) findViewById(R.id.float_transfer_count);
-        cashInTextView = (TextView) findViewById(R.id.cash_in_count);
-        cashOutTextView = (TextView) findViewById(R.id.withdrawal_count);
-        paymentTextView = (TextView) findViewById(R.id.payment_count);
+        ((AppCompatActivity) getActivity()).getSupportActionBar().setTitle(getResources().getString(R.string.read_mini_statement));
 
-        floatLayout = (LinearLayout) findViewById(R.id.float_layout);
-        cashInLayout = (LinearLayout) findViewById(R.id.cash_in_layout);
-        cashOutLayout = (LinearLayout) findViewById(R.id.withdrawal_layout);
-        paymentLayout = (LinearLayout) findViewById(R.id.payment_layout);
+        initEvent(v);
 
-        SharedPreferences sharedPref = self.getSharedPreferences(Constants.STORE_USERNAME_KEY,
+        return v;
+    }
+
+    private void initEvent(View v) {
+        noStatement = (TextView) v.findViewById(R.id.no_statement);
+        generalLayout = (LinearLayout) v.findViewById(R.id.general_layout);
+        container = (LinearLayout) v.findViewById(R.id.container);
+
+        countCardView = (CardView) v.findViewById(R.id.count_cardview);
+        floatTextView = (TextView) v.findViewById(R.id.float_transfer_count);
+        cashInTextView = (TextView) v.findViewById(R.id.cash_in_count);
+        cashOutTextView = (TextView) v.findViewById(R.id.withdrawal_count);
+        paymentTextView = (TextView) v.findViewById(R.id.payment_count);
+
+        floatLayout = (LinearLayout) v.findViewById(R.id.float_layout);
+        cashInLayout = (LinearLayout) v.findViewById(R.id.cash_in_layout);
+        cashOutLayout = (LinearLayout) v.findViewById(R.id.withdrawal_layout);
+        paymentLayout = (LinearLayout) v.findViewById(R.id.payment_layout);
+
+        SharedPreferences sharedPref = getActivity().getSharedPreferences(Constants.STORE_USERNAME_KEY,
                 Context.MODE_PRIVATE);
         String username = sharedPref.getString("username", Constants.UNKNOWN);
 
@@ -182,18 +195,17 @@ public class MiniStatementActivity extends AppCompatActivity {
             }
         });
 
-        Intent intent = new Intent(self, BackgroundServices.class);
+        Intent intent = new Intent(getActivity(), BackgroundServices.class);
         intent.putExtra(Constants.JOB_IDENTITY, ApiJobs.GET_MINI_STATEMENT);
         intent.putExtra(Constants.JOB_DATA, data.toString());
-        startService(intent);
+        getActivity().startService(intent);
         busy = true;
     }
 
     @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
+    public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.mini_statement, menu);
-        return true;
+        inflater.inflate(R.menu.mini_statement, menu);
     }
 
     @Override
@@ -202,10 +214,7 @@ public class MiniStatementActivity extends AppCompatActivity {
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
-        if (id == android.R.id.home) {
-            onBackPressed();
-            return true;
-        } else if (id == R.id.logout) {
+        if (id == R.id.logout) {
             confirmLogout();
             return true;
         }
@@ -214,13 +223,13 @@ public class MiniStatementActivity extends AppCompatActivity {
 
     private void transactionsClickAction(ArrayList<Statement> arrayList, String string) {
         if (arrayList.size() > 0) {
-            Intent i = new Intent(this, TransactionActivity.class);
+            Intent i = new Intent(getActivity(), TransactionActivity.class);
             i.putExtra("name", string);
             i.putExtra("amount", arrayList.size());
             i.putParcelableArrayListExtra("arraylist", arrayList);
             startActivity(i);
         } else {
-            Toast.makeText(MiniStatementActivity.this, "No " + string + " transaction available", Toast.LENGTH_SHORT).show();
+            Toast.makeText(getActivity(), "No " + string + " transaction available", Toast.LENGTH_SHORT).show();
         }
     }
 
@@ -228,7 +237,7 @@ public class MiniStatementActivity extends AppCompatActivity {
      * Confirms that the user really wants to logout
      */
     public void confirmLogout() {
-        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
         builder.setMessage(getResources().getString(R.string.logout_confirmation))
                 .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
 
@@ -251,30 +260,20 @@ public class MiniStatementActivity extends AppCompatActivity {
     }
 
     private void logout() {
-        Intent actIntent = new Intent(self, LoginActivity.class);
+        Intent actIntent = new Intent(getActivity(), LoginActivity.class);
         actIntent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
         startActivity(actIntent);
-        finish();
     }
 
     @Override
-    protected void onResume() {
+    public void onResume() {
         super.onResume();
-        registerReceiver(receiver, new IntentFilter(Constants.SERVICE_NOTIFICATION));
+        getActivity().registerReceiver(receiver, new IntentFilter(Constants.SERVICE_NOTIFICATION));
     }
 
     @Override
-    protected void onPause() {
+    public void onPause() {
         super.onPause();
-        unregisterReceiver(receiver);
-    }
-
-    @Override
-    public void onBackPressed() {
-        if (busy) {
-            Toast.makeText(self, getResources().getString(R.string.processing_request), Toast.LENGTH_LONG).show();
-        } else {
-            finish();
-        }
+        getActivity().unregisterReceiver(receiver);
     }
 }

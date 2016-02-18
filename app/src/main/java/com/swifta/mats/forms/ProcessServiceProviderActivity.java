@@ -17,7 +17,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import com.swifta.mats.BillPaymentActivity;
+import com.swifta.mats.BillPaymentFragment;
 import com.swifta.mats.LoginActivity;
 import com.swifta.mats.R;
 import com.swifta.mats.service.BackgroundServices;
@@ -71,7 +71,7 @@ public class ProcessServiceProviderActivity extends AppCompatActivity {
                             dialog.setPositiveButton("OK", new DialogInterface.OnClickListener() {
                                 @Override
                                 public void onClick(DialogInterface dialog, int which) {
-                                    Intent i = new Intent(ProcessServiceProviderActivity.this, BillPaymentActivity.class);
+                                    Intent i = new Intent(ProcessServiceProviderActivity.this, BillPaymentFragment.class);
                                     startActivity(i);
                                 }
                             });
