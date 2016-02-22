@@ -106,6 +106,9 @@ Your new password is &#160;</string>
     <string name="service_firstname">First name</string>
     <string name="service_lastname">Last name</string>
     <string name="title_activity_main2">Main2Activity</string>
+    <string name="account_balance">Account balance</string>
+    <string name="account_balance_value">&#8358;123,000.00</string>
+    <string name="last_five_statements">Last 5 transactions</string>
 
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>

@@ -11,20 +11,19 @@ import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.CardView;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
-import android.view.View.OnClickListener;
 import android.view.ViewGroup;
+import android.widget.LinearLayout;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.swifta.mats.service.BackgroundServices;
 import com.swifta.mats.util.ApiJobs;
 import com.swifta.mats.util.Constants;
-import com.swifta.mats.util.InternetCheck;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -34,16 +33,13 @@ public class HomeFragment extends Fragment {
 
     private HomeFragment self = this;
     private String myName = "";
-    private TextView withdrawalButton;
-    private TextView floatTransferButton;
-    private TextView readMiniStatementButton;
-    private TextView cashInButton;
-    private TextView billPaymentButton;
     private TextView transactionTitle;
     private TextView transactionType;
     private TextView transactionDate;
     private TextView transactionTime;
     private TextView transactionStatus;
+    private LinearLayout container;
+    private CardView lastFiveCardview;
 
     private BroadcastReceiver receiver = new BroadcastReceiver() {
 
@@ -58,45 +54,8 @@ public class HomeFragment extends Fragment {
                 JSONArray finalJson = responseJson2.getJSONArray("TransactionResponse");
 
                 if (finalJson.length() != 0) {
-                    // Automatically populates the views with the first data from the JSON response
-                    JSONObject arrayValue = finalJson.getJSONObject(0);
-
-                    // Sets up the layout to display the data from the JSON response
-
-                    String transactionTypeValue = arrayValue.getString("transactiontype").toLowerCase();
-                    String date = arrayValue.getString("date");
-                    String status = arrayValue.getString("status");
-
-                    transactionTitle.setVisibility(View.VISIBLE);
-                    transactionType.setVisibility(View.VISIBLE);
-                    transactionType.setText(transactionTypeValue);
-                    transactionDate.setVisibility(View.VISIBLE);
-                    transactionDate.setText(getDayFromDate(date));
-                    transactionTime.setVisibility(View.VISIBLE);
-                    transactionTime.setText(getTimeFromDate(date));
-                    transactionStatus.setVisibility(View.VISIBLE);
-
-
-                    // If the status failed, creates a visual cue by setting the text color to red,
-                    // sets the text color to green if successful and to yellow if pending
-                    switch (status) {
-                        case "SUCCESSFUL":
-                            transactionStatus.setTextColor(ContextCompat.getColor(getActivity(), android.R.color.holo_green_dark));
-                            break;
-                        case "PENDING":
-                            transactionStatus.setTextColor(ContextCompat.getColor(getActivity(), R.color.yellow));
-                            break;
-                        case "FAILED":
-                            transactionStatus.setTextColor(ContextCompat.getColor(getActivity(), android.R.color.holo_red_dark));
-                            break;
-                        case "NOT_ENOUGH_FUNDS":
-                            transactionStatus.setTextColor(ContextCompat.getColor(getActivity(), android.R.color.holo_red_dark));
-                            break;
-                        default:
-                            transactionStatus.setTextColor(ContextCompat.getColor(getActivity(), android.R.color.black));
-                    }
-
-                    transactionStatus.setText(status);
+                    // Automatically populates the views with data from the JSON response
+                    updateViews(finalJson);
                 }
             } catch (JSONException e) {
                 // TODO Auto-generated catch block
@@ -134,85 +93,13 @@ public class HomeFragment extends Fragment {
     }
 
     private void initEvents(View v) {
-        withdrawalButton = (TextView) v.findViewById(R.id.withdrawal);
-        floatTransferButton = (TextView) v.findViewById(R.id.float_transfer);
-        readMiniStatementButton = (TextView) v.findViewById(R.id.mini_statement);
-        cashInButton = (TextView) v.findViewById(R.id.cash_in);
-        billPaymentButton = (TextView) v.findViewById(R.id.bill_payment);
         transactionTitle = (TextView) v.findViewById(R.id.transaction_title);
         transactionType = (TextView) v.findViewById(R.id.transaction_type);
         transactionDate = (TextView) v.findViewById(R.id.transaction_date);
         transactionTime = (TextView) v.findViewById(R.id.transaction_time);
         transactionStatus = (TextView) v.findViewById(R.id.transaction_status);
-
-        withdrawalButton.setOnClickListener(new OnClickListener() {
-
-            @Override
-            public void onClick(View v) {
-                // TODO Auto-generated method stub
-                Fragment fragment = new WithdrawalFragment();
-                android.support.v4.app.FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
-                android.support.v4.app.FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-                fragmentTransaction.replace(R.id.frameLayout, fragment);
-                fragmentTransaction.commit();
-            }
-        });
-
-        floatTransferButton.setOnClickListener(new OnClickListener() {
-
-            @Override
-            public void onClick(View v) {
-                // TODO Auto-generated method stub
-                Fragment fragment = new FloatTransferFragment();
-                android.support.v4.app.FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
-                android.support.v4.app.FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-                fragmentTransaction.replace(R.id.frameLayout, fragment);
-                fragmentTransaction.commit();
-            }
-
-        });
-
-        readMiniStatementButton.setOnClickListener(new OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if (InternetCheck.isNetworkAvailable(getActivity())) {
-                    Fragment fragment = new MiniStatementFragment();
-                    android.support.v4.app.FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
-                    android.support.v4.app.FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-                    fragmentTransaction.replace(R.id.frameLayout, fragment);
-                    fragmentTransaction.commit();
-                } else {
-                    Toast.makeText(getActivity(), getResources().getString(R.string.internet_connection_error),
-                            Toast.LENGTH_LONG).show();
-                }
-            }
-        });
-
-        cashInButton.setOnClickListener(new OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Fragment fragment = new MMOperatorsFragment();
-                Bundle bundle = new Bundle();
-                bundle.putString(Constants.PREVIOUS_ACTIVITY, Constants.CASH_IN);
-                fragment.setArguments(bundle);
-
-                android.support.v4.app.FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
-                android.support.v4.app.FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-                fragmentTransaction.replace(R.id.frameLayout, fragment);
-                fragmentTransaction.commit();
-            }
-        });
-
-        billPaymentButton.setOnClickListener(new OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Fragment fragment = new BillPaymentFragment();
-                android.support.v4.app.FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
-                android.support.v4.app.FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-                fragmentTransaction.replace(R.id.frameLayout, fragment);
-                fragmentTransaction.commit();
-            }
-        });
+        container = (LinearLayout) v.findViewById(R.id.container);
+        lastFiveCardview = (CardView) v.findViewById(R.id.last_five_cardview);
 
         SharedPreferences sharedPref = getActivity().getSharedPreferences(Constants.STORE_USERNAME_KEY,
                 Context.MODE_PRIVATE);
@@ -230,6 +117,74 @@ public class HomeFragment extends Fragment {
         intent.putExtra(Constants.JOB_IDENTITY, ApiJobs.GET_MINI_STATEMENT);
         intent.putExtra(Constants.JOB_DATA, data.toString());
         getActivity().startService(intent);
+    }
+
+    /**
+     * Updates the layout with data from the arraylist
+     */
+    private void updateViews(JSONArray finalJson) throws JSONException {
+
+        lastFiveCardview.setVisibility(View.VISIBLE);
+
+        // Automatically populates with data from the JSON response
+        for (int i = 0; i < 6; i++) {
+
+            JSONObject arrayValue = finalJson.getJSONObject(i);
+
+            // Sets up the layout to display the data from the JSON response
+            View v = getActivity().getLayoutInflater().inflate(R.layout.mini_statement_item, null);
+            container.addView(v);
+
+            TextView transactionType = (TextView) v.findViewById(R.id.transactiontype);
+            TextView amount = (TextView) v.findViewById(R.id.amount);
+            TextView receiver = (TextView) v.findViewById(R.id.receiver);
+            TextView status = (TextView) v.findViewById(R.id.status);
+
+            String transactionTypeValue = arrayValue.getString("transactiontype");
+            String dateValue = arrayValue.getString("date");
+            int amountValue = arrayValue.getInt("amount");
+            String receiverValue = arrayValue.getString("receiver");
+            String statusValue = arrayValue.getString("status");
+
+            // Set the values for the last transaction only
+            if (i == 0) {
+                transactionTitle.setVisibility(View.VISIBLE);
+                transactionType.setVisibility(View.VISIBLE);
+                transactionType.setText(transactionTypeValue);
+                transactionDate.setVisibility(View.VISIBLE);
+                transactionDate.setText(getDayFromDate(dateValue));
+                transactionTime.setVisibility(View.VISIBLE);
+                transactionTime.setText(getTimeFromDate(dateValue));
+                transactionStatus.setVisibility(View.VISIBLE);
+            }
+
+            transactionType.setText(transactionTypeValue.replace("_", " ") + " on "
+                    + getDayFromDate(dateValue) + " at " + getTimeFromDate(dateValue));
+
+            amount.setText("Amount: " + amountValue);
+
+            receiver.setText("Receiver: " + receiverValue);
+
+            // If the status failed, creates a visual cue by setting the text color to red,
+            // sets the text color to green if successful and to yellow if pending
+            switch (statusValue) {
+                case "SUCCESSFUL":
+                    status.setTextColor(ContextCompat.getColor(getActivity(), android.R.color.holo_green_dark));
+                    break;
+                case "PENDING":
+                    status.setTextColor(ContextCompat.getColor(getActivity(), R.color.yellow));
+                    break;
+                case "FAILED":
+                    status.setTextColor(ContextCompat.getColor(getActivity(), android.R.color.holo_red_dark));
+                    break;
+                case "NOT_ENOUGH_FUNDS":
+                    status.setTextColor(ContextCompat.getColor(getActivity(), android.R.color.holo_red_dark));
+                    break;
+                default:
+                    status.setTextColor(ContextCompat.getColor(getActivity(), android.R.color.black));
+            }
+            status.setText(statusValue);
+        }
     }
 
     @Override
