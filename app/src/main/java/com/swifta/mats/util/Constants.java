@@ -39,10 +39,17 @@ public class Constants {
      */
     public static final String DSTV_VENDOR_ID = "BILL001";
     public static final String GOTV_VENDOR_ID = "BILL002";
+    public static final String SWIFT_VENDOR_ID = "BILL003";
+    public static final String SMILE_VENDOR_ID = "BILL004";
+    public static final String STARTIMES_VENDOR_ID = "BILL005";
+    public static final String SPECTRANET_VENDOR_ID = "BILL006";
+    public static final String NAIRABET_VENDOR_ID = "BILL007";
+    public static final String WAEC_VENDOR_ID = "BILL008";
     public static final String MTN_VENDOR_ID = "BILL009";
     public static final String GLO_VENDOR_ID = "BILL010";
     public static final String ETISALAT_VENDOR_ID = "BILL011";
     public static final String AIRTEL_VENDOR_ID = "BILL012";
+    public static final String IROKO_VENDOR_ID = "BILL013";
     public static final String VENDOR_ID = "VENDOR_ID";
     public static final String NONE = "none";
 

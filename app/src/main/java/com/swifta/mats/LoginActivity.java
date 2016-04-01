@@ -142,11 +142,12 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 // TODO Auto-generated method stub
-                if (isChecked) {
-                    passwordText.setInputType(InputType.TYPE_CLASS_TEXT);
-                    showPassword.setEnabled(false);
-                    showPassword.setClickable(false);
+                if (!isChecked) {
+                    passwordText.setInputType(InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_VARIATION_PASSWORD);
+                } else {
+                    passwordText.setInputType(InputType.TYPE_TEXT_VARIATION_PASSWORD);
                 }
+
             }
         });
     }

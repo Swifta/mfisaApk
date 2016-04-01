@@ -8,6 +8,7 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -16,6 +17,8 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 
 import com.swifta.mats.forms.CashInActivity;
 import com.swifta.mats.forms.CashOutUnregisteredCustomerActivity;
@@ -28,11 +31,11 @@ public class MMOperatorsFragment extends Fragment {
     private MMOperatorsFragment self = this;
     private String myName = "";
 
-    private Button ready_cash;
-    private Button fets;
-    private Button teasy_mobile;
-    private Button paga;
-    private Button fortis;
+    private LinearLayout ready_cash;
+    private LinearLayout fets;
+    private LinearLayout teasy_mobile;
+    private LinearLayout paga;
+    private LinearLayout fortis;
     private Bundle bundle = new Bundle();
 
     public MMOperatorsFragment() {
@@ -55,18 +58,20 @@ public class MMOperatorsFragment extends Fragment {
                 Context.MODE_PRIVATE);
         myName = sharedPref.getString("username", Constants.UNKNOWN).toUpperCase();
 
-        ((AppCompatActivity) getActivity()).getSupportActionBar().setTitle(getResources().getString(R.string.cash_in));
-        initEvents(v);
+        Bundle bundle = this.getArguments();
+        String toolbarTitle = bundle.getString("toolbar_title", getResources().getString(R.string.cash_in));
+        ((AppCompatActivity) getActivity()).getSupportActionBar().setTitle(toolbarTitle);
 
+        initEvents(v);
         return v;
     }
 
     private void initEvents(View v) {
-        ready_cash = (Button) v.findViewById(R.id.ready_cash);
-        fets = (Button) v.findViewById(R.id.fets);
-        teasy_mobile = (Button) v.findViewById(R.id.teasy_mobile);
-        paga = (Button) v.findViewById(R.id.paga);
-        fortis = (Button) v.findViewById(R.id.fortis);
+        ready_cash = (LinearLayout) v.findViewById(R.id.ready_cash);
+        fets = (LinearLayout) v.findViewById(R.id.fets);
+        teasy_mobile = (LinearLayout) v.findViewById(R.id.teasy_mobile);
+        paga = (LinearLayout) v.findViewById(R.id.paga);
+        fortis = (LinearLayout) v.findViewById(R.id.fortis);
 
         ready_cash.setOnClickListener(new OnClickListener() {
             @Override

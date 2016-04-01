@@ -7,6 +7,13 @@
     <color name="blue">#1D99D4</color>
     <color name="black">#000000</color>
     <color name="white">#FFFFFF</color>
+    <color name="mtn_yellow">#FEC72F</color>
+    <color name="etisalat_green">#98BF65</color>
+    <color name="glo_green">#527624</color>
+    <color name="airtel_red">#E62826</color>
+    <color name="purple">#3f1461</color>
+    <color name="iroko">#BD194B</color>
+    <color name="startimes">#F5551E</color>
 
     <!-- Material Design Color Scheme -->
     <color name="colorPrimary">#2e73b9</color>

@@ -3,7 +3,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:gravity="center"
     android:orientation="vertical"
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
@@ -11,98 +10,103 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.swifta.mats.forms.CashInActivity">
 
-    <LinearLayout
-        android:id="@+id/cash_out_layout"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:layout_height="wrap_content">
 
-        <android.support.design.widget.TextInputLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <EditText
-                android:id="@+id/cash_out_dealer"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/activity_vertical_padding"
-                android:ems="10"
-                android:hint="@string/dealer_hint"
-                android:inputType="text"
-                android:textSize="@dimen/input_font_size" />
-
-        </android.support.design.widget.TextInputLayout>
-
-        <android.support.design.widget.TextInputLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <EditText
-                android:id="@+id/cash_out_amount"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/activity_vertical_padding"
-                android:ems="10"
-                android:hint="@string/amount_hint"
-                android:inputType="numberDecimal"
-                android:textSize="@dimen/input_font_size" />
-
-        </android.support.design.widget.TextInputLayout>
-
-        <android.support.design.widget.TextInputLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <EditText
-                android:id="@+id/redeem_code"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/activity_vertical_padding"
-                android:ems="10"
-                android:hint="@string/redeem_code"
-                android:inputType="number"
-                android:textSize="@dimen/input_font_size" />
-
-        </android.support.design.widget.TextInputLayout>
-
-        <android.support.design.widget.TextInputLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <EditText
-                android:id="@+id/payment_reference"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/activity_vertical_padding"
-                android:ems="10"
-                android:hint="@string/payment_reference"
-                android:inputType="number"
-                android:textSize="@dimen/input_font_size" />
-
-        </android.support.design.widget.TextInputLayout>
-
-        <android.support.design.widget.TextInputLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <EditText
-                android:id="@+id/reference_number"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/activity_vertical_padding"
-                android:ems="10"
-                android:hint="@string/reference_number"
-                android:inputType="number"
-                android:textSize="@dimen/input_font_size" />
-
-        </android.support.design.widget.TextInputLayout>
-
-        <Button
-            android:id="@+id/cash_out_unregistered"
+        <LinearLayout
+            android:id="@+id/cash_out_layout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/accent_button_selector"
-            android:text="@string/cash_out"
-            android:textColor="@color/white" />
-    </LinearLayout>
+            android:orientation="vertical">
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/cash_out_dealer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/activity_vertical_padding"
+                    android:ems="10"
+                    android:hint="@string/dealer_hint"
+                    android:inputType="text"
+                    android:textSize="@dimen/input_font_size" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/cash_out_amount"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/activity_vertical_padding"
+                    android:ems="10"
+                    android:hint="@string/amount_hint"
+                    android:inputType="numberDecimal"
+                    android:textSize="@dimen/input_font_size" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/redeem_code"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/activity_vertical_padding"
+                    android:ems="10"
+                    android:hint="@string/redeem_code"
+                    android:inputType="number"
+                    android:textSize="@dimen/input_font_size" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/payment_reference"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/activity_vertical_padding"
+                    android:ems="10"
+                    android:hint="@string/payment_reference"
+                    android:inputType="number"
+                    android:textSize="@dimen/input_font_size" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/reference_number"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/activity_vertical_padding"
+                    android:ems="10"
+                    android:hint="@string/reference_number"
+                    android:inputType="number"
+                    android:textSize="@dimen/input_font_size" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <Button
+                android:id="@+id/cash_out_unregistered"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/accent_button_selector"
+                android:text="@string/cash_out"
+                android:textColor="@color/white" />
+        </LinearLayout>
+    </ScrollView>
 </LinearLayout>

@@ -11,7 +11,7 @@ import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.CardView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -29,6 +29,11 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Locale;
+
 public class HomeFragment extends Fragment {
 
     private HomeFragment self = this;
@@ -38,8 +43,8 @@ public class HomeFragment extends Fragment {
     private TextView transactionDate;
     private TextView transactionTime;
     private TextView transactionStatus;
+    private TextView todaysTransactions;
     private LinearLayout container;
-    private CardView lastFiveCardview;
 
     private BroadcastReceiver receiver = new BroadcastReceiver() {
 
@@ -98,8 +103,8 @@ public class HomeFragment extends Fragment {
         transactionDate = (TextView) v.findViewById(R.id.transaction_date);
         transactionTime = (TextView) v.findViewById(R.id.transaction_time);
         transactionStatus = (TextView) v.findViewById(R.id.transaction_status);
+        todaysTransactions = (TextView) v.findViewById(R.id.today_transaction);
         container = (LinearLayout) v.findViewById(R.id.container);
-        lastFiveCardview = (CardView) v.findViewById(R.id.last_five_cardview);
 
         SharedPreferences sharedPref = getActivity().getSharedPreferences(Constants.STORE_USERNAME_KEY,
                 Context.MODE_PRIVATE);
@@ -124,7 +129,31 @@ public class HomeFragment extends Fragment {
      */
     private void updateViews(JSONArray finalJson) throws JSONException {
 
-        lastFiveCardview.setVisibility(View.VISIBLE);
+        container.setVisibility(View.VISIBLE);
+
+        int todaySuccessfulTransactionsTotal = 0;
+
+        // Calculate the total transaction for the current day
+        for (int i = 0; i < finalJson.length(); i++) {
+            JSONObject arrayValue = finalJson.getJSONObject(i);
+            String status = arrayValue.getString("status");
+            String date = arrayValue.getString("date");
+
+            // Set the current date
+            DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd", Locale.getDefault());
+            Calendar cal = Calendar.getInstance(Locale.getDefault());
+            String currentDate = dateFormat.format(cal.getTime());
+
+            // Sum today's transactions together
+            if (status.equals("SUCCESSFUL") && getDayFromDate(date).equals(currentDate)) {
+                todaySuccessfulTransactionsTotal += arrayValue.getInt("amount");
+            }
+        }
+
+        // Only change the default text if it has a value
+        if (todaySuccessfulTransactionsTotal > 0) {
+            todaysTransactions.setText(getResources().getString(R.string.naira_sign) + todaySuccessfulTransactionsTotal);
+        }
 
         // Automatically populates with data from the JSON response
         for (int i = 0; i < 6; i++) {
@@ -135,7 +164,7 @@ public class HomeFragment extends Fragment {
             View v = getActivity().getLayoutInflater().inflate(R.layout.mini_statement_item, null);
             container.addView(v);
 
-            TextView transactionType = (TextView) v.findViewById(R.id.transactiontype);
+            TextView type = (TextView) v.findViewById(R.id.transactiontype);
             TextView amount = (TextView) v.findViewById(R.id.amount);
             TextView receiver = (TextView) v.findViewById(R.id.receiver);
             TextView status = (TextView) v.findViewById(R.id.status);
@@ -150,7 +179,7 @@ public class HomeFragment extends Fragment {
             if (i == 0) {
                 transactionTitle.setVisibility(View.VISIBLE);
                 transactionType.setVisibility(View.VISIBLE);
-                transactionType.setText(transactionTypeValue);
+                transactionType.setText(transactionTypeValue.replace("_", " "));
                 transactionDate.setVisibility(View.VISIBLE);
                 transactionDate.setText(getDayFromDate(dateValue));
                 transactionTime.setVisibility(View.VISIBLE);
@@ -158,7 +187,7 @@ public class HomeFragment extends Fragment {
                 transactionStatus.setVisibility(View.VISIBLE);
             }
 
-            transactionType.setText(transactionTypeValue.replace("_", " ") + " on "
+            type.setText(transactionTypeValue.replace("_", " ") + " on "
                     + getDayFromDate(dateValue) + " at " + getTimeFromDate(dateValue));
 
             amount.setText("Amount: " + amountValue);
@@ -265,7 +294,13 @@ public class HomeFragment extends Fragment {
 
         // Determines whether to append a "PM" prefix or "AM"
         if (Integer.parseInt(dateValue.substring(0, 2)) >= 12) {
-            return dateValue += " PM";
+            if (Integer.parseInt(dateValue.substring(0, 2)) > 12) {
+                int dateRep = Integer.parseInt(dateValue.substring(0, 2)) - 11;
+                dateValue = String.valueOf(dateRep) + ":" + date.substring(14, 19);
+                return dateValue += " PM";
+            } else {
+                return dateValue += " PM";
+            }
         } else {
             return dateValue += " AM";
         }

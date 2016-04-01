@@ -16,6 +16,7 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.RelativeLayout;
 import android.widget.Toast;
 
 import com.swifta.mats.forms.CompleteDepositFloatActivity;
@@ -31,8 +32,8 @@ public class FloatTransferFragment extends Fragment {
     private String myName = "";
     private boolean btn_clicked = true;
 
-    private Button depositBtn;
-    private Button completeDepositBtn;
+    private RelativeLayout depositBtn;
+    private RelativeLayout completeDepositBtn;
 
     private SharedPreferences sharedPref;
 
@@ -65,8 +66,8 @@ public class FloatTransferFragment extends Fragment {
     }
 
     private void initEvents(View v) {
-        depositBtn = (Button) v.findViewById(R.id.deposit_float);
-        completeDepositBtn = (Button) v.findViewById(R.id.complete_deposit_float);
+        depositBtn = (RelativeLayout) v.findViewById(R.id.deposit_float);
+        completeDepositBtn = (RelativeLayout) v.findViewById(R.id.complete_deposit_float);
 
         depositBtn.setOnClickListener(new OnClickListener() {
 

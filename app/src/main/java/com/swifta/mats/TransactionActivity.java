@@ -3,6 +3,7 @@ package com.swifta.mats;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.LinearLayout;
@@ -97,7 +98,13 @@ public class TransactionActivity extends AppCompatActivity {
 
         // Determines whether to append a "PM" prefix or "AM"
         if (Integer.parseInt(dateValue.substring(0, 2)) >= 12) {
-            return dateValue += " PM";
+            if(Integer.parseInt(dateValue.substring(0, 2)) > 12) {
+                int dateRep = Integer.parseInt(dateValue.substring(0, 2)) - 11;
+                dateValue = String.valueOf(dateRep) + ":" + date.substring(14,19);
+                return dateValue += " PM";
+            } else {
+                return dateValue += " PM";
+            }
         } else {
             return dateValue += " AM";
         }

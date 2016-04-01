@@ -9,6 +9,7 @@
 	 android:layout_height="40dp"
 		 android:background="@color/colorPrimaryDark"
 		 android:drawablePadding="5dp"
+		 android:drawableLeft="@drawable/ic_subject_black_24dp"
 		 android:drawableStart="@drawable/ic_subject_black_24dp"
 		 android:padding="5dp"
 	 android:text="@string/dummy"

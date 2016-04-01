@@ -32,9 +32,7 @@ public class PreviewListAdapter extends ArrayAdapter<String>{
 		 
 		 TextView txtLeft = (TextView) rowView.findViewById(R.id.left);
 		 TextView txtRight = (TextView) rowView.findViewById(R.id.right);
-		 
-		 //System.out.println("I counted "+this.getCount());
-		 
+
 		 txtLeft.setText(left[position]);
 		 txtRight.setText(right[position]);
 		 

@@ -56,38 +56,39 @@ public class WithdrawalFragment extends Fragment {
         dealer = (Button) v.findViewById(R.id.dealer_account);
         completeCashout = (Button) v.findViewById(R.id.complete_cash_out);
         unregisteredCustomer = (Button) v.findViewById(R.id.unregistered_customer);
-        dealer.setOnClickListener(new OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                // TODO Auto-generated method stub
-                Fragment fragment = new MMOperatorsFragment();
-                Bundle bundle = new Bundle();
-                bundle.putString(Constants.PREVIOUS_ACTIVITY, Constants.DEALER_ACCOUNT);
-                fragment.setArguments(bundle);
+//        dealer.setOnClickListener(new OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                // TODO Auto-generated method stub
+//                Fragment fragment = new MMOperatorsFragment();
+//                Bundle bundle = new Bundle();
+//                bundle.putString(Constants.PREVIOUS_ACTIVITY, Constants.DEALER_ACCOUNT);
+//                bundle.putString("toolbar_title", getResources().getString(R.string.cash_out));
+//                fragment.setArguments(bundle);
+//
+//                android.support.v4.app.FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
+//                android.support.v4.app.FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+//                fragmentTransaction.replace(R.id.frameLayout, fragment);
+//                fragmentTransaction.commit();
+//            }
+//        });
 
-                android.support.v4.app.FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
-                android.support.v4.app.FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-                fragmentTransaction.replace(R.id.frameLayout, fragment);
-                fragmentTransaction.commit();
-            }
-        });
-
-        completeCashout.setOnClickListener(new OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                // Confirms a pending cashout transaction before opening the Activity
-                SharedPreferences sharedPref = getActivity().getSharedPreferences(Constants.STORE_CASHOUT_DATA,
-                        Context.MODE_PRIVATE);
-                String destinationresourceid = sharedPref.getString("destinationresourceid", Constants.UNKNOWN);
-                if (destinationresourceid.equals(Constants.UNKNOWN)) {
-                    Toast.makeText(getActivity(), getResources().getString(R.string.no_uncompleted_transactions),
-                            Toast.LENGTH_SHORT).show();
-                } else {
-                    Intent actIntent = new Intent(getActivity(), CompleteCashOutActivity.class);
-                    startActivity(actIntent);
-                }
-            }
-        });
+//        completeCashout.setOnClickListener(new OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                // Confirms a pending cashout transaction before opening the Activity
+//                SharedPreferences sharedPref = getActivity().getSharedPreferences(Constants.STORE_CASHOUT_DATA,
+//                        Context.MODE_PRIVATE);
+//                String destinationresourceid = sharedPref.getString("destinationresourceid", Constants.UNKNOWN);
+//                if (destinationresourceid.equals(Constants.UNKNOWN)) {
+//                    Toast.makeText(getActivity(), getResources().getString(R.string.no_uncompleted_transactions),
+//                            Toast.LENGTH_SHORT).show();
+//                } else {
+//                    Intent actIntent = new Intent(getActivity(), CompleteCashOutActivity.class);
+//                    startActivity(actIntent);
+//                }
+//            }
+//        });
 
         unregisteredCustomer.setOnClickListener(new OnClickListener() {
             @Override
@@ -95,6 +96,7 @@ public class WithdrawalFragment extends Fragment {
                 Fragment fragment = new MMOperatorsFragment();
                 Bundle bundle = new Bundle();
                 bundle.putString(Constants.PREVIOUS_ACTIVITY, Constants.UNREGISTERED_CUSTOMER);
+                bundle.putString("toolbar_title", getResources().getString(R.string.cash_out));
                 fragment.setArguments(bundle);
 
                 android.support.v4.app.FragmentManager fragmentManager = getActivity().getSupportFragmentManager();

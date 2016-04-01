@@ -59,6 +59,7 @@
     <string name="title_activity_deposit_float">DepositFloatActivity</string>
     <string name="dealer_hint">Dealer ID</string>
     <string name="dummy">Dummy</string>
+    <string name="confirm_bill_payment">Confirm Payment Transaction</string>
     <string name="confirm_float">Confirm Float Transfer Transaction</string>
     <string name="dealer_confirmation_title">Dealer OTP Confirmation</string>
     <string name="dealer_confirmation">Enter OTP</string>
@@ -107,8 +108,14 @@ Your new password is &#160;</string>
     <string name="service_lastname">Last name</string>
     <string name="title_activity_main2">Main2Activity</string>
     <string name="account_balance">Account balance</string>
-    <string name="account_balance_value">&#8358;123,000.00</string>
-    <string name="last_five_statements">Last 5 transactions</string>
+    <string name="account_balance_value">&#8358;00.00</string>
+    <string name="naira_sign">&#8358;</string>
+    <string name="todays_transactions">Today\'s Transactions</string>
+    <string name="last_five_statements">LAST 5 TRANSACTIONS</string>
+    <string name="smile">Smile</string>
+    <string name="spectranet">Spectranet</string>
+    <string name="startimes">StarTimes</string>
+    <string name="irokotv">irokotv</string>
 
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>

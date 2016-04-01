@@ -15,11 +15,16 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.LinearLayout;
+import android.widget.ListView;
+import android.widget.ScrollView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.swifta.mats.BillPaymentFragment;
 import com.swifta.mats.LoginActivity;
 import com.swifta.mats.R;
+import com.swifta.mats.adapters.PreviewListAdapter;
 import com.swifta.mats.service.BackgroundServices;
 import com.swifta.mats.util.ApiJobs;
 import com.swifta.mats.util.Constants;
@@ -33,6 +38,8 @@ public class ProcessServiceProviderActivity extends AppCompatActivity {
     private boolean busy = false;
     private String myName;
 
+    private TextView title;
+    private ScrollView container;
     private EditText serviceAmount;
     private EditText servicePhoneNumber;
     private EditText serviceAccNumber;
@@ -41,6 +48,14 @@ public class ProcessServiceProviderActivity extends AppCompatActivity {
     private EditText serviceDescription;
     private Button serviceSubmit;
     private ProgressDialog progressDialog;
+
+    private ListView preview_list;
+    private PreviewListAdapter adapter;
+
+    private LinearLayout confirm_list;
+    private LinearLayout confirmButtons;
+    private Button confirmCancelButton;
+    private Button confirm;
 
     String serviceAmountValue;
     String servicePhoneNumberValue;
@@ -71,8 +86,7 @@ public class ProcessServiceProviderActivity extends AppCompatActivity {
                             dialog.setPositiveButton("OK", new DialogInterface.OnClickListener() {
                                 @Override
                                 public void onClick(DialogInterface dialog, int which) {
-                                    Intent i = new Intent(ProcessServiceProviderActivity.this, BillPaymentFragment.class);
-                                    startActivity(i);
+                                    onBackPressed();
                                 }
                             });
                             dialog.show();
@@ -86,7 +100,7 @@ public class ProcessServiceProviderActivity extends AppCompatActivity {
                             dialog.setPositiveButton("OK", new DialogInterface.OnClickListener() {
                                 @Override
                                 public void onClick(DialogInterface dialog, int which) {
-                                    dialog.cancel();
+                                    onBackPressed();
                                 }
                             });
                             dialog.show();
@@ -135,6 +149,8 @@ public class ProcessServiceProviderActivity extends AppCompatActivity {
         final String servicename = getIntent().getStringExtra("servicename");
         final String serviceamount = getIntent().getStringExtra("serviceamount");
 
+        title = (TextView) findViewById(R.id.title);
+        container = (ScrollView) findViewById(R.id.container);
         serviceAmount = (EditText) findViewById(R.id.service_amount);
         servicePhoneNumber = (EditText) findViewById(R.id.service_phone_number);
         serviceAccNumber = (EditText) findViewById(R.id.service_acc_number);
@@ -142,12 +158,23 @@ public class ProcessServiceProviderActivity extends AppCompatActivity {
         serviceLastname = (EditText) findViewById(R.id.service_lastname);
         serviceDescription = (EditText) findViewById(R.id.service_description);
 
+        preview_list = (ListView) findViewById(R.id.preview_list);
+
+        confirm_list = (LinearLayout) findViewById(R.id.confirm_list);
+        confirmButtons = (LinearLayout) findViewById(R.id.confirm_btns);
+        confirmCancelButton = (Button) findViewById(R.id.confirm_cancel);
+        confirm = (Button) findViewById(R.id.confirm);
+
         if (type.equals("telco")) {
+            serviceFirstname.setVisibility(View.GONE);
             serviceLastname.setVisibility(View.GONE);
             serviceAmount.setVisibility(View.VISIBLE);
+            serviceAccNumber.setVisibility(View.GONE);
         } else if (type.equals("cable")) {
             serviceAmount.setVisibility(View.GONE);
+            serviceFirstname.setVisibility(View.VISIBLE);
             serviceLastname.setVisibility(View.VISIBLE);
+            serviceAccNumber.setVisibility(View.VISIBLE);
         }
         serviceSubmit = (Button) findViewById(R.id.service_submit);
         progressDialog = new ProgressDialog(self);
@@ -158,40 +185,90 @@ public class ProcessServiceProviderActivity extends AppCompatActivity {
                 // TODO Auto-generated method stub
 
                 if (processEditText(type)) {
-                    if (InternetCheck.isNetworkAvailable(self)) {
-                        progressDialog.setMessage(getResources().getString(R.string.wait));
-                        progressDialog.show();
 
-                        JSONObject data = new JSONObject();
-                        try {
-                            data.put("orginatingresourceid", myName.toLowerCase());
-                            data.put("frommessage", serviceDescriptionValue.replace(" ", "%20"));
-                            data.put("vendorid", vendorId);
-                            data.put("vendoraccount", serviceAccNumberValue + "%7C" + servicePhoneNumberValue);
-                            data.put("vendorservicename", servicename.replace(" ", "%20"));
+                    String[] left;
+                    String[] right;
+                    switch (type) {
+                        case "telco":
+                            // TODO Auto-generated method stub
+                            left = new String[]{"Amount", "Phone Number", "Description"};
+                            right = new String[]{servicePhoneNumberValue, servicePhoneNumberValue,
+                                    serviceDescriptionValue};
+                            adapter = new PreviewListAdapter(self, left, right);
+                            preview_list.setAdapter(adapter);
 
-                            if (type.equals("telco")) {
-                                data.put("amount", serviceAmountValue);
-                                data.put("vendorparam1", "airtime");
-                                data.put("vendorparam2", serviceFirstnameValue);
-                            } else if (type.equals("cable")) {
-                                data.put("amount", serviceamount);
-                                data.put("vendorparam1", serviceFirstnameValue);
-                                data.put("vendorparam2", serviceLastnameValue);
-                            }
-                        } catch (JSONException e) {
-                            // TODO Auto-generated catch block
-                            e.printStackTrace();
-                        }
-                        Intent intent = new Intent(self, BackgroundServices.class);
-                        intent.putExtra(Constants.JOB_IDENTITY, ApiJobs.PAYBILL_REQUEST);
-                        intent.putExtra(Constants.JOB_DATA, data.toString());
-                        startService(intent);
-                        busy = true;
-                    } else {
-                        Toast.makeText(self, getResources().getString(R.string.internet_connection_error), Toast.LENGTH_LONG).show();
+                            container.setVisibility(View.GONE);
+                            confirm_list.setVisibility(View.VISIBLE);
+                            confirmButtons.setVisibility(View.VISIBLE);
+                            title.setText(getResources().getString(R.string.confirm_bill_payment));
+                            break;
+                        case "cable":
+                            // TODO Auto-generated method stub
+                            left = new String[]{"Phone number", "Account Number", "First name", "Last name", "Description"};
+                            right = new String[]{servicePhoneNumberValue, serviceAccNumberValue,
+                                    serviceFirstnameValue, serviceLastnameValue, serviceDescriptionValue};
+                            adapter = new PreviewListAdapter(self, left, right);
+                            preview_list.setAdapter(adapter);
+
+                            container.setVisibility(View.GONE);
+                            confirm_list.setVisibility(View.VISIBLE);
+                            confirmButtons.setVisibility(View.VISIBLE);
+                            title.setText(getResources().getString(R.string.confirm_bill_payment));
+                            break;
                     }
                 }
+            }
+        });
+
+        confirm.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (InternetCheck.isNetworkAvailable(self)) {
+                    confirm_list.setVisibility(View.GONE);
+                    confirmButtons.setVisibility(View.GONE);
+                    progressDialog.setMessage(getResources().getString(R.string.wait));
+                    progressDialog.show();
+
+                    JSONObject data = new JSONObject();
+                    try {
+                        data.put("orginatingresourceid", myName.toLowerCase());
+                        data.put("frommessage", serviceDescriptionValue.replace(" ", "%20"));
+                        data.put("vendorid", vendorId);
+
+                        if (type.equals("telco")) {
+                            data.put("vendorservicename", "airtime");
+                            data.put("amount", serviceAmountValue);
+                            data.put("vendorparam1", "airtime");
+                            data.put("vendorparam2", "payment");
+                            data.put("vendoraccount", "12345678%7C" + servicePhoneNumberValue);
+                        } else if (type.equals("cable")) {
+                            data.put("vendorservicename", servicename.replace(" ", "%20"));
+                            data.put("amount", serviceamount);
+                            data.put("vendorparam1", serviceFirstnameValue);
+                            data.put("vendorparam2", serviceLastnameValue);
+                            data.put("vendoraccount", serviceAccNumberValue + "%7C" + servicePhoneNumberValue);
+                        }
+                    } catch (JSONException e) {
+                        // TODO Auto-generated catch block
+                        e.printStackTrace();
+                    }
+                    Intent intent = new Intent(self, BackgroundServices.class);
+                    intent.putExtra(Constants.JOB_IDENTITY, ApiJobs.PAYBILL_REQUEST);
+                    intent.putExtra(Constants.JOB_DATA, data.toString());
+                    startService(intent);
+                    busy = true;
+                } else {
+                    Toast.makeText(self, getResources().getString(R.string.internet_connection_error), Toast.LENGTH_LONG).show();
+                }
+            }
+        });
+
+        confirmCancelButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                confirm_list.setVisibility(View.GONE);
+                confirmButtons.setVisibility(View.GONE);
+                container.setVisibility(View.VISIBLE);
             }
         });
     }
@@ -204,20 +281,19 @@ public class ProcessServiceProviderActivity extends AppCompatActivity {
         serviceLastnameValue = serviceLastname.getText().toString();
         serviceDescriptionValue = serviceDescription.getText().toString();
 
-        /**  Telco ServiceProviders are pre-filled with vendorparam1 but need an amount
-         *   The first-name field will be used to collect the name of the user
-         *   but the value will eventually be stored as vendorparam2.
+        /**  Telco ServiceProviders are pre-filled with vendorparam1 and vendorparam2 but need an amount
          *   Vendorparam1 will be pre-filled with "airtime"
+         *   Vewndorparam2 will be pre-filled with "payment"
          *   CableTV ServiceProviders are pre-filled with amount but need the first-name and last-name
          **/
 
-        if (serviceDescriptionValue.isEmpty() || servicePhoneNumberValue.isEmpty() || serviceAccNumberValue.isEmpty() ||
-                serviceFirstnameValue.isEmpty()) {
+        if (serviceDescriptionValue.isEmpty() || servicePhoneNumberValue.isEmpty()) {
 
-            if (type.equals("telco") && (serviceAmountValue.isEmpty())) {
+            if (type.equals("telco") && serviceAmountValue.isEmpty()) {
                 Toast.makeText(self, getResources().getString(R.string.empty_credentials), Toast.LENGTH_SHORT).show();
                 return false;
-            } else if (type.equals("cable") && serviceLastnameValue.isEmpty()) {
+            } else if (type.equals("cable") && (serviceLastnameValue.isEmpty() || serviceAccNumberValue.isEmpty() ||
+                    serviceFirstnameValue.isEmpty())) {
                 Toast.makeText(self, getResources().getString(R.string.empty_credentials), Toast.LENGTH_SHORT).show();
                 return false;
             }

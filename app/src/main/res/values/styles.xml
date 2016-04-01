@@ -20,11 +20,18 @@
         <item name="android:windowNoTitle">true</item>
     </style>
 
-    <!-- Divider style -->
-    <style name="Divider">
+    <!-- HorizontalDivider style -->
+    <style name="HorizontalDivider">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">1dp</item>
         <item name="android:background">@android:color/darker_gray</item>
+    </style>
+
+    <!-- VerticalDivider style -->
+    <style name="VerticalDivider">
+        <item name="android:layout_width">1dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:background">@color/yellow</item>
     </style>
 
     <style name="AppTheme.NoActionBar">

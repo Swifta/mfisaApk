@@ -17,7 +17,7 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
+import android.widget.LinearLayout;
 import android.widget.Toast;
 
 import com.swifta.mats.forms.ProcessServiceProviderActivity;
@@ -35,9 +35,16 @@ public class BillPaymentFragment extends Fragment {
     private BillPaymentFragment self = this;
     private boolean busy = false;
     private String myName;
-    private Button dstvButton;
-    private Button gotvButton;
-    private Button mtn;
+    private LinearLayout dstvButton;
+    private LinearLayout gotvButton;
+    private LinearLayout startimesButton;
+    private LinearLayout irokotvButton;
+    private LinearLayout mtn;
+    private LinearLayout glo;
+    private LinearLayout etisalat;
+    private LinearLayout airtel;
+    private LinearLayout smile;
+    private LinearLayout spectranet;
 
     private ProgressDialog progressDialog;
     public static String vendorId;
@@ -114,9 +121,16 @@ public class BillPaymentFragment extends Fragment {
     }
 
     private void initEvents(View v) {
-        dstvButton = (Button) v.findViewById(R.id.dstv);
-        gotvButton = (Button) v.findViewById(R.id.gotv);
-        mtn = (Button) v.findViewById(R.id.mtn);
+        dstvButton = (LinearLayout) v.findViewById(R.id.dstv);
+        gotvButton = (LinearLayout) v.findViewById(R.id.gotv);
+        startimesButton = (LinearLayout) v.findViewById(R.id.startimes);
+        irokotvButton = (LinearLayout) v.findViewById(R.id.irokotv);
+        mtn = (LinearLayout) v.findViewById(R.id.mtn);
+        glo = (LinearLayout) v.findViewById(R.id.glo);
+        etisalat = (LinearLayout) v.findViewById(R.id.etisalat);
+        airtel = (LinearLayout) v.findViewById(R.id.airtel);
+        smile = (LinearLayout) v.findViewById(R.id.smile);
+        spectranet = (LinearLayout) v.findViewById(R.id.spectranet);
         progressDialog = new ProgressDialog(getActivity());
 
         dstvButton.setOnClickListener(new View.OnClickListener() {
@@ -151,7 +165,6 @@ public class BillPaymentFragment extends Fragment {
         });
 
         gotvButton.setOnClickListener(new View.OnClickListener() {
-
             @Override
             public void onClick(View v) {
                 // TODO Auto-generated method stub
@@ -181,8 +194,67 @@ public class BillPaymentFragment extends Fragment {
             }
         });
 
-        mtn.setOnClickListener(new View.OnClickListener() {
+        startimesButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // TODO Auto-generated method stub
+                if (InternetCheck.isNetworkAvailable(getActivity())) {
 
+                    progressDialog.setMessage(getResources().getString(R.string.wait));
+                    progressDialog.show();
+
+                    JSONObject data = new JSONObject();
+                    try {
+                        vendorId = Constants.STARTIMES_VENDOR_ID;
+                        data.put(Constants.VENDOR_ID, vendorId);
+                    } catch (JSONException e) {
+                        // TODO Auto-generated catch block
+                        e.printStackTrace();
+                    }
+
+                    Intent intent = new Intent(getActivity(), BackgroundServices.class);
+                    intent.putExtra(Constants.JOB_IDENTITY, ApiJobs.GET_SERVICE_PROVIDER_DETAILS);
+                    intent.putExtra(Constants.JOB_DATA, data.toString());
+                    getActivity().startService(intent);
+                    busy = true;
+                } else {
+                    Toast.makeText(getActivity(), getResources().getString(R.string.internet_connection_error),
+                            Toast.LENGTH_LONG).show();
+                }
+            }
+        });
+
+        irokotvButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // TODO Auto-generated method stub
+                if (InternetCheck.isNetworkAvailable(getActivity())) {
+
+                    progressDialog.setMessage(getResources().getString(R.string.wait));
+                    progressDialog.show();
+
+                    JSONObject data = new JSONObject();
+                    try {
+                        vendorId = Constants.IROKO_VENDOR_ID;
+                        data.put(Constants.VENDOR_ID, vendorId);
+                    } catch (JSONException e) {
+                        // TODO Auto-generated catch block
+                        e.printStackTrace();
+                    }
+
+                    Intent intent = new Intent(getActivity(), BackgroundServices.class);
+                    intent.putExtra(Constants.JOB_IDENTITY, ApiJobs.GET_SERVICE_PROVIDER_DETAILS);
+                    intent.putExtra(Constants.JOB_DATA, data.toString());
+                    getActivity().startService(intent);
+                    busy = true;
+                } else {
+                    Toast.makeText(getActivity(), getResources().getString(R.string.internet_connection_error),
+                            Toast.LENGTH_LONG).show();
+                }
+            }
+        });
+
+        mtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 // TODO Auto-generated method stub
@@ -194,6 +266,156 @@ public class BillPaymentFragment extends Fragment {
                     JSONObject data = new JSONObject();
                     try {
                         vendorId = Constants.MTN_VENDOR_ID;
+                        data.put(Constants.VENDOR_ID, vendorId);
+                    } catch (JSONException e) {
+                        // TODO Auto-generated catch block
+                        e.printStackTrace();
+                    }
+
+                    Intent intent = new Intent(getActivity(), BackgroundServices.class);
+                    intent.putExtra(Constants.JOB_IDENTITY, ApiJobs.GET_SERVICE_PROVIDER_DETAILS);
+                    intent.putExtra(Constants.JOB_DATA, data.toString());
+                    getActivity().startService(intent);
+                    busy = true;
+                } else {
+                    Toast.makeText(getActivity(), getResources().getString(R.string.internet_connection_error),
+                            Toast.LENGTH_LONG).show();
+                }
+            }
+        });
+
+        glo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // TODO Auto-generated method stub
+                if (InternetCheck.isNetworkAvailable(getActivity())) {
+
+                    progressDialog.setMessage(getResources().getString(R.string.wait));
+                    progressDialog.show();
+
+                    JSONObject data = new JSONObject();
+                    try {
+                        vendorId = Constants.GLO_VENDOR_ID;
+                        data.put(Constants.VENDOR_ID, vendorId);
+                    } catch (JSONException e) {
+                        // TODO Auto-generated catch block
+                        e.printStackTrace();
+                    }
+
+                    Intent intent = new Intent(getActivity(), BackgroundServices.class);
+                    intent.putExtra(Constants.JOB_IDENTITY, ApiJobs.GET_SERVICE_PROVIDER_DETAILS);
+                    intent.putExtra(Constants.JOB_DATA, data.toString());
+                    getActivity().startService(intent);
+                    busy = true;
+                } else {
+                    Toast.makeText(getActivity(), getResources().getString(R.string.internet_connection_error),
+                            Toast.LENGTH_LONG).show();
+                }
+            }
+        });
+
+        etisalat.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // TODO Auto-generated method stub
+                if (InternetCheck.isNetworkAvailable(getActivity())) {
+
+                    progressDialog.setMessage(getResources().getString(R.string.wait));
+                    progressDialog.show();
+
+                    JSONObject data = new JSONObject();
+                    try {
+                        vendorId = Constants.ETISALAT_VENDOR_ID;
+                        data.put(Constants.VENDOR_ID, vendorId);
+                    } catch (JSONException e) {
+                        // TODO Auto-generated catch block
+                        e.printStackTrace();
+                    }
+
+                    Intent intent = new Intent(getActivity(), BackgroundServices.class);
+                    intent.putExtra(Constants.JOB_IDENTITY, ApiJobs.GET_SERVICE_PROVIDER_DETAILS);
+                    intent.putExtra(Constants.JOB_DATA, data.toString());
+                    getActivity().startService(intent);
+                    busy = true;
+                } else {
+                    Toast.makeText(getActivity(), getResources().getString(R.string.internet_connection_error),
+                            Toast.LENGTH_LONG).show();
+                }
+            }
+        });
+
+        airtel.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // TODO Auto-generated method stub
+                if (InternetCheck.isNetworkAvailable(getActivity())) {
+
+                    progressDialog.setMessage(getResources().getString(R.string.wait));
+                    progressDialog.show();
+
+                    JSONObject data = new JSONObject();
+                    try {
+                        vendorId = Constants.AIRTEL_VENDOR_ID;
+                        data.put(Constants.VENDOR_ID, vendorId);
+                    } catch (JSONException e) {
+                        // TODO Auto-generated catch block
+                        e.printStackTrace();
+                    }
+
+                    Intent intent = new Intent(getActivity(), BackgroundServices.class);
+                    intent.putExtra(Constants.JOB_IDENTITY, ApiJobs.GET_SERVICE_PROVIDER_DETAILS);
+                    intent.putExtra(Constants.JOB_DATA, data.toString());
+                    getActivity().startService(intent);
+                    busy = true;
+                } else {
+                    Toast.makeText(getActivity(), getResources().getString(R.string.internet_connection_error),
+                            Toast.LENGTH_LONG).show();
+                }
+            }
+        });
+
+        smile.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // TODO Auto-generated method stub
+                if (InternetCheck.isNetworkAvailable(getActivity())) {
+
+                    progressDialog.setMessage(getResources().getString(R.string.wait));
+                    progressDialog.show();
+
+                    JSONObject data = new JSONObject();
+                    try {
+                        vendorId = Constants.SMILE_VENDOR_ID;
+                        data.put(Constants.VENDOR_ID, vendorId);
+                    } catch (JSONException e) {
+                        // TODO Auto-generated catch block
+                        e.printStackTrace();
+                    }
+
+                    Intent intent = new Intent(getActivity(), BackgroundServices.class);
+                    intent.putExtra(Constants.JOB_IDENTITY, ApiJobs.GET_SERVICE_PROVIDER_DETAILS);
+                    intent.putExtra(Constants.JOB_DATA, data.toString());
+                    getActivity().startService(intent);
+                    busy = true;
+                } else {
+                    Toast.makeText(getActivity(), getResources().getString(R.string.internet_connection_error),
+                            Toast.LENGTH_LONG).show();
+                }
+            }
+        });
+
+        spectranet.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // TODO Auto-generated method stub
+                if (InternetCheck.isNetworkAvailable(getActivity())) {
+
+                    progressDialog.setMessage(getResources().getString(R.string.wait));
+                    progressDialog.show();
+
+                    JSONObject data = new JSONObject();
+                    try {
+                        vendorId = Constants.SPECTRANET_VENDOR_ID;
                         data.put(Constants.VENDOR_ID, vendorId);
                     } catch (JSONException e) {
                         // TODO Auto-generated catch block

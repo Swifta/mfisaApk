@@ -1,111 +1,337 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorDividerLight"
     tools:context=".FloatTransferFragment">
 
-    <TextView
-        android:id="@+id/title"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:drawableLeft="@drawable/ic_payment_black_24dp"
-        android:drawablePadding="@dimen/activity_horizontal_padding"
-        android:drawableStart="@drawable/ic_payment_black_24dp"
-        android:gravity="start"
-        android:text="@string/bill_payment_options_title"
-        android:textColor="@color/colorDividerDark"
-        android:textSize="@dimen/title_font_size" />
-
     <ScrollView
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        android:layout_below="@id/title"
-        android:layout_marginTop="@dimen/activity_vertical_margin">
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
         <LinearLayout
             android:id="@+id/options"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_margin="@dimen/activity_vertical_margin"
             android:gravity="center"
             android:orientation="vertical">
 
-            <Button
-                android:id="@+id/dstv"
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/btn_height"
-                android:layout_marginBottom="@dimen/btn_separator"
-                android:layout_marginEnd="@dimen/btn_separator"
-                android:layout_marginRight="@dimen/btn_separator"
-                android:background="@drawable/accent_button_selector"
-                android:text="@string/dstv"
-                android:textColor="@color/white" />
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/five_dp"
+                android:orientation="horizontal">
 
-            <Button
-                android:id="@+id/gotv"
+                <LinearLayout
+                    android:id="@+id/dstv"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/two_hundred_dp"
+                    android:layout_marginEnd="@dimen/five_dp"
+                    android:layout_marginRight="@dimen/five_dp"
+                    android:layout_weight="1"
+                    android:background="@android:color/white"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="150dp"
+                        android:adjustViewBounds="true"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/dstvlogo" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/ten_dp"
+                        android:layout_marginStart="@dimen/ten_dp"
+                        android:layout_marginTop="@dimen/twenty_dp"
+                        android:fontFamily="sans-serif-medium"
+                        android:text="@string/dstv"
+                        android:textColor="@color/btn_green" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/gotv"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/two_hundred_dp"
+                    android:layout_marginEnd="@dimen/five_dp"
+                    android:layout_marginRight="@dimen/five_dp"
+                    android:layout_weight="1"
+                    android:background="@android:color/white"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="150dp"
+                        android:adjustViewBounds="true"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/gotv" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/ten_dp"
+                        android:layout_marginStart="@dimen/ten_dp"
+                        android:layout_marginTop="@dimen/twenty_dp"
+                        android:fontFamily="sans-serif-medium"
+                        android:text="@string/gotv"
+                        android:textColor="@color/red" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/btn_height"
-                android:layout_marginBottom="@dimen/btn_separator"
-                android:layout_marginEnd="@dimen/btn_separator"
-                android:layout_marginRight="@dimen/btn_separator"
-                android:background="@drawable/accent_button_selector"
-                android:text="@string/gotv"
-                android:textColor="@color/white" />
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/five_dp"
+                android:orientation="horizontal">
 
-            <Button
-                android:id="@+id/mtn"
+                <LinearLayout
+                    android:id="@+id/startimes"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/two_hundred_dp"
+                    android:layout_marginEnd="@dimen/five_dp"
+                    android:layout_marginRight="@dimen/five_dp"
+                    android:layout_weight="1"
+                    android:background="@android:color/white"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="150dp"
+                        android:adjustViewBounds="true"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/startimes" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/ten_dp"
+                        android:layout_marginStart="@dimen/ten_dp"
+                        android:layout_marginTop="@dimen/twenty_dp"
+                        android:fontFamily="sans-serif-medium"
+                        android:text="@string/startimes"
+                        android:textColor="@color/startimes" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/irokotv"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/two_hundred_dp"
+                    android:layout_marginEnd="@dimen/five_dp"
+                    android:layout_marginRight="@dimen/five_dp"
+                    android:layout_weight="1"
+                    android:background="@android:color/white"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="150dp"
+                        android:adjustViewBounds="true"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/iroko" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/ten_dp"
+                        android:layout_marginStart="@dimen/ten_dp"
+                        android:layout_marginTop="@dimen/twenty_dp"
+                        android:fontFamily="sans-serif-medium"
+                        android:text="@string/irokotv"
+                        android:textColor="@color/iroko" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/btn_height"
-                android:layout_marginBottom="@dimen/btn_separator"
-                android:layout_marginEnd="@dimen/btn_separator"
-                android:layout_marginRight="@dimen/btn_separator"
-                android:background="@drawable/accent_button_selector"
-                android:text="@string/mtn"
-                android:textColor="@color/white" />
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/five_dp"
+                android:orientation="horizontal">
 
-            <Button
-                android:id="@+id/glo"
+                <LinearLayout
+                    android:id="@+id/mtn"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/two_hundred_dp"
+                    android:layout_marginEnd="@dimen/five_dp"
+                    android:layout_marginRight="@dimen/five_dp"
+                    android:layout_weight="1"
+                    android:background="@android:color/white"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="150dp"
+                        android:adjustViewBounds="true"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/mtn" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/ten_dp"
+                        android:layout_marginStart="@dimen/ten_dp"
+                        android:layout_marginTop="@dimen/twenty_dp"
+                        android:fontFamily="sans-serif-medium"
+                        android:text="@string/mtn"
+                        android:textColor="@color/mtn_yellow" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/glo"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/two_hundred_dp"
+                    android:layout_marginEnd="@dimen/five_dp"
+                    android:layout_marginRight="@dimen/five_dp"
+                    android:layout_weight="1"
+                    android:background="@android:color/white"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="150dp"
+                        android:adjustViewBounds="true"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/glo_logos" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/ten_dp"
+                        android:layout_marginStart="@dimen/ten_dp"
+                        android:layout_marginTop="@dimen/twenty_dp"
+                        android:fontFamily="sans-serif-medium"
+                        android:text="@string/glo"
+                        android:textColor="@color/glo_green" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/btn_height"
-                android:layout_marginBottom="@dimen/btn_separator"
-                android:layout_marginEnd="@dimen/btn_separator"
-                android:layout_marginRight="@dimen/btn_separator"
-                android:background="@drawable/accent_button_selector"
-                android:text="@string/glo"
-                android:textColor="@color/white" />
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/five_dp"
+                android:orientation="horizontal">
 
-            <Button
-                android:id="@+id/etisalat"
+                <LinearLayout
+                    android:id="@+id/etisalat"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/two_hundred_dp"
+                    android:layout_marginEnd="@dimen/five_dp"
+                    android:layout_marginRight="@dimen/five_dp"
+                    android:layout_weight="1"
+                    android:background="@android:color/white"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="150dp"
+                        android:adjustViewBounds="true"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/etisalat_logo" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/ten_dp"
+                        android:layout_marginStart="@dimen/ten_dp"
+                        android:layout_marginTop="@dimen/twenty_dp"
+                        android:fontFamily="sans-serif-medium"
+                        android:text="@string/etisalat"
+                        android:textColor="@color/etisalat_green" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/airtel"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/two_hundred_dp"
+                    android:layout_marginEnd="@dimen/five_dp"
+                    android:layout_marginRight="@dimen/five_dp"
+                    android:layout_weight="1"
+                    android:background="@android:color/white"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="150dp"
+                        android:adjustViewBounds="true"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/airtel_logos" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/ten_dp"
+                        android:layout_marginStart="@dimen/ten_dp"
+                        android:layout_marginTop="@dimen/twenty_dp"
+                        android:fontFamily="sans-serif-medium"
+                        android:text="@string/airtel"
+                        android:textColor="@color/airtel_red" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/btn_height"
-                android:layout_marginBottom="@dimen/btn_separator"
-                android:layout_marginEnd="@dimen/btn_separator"
-                android:layout_marginRight="@dimen/btn_separator"
-                android:background="@drawable/accent_button_selector"
-                android:text="@string/etisalat"
-                android:textColor="@color/white" />
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/five_dp"
+                android:orientation="horizontal">
 
-            <Button
-                android:id="@+id/airtel"
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/btn_height"
-                android:layout_marginBottom="@dimen/btn_separator"
-                android:layout_marginEnd="@dimen/btn_separator"
-                android:layout_marginRight="@dimen/btn_separator"
-                android:background="@drawable/accent_button_selector"
-                android:text="@string/airtel"
-                android:textColor="@color/white" />
+                <LinearLayout
+                    android:id="@+id/smile"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/two_hundred_dp"
+                    android:layout_marginEnd="@dimen/five_dp"
+                    android:layout_marginRight="@dimen/five_dp"
+                    android:layout_weight="1"
+                    android:background="@android:color/white"
+                    android:orientation="vertical">
 
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="150dp"
+                        android:adjustViewBounds="true"
+                        android:background="@drawable/smile"
+                        android:scaleType="fitXY" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/ten_dp"
+                        android:layout_marginStart="@dimen/ten_dp"
+                        android:layout_marginTop="@dimen/twenty_dp"
+                        android:fontFamily="sans-serif-medium"
+                        android:text="@string/smile"
+                        android:textColor="@color/etisalat_green" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/spectranet"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/two_hundred_dp"
+                    android:layout_marginEnd="@dimen/five_dp"
+                    android:layout_marginRight="@dimen/five_dp"
+                    android:layout_weight="1"
+                    android:background="@android:color/white"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="150dp"
+                        android:adjustViewBounds="true"
+                        android:background="@drawable/spectranet"
+                        android:scaleType="fitXY" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/ten_dp"
+                        android:layout_marginStart="@dimen/ten_dp"
+                        android:layout_marginTop="@dimen/twenty_dp"
+                        android:fontFamily="sans-serif-medium"
+                        android:text="@string/spectranet"
+                        android:textColor="@color/startimes" />
+                </LinearLayout>
+            </LinearLayout>
         </LinearLayout>
-
     </ScrollView>
 </RelativeLayout>
 

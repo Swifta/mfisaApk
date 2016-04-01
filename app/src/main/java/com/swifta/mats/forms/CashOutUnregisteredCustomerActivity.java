@@ -69,7 +69,7 @@ public class CashOutUnregisteredCustomerActivity extends AppCompatActivity {
                             dialog.setPositiveButton("OK", new DialogInterface.OnClickListener() {
                                 @Override
                                 public void onClick(DialogInterface dialog, int which) {
-                                    dialog.cancel();
+                                    onBackPressed();
                                 }
                             });
                             dialog.show();
@@ -81,7 +81,7 @@ public class CashOutUnregisteredCustomerActivity extends AppCompatActivity {
                             dialog.setPositiveButton("OK", new DialogInterface.OnClickListener() {
                                 @Override
                                 public void onClick(DialogInterface dialog, int which) {
-                                    dialog.cancel();
+                                    onBackPressed();
                                 }
                             });
                             dialog.show();
@@ -93,7 +93,7 @@ public class CashOutUnregisteredCustomerActivity extends AppCompatActivity {
                         dialog.setPositiveButton("OK", new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialog, int which) {
-                                dialog.cancel();
+                                onBackPressed();
                             }
                         });
                         dialog.show();

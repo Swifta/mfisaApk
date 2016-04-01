@@ -33,9 +33,7 @@
             android:id="@+id/options"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
             android:layout_margin="@dimen/activity_vertical_margin"
-            android:gravity="center"
             android:orientation="vertical">
 
             <Button
@@ -43,9 +41,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/btn_height"
                 android:layout_marginBottom="@dimen/btn_separator"
-                android:layout_marginEnd="@dimen/btn_separator"
-                android:layout_marginRight="@dimen/btn_separator"
-                android:background="@drawable/accent_button_selector"
+                android:background="@color/colorDivider"
+                android:clickable="false"
                 android:text="@string/dealer_account"
                 android:textColor="@color/white" />
 
@@ -54,8 +51,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/btn_height"
                 android:layout_marginBottom="@dimen/btn_separator"
-                android:layout_marginEnd="@dimen/btn_separator"
-                android:layout_marginRight="@dimen/btn_separator"
                 android:background="@drawable/accent_button_selector"
                 android:text="@string/unregistered_customer"
                 android:textColor="@color/white" />
@@ -65,9 +60,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/btn_height"
                 android:layout_marginBottom="@dimen/btn_separator"
-                android:layout_marginEnd="@dimen/btn_separator"
-                android:layout_marginRight="@dimen/btn_separator"
-                android:background="@drawable/accent_button_selector"
+                android:background="@color/colorDivider"
+                android:clickable="false"
                 android:text="@string/complete_previous_cashout"
                 android:textColor="@color/white" />
 
