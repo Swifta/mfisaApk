@@ -80,68 +80,68 @@
                 </LinearLayout>
             </LinearLayout>
 
-            <!--<LinearLayout-->
-                <!--android:layout_width="match_parent"-->
-                <!--android:layout_height="wrap_content"-->
-                <!--android:layout_margin="@dimen/five_dp"-->
-                <!--android:orientation="horizontal">-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/five_dp"
+                android:orientation="horizontal">
 
-                <!--<LinearLayout-->
-                    <!--android:id="@+id/startimes"-->
-                    <!--android:layout_width="0dp"-->
-                    <!--android:layout_height="@dimen/two_hundred_dp"-->
-                    <!--android:layout_marginEnd="@dimen/five_dp"-->
-                    <!--android:layout_marginRight="@dimen/five_dp"-->
-                    <!--android:layout_weight="1"-->
-                    <!--android:background="@android:color/white"-->
-                    <!--android:orientation="vertical">-->
+                <LinearLayout
+                    android:id="@+id/startimes"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/two_hundred_dp"
+                    android:layout_marginEnd="@dimen/five_dp"
+                    android:layout_marginRight="@dimen/five_dp"
+                    android:layout_weight="1"
+                    android:background="@android:color/white"
+                    android:orientation="vertical">
 
-                    <!--<ImageView-->
-                        <!--android:layout_width="match_parent"-->
-                        <!--android:layout_height="150dp"-->
-                        <!--android:adjustViewBounds="true"-->
-                        <!--android:scaleType="centerCrop"-->
-                        <!--android:src="@drawable/startimes" />-->
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="150dp"
+                        android:adjustViewBounds="true"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/startimes" />
 
-                    <!--<TextView-->
-                        <!--android:layout_width="wrap_content"-->
-                        <!--android:layout_height="wrap_content"-->
-                        <!--android:layout_marginLeft="@dimen/ten_dp"-->
-                        <!--android:layout_marginStart="@dimen/ten_dp"-->
-                        <!--android:layout_marginTop="@dimen/twenty_dp"-->
-                        <!--android:fontFamily="sans-serif-medium"-->
-                        <!--android:text="@string/startimes"-->
-                        <!--android:textColor="@color/startimes" />-->
-                <!--</LinearLayout>-->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/ten_dp"
+                        android:layout_marginStart="@dimen/ten_dp"
+                        android:layout_marginTop="@dimen/twenty_dp"
+                        android:fontFamily="sans-serif-medium"
+                        android:text="@string/startimes"
+                        android:textColor="@color/startimes" />
+                </LinearLayout>
 
-                <!--<LinearLayout-->
-                    <!--android:id="@+id/irokotv"-->
-                    <!--android:layout_width="0dp"-->
-                    <!--android:layout_height="@dimen/two_hundred_dp"-->
-                    <!--android:layout_marginEnd="@dimen/five_dp"-->
-                    <!--android:layout_marginRight="@dimen/five_dp"-->
-                    <!--android:layout_weight="1"-->
-                    <!--android:background="@android:color/white"-->
-                    <!--android:orientation="vertical">-->
+                <LinearLayout
+                    android:id="@+id/irokotv"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/two_hundred_dp"
+                    android:layout_marginEnd="@dimen/five_dp"
+                    android:layout_marginRight="@dimen/five_dp"
+                    android:layout_weight="1"
+                    android:background="@android:color/white"
+                    android:orientation="vertical">
 
-                    <!--<ImageView-->
-                        <!--android:layout_width="match_parent"-->
-                        <!--android:layout_height="150dp"-->
-                        <!--android:adjustViewBounds="true"-->
-                        <!--android:scaleType="centerCrop"-->
-                        <!--android:src="@drawable/iroko" />-->
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="150dp"
+                        android:adjustViewBounds="true"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/iroko" />
 
-                    <!--<TextView-->
-                        <!--android:layout_width="wrap_content"-->
-                        <!--android:layout_height="wrap_content"-->
-                        <!--android:layout_marginLeft="@dimen/ten_dp"-->
-                        <!--android:layout_marginStart="@dimen/ten_dp"-->
-                        <!--android:layout_marginTop="@dimen/twenty_dp"-->
-                        <!--android:fontFamily="sans-serif-medium"-->
-                        <!--android:text="@string/irokotv"-->
-                        <!--android:textColor="@color/iroko" />-->
-                <!--</LinearLayout>-->
-            <!--</LinearLayout>-->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/ten_dp"
+                        android:layout_marginStart="@dimen/ten_dp"
+                        android:layout_marginTop="@dimen/twenty_dp"
+                        android:fontFamily="sans-serif-medium"
+                        android:text="@string/irokotv"
+                        android:textColor="@color/iroko" />
+                </LinearLayout>
+            </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -269,68 +269,68 @@
                 </LinearLayout>
             </LinearLayout>
 
-            <!--<LinearLayout-->
-                <!--android:layout_width="match_parent"-->
-                <!--android:layout_height="wrap_content"-->
-                <!--android:layout_margin="@dimen/five_dp"-->
-                <!--android:orientation="horizontal">-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/five_dp"
+                android:orientation="horizontal">
 
-                <!--<LinearLayout-->
-                    <!--android:id="@+id/smile"-->
-                    <!--android:layout_width="0dp"-->
-                    <!--android:layout_height="@dimen/two_hundred_dp"-->
-                    <!--android:layout_marginEnd="@dimen/five_dp"-->
-                    <!--android:layout_marginRight="@dimen/five_dp"-->
-                    <!--android:layout_weight="1"-->
-                    <!--android:background="@android:color/white"-->
-                    <!--android:orientation="vertical">-->
+                <LinearLayout
+                    android:id="@+id/smile"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/two_hundred_dp"
+                    android:layout_marginEnd="@dimen/five_dp"
+                    android:layout_marginRight="@dimen/five_dp"
+                    android:layout_weight="1"
+                    android:background="@android:color/white"
+                    android:orientation="vertical">
 
-                    <!--<ImageView-->
-                        <!--android:layout_width="match_parent"-->
-                        <!--android:layout_height="150dp"-->
-                        <!--android:adjustViewBounds="true"-->
-                        <!--android:background="@drawable/smile"-->
-                        <!--android:scaleType="fitXY" />-->
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="150dp"
+                        android:adjustViewBounds="true"
+                        android:background="@drawable/smile"
+                        android:scaleType="fitXY" />
 
-                    <!--<TextView-->
-                        <!--android:layout_width="wrap_content"-->
-                        <!--android:layout_height="wrap_content"-->
-                        <!--android:layout_marginLeft="@dimen/ten_dp"-->
-                        <!--android:layout_marginStart="@dimen/ten_dp"-->
-                        <!--android:layout_marginTop="@dimen/twenty_dp"-->
-                        <!--android:fontFamily="sans-serif-medium"-->
-                        <!--android:text="@string/smile"-->
-                        <!--android:textColor="@color/etisalat_green" />-->
-                <!--</LinearLayout>-->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/ten_dp"
+                        android:layout_marginStart="@dimen/ten_dp"
+                        android:layout_marginTop="@dimen/twenty_dp"
+                        android:fontFamily="sans-serif-medium"
+                        android:text="@string/smile"
+                        android:textColor="@color/etisalat_green" />
+                </LinearLayout>
 
-                <!--<LinearLayout-->
-                    <!--android:id="@+id/spectranet"-->
-                    <!--android:layout_width="0dp"-->
-                    <!--android:layout_height="@dimen/two_hundred_dp"-->
-                    <!--android:layout_marginEnd="@dimen/five_dp"-->
-                    <!--android:layout_marginRight="@dimen/five_dp"-->
-                    <!--android:layout_weight="1"-->
-                    <!--android:background="@android:color/white"-->
-                    <!--android:orientation="vertical">-->
+                <LinearLayout
+                    android:id="@+id/spectranet"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/two_hundred_dp"
+                    android:layout_marginEnd="@dimen/five_dp"
+                    android:layout_marginRight="@dimen/five_dp"
+                    android:layout_weight="1"
+                    android:background="@android:color/white"
+                    android:orientation="vertical">
 
-                    <!--<ImageView-->
-                        <!--android:layout_width="match_parent"-->
-                        <!--android:layout_height="150dp"-->
-                        <!--android:adjustViewBounds="true"-->
-                        <!--android:background="@drawable/spectranet"-->
-                        <!--android:scaleType="fitXY" />-->
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="150dp"
+                        android:adjustViewBounds="true"
+                        android:background="@drawable/spectranet"
+                        android:scaleType="fitXY" />
 
-                    <!--<TextView-->
-                        <!--android:layout_width="wrap_content"-->
-                        <!--android:layout_height="wrap_content"-->
-                        <!--android:layout_marginLeft="@dimen/ten_dp"-->
-                        <!--android:layout_marginStart="@dimen/ten_dp"-->
-                        <!--android:layout_marginTop="@dimen/twenty_dp"-->
-                        <!--android:fontFamily="sans-serif-medium"-->
-                        <!--android:text="@string/spectranet"-->
-                        <!--android:textColor="@color/startimes" />-->
-                <!--</LinearLayout>-->
-            <!--</LinearLayout>-->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/ten_dp"
+                        android:layout_marginStart="@dimen/ten_dp"
+                        android:layout_marginTop="@dimen/twenty_dp"
+                        android:fontFamily="sans-serif-medium"
+                        android:text="@string/spectranet"
+                        android:textColor="@color/startimes" />
+                </LinearLayout>
+            </LinearLayout>
         </LinearLayout>
     </ScrollView>
 </RelativeLayout>

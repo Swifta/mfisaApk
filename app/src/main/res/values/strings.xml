@@ -102,7 +102,7 @@ Your new password is &#160;</string>
     <string name="airtel">Airtel</string>
     <string name="title_activity_bill_payment_form">BillPaymentFormActivity</string>
     <string name="action_search">Search</string>
-    <string name="service_phone_number_hint">Phone Number</string>
+    <string name="service_phone_number_hint">Phone or Account Number</string>
     <string name="service_acc_number_hint">Account Number</string>
     <string name="service_firstname">First name</string>
     <string name="service_lastname">Last name</string>
