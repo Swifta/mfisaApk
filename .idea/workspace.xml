@@ -2,690 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d585dff1-c13e-42e1-b4fd-55b6d2ed2c1d" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/android/support/design/R$anim.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/android/support/design/R$attr.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/android/support/design/R$bool.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/android/support/design/R$color.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/android/support/design/R$dimen.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/android/support/design/R$drawable.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/android/support/design/R$id.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/android/support/design/R$integer.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/android/support/design/R$layout.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/android/support/design/R$string.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/android/support/design/R$style.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/android/support/design/R$styleable.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/android/support/design/R.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/android/support/transition/R$id.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/android/support/transition/R.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/android/support/v7/appcompat/R$anim.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/android/support/v7/appcompat/R$attr.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/android/support/v7/appcompat/R$bool.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/android/support/v7/appcompat/R$color.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/android/support/v7/appcompat/R$dimen.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/android/support/v7/appcompat/R$drawable.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/android/support/v7/appcompat/R$id.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/android/support/v7/appcompat/R$integer.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/android/support/v7/appcompat/R$layout.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/android/support/v7/appcompat/R$string.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/android/support/v7/appcompat/R$style.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/android/support/v7/appcompat/R$styleable.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/android/support/v7/appcompat/R.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/android/support/v7/cardview/R$attr.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/android/support/v7/cardview/R$color.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/android/support/v7/cardview/R$dimen.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/android/support/v7/cardview/R$style.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/android/support/v7/cardview/R$styleable.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/android/support/v7/cardview/R.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/android/support/v7/recyclerview/R$attr.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/android/support/v7/recyclerview/R$dimen.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/android/support/v7/recyclerview/R$id.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/android/support/v7/recyclerview/R$styleable.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/android/support/v7/recyclerview/R.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/swifta/mats/AccountActivity$1$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/swifta/mats/AccountActivity$1$2.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/swifta/mats/AccountActivity$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/swifta/mats/AccountActivity$2.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/swifta/mats/AccountActivity$3.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/swifta/mats/AccountActivity$4.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/swifta/mats/AccountActivity$5.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/swifta/mats/AccountActivity.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/swifta/mats/BillPaymentFragment$1$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/swifta/mats/BillPaymentFragment$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/swifta/mats/BillPaymentFragment$10.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/swifta/mats/BillPaymentFragment$11.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/swifta/mats/BillPaymentFragment$12.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/swifta/mats/BillPaymentFragment$13.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/swifta/mats/BillPaymentFragment$2.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/swifta/mats/BillPaymentFragment$3.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/swifta/mats/BillPaymentFragment$4.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/swifta/mats/BillPaymentFragment$5.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/swifta/mats/BillPaymentFragment$6.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/swifta/mats/BillPaymentFragment$7.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/swifta/mats/BillPaymentFragment$8.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/swifta/mats/BillPaymentFragment$9.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/swifta/mats/BillPaymentFragment.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/swifta/mats/BuildConfig.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/swifta/mats/FloatTransferFragment$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/swifta/mats/FloatTransferFragment$2.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/swifta/mats/FloatTransferFragment$3.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/swifta/mats/FloatTransferFragment$4.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/swifta/mats/FloatTransferFragment.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/swifta/mats/HomeFragment$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/swifta/mats/HomeFragment$2.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/swifta/mats/HomeFragment$3.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/swifta/mats/HomeFragment.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/swifta/mats/LoginActivity$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/swifta/mats/LoginActivity$2.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/swifta/mats/LoginActivity$3.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/swifta/mats/LoginActivity.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/swifta/mats/MMOperatorsFragment$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/swifta/mats/MMOperatorsFragment$2.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/swifta/mats/MMOperatorsFragment$3.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/swifta/mats/MMOperatorsFragment$4.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/swifta/mats/MMOperatorsFragment$5.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/swifta/mats/MMOperatorsFragment$6.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/swifta/mats/MMOperatorsFragment$7.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/swifta/mats/MMOperatorsFragment.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/swifta/mats/MainActivity.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/swifta/mats/MiniStatementFragment$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/swifta/mats/MiniStatementFragment$2.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/swifta/mats/MiniStatementFragment$3.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/swifta/mats/MiniStatementFragment$4.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/swifta/mats/MiniStatementFragment$5.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/swifta/mats/MiniStatementFragment$6.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/swifta/mats/MiniStatementFragment$7.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/swifta/mats/MiniStatementFragment.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/swifta/mats/R$anim.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/swifta/mats/R$attr.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/swifta/mats/R$bool.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/swifta/mats/R$color.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/swifta/mats/R$dimen.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/swifta/mats/R$drawable.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/swifta/mats/R$id.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/swifta/mats/R$integer.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/swifta/mats/R$layout.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/swifta/mats/R$menu.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/swifta/mats/R$mipmap.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/swifta/mats/R$string.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/swifta/mats/R$style.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/swifta/mats/R$styleable.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/swifta/mats/R.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/swifta/mats/ServiceProviderDetailsActivity.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/swifta/mats/Statement$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/swifta/mats/Statement.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/swifta/mats/TransactionActivity.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/swifta/mats/WithdrawalFragment$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/swifta/mats/WithdrawalFragment$2.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/swifta/mats/WithdrawalFragment$3.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/swifta/mats/WithdrawalFragment.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/swifta/mats/adapters/PreviewListAdapter.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/swifta/mats/adapters/ServiceProviderDetailsAdapter$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/swifta/mats/adapters/ServiceProviderDetailsAdapter$ServiceViewHolder.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/swifta/mats/adapters/ServiceProviderDetailsAdapter.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/swifta/mats/adapters/ServiceProviderDetailsModel.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/swifta/mats/forms/CashInActivity$1$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/swifta/mats/forms/CashInActivity$1$2.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/swifta/mats/forms/CashInActivity$1$3.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/swifta/mats/forms/CashInActivity$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/swifta/mats/forms/CashInActivity$2.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/swifta/mats/forms/CashInActivity$3.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/swifta/mats/forms/CashInActivity$4.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/swifta/mats/forms/CashInActivity.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/swifta/mats/forms/CashOutUnregisteredCustomerActivity$1$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/swifta/mats/forms/CashOutUnregisteredCustomerActivity$1$2.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/swifta/mats/forms/CashOutUnregisteredCustomerActivity$1$3.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/swifta/mats/forms/CashOutUnregisteredCustomerActivity$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/swifta/mats/forms/CashOutUnregisteredCustomerActivity$2.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/swifta/mats/forms/CashOutUnregisteredCustomerActivity$3.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/swifta/mats/forms/CashOutUnregisteredCustomerActivity$4.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/swifta/mats/forms/CashOutUnregisteredCustomerActivity.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/swifta/mats/forms/CompleteCashOutActivity$1$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/swifta/mats/forms/CompleteCashOutActivity$1$2.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/swifta/mats/forms/CompleteCashOutActivity$1$3.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/swifta/mats/forms/CompleteCashOutActivity$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/swifta/mats/forms/CompleteCashOutActivity$2.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/swifta/mats/forms/CompleteCashOutActivity$3.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/swifta/mats/forms/CompleteCashOutActivity$4.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/swifta/mats/forms/CompleteCashOutActivity.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/swifta/mats/forms/CompleteDepositFloatActivity$1$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/swifta/mats/forms/CompleteDepositFloatActivity$1$2.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/swifta/mats/forms/CompleteDepositFloatActivity$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/swifta/mats/forms/CompleteDepositFloatActivity$2.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/swifta/mats/forms/CompleteDepositFloatActivity$3.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/swifta/mats/forms/CompleteDepositFloatActivity$4.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/swifta/mats/forms/CompleteDepositFloatActivity$5.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/swifta/mats/forms/CompleteDepositFloatActivity$6.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/swifta/mats/forms/CompleteDepositFloatActivity.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/swifta/mats/forms/DepositFloatActivity$1$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/swifta/mats/forms/DepositFloatActivity$1$2.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/swifta/mats/forms/DepositFloatActivity$1$3.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/swifta/mats/forms/DepositFloatActivity$1$4.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/swifta/mats/forms/DepositFloatActivity$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/swifta/mats/forms/DepositFloatActivity$10.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/swifta/mats/forms/DepositFloatActivity$2.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/swifta/mats/forms/DepositFloatActivity$3.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/swifta/mats/forms/DepositFloatActivity$4.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/swifta/mats/forms/DepositFloatActivity$5.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/swifta/mats/forms/DepositFloatActivity$6.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/swifta/mats/forms/DepositFloatActivity$7.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/swifta/mats/forms/DepositFloatActivity$8.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/swifta/mats/forms/DepositFloatActivity$9.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/swifta/mats/forms/DepositFloatActivity.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/swifta/mats/forms/ProcessServiceProviderActivity$1$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/swifta/mats/forms/ProcessServiceProviderActivity$1$2.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/swifta/mats/forms/ProcessServiceProviderActivity$1$3.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/swifta/mats/forms/ProcessServiceProviderActivity$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/swifta/mats/forms/ProcessServiceProviderActivity$2.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/swifta/mats/forms/ProcessServiceProviderActivity$3.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/swifta/mats/forms/ProcessServiceProviderActivity$4.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/swifta/mats/forms/ProcessServiceProviderActivity$5.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/swifta/mats/forms/ProcessServiceProviderActivity$6.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/swifta/mats/forms/ProcessServiceProviderActivity.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/swifta/mats/forms/WithdrawMMActivity$1$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/swifta/mats/forms/WithdrawMMActivity$1$2.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/swifta/mats/forms/WithdrawMMActivity$1$3.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/swifta/mats/forms/WithdrawMMActivity$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/swifta/mats/forms/WithdrawMMActivity$2.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/swifta/mats/forms/WithdrawMMActivity$3.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/swifta/mats/forms/WithdrawMMActivity$4.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/swifta/mats/forms/WithdrawMMActivity$5.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/swifta/mats/forms/WithdrawMMActivity.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/swifta/mats/service/BackgroundServices.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/swifta/mats/service/ExSSLSocketFactory$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/swifta/mats/service/ExSSLSocketFactory$2.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/swifta/mats/service/ExSSLSocketFactory.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/swifta/mats/util/ApiJobs.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/swifta/mats/util/Constants.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/swifta/mats/util/Dealers.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/swifta/mats/util/InternetCheck.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/incremental-safeguard/debug/tag.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeDebugAssets/merger.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeDebugJniLibFolders/merger.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeDebugShaders/merger.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/packageDebug/dex-renamer-state.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/packageDebug/file-input-save-data.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/packageDebug/zip-cache/Eu3PboycRzFRtmQHbMpMJHnaWwA=" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/com.android.support-animated-vector-drawable-25.0.0_f644db2d1d7284e8a64c42e9d2d852f0ae29489d.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/com.android.support-appcompat-v7-25.0.0_ac44237f28b7466f0927bafd401a092c32812714.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/com.android.support-cardview-v7-25.0.0_c8439c69f72830040cd794fddfdfbc25bc4edb86.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/com.android.support-design-25.0.0_454fe4c142f40f07e50d4732033014b5a5656f98.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/com.android.support-recyclerview-v7-25.0.0_6686a914579b3f4691d30a07eb8407d425fe9061.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/com.android.support-support-compat-25.0.0_250f84e6988f49d1e82c89cadba6c0b544607115.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/com.android.support-support-core-ui-25.0.0_c99d8b6f2af43b49db02f1b02ced22f3ea290cc9.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/com.android.support-support-core-utils-25.0.0_210b1d8c97a3819834c03070cbd757c93cbb063b.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/com.android.support-support-fragment-25.0.0_7b58a09952be999f351ba32a43f22d956cad77dd.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/com.android.support-support-media-compat-25.0.0_432a5b50218788c490f411a6aa547aad7255079f.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/com.android.support-support-v4-25.0.0_b5f1a11b0043023a0899c09dac96d76a4d6f4545.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/com.android.support-support-vector-drawable-25.0.0_ca126b0a88633a1793e2d5081b660ad6feefdb1f.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/com.android.support-transition-25.0.0_1ea6e60f7e5b43a979cbbcbcd6d85f88d2a62450.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/debug_dafd74e87dabb6bfd58658485a795cbe85c481b1.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/internal_impl-25.0.0_34c61cf7c99bc2150f9a45bad30483a75eb5b93a.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/internal_impl-25.0.0_4133188941d05fcf5552f7e9347e52f3f55e5e9f.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/internal_impl-25.0.0_6c366b905eafa0e35dd340da74a4b509553789e6.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/internal_impl-25.0.0_90636750bf372dce8987b4f4fc94443aaddbb6ee.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/internal_impl-25.0.0_f7ba7b21dd71d83c5efccd65f9437e8787e9e545.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/support-annotations-25.0.0_9d4ea301aea04ed5eb1bfd8be7fd602655cd0993.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dex/debug/folders/1000/1f/main/classes.dex" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/outputs/apk/app-debug.apk" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4538sspgyqlnlgbnid3tnqm0o/android/support/v7/recyclerview/BuildConfig.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4538sspgyqlnlgbnid3tnqm0o/android/support/v7/util/AsyncListUtil$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4538sspgyqlnlgbnid3tnqm0o/android/support/v7/util/AsyncListUtil$2.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4538sspgyqlnlgbnid3tnqm0o/android/support/v7/util/AsyncListUtil$DataCallback.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4538sspgyqlnlgbnid3tnqm0o/android/support/v7/util/AsyncListUtil$ViewCallback.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4538sspgyqlnlgbnid3tnqm0o/android/support/v7/util/AsyncListUtil.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4538sspgyqlnlgbnid3tnqm0o/android/support/v7/util/BatchingListUpdateCallback.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4538sspgyqlnlgbnid3tnqm0o/android/support/v7/util/DiffUtil$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4538sspgyqlnlgbnid3tnqm0o/android/support/v7/util/DiffUtil$Callback.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4538sspgyqlnlgbnid3tnqm0o/android/support/v7/util/DiffUtil$DiffResult$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4538sspgyqlnlgbnid3tnqm0o/android/support/v7/util/DiffUtil$DiffResult.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4538sspgyqlnlgbnid3tnqm0o/android/support/v7/util/DiffUtil$PostponedUpdate.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4538sspgyqlnlgbnid3tnqm0o/android/support/v7/util/DiffUtil$Range.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4538sspgyqlnlgbnid3tnqm0o/android/support/v7/util/DiffUtil$Snake.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4538sspgyqlnlgbnid3tnqm0o/android/support/v7/util/DiffUtil.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4538sspgyqlnlgbnid3tnqm0o/android/support/v7/util/ListUpdateCallback.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4538sspgyqlnlgbnid3tnqm0o/android/support/v7/util/MessageThreadUtil$1$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4538sspgyqlnlgbnid3tnqm0o/android/support/v7/util/MessageThreadUtil$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4538sspgyqlnlgbnid3tnqm0o/android/support/v7/util/MessageThreadUtil$2$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4538sspgyqlnlgbnid3tnqm0o/android/support/v7/util/MessageThreadUtil$2.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4538sspgyqlnlgbnid3tnqm0o/android/support/v7/util/MessageThreadUtil$MessageQueue.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4538sspgyqlnlgbnid3tnqm0o/android/support/v7/util/MessageThreadUtil$SyncQueueItem.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4538sspgyqlnlgbnid3tnqm0o/android/support/v7/util/MessageThreadUtil.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4538sspgyqlnlgbnid3tnqm0o/android/support/v7/util/SortedList$BatchedCallback.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4538sspgyqlnlgbnid3tnqm0o/android/support/v7/util/SortedList$Callback.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4538sspgyqlnlgbnid3tnqm0o/android/support/v7/util/SortedList.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4538sspgyqlnlgbnid3tnqm0o/android/support/v7/util/ThreadUtil$BackgroundCallback.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4538sspgyqlnlgbnid3tnqm0o/android/support/v7/util/ThreadUtil$MainThreadCallback.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4538sspgyqlnlgbnid3tnqm0o/android/support/v7/util/ThreadUtil.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4538sspgyqlnlgbnid3tnqm0o/android/support/v7/util/TileList$Tile.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4538sspgyqlnlgbnid3tnqm0o/android/support/v7/util/TileList.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4538sspgyqlnlgbnid3tnqm0o/android/support/v7/widget/AdapterHelper$Callback.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4538sspgyqlnlgbnid3tnqm0o/android/support/v7/widget/AdapterHelper$UpdateOp.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4538sspgyqlnlgbnid3tnqm0o/android/support/v7/widget/AdapterHelper.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4538sspgyqlnlgbnid3tnqm0o/android/support/v7/widget/ChildHelper$Bucket.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4538sspgyqlnlgbnid3tnqm0o/android/support/v7/widget/ChildHelper$Callback.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4538sspgyqlnlgbnid3tnqm0o/android/support/v7/widget/ChildHelper.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4538sspgyqlnlgbnid3tnqm0o/android/support/v7/widget/DefaultItemAnimator$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4538sspgyqlnlgbnid3tnqm0o/android/support/v7/widget/DefaultItemAnimator$2.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4538sspgyqlnlgbnid3tnqm0o/android/support/v7/widget/DefaultItemAnimator$3.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4538sspgyqlnlgbnid3tnqm0o/android/support/v7/widget/DefaultItemAnimator$4.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4538sspgyqlnlgbnid3tnqm0o/android/support/v7/widget/DefaultItemAnimator$5.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4538sspgyqlnlgbnid3tnqm0o/android/support/v7/widget/DefaultItemAnimator$6.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4538sspgyqlnlgbnid3tnqm0o/android/support/v7/widget/DefaultItemAnimator$7.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4538sspgyqlnlgbnid3tnqm0o/android/support/v7/widget/DefaultItemAnimator$8.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4538sspgyqlnlgbnid3tnqm0o/android/support/v7/widget/DefaultItemAnimator$ChangeInfo.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4538sspgyqlnlgbnid3tnqm0o/android/support/v7/widget/DefaultItemAnimator$MoveInfo.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4538sspgyqlnlgbnid3tnqm0o/android/support/v7/widget/DefaultItemAnimator$VpaListenerAdapter.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4538sspgyqlnlgbnid3tnqm0o/android/support/v7/widget/DefaultItemAnimator.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4538sspgyqlnlgbnid3tnqm0o/android/support/v7/widget/DividerItemDecoration.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4538sspgyqlnlgbnid3tnqm0o/android/support/v7/widget/GridLayoutManager$DefaultSpanSizeLookup.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4538sspgyqlnlgbnid3tnqm0o/android/support/v7/widget/GridLayoutManager$LayoutParams.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4538sspgyqlnlgbnid3tnqm0o/android/support/v7/widget/GridLayoutManager$SpanSizeLookup.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4538sspgyqlnlgbnid3tnqm0o/android/support/v7/widget/GridLayoutManager.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4538sspgyqlnlgbnid3tnqm0o/android/support/v7/widget/LayoutState.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4538sspgyqlnlgbnid3tnqm0o/android/support/v7/widget/LinearLayoutManager$AnchorInfo.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4538sspgyqlnlgbnid3tnqm0o/android/support/v7/widget/LinearLayoutManager$LayoutChunkResult.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4538sspgyqlnlgbnid3tnqm0o/android/support/v7/widget/LinearLayoutManager$LayoutState.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4538sspgyqlnlgbnid3tnqm0o/android/support/v7/widget/LinearLayoutManager$SavedState$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4538sspgyqlnlgbnid3tnqm0o/android/support/v7/widget/LinearLayoutManager$SavedState.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4538sspgyqlnlgbnid3tnqm0o/android/support/v7/widget/LinearLayoutManager.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4538sspgyqlnlgbnid3tnqm0o/android/support/v7/widget/LinearSmoothScroller.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4538sspgyqlnlgbnid3tnqm0o/android/support/v7/widget/LinearSnapHelper.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4538sspgyqlnlgbnid3tnqm0o/android/support/v7/widget/OpReorderer$Callback.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4538sspgyqlnlgbnid3tnqm0o/android/support/v7/widget/OpReorderer.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4538sspgyqlnlgbnid3tnqm0o/android/support/v7/widget/OrientationHelper$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4538sspgyqlnlgbnid3tnqm0o/android/support/v7/widget/OrientationHelper$2.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4538sspgyqlnlgbnid3tnqm0o/android/support/v7/widget/OrientationHelper.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4538sspgyqlnlgbnid3tnqm0o/android/support/v7/widget/PositionMap$ContainerHelpers.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4538sspgyqlnlgbnid3tnqm0o/android/support/v7/widget/PositionMap.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4538sspgyqlnlgbnid3tnqm0o/android/support/v7/widget/RecyclerView$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4538sspgyqlnlgbnid3tnqm0o/android/support/v7/widget/RecyclerView$2.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4538sspgyqlnlgbnid3tnqm0o/android/support/v7/widget/RecyclerView$3.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4538sspgyqlnlgbnid3tnqm0o/android/support/v7/widget/RecyclerView$4.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4538sspgyqlnlgbnid3tnqm0o/android/support/v7/widget/RecyclerView$5.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4538sspgyqlnlgbnid3tnqm0o/android/support/v7/widget/RecyclerView$6.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4538sspgyqlnlgbnid3tnqm0o/android/support/v7/widget/RecyclerView$Adapter.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4538sspgyqlnlgbnid3tnqm0o/android/support/v7/widget/RecyclerView$AdapterDataObservable.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4538sspgyqlnlgbnid3tnqm0o/android/support/v7/widget/RecyclerView$AdapterDataObserver.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4538sspgyqlnlgbnid3tnqm0o/android/support/v7/widget/RecyclerView$ChildDrawingOrderCallback.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4538sspgyqlnlgbnid3tnqm0o/android/support/v7/widget/RecyclerView$ItemAnimator$AdapterChanges.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4538sspgyqlnlgbnid3tnqm0o/android/support/v7/widget/RecyclerView$ItemAnimator$ItemAnimatorFinishedListener.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4538sspgyqlnlgbnid3tnqm0o/android/support/v7/widget/RecyclerView$ItemAnimator$ItemAnimatorListener.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4538sspgyqlnlgbnid3tnqm0o/android/support/v7/widget/RecyclerView$ItemAnimator$ItemHolderInfo.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4538sspgyqlnlgbnid3tnqm0o/android/support/v7/widget/RecyclerView$ItemAnimator.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4538sspgyqlnlgbnid3tnqm0o/android/support/v7/widget/RecyclerView$ItemAnimatorRestoreListener.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4538sspgyqlnlgbnid3tnqm0o/android/support/v7/widget/RecyclerView$ItemDecoration.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4538sspgyqlnlgbnid3tnqm0o/android/support/v7/widget/RecyclerView$LayoutManager$Properties.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4538sspgyqlnlgbnid3tnqm0o/android/support/v7/widget/RecyclerView$LayoutManager.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4538sspgyqlnlgbnid3tnqm0o/android/support/v7/widget/RecyclerView$LayoutParams.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4538sspgyqlnlgbnid3tnqm0o/android/support/v7/widget/RecyclerView$OnChildAttachStateChangeListener.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4538sspgyqlnlgbnid3tnqm0o/android/support/v7/widget/RecyclerView$OnFlingListener.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4538sspgyqlnlgbnid3tnqm0o/android/support/v7/widget/RecyclerView$OnItemTouchListener.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4538sspgyqlnlgbnid3tnqm0o/android/support/v7/widget/RecyclerView$OnScrollListener.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4538sspgyqlnlgbnid3tnqm0o/android/support/v7/widget/RecyclerView$RecycledViewPool.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4538sspgyqlnlgbnid3tnqm0o/android/support/v7/widget/RecyclerView$Recycler.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4538sspgyqlnlgbnid3tnqm0o/android/support/v7/widget/RecyclerView$RecyclerListener.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4538sspgyqlnlgbnid3tnqm0o/android/support/v7/widget/RecyclerView$RecyclerViewDataObserver.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4538sspgyqlnlgbnid3tnqm0o/android/support/v7/widget/RecyclerView$SavedState$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4538sspgyqlnlgbnid3tnqm0o/android/support/v7/widget/RecyclerView$SavedState.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4538sspgyqlnlgbnid3tnqm0o/android/support/v7/widget/RecyclerView$SimpleOnItemTouchListener.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4538sspgyqlnlgbnid3tnqm0o/android/support/v7/widget/RecyclerView$SmoothScroller$Action.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4538sspgyqlnlgbnid3tnqm0o/android/support/v7/widget/RecyclerView$SmoothScroller$ScrollVectorProvider.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4538sspgyqlnlgbnid3tnqm0o/android/support/v7/widget/RecyclerView$SmoothScroller.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4538sspgyqlnlgbnid3tnqm0o/android/support/v7/widget/RecyclerView$State.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4538sspgyqlnlgbnid3tnqm0o/android/support/v7/widget/RecyclerView$ViewCacheExtension.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4538sspgyqlnlgbnid3tnqm0o/android/support/v7/widget/RecyclerView$ViewFlinger.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4538sspgyqlnlgbnid3tnqm0o/android/support/v7/widget/RecyclerView$ViewHolder.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4538sspgyqlnlgbnid3tnqm0o/android/support/v7/widget/RecyclerView$ViewPrefetcher.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4538sspgyqlnlgbnid3tnqm0o/android/support/v7/widget/RecyclerView.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4538sspgyqlnlgbnid3tnqm0o/android/support/v7/widget/RecyclerViewAccessibilityDelegate$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4538sspgyqlnlgbnid3tnqm0o/android/support/v7/widget/RecyclerViewAccessibilityDelegate.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4538sspgyqlnlgbnid3tnqm0o/android/support/v7/widget/ScrollbarHelper.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4538sspgyqlnlgbnid3tnqm0o/android/support/v7/widget/SimpleItemAnimator.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4538sspgyqlnlgbnid3tnqm0o/android/support/v7/widget/SnapHelper$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4538sspgyqlnlgbnid3tnqm0o/android/support/v7/widget/SnapHelper$2.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4538sspgyqlnlgbnid3tnqm0o/android/support/v7/widget/SnapHelper.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4538sspgyqlnlgbnid3tnqm0o/android/support/v7/widget/StaggeredGridLayoutManager$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4538sspgyqlnlgbnid3tnqm0o/android/support/v7/widget/StaggeredGridLayoutManager$AnchorInfo.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4538sspgyqlnlgbnid3tnqm0o/android/support/v7/widget/StaggeredGridLayoutManager$LayoutParams.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4538sspgyqlnlgbnid3tnqm0o/android/support/v7/widget/StaggeredGridLayoutManager$LazySpanLookup$FullSpanItem$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4538sspgyqlnlgbnid3tnqm0o/android/support/v7/widget/StaggeredGridLayoutManager$LazySpanLookup$FullSpanItem.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4538sspgyqlnlgbnid3tnqm0o/android/support/v7/widget/StaggeredGridLayoutManager$LazySpanLookup.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4538sspgyqlnlgbnid3tnqm0o/android/support/v7/widget/StaggeredGridLayoutManager$SavedState$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4538sspgyqlnlgbnid3tnqm0o/android/support/v7/widget/StaggeredGridLayoutManager$SavedState.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4538sspgyqlnlgbnid3tnqm0o/android/support/v7/widget/StaggeredGridLayoutManager$Span.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4538sspgyqlnlgbnid3tnqm0o/android/support/v7/widget/StaggeredGridLayoutManager.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4538sspgyqlnlgbnid3tnqm0o/android/support/v7/widget/ViewInfoStore$InfoRecord.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4538sspgyqlnlgbnid3tnqm0o/android/support/v7/widget/ViewInfoStore$ProcessCallback.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4538sspgyqlnlgbnid3tnqm0o/android/support/v7/widget/ViewInfoStore.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4538sspgyqlnlgbnid3tnqm0o/android/support/v7/widget/helper/ItemTouchHelper$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4538sspgyqlnlgbnid3tnqm0o/android/support/v7/widget/helper/ItemTouchHelper$2.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4538sspgyqlnlgbnid3tnqm0o/android/support/v7/widget/helper/ItemTouchHelper$3.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4538sspgyqlnlgbnid3tnqm0o/android/support/v7/widget/helper/ItemTouchHelper$4.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4538sspgyqlnlgbnid3tnqm0o/android/support/v7/widget/helper/ItemTouchHelper$5.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4538sspgyqlnlgbnid3tnqm0o/android/support/v7/widget/helper/ItemTouchHelper$Callback$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4538sspgyqlnlgbnid3tnqm0o/android/support/v7/widget/helper/ItemTouchHelper$Callback$2.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4538sspgyqlnlgbnid3tnqm0o/android/support/v7/widget/helper/ItemTouchHelper$Callback.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4538sspgyqlnlgbnid3tnqm0o/android/support/v7/widget/helper/ItemTouchHelper$ItemTouchHelperGestureListener.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4538sspgyqlnlgbnid3tnqm0o/android/support/v7/widget/helper/ItemTouchHelper$RecoverAnimation$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4538sspgyqlnlgbnid3tnqm0o/android/support/v7/widget/helper/ItemTouchHelper$RecoverAnimation.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4538sspgyqlnlgbnid3tnqm0o/android/support/v7/widget/helper/ItemTouchHelper$SimpleCallback.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4538sspgyqlnlgbnid3tnqm0o/android/support/v7/widget/helper/ItemTouchHelper$ViewDropHandler.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4538sspgyqlnlgbnid3tnqm0o/android/support/v7/widget/helper/ItemTouchHelper.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4538sspgyqlnlgbnid3tnqm0o/android/support/v7/widget/helper/ItemTouchUIUtil.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4538sspgyqlnlgbnid3tnqm0o/android/support/v7/widget/helper/ItemTouchUIUtilImpl$Gingerbread.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4538sspgyqlnlgbnid3tnqm0o/android/support/v7/widget/helper/ItemTouchUIUtilImpl$Honeycomb.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4538sspgyqlnlgbnid3tnqm0o/android/support/v7/widget/helper/ItemTouchUIUtilImpl$Lollipop.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4538sspgyqlnlgbnid3tnqm0o/android/support/v7/widget/helper/ItemTouchUIUtilImpl.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4538sspgyqlnlgbnid3tnqm0o/android/support/v7/widget/util/SortedListAdapterCallback.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4dk2wmsj6p2gb3d1c23fxyx58/android/support/design/BuildConfig.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4dk2wmsj6p2gb3d1c23fxyx58/android/support/design/internal/BaselineLayout.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4dk2wmsj6p2gb3d1c23fxyx58/android/support/design/internal/BottomNavigationAnimationHelperBase.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4dk2wmsj6p2gb3d1c23fxyx58/android/support/design/internal/BottomNavigationAnimationHelperIcs.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4dk2wmsj6p2gb3d1c23fxyx58/android/support/design/internal/BottomNavigationItemView.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4dk2wmsj6p2gb3d1c23fxyx58/android/support/design/internal/BottomNavigationMenu.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4dk2wmsj6p2gb3d1c23fxyx58/android/support/design/internal/BottomNavigationMenuView$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4dk2wmsj6p2gb3d1c23fxyx58/android/support/design/internal/BottomNavigationMenuView.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4dk2wmsj6p2gb3d1c23fxyx58/android/support/design/internal/BottomNavigationPresenter.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4dk2wmsj6p2gb3d1c23fxyx58/android/support/design/internal/ForegroundLinearLayout.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4dk2wmsj6p2gb3d1c23fxyx58/android/support/design/internal/NavigationMenu.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4dk2wmsj6p2gb3d1c23fxyx58/android/support/design/internal/NavigationMenuItemView$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4dk2wmsj6p2gb3d1c23fxyx58/android/support/design/internal/NavigationMenuItemView.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4dk2wmsj6p2gb3d1c23fxyx58/android/support/design/internal/NavigationMenuPresenter$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4dk2wmsj6p2gb3d1c23fxyx58/android/support/design/internal/NavigationMenuPresenter$HeaderViewHolder.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4dk2wmsj6p2gb3d1c23fxyx58/android/support/design/internal/NavigationMenuPresenter$NavigationMenuAdapter.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4dk2wmsj6p2gb3d1c23fxyx58/android/support/design/internal/NavigationMenuPresenter$NavigationMenuHeaderItem.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4dk2wmsj6p2gb3d1c23fxyx58/android/support/design/internal/NavigationMenuPresenter$NavigationMenuItem.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4dk2wmsj6p2gb3d1c23fxyx58/android/support/design/internal/NavigationMenuPresenter$NavigationMenuSeparatorItem.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4dk2wmsj6p2gb3d1c23fxyx58/android/support/design/internal/NavigationMenuPresenter$NavigationMenuTextItem.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4dk2wmsj6p2gb3d1c23fxyx58/android/support/design/internal/NavigationMenuPresenter$NormalViewHolder.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4dk2wmsj6p2gb3d1c23fxyx58/android/support/design/internal/NavigationMenuPresenter$SeparatorViewHolder.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4dk2wmsj6p2gb3d1c23fxyx58/android/support/design/internal/NavigationMenuPresenter$SubheaderViewHolder.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4dk2wmsj6p2gb3d1c23fxyx58/android/support/design/internal/NavigationMenuPresenter$ViewHolder.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4dk2wmsj6p2gb3d1c23fxyx58/android/support/design/internal/NavigationMenuPresenter.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4dk2wmsj6p2gb3d1c23fxyx58/android/support/design/internal/NavigationMenuView.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4dk2wmsj6p2gb3d1c23fxyx58/android/support/design/internal/NavigationSubMenu.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4dk2wmsj6p2gb3d1c23fxyx58/android/support/design/internal/ParcelableSparseArray$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4dk2wmsj6p2gb3d1c23fxyx58/android/support/design/internal/ParcelableSparseArray.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4dk2wmsj6p2gb3d1c23fxyx58/android/support/design/internal/ScrimInsetsFrameLayout$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4dk2wmsj6p2gb3d1c23fxyx58/android/support/design/internal/ScrimInsetsFrameLayout.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4dk2wmsj6p2gb3d1c23fxyx58/android/support/design/internal/TextScale$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4dk2wmsj6p2gb3d1c23fxyx58/android/support/design/internal/TextScale.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4dk2wmsj6p2gb3d1c23fxyx58/android/support/design/internal/package-info.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4dk2wmsj6p2gb3d1c23fxyx58/android/support/design/widget/AnimationUtils$AnimationListenerAdapter.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4dk2wmsj6p2gb3d1c23fxyx58/android/support/design/widget/AnimationUtils.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4dk2wmsj6p2gb3d1c23fxyx58/android/support/design/widget/AppBarLayout$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4dk2wmsj6p2gb3d1c23fxyx58/android/support/design/widget/AppBarLayout$Behavior$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4dk2wmsj6p2gb3d1c23fxyx58/android/support/design/widget/AppBarLayout$Behavior$DragCallback.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4dk2wmsj6p2gb3d1c23fxyx58/android/support/design/widget/AppBarLayout$Behavior$SavedState$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4dk2wmsj6p2gb3d1c23fxyx58/android/support/design/widget/AppBarLayout$Behavior$SavedState.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4dk2wmsj6p2gb3d1c23fxyx58/android/support/design/widget/AppBarLayout$Behavior.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4dk2wmsj6p2gb3d1c23fxyx58/android/support/design/widget/AppBarLayout$LayoutParams$ScrollFlags.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4dk2wmsj6p2gb3d1c23fxyx58/android/support/design/widget/AppBarLayout$LayoutParams.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4dk2wmsj6p2gb3d1c23fxyx58/android/support/design/widget/AppBarLayout$OnOffsetChangedListener.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4dk2wmsj6p2gb3d1c23fxyx58/android/support/design/widget/AppBarLayout$ScrollingViewBehavior.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4dk2wmsj6p2gb3d1c23fxyx58/android/support/design/widget/AppBarLayout.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4dk2wmsj6p2gb3d1c23fxyx58/android/support/design/widget/BottomNavigationView$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4dk2wmsj6p2gb3d1c23fxyx58/android/support/design/widget/BottomNavigationView$OnNavigationItemSelectedListener.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4dk2wmsj6p2gb3d1c23fxyx58/android/support/design/widget/BottomNavigationView.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4dk2wmsj6p2gb3d1c23fxyx58/android/support/design/widget/BottomSheetBehavior$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4dk2wmsj6p2gb3d1c23fxyx58/android/support/design/widget/BottomSheetBehavior$2.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4dk2wmsj6p2gb3d1c23fxyx58/android/support/design/widget/BottomSheetBehavior$BottomSheetCallback.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4dk2wmsj6p2gb3d1c23fxyx58/android/support/design/widget/BottomSheetBehavior$SavedState$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4dk2wmsj6p2gb3d1c23fxyx58/android/support/design/widget/BottomSheetBehavior$SavedState.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4dk2wmsj6p2gb3d1c23fxyx58/android/support/design/widget/BottomSheetBehavior$SettleRunnable.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4dk2wmsj6p2gb3d1c23fxyx58/android/support/design/widget/BottomSheetBehavior$State.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4dk2wmsj6p2gb3d1c23fxyx58/android/support/design/widget/BottomSheetBehavior.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4dk2wmsj6p2gb3d1c23fxyx58/android/support/design/widget/BottomSheetDialog$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4dk2wmsj6p2gb3d1c23fxyx58/android/support/design/widget/BottomSheetDialog$2.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4dk2wmsj6p2gb3d1c23fxyx58/android/support/design/widget/BottomSheetDialog.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4dk2wmsj6p2gb3d1c23fxyx58/android/support/design/widget/BottomSheetDialogFragment.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4dk2wmsj6p2gb3d1c23fxyx58/android/support/design/widget/CheckableImageButton$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4dk2wmsj6p2gb3d1c23fxyx58/android/support/design/widget/CheckableImageButton.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4dk2wmsj6p2gb3d1c23fxyx58/android/support/design/widget/CircularBorderDrawable.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4dk2wmsj6p2gb3d1c23fxyx58/android/support/design/widget/CircularBorderDrawableLollipop.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4dk2wmsj6p2gb3d1c23fxyx58/android/support/design/widget/CollapsingTextHelper.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4dk2wmsj6p2gb3d1c23fxyx58/android/support/design/widget/CollapsingToolbarLayout$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4dk2wmsj6p2gb3d1c23fxyx58/android/support/design/widget/CollapsingToolbarLayout$2.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4dk2wmsj6p2gb3d1c23fxyx58/android/support/design/widget/CollapsingToolbarLayout$LayoutParams.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4dk2wmsj6p2gb3d1c23fxyx58/android/support/design/widget/CollapsingToolbarLayout$OffsetUpdateListener.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4dk2wmsj6p2gb3d1c23fxyx58/android/support/design/widget/CollapsingToolbarLayout.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4dk2wmsj6p2gb3d1c23fxyx58/android/support/design/widget/CoordinatorLayout$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4dk2wmsj6p2gb3d1c23fxyx58/android/support/design/widget/CoordinatorLayout$Behavior.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4dk2wmsj6p2gb3d1c23fxyx58/android/support/design/widget/CoordinatorLayout$DefaultBehavior.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4dk2wmsj6p2gb3d1c23fxyx58/android/support/design/widget/CoordinatorLayout$DispatchChangeEvent.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4dk2wmsj6p2gb3d1c23fxyx58/android/support/design/widget/CoordinatorLayout$HierarchyChangeListener.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4dk2wmsj6p2gb3d1c23fxyx58/android/support/design/widget/CoordinatorLayout$LayoutParams.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4dk2wmsj6p2gb3d1c23fxyx58/android/support/design/widget/CoordinatorLayout$OnPreDrawListener.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4dk2wmsj6p2gb3d1c23fxyx58/android/support/design/widget/CoordinatorLayout$SavedState$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4dk2wmsj6p2gb3d1c23fxyx58/android/support/design/widget/CoordinatorLayout$SavedState.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4dk2wmsj6p2gb3d1c23fxyx58/android/support/design/widget/CoordinatorLayout$ViewElevationComparator.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4dk2wmsj6p2gb3d1c23fxyx58/android/support/design/widget/CoordinatorLayout.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4dk2wmsj6p2gb3d1c23fxyx58/android/support/design/widget/DirectedAcyclicGraph.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4dk2wmsj6p2gb3d1c23fxyx58/android/support/design/widget/DrawableUtils.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4dk2wmsj6p2gb3d1c23fxyx58/android/support/design/widget/FloatingActionButton$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4dk2wmsj6p2gb3d1c23fxyx58/android/support/design/widget/FloatingActionButton$Behavior.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4dk2wmsj6p2gb3d1c23fxyx58/android/support/design/widget/FloatingActionButton$OnVisibilityChangedListener.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4dk2wmsj6p2gb3d1c23fxyx58/android/support/design/widget/FloatingActionButton$ShadowDelegateImpl.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4dk2wmsj6p2gb3d1c23fxyx58/android/support/design/widget/FloatingActionButton$Size.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4dk2wmsj6p2gb3d1c23fxyx58/android/support/design/widget/FloatingActionButton.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4dk2wmsj6p2gb3d1c23fxyx58/android/support/design/widget/FloatingActionButtonGingerbread$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4dk2wmsj6p2gb3d1c23fxyx58/android/support/design/widget/FloatingActionButtonGingerbread$2.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4dk2wmsj6p2gb3d1c23fxyx58/android/support/design/widget/FloatingActionButtonGingerbread$DisabledElevationAnimation.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4dk2wmsj6p2gb3d1c23fxyx58/android/support/design/widget/FloatingActionButtonGingerbread$ElevateToTranslationZAnimation.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4dk2wmsj6p2gb3d1c23fxyx58/android/support/design/widget/FloatingActionButtonGingerbread$ResetElevationAnimation.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4dk2wmsj6p2gb3d1c23fxyx58/android/support/design/widget/FloatingActionButtonGingerbread$ShadowAnimatorImpl.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4dk2wmsj6p2gb3d1c23fxyx58/android/support/design/widget/FloatingActionButtonGingerbread.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4dk2wmsj6p2gb3d1c23fxyx58/android/support/design/widget/FloatingActionButtonIcs$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4dk2wmsj6p2gb3d1c23fxyx58/android/support/design/widget/FloatingActionButtonIcs$2.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4dk2wmsj6p2gb3d1c23fxyx58/android/support/design/widget/FloatingActionButtonIcs.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4dk2wmsj6p2gb3d1c23fxyx58/android/support/design/widget/FloatingActionButtonImpl$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4dk2wmsj6p2gb3d1c23fxyx58/android/support/design/widget/FloatingActionButtonImpl$InternalVisibilityChangedListener.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4dk2wmsj6p2gb3d1c23fxyx58/android/support/design/widget/FloatingActionButtonImpl.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4dk2wmsj6p2gb3d1c23fxyx58/android/support/design/widget/FloatingActionButtonLollipop.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4dk2wmsj6p2gb3d1c23fxyx58/android/support/design/widget/HeaderBehavior$FlingRunnable.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4dk2wmsj6p2gb3d1c23fxyx58/android/support/design/widget/HeaderBehavior.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4dk2wmsj6p2gb3d1c23fxyx58/android/support/design/widget/HeaderScrollingViewBehavior.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4dk2wmsj6p2gb3d1c23fxyx58/android/support/design/widget/MathUtils.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4dk2wmsj6p2gb3d1c23fxyx58/android/support/design/widget/NavigationView$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4dk2wmsj6p2gb3d1c23fxyx58/android/support/design/widget/NavigationView$OnNavigationItemSelectedListener.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4dk2wmsj6p2gb3d1c23fxyx58/android/support/design/widget/NavigationView$SavedState$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4dk2wmsj6p2gb3d1c23fxyx58/android/support/design/widget/NavigationView$SavedState.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4dk2wmsj6p2gb3d1c23fxyx58/android/support/design/widget/NavigationView.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4dk2wmsj6p2gb3d1c23fxyx58/android/support/design/widget/ShadowDrawableWrapper.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4dk2wmsj6p2gb3d1c23fxyx58/android/support/design/widget/ShadowViewDelegate.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4dk2wmsj6p2gb3d1c23fxyx58/android/support/design/widget/Snackbar$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4dk2wmsj6p2gb3d1c23fxyx58/android/support/design/widget/Snackbar$10.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4dk2wmsj6p2gb3d1c23fxyx58/android/support/design/widget/Snackbar$2.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4dk2wmsj6p2gb3d1c23fxyx58/android/support/design/widget/Snackbar$3.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4dk2wmsj6p2gb3d1c23fxyx58/android/support/design/widget/Snackbar$4.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4dk2wmsj6p2gb3d1c23fxyx58/android/support/design/widget/Snackbar$5$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4dk2wmsj6p2gb3d1c23fxyx58/android/support/design/widget/Snackbar$5.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4dk2wmsj6p2gb3d1c23fxyx58/android/support/design/widget/Snackbar$6.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4dk2wmsj6p2gb3d1c23fxyx58/android/support/design/widget/Snackbar$7.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4dk2wmsj6p2gb3d1c23fxyx58/android/support/design/widget/Snackbar$8.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4dk2wmsj6p2gb3d1c23fxyx58/android/support/design/widget/Snackbar$9.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4dk2wmsj6p2gb3d1c23fxyx58/android/support/design/widget/Snackbar$Behavior.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4dk2wmsj6p2gb3d1c23fxyx58/android/support/design/widget/Snackbar$Callback$DismissEvent.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4dk2wmsj6p2gb3d1c23fxyx58/android/support/design/widget/Snackbar$Callback.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4dk2wmsj6p2gb3d1c23fxyx58/android/support/design/widget/Snackbar$Duration.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4dk2wmsj6p2gb3d1c23fxyx58/android/support/design/widget/Snackbar$SnackbarLayout$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4dk2wmsj6p2gb3d1c23fxyx58/android/support/design/widget/Snackbar$SnackbarLayout$OnAttachStateChangeListener.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4dk2wmsj6p2gb3d1c23fxyx58/android/support/design/widget/Snackbar$SnackbarLayout$OnLayoutChangeListener.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4dk2wmsj6p2gb3d1c23fxyx58/android/support/design/widget/Snackbar$SnackbarLayout.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4dk2wmsj6p2gb3d1c23fxyx58/android/support/design/widget/Snackbar.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4dk2wmsj6p2gb3d1c23fxyx58/android/support/design/widget/SnackbarManager$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4dk2wmsj6p2gb3d1c23fxyx58/android/support/design/widget/SnackbarManager$Callback.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4dk2wmsj6p2gb3d1c23fxyx58/android/support/design/widget/SnackbarManager$SnackbarRecord.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4dk2wmsj6p2gb3d1c23fxyx58/android/support/design/widget/SnackbarManager.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4dk2wmsj6p2gb3d1c23fxyx58/android/support/design/widget/StateListAnimator$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4dk2wmsj6p2gb3d1c23fxyx58/android/support/design/widget/StateListAnimator$Tuple.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4dk2wmsj6p2gb3d1c23fxyx58/android/support/design/widget/StateListAnimator.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4dk2wmsj6p2gb3d1c23fxyx58/android/support/design/widget/SwipeDismissBehavior$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4dk2wmsj6p2gb3d1c23fxyx58/android/support/design/widget/SwipeDismissBehavior$OnDismissListener.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4dk2wmsj6p2gb3d1c23fxyx58/android/support/design/widget/SwipeDismissBehavior$SettleRunnable.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4dk2wmsj6p2gb3d1c23fxyx58/android/support/design/widget/SwipeDismissBehavior.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4dk2wmsj6p2gb3d1c23fxyx58/android/support/design/widget/TabItem.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4dk2wmsj6p2gb3d1c23fxyx58/android/support/design/widget/TabLayout$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4dk2wmsj6p2gb3d1c23fxyx58/android/support/design/widget/TabLayout$AdapterChangeListener.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4dk2wmsj6p2gb3d1c23fxyx58/android/support/design/widget/TabLayout$Mode.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4dk2wmsj6p2gb3d1c23fxyx58/android/support/design/widget/TabLayout$OnTabSelectedListener.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4dk2wmsj6p2gb3d1c23fxyx58/android/support/design/widget/TabLayout$PagerAdapterObserver.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4dk2wmsj6p2gb3d1c23fxyx58/android/support/design/widget/TabLayout$SlidingTabStrip$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4dk2wmsj6p2gb3d1c23fxyx58/android/support/design/widget/TabLayout$SlidingTabStrip$2.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4dk2wmsj6p2gb3d1c23fxyx58/android/support/design/widget/TabLayout$SlidingTabStrip.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4dk2wmsj6p2gb3d1c23fxyx58/android/support/design/widget/TabLayout$Tab.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4dk2wmsj6p2gb3d1c23fxyx58/android/support/design/widget/TabLayout$TabGravity.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4dk2wmsj6p2gb3d1c23fxyx58/android/support/design/widget/TabLayout$TabLayoutOnPageChangeListener.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4dk2wmsj6p2gb3d1c23fxyx58/android/support/design/widget/TabLayout$TabView.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4dk2wmsj6p2gb3d1c23fxyx58/android/support/design/widget/TabLayout$ViewPagerOnTabSelectedListener.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4dk2wmsj6p2gb3d1c23fxyx58/android/support/design/widget/TabLayout.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4dk2wmsj6p2gb3d1c23fxyx58/android/support/design/widget/TextInputEditText.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4dk2wmsj6p2gb3d1c23fxyx58/android/support/design/widget/TextInputLayout$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4dk2wmsj6p2gb3d1c23fxyx58/android/support/design/widget/TextInputLayout$2.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4dk2wmsj6p2gb3d1c23fxyx58/android/support/design/widget/TextInputLayout$3.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4dk2wmsj6p2gb3d1c23fxyx58/android/support/design/widget/TextInputLayout$4.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4dk2wmsj6p2gb3d1c23fxyx58/android/support/design/widget/TextInputLayout$5.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4dk2wmsj6p2gb3d1c23fxyx58/android/support/design/widget/TextInputLayout$SavedState$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4dk2wmsj6p2gb3d1c23fxyx58/android/support/design/widget/TextInputLayout$SavedState.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4dk2wmsj6p2gb3d1c23fxyx58/android/support/design/widget/TextInputLayout$TextInputAccessibilityDelegate.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4dk2wmsj6p2gb3d1c23fxyx58/android/support/design/widget/TextInputLayout.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4dk2wmsj6p2gb3d1c23fxyx58/android/support/design/widget/ThemeUtils.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4dk2wmsj6p2gb3d1c23fxyx58/android/support/design/widget/ValueAnimatorCompat$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4dk2wmsj6p2gb3d1c23fxyx58/android/support/design/widget/ValueAnimatorCompat$2.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4dk2wmsj6p2gb3d1c23fxyx58/android/support/design/widget/ValueAnimatorCompat$AnimatorListener.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4dk2wmsj6p2gb3d1c23fxyx58/android/support/design/widget/ValueAnimatorCompat$AnimatorListenerAdapter.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4dk2wmsj6p2gb3d1c23fxyx58/android/support/design/widget/ValueAnimatorCompat$AnimatorUpdateListener.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4dk2wmsj6p2gb3d1c23fxyx58/android/support/design/widget/ValueAnimatorCompat$Creator.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4dk2wmsj6p2gb3d1c23fxyx58/android/support/design/widget/ValueAnimatorCompat$Impl$AnimatorListenerProxy.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4dk2wmsj6p2gb3d1c23fxyx58/android/support/design/widget/ValueAnimatorCompat$Impl$AnimatorUpdateListenerProxy.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4dk2wmsj6p2gb3d1c23fxyx58/android/support/design/widget/ValueAnimatorCompat$Impl.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4dk2wmsj6p2gb3d1c23fxyx58/android/support/design/widget/ValueAnimatorCompat.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4dk2wmsj6p2gb3d1c23fxyx58/android/support/design/widget/ValueAnimatorCompatImplGingerbread$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4dk2wmsj6p2gb3d1c23fxyx58/android/support/design/widget/ValueAnimatorCompatImplGingerbread.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4dk2wmsj6p2gb3d1c23fxyx58/android/support/design/widget/ValueAnimatorCompatImplHoneycombMr1$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4dk2wmsj6p2gb3d1c23fxyx58/android/support/design/widget/ValueAnimatorCompatImplHoneycombMr1$2.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4dk2wmsj6p2gb3d1c23fxyx58/android/support/design/widget/ValueAnimatorCompatImplHoneycombMr1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4dk2wmsj6p2gb3d1c23fxyx58/android/support/design/widget/ViewGroupUtils$ViewGroupUtilsImpl.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4dk2wmsj6p2gb3d1c23fxyx58/android/support/design/widget/ViewGroupUtils$ViewGroupUtilsImplBase.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4dk2wmsj6p2gb3d1c23fxyx58/android/support/design/widget/ViewGroupUtils$ViewGroupUtilsImplHoneycomb.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4dk2wmsj6p2gb3d1c23fxyx58/android/support/design/widget/ViewGroupUtils.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4dk2wmsj6p2gb3d1c23fxyx58/android/support/design/widget/ViewGroupUtilsHoneycomb.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4dk2wmsj6p2gb3d1c23fxyx58/android/support/design/widget/ViewOffsetBehavior.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4dk2wmsj6p2gb3d1c23fxyx58/android/support/design/widget/ViewOffsetHelper.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4dk2wmsj6p2gb3d1c23fxyx58/android/support/design/widget/ViewUtils$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4dk2wmsj6p2gb3d1c23fxyx58/android/support/design/widget/ViewUtils.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4dk2wmsj6p2gb3d1c23fxyx58/android/support/design/widget/ViewUtilsLollipop.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_4dk2wmsj6p2gb3d1c23fxyx58/android/support/design/widget/VisibilityAwareImageButton.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_7197dywyacsn5o5z31c7u5nnq/android/support/transition/AutoTransition.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_7197dywyacsn5o5z31c7u5nnq/android/support/transition/AutoTransitionPort.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_7197dywyacsn5o5z31c7u5nnq/android/support/transition/BuildConfig.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_7197dywyacsn5o5z31c7u5nnq/android/support/transition/ChangeBounds.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_7197dywyacsn5o5z31c7u5nnq/android/support/transition/ChangeBoundsIcs.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_7197dywyacsn5o5z31c7u5nnq/android/support/transition/ChangeBoundsInterface.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_7197dywyacsn5o5z31c7u5nnq/android/support/transition/ChangeBoundsKitKat.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_7197dywyacsn5o5z31c7u5nnq/android/support/transition/ChangeBoundsPort$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_7197dywyacsn5o5z31c7u5nnq/android/support/transition/ChangeBoundsPort$2.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_7197dywyacsn5o5z31c7u5nnq/android/support/transition/ChangeBoundsPort$3.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_7197dywyacsn5o5z31c7u5nnq/android/support/transition/ChangeBoundsPort$4.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_7197dywyacsn5o5z31c7u5nnq/android/support/transition/ChangeBoundsPort.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_7197dywyacsn5o5z31c7u5nnq/android/support/transition/Fade.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_7197dywyacsn5o5z31c7u5nnq/android/support/transition/FadeIcs.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_7197dywyacsn5o5z31c7u5nnq/android/support/transition/FadeKitKat.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_7197dywyacsn5o5z31c7u5nnq/android/support/transition/FadePort$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_7197dywyacsn5o5z31c7u5nnq/android/support/transition/FadePort$2.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_7197dywyacsn5o5z31c7u5nnq/android/support/transition/FadePort$3.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_7197dywyacsn5o5z31c7u5nnq/android/support/transition/FadePort.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_7197dywyacsn5o5z31c7u5nnq/android/support/transition/RectEvaluator.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_7197dywyacsn5o5z31c7u5nnq/android/support/transition/Scene.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_7197dywyacsn5o5z31c7u5nnq/android/support/transition/SceneApi21.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_7197dywyacsn5o5z31c7u5nnq/android/support/transition/SceneIcs.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_7197dywyacsn5o5z31c7u5nnq/android/support/transition/SceneImpl.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_7197dywyacsn5o5z31c7u5nnq/android/support/transition/SceneKitKat.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_7197dywyacsn5o5z31c7u5nnq/android/support/transition/ScenePort.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_7197dywyacsn5o5z31c7u5nnq/android/support/transition/SceneStaticsApi21.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_7197dywyacsn5o5z31c7u5nnq/android/support/transition/SceneStaticsIcs.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_7197dywyacsn5o5z31c7u5nnq/android/support/transition/SceneStaticsImpl.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_7197dywyacsn5o5z31c7u5nnq/android/support/transition/SceneStaticsKitKat.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_7197dywyacsn5o5z31c7u5nnq/android/support/transition/SceneWrapper.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_7197dywyacsn5o5z31c7u5nnq/android/support/transition/Transition$TransitionListener.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_7197dywyacsn5o5z31c7u5nnq/android/support/transition/Transition.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_7197dywyacsn5o5z31c7u5nnq/android/support/transition/TransitionApi23.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_7197dywyacsn5o5z31c7u5nnq/android/support/transition/TransitionIcs$CompatListener.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_7197dywyacsn5o5z31c7u5nnq/android/support/transition/TransitionIcs$TransitionWrapper.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_7197dywyacsn5o5z31c7u5nnq/android/support/transition/TransitionIcs.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_7197dywyacsn5o5z31c7u5nnq/android/support/transition/TransitionImpl.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_7197dywyacsn5o5z31c7u5nnq/android/support/transition/TransitionInterface.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_7197dywyacsn5o5z31c7u5nnq/android/support/transition/TransitionInterfaceListener.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_7197dywyacsn5o5z31c7u5nnq/android/support/transition/TransitionKitKat$CompatListener.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_7197dywyacsn5o5z31c7u5nnq/android/support/transition/TransitionKitKat$TransitionWrapper.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_7197dywyacsn5o5z31c7u5nnq/android/support/transition/TransitionKitKat.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_7197dywyacsn5o5z31c7u5nnq/android/support/transition/TransitionManager.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_7197dywyacsn5o5z31c7u5nnq/android/support/transition/TransitionManagerIcs.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_7197dywyacsn5o5z31c7u5nnq/android/support/transition/TransitionManagerImpl.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_7197dywyacsn5o5z31c7u5nnq/android/support/transition/TransitionManagerKitKat.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_7197dywyacsn5o5z31c7u5nnq/android/support/transition/TransitionManagerPort$MultiListener$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_7197dywyacsn5o5z31c7u5nnq/android/support/transition/TransitionManagerPort$MultiListener.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_7197dywyacsn5o5z31c7u5nnq/android/support/transition/TransitionManagerPort.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_7197dywyacsn5o5z31c7u5nnq/android/support/transition/TransitionManagerStaticsIcs.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_7197dywyacsn5o5z31c7u5nnq/android/support/transition/TransitionManagerStaticsImpl.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_7197dywyacsn5o5z31c7u5nnq/android/support/transition/TransitionManagerStaticsKitKat.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_7197dywyacsn5o5z31c7u5nnq/android/support/transition/TransitionPort$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_7197dywyacsn5o5z31c7u5nnq/android/support/transition/TransitionPort$2.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_7197dywyacsn5o5z31c7u5nnq/android/support/transition/TransitionPort$AnimationInfo.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_7197dywyacsn5o5z31c7u5nnq/android/support/transition/TransitionPort$ArrayListManager.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_7197dywyacsn5o5z31c7u5nnq/android/support/transition/TransitionPort$TransitionListener.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_7197dywyacsn5o5z31c7u5nnq/android/support/transition/TransitionPort$TransitionListenerAdapter.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_7197dywyacsn5o5z31c7u5nnq/android/support/transition/TransitionPort.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_7197dywyacsn5o5z31c7u5nnq/android/support/transition/TransitionSet.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_7197dywyacsn5o5z31c7u5nnq/android/support/transition/TransitionSetIcs.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_7197dywyacsn5o5z31c7u5nnq/android/support/transition/TransitionSetImpl.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_7197dywyacsn5o5z31c7u5nnq/android/support/transition/TransitionSetKitKat.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_7197dywyacsn5o5z31c7u5nnq/android/support/transition/TransitionSetPort$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_7197dywyacsn5o5z31c7u5nnq/android/support/transition/TransitionSetPort$TransitionSetListener.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_7197dywyacsn5o5z31c7u5nnq/android/support/transition/TransitionSetPort.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_7197dywyacsn5o5z31c7u5nnq/android/support/transition/TransitionValues.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_7197dywyacsn5o5z31c7u5nnq/android/support/transition/TransitionValuesMaps.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_7197dywyacsn5o5z31c7u5nnq/android/support/transition/ViewGroupOverlay.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_7197dywyacsn5o5z31c7u5nnq/android/support/transition/ViewOverlay$OverlayViewGroup$TouchInterceptor.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_7197dywyacsn5o5z31c7u5nnq/android/support/transition/ViewOverlay$OverlayViewGroup.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_7197dywyacsn5o5z31c7u5nnq/android/support/transition/ViewOverlay.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_7197dywyacsn5o5z31c7u5nnq/android/support/transition/Visibility.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_7197dywyacsn5o5z31c7u5nnq/android/support/transition/VisibilityIcs$VisibilityWrapper.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_7197dywyacsn5o5z31c7u5nnq/android/support/transition/VisibilityIcs.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_7197dywyacsn5o5z31c7u5nnq/android/support/transition/VisibilityImpl.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_7197dywyacsn5o5z31c7u5nnq/android/support/transition/VisibilityInterface.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_7197dywyacsn5o5z31c7u5nnq/android/support/transition/VisibilityKitKat$VisibilityWrapper.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_7197dywyacsn5o5z31c7u5nnq/android/support/transition/VisibilityKitKat.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_7197dywyacsn5o5z31c7u5nnq/android/support/transition/VisibilityPort$VisibilityInfo.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_7197dywyacsn5o5z31c7u5nnq/android/support/transition/VisibilityPort.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_7197dywyacsn5o5z31c7u5nnq/android/support/transition/WindowIdPort.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_eatfy91j7gf3mbkygq6kyh48h/android/support/v7/cardview/BuildConfig.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_eatfy91j7gf3mbkygq6kyh48h/android/support/v7/widget/CardView$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_eatfy91j7gf3mbkygq6kyh48h/android/support/v7/widget/CardView.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_eatfy91j7gf3mbkygq6kyh48h/android/support/v7/widget/CardViewApi21.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_eatfy91j7gf3mbkygq6kyh48h/android/support/v7/widget/CardViewDelegate.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_eatfy91j7gf3mbkygq6kyh48h/android/support/v7/widget/CardViewGingerbread$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_eatfy91j7gf3mbkygq6kyh48h/android/support/v7/widget/CardViewGingerbread.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_eatfy91j7gf3mbkygq6kyh48h/android/support/v7/widget/CardViewImpl.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_eatfy91j7gf3mbkygq6kyh48h/android/support/v7/widget/CardViewJellybeanMr1$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_eatfy91j7gf3mbkygq6kyh48h/android/support/v7/widget/CardViewJellybeanMr1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_eatfy91j7gf3mbkygq6kyh48h/android/support/v7/widget/RoundRectDrawable.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_eatfy91j7gf3mbkygq6kyh48h/android/support/v7/widget/RoundRectDrawableWithShadow$RoundRectHelper.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/tmp/expandedArchives/classes.jar_eatfy91j7gf3mbkygq6kyh48h/android/support/v7/widget/RoundRectDrawableWithShadow.class" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/cache.properties.lock" afterPath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/cache.properties.lock" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/fileHashes.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/fileSnapshots.bin" afterPath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/fileSnapshots.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/fileSnapshotsToTreeSnapshotsIndex.bin" afterPath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/fileSnapshotsToTreeSnapshotsIndex.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/taskArtifacts.bin" afterPath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/taskArtifacts.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/abc_btn_radio_to_on_mtrl_000.png" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/abc_btn_radio_to_on_mtrl_000.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/abc_ic_commit_search_api_mtrl_alpha.png" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/abc_ic_commit_search_api_mtrl_alpha.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/abc_ic_star_half_black_16dp.png" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/abc_ic_star_half_black_16dp.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/abc_ic_star_half_black_36dp.png" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/abc_ic_star_half_black_36dp.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/abc_text_select_handle_middle_mtrl_dark.png" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/abc_text_select_handle_middle_mtrl_dark.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/abc_text_select_handle_middle_mtrl_light.png" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/abc_text_select_handle_middle_mtrl_light.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/drawable-hdpi/ic_subject_black_24dp.png" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/drawable-hdpi/ic_subject_black_24dp.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/drawable-ldrtl-xxxhdpi-v17/abc_ic_menu_cut_mtrl_alpha.png" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/drawable-ldrtl-xxxhdpi-v17/abc_ic_menu_cut_mtrl_alpha.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/drawable-mdpi-v4/abc_ic_menu_share_mtrl_alpha.png" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/drawable-mdpi-v4/abc_ic_menu_share_mtrl_alpha.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/drawable-mdpi-v4/abc_ic_menu_copy_mtrl_am_alpha.png" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/drawable-mdpi-v4/abc_ic_menu_copy_mtrl_am_alpha.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/drawable-mdpi-v4/abc_ic_star_black_16dp.png" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/drawable-mdpi-v4/abc_ic_star_black_16dp.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/drawable-mdpi-v4/abc_ic_star_black_48dp.png" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/drawable-mdpi-v4/abc_ic_star_black_48dp.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/drawable-mdpi/ic_action_cash_out.png" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/drawable-mdpi/ic_action_cash_out.png" />
@@ -695,26 +22,19 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4/abc_ic_menu_cut_mtrl_alpha.png" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4/abc_ic_menu_cut_mtrl_alpha.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4/abc_ic_star_half_black_48dp.png" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4/abc_ic_star_half_black_48dp.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4/abc_text_select_handle_middle_mtrl_light.png" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4/abc_text_select_handle_middle_mtrl_light.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/drawable-xhdpi/ic_acccount_white.png" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/drawable-xhdpi/ic_acccount_white.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/drawable-xhdpi/ic_launcher.png" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/drawable-xhdpi/ic_launcher.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/drawable-xhdpi/ic_lock_black_24dp.png" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/drawable-xhdpi/ic_lock_black_24dp.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4/abc_btn_check_to_on_mtrl_015.png" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4/abc_btn_check_to_on_mtrl_015.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4/abc_ic_star_black_16dp.png" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4/abc_ic_star_black_16dp.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4/abc_text_select_handle_left_mtrl_light.png" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4/abc_text_select_handle_left_mtrl_light.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/drawable-xxhdpi/ic_payment_black_24dp.png" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/drawable-xxhdpi/ic_payment_black_24dp.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4/abc_btn_check_to_on_mtrl_000.png" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4/abc_btn_check_to_on_mtrl_000.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4/abc_ic_menu_share_mtrl_alpha.png" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4/abc_ic_menu_share_mtrl_alpha.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4/abc_ic_star_black_16dp.png" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4/abc_ic_star_black_16dp.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4/abc_ic_star_half_black_16dp.png" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4/abc_ic_star_half_black_16dp.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4/abc_scrubber_control_to_pressed_mtrl_000.png" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4/abc_scrubber_control_to_pressed_mtrl_000.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4/abc_text_select_handle_right_mtrl_dark.png" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4/abc_text_select_handle_right_mtrl_dark.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/drawable-xxxhdpi/ic_payment_black_24dp.png" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/drawable-xxxhdpi/ic_payment_black_24dp.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/mipmap-xxxhdpi/ic_launcher.png" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/mipmap-xxxhdpi/ic_launcher.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/resources-debug.ap_" afterPath="$PROJECT_DIR$/app/build/intermediates/res/resources-debug.ap_" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/appcompat_v7_25_0_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/appcompat_v7_25_0_0.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/design_25_0_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/design_25_0_0.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/recyclerview_v7_25_0_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/recyclerview_v7_25_0_0.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/support_compat_25_0_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/support_compat_25_0_0.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/support_core_ui_25_0_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/support_core_ui_25_0_0.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/support_core_utils_25_0_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/support_core_utils_25_0_0.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/support_fragment_25_0_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/support_fragment_25_0_0.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/support_media_compat_25_0_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/support_media_compat_25_0_0.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/single/layout.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/single/layout.json" />
@@ -748,12 +68,22 @@
     <favorites_list name="mfisaApk" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="build.gradle" pinned="false" current-in-tab="true">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="build.gradle" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/build.gradle">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="225">
+              <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="705">
+              <caret line="47" column="0" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -2448,18 +1778,14 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
-      <pane id="AndroidView" />
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
             <PATH_ELEMENT>
               <option name="myItemId" value="mfisaApk" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="External Libraries" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
@@ -2474,8 +1800,8 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
+      <pane id="AndroidView" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -2669,6 +1995,9 @@
   <component name="ShelveChangesManager" show_recycled="false">
     <option name="remove_strategy" value="false" />
   </component>
+  <component name="SvnConfiguration">
+    <configuration>$USER_HOME$/.subversion</configuration>
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="d585dff1-c13e-42e1-b4fd-55b6d2ed2c1d" name="Default" comment="" />
@@ -2680,7 +2009,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1280" height="724" extended-state="0" />
+    <frame x="0" y="23" width="1280" height="724" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -2690,22 +2019,22 @@
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33881578" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33881578" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24959612" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2536349" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Android Model" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -2715,6 +2044,14 @@
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
+  </component>
+  <component name="Vcs.Log.UiProperties">
+    <option name="RECENTLY_FILTERED_USER_GROUPS">
+      <collection />
+    </option>
+    <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+      <collection />
+    </option>
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
@@ -2728,14 +2065,21 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/build.gradle">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="225">
+          <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="705">
+          <caret line="47" column="0" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
           <folding />
         </state>
       </provider>
