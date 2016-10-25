@@ -1,7 +1,4 @@
-#Tue Oct 04 14:56:50 WAT 2016
-base.0=/Users/moyinoluwa/Documents/SwiftaAndroidStudioProjects/mfisaApk/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_6e985dd1f02fc1924a805f2c3e4868b5e1f30bbd
-renamed.1=classes.dex
-renamed.0=classes2.dex
-file.1=/Users/moyinoluwa/Documents/SwiftaAndroidStudioProjects/mfisaApk/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_847f8531927f66389b7e5828c4a809f14f11cf32/classes.dex
-base.1=/Users/moyinoluwa/Documents/SwiftaAndroidStudioProjects/mfisaApk/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_847f8531927f66389b7e5828c4a809f14f11cf32
-file.0=/Users/moyinoluwa/Documents/SwiftaAndroidStudioProjects/mfisaApk/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_6e985dd1f02fc1924a805f2c3e4868b5e1f30bbd/classes.dex
+#Tue Oct 25 11:29:30 WAT 2016
+base.0=/Users/moyinoluwa/Documents/SwiftaAndroidStudioProjects/mfisaApk/app/build/intermediates/transforms/dex/debug/folders/1000/1f/main
+renamed.0=classes.dex
+file.0=/Users/moyinoluwa/Documents/SwiftaAndroidStudioProjects/mfisaApk/app/build/intermediates/transforms/dex/debug/folders/1000/1f/main/classes.dex
