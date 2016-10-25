@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context=".MiniStatementFragment">
+
+    <LinearLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/general_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ProgressBar
+                android:id="@+id/progress_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="30dp" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/no_statement"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/activity_vertical_margin"
+            android:text="@string/no_statement"
+            android:textColor="@android:color/black"
+            android:visibility="gone" />
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/count_cardview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="70dp"
+            android:visibility="gone"
+            app:cardBackgroundColor="@android:color/white"
+            app:cardCornerRadius="8dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/float_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/white_button_selector"
+                    android:clickable="true"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/float_transfer"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/btn_height"
+                        android:fontFamily="sans-serif-medium"
+                        android:paddingLeft="20dp"
+                        android:paddingStart="20dp"
+                        android:paddingTop="20dp"
+                        android:text="@string/float_transfer"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/float_transfer_count"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/btn_height"
+                        android:fontFamily="sans-serif-medium"
+                        android:paddingTop="20dp"
+                        android:text="(0)"
+                        android:textSize="20sp" />
+                </LinearLayout>
+
+                <View style="@style/HorizontalDivider" />
+
+                <LinearLayout
+                    android:id="@+id/cash_in_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/white_button_selector"
+                    android:clickable="true"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/cash_in"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/btn_height"
+                        android:clickable="true"
+                        android:fontFamily="sans-serif-medium"
+                        android:paddingLeft="20dp"
+                        android:paddingStart="20dp"
+                        android:paddingTop="20dp"
+                        android:text="@string/cash_in"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/cash_in_count"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/btn_height"
+                        android:fontFamily="sans-serif-medium"
+                        android:paddingTop="20dp"
+                        android:text="(0)"
+                        android:textSize="20sp" />
+                </LinearLayout>
+
+                <View style="@style/HorizontalDivider" />
+
+                <LinearLayout
+                    android:id="@+id/withdrawal_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/white_button_selector"
+                    android:clickable="true"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/withdrawal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/btn_height"
+                        android:clickable="true"
+                        android:fontFamily="sans-serif-medium"
+                        android:paddingLeft="20dp"
+                        android:paddingStart="20dp"
+                        android:paddingTop="20dp"
+                        android:text="@string/cash_out"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/withdrawal_count"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/btn_height"
+                        android:fontFamily="sans-serif-medium"
+                        android:paddingTop="20dp"
+                        android:text="(0)"
+                        android:textSize="20sp" />
+                </LinearLayout>
+
+                <View style="@style/HorizontalDivider" />
+
+                <LinearLayout
+                    android:id="@+id/payment_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/white_button_selector"
+                    android:clickable="true"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/payment"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/btn_height"
+                        android:clickable="true"
+                        android:fontFamily="sans-serif-medium"
+                        android:paddingLeft="20dp"
+                        android:paddingStart="20dp"
+                        android:paddingTop="20dp"
+                        android:text="@string/bill_payment"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/payment_count"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/btn_height"
+                        android:fontFamily="sans-serif-medium"
+                        android:paddingTop="20dp"
+                        android:text="(0)"
+                        android:textSize="20sp" />
+                </LinearLayout>
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+    </LinearLayout>
+
+
+</ScrollView>

@@ -1,0 +1,300 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorDividerLight"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.swifta.mats.forms.DepositFloatActivity">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:drawableLeft="@drawable/ic_payment_black_24dp"
+        android:drawablePadding="@dimen/activity_horizontal_padding"
+        android:drawableStart="@drawable/ic_payment_black_24dp"
+        android:gravity="start"
+        android:text="@string/deposit_float"
+        android:textColor="@color/colorDividerDark"
+        android:textSize="@dimen/title_font_size" />
+
+    <LinearLayout
+        android:id="@+id/form"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/amount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_vertical_padding"
+                android:ems="10"
+                android:hint="@string/amount_hint"
+                android:inputType="numberSigned"
+                android:textSize="@dimen/input_font_size" />
+
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/dealer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_vertical_padding"
+                android:ems="10"
+                android:hint="@string/dealer_hint"
+                android:inputType="text"
+                android:textSize="@dimen/input_font_size" />
+
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_vertical_padding"
+                android:ems="10"
+                android:hint="@string/description_hint"
+                android:inputType="text"
+                android:textSize="@dimen/input_font_size" />
+
+        </android.support.design.widget.TextInputLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/btns"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/form"
+        android:layout_gravity="center"
+        android:layout_margin="@dimen/activity_horizontal_padding"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/cancel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/btn_separator"
+            android:layout_marginRight="@dimen/btn_separator"
+            android:layout_weight="1"
+            android:background="@drawable/white_button_selector"
+            android:text="@string/cancel"
+            android:textColor="@color/colorAccent" />
+
+        <Button
+            android:id="@+id/ok"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/btn_separator"
+            android:layout_marginStart="@dimen/btn_separator"
+            android:layout_weight="1"
+            android:background="@drawable/accent_button_selector"
+            android:text="@string/ok"
+            android:textColor="@color/white" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/otp_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center"
+        android:layout_margin="@dimen/activity_horizontal_padding"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/transaction_id"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:drawableLeft="@drawable/ic_perm_identity_black_24dp"
+            android:drawablePadding="@dimen/activity_horizontal_padding"
+            android:drawableStart="@drawable/ic_perm_identity_black_24dp"
+            android:gravity="center"
+            android:text="@string/empty"
+            android:textColor="@color/colorDividerDark"
+            android:textSize="@dimen/input_font_size" />
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/otp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_vertical_padding"
+                android:ems="10"
+                android:hint="@string/dealer_confirmation"
+                android:inputType="numberSigned"
+                android:textSize="@dimen/input_font_size" />
+
+        </android.support.design.widget.TextInputLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/tranx_success_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center"
+        android:layout_margin="@dimen/activity_horizontal_padding"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <ListView
+            android:id="@+id/success_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/confirm_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center"
+        android:layout_margin="@dimen/activity_horizontal_padding"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <ListView
+            android:id="@+id/preview_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/loading"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_margin="@dimen/activity_horizontal_padding"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <ProgressBar
+            android:id="@+id/wait"
+            style="?android:attr/progressBarStyleLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center" />
+
+        <TextView
+            android:id="@+id/wait_txt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:ems="10"
+            android:gravity="center"
+            android:hint="@string/please_wait"
+            android:textColor="@color/colorDividerDark"
+            android:textSize="@dimen/input_font_size" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/confirm_btns"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="center"
+        android:layout_margin="@dimen/activity_horizontal_padding"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <Button
+            android:id="@+id/confirm_cancel"
+            android:layout_width="@dimen/btn_width1"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/btn_separator"
+            android:layout_marginRight="@dimen/btn_separator"
+            android:layout_weight="1"
+            android:background="@drawable/white_button_selector"
+            android:text="@string/cancel"
+            android:textColor="@color/colorAccent" />
+
+        <Button
+            android:id="@+id/confirm"
+            android:layout_width="@dimen/btn_width1"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/btn_separator"
+            android:layout_marginStart="@dimen/btn_separator"
+            android:layout_weight="1"
+            android:background="@drawable/accent_button_selector"
+            android:text="@string/confirm"
+            android:textColor="@color/white" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/done_btns"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="center"
+        android:layout_margin="@dimen/activity_horizontal_padding"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <Button
+            android:id="@+id/okay_done"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/accent_button_selector"
+            android:text="@string/ok"
+            android:textColor="@color/white" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/back_btns"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="center"
+        android:layout_margin="@dimen/activity_horizontal_padding"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <Button
+            android:id="@+id/back_done"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/white_button_selector"
+            android:text="@string/back"
+            android:textColor="@color/colorAccent" />
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,142 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frameLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HomeFragment">
+
+    <LinearLayout
+        android:id="@+id/options"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/two_hundred_dp"
+            android:background="@color/colorPrimary"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="@dimen/ten_dp">
+
+
+                <TextView
+                    android:id="@+id/transaction_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="@string/last_transaction"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/ten_sp"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/transaction_type"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-medium"
+                    android:inputType="textCapWords"
+                    android:textColor="@color/btn_green"
+                    android:textSize="@dimen/fifteen_sp"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/transaction_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-medium"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/ten_sp"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/transaction_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-medium"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/ten_sp"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/transaction_status"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-medium"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="@dimen/ten_sp"
+                    android:visibility="gone" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="@dimen/twenty_dp"
+                android:layout_marginTop="@dimen/twenty_dp"
+                android:orientation="horizontal">
+
+                <View style="@style/VerticalDivider" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-medium"
+                    android:gravity="center"
+                    android:text="@string/todays_transactions"
+                    android:textColor="@color/btn_green"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/today_transaction"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-medium"
+                    android:gravity="center"
+                    android:text="@string/account_balance_value"
+                    android:textColor="@color/white"
+                    android:textSize="25sp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-medium"
+                android:paddingEnd="30dp"
+                android:paddingLeft="30dp"
+                android:paddingRight="30dp"
+                android:paddingStart="30dp"
+                android:paddingTop="@dimen/ten_dp"
+                android:text="@string/last_five_statements"
+                android:textSize="@dimen/tiny_font" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

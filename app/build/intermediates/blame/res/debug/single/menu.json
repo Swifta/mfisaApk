@@ -1,0 +1,34 @@
+[
+    {
+        "merged": "/Users/moyinoluwa/Documents/SwiftaAndroidStudioProjects/mfisaApk/app/build/intermediates/res/merged/debug/menu/activity_main_drawer.xml",
+        "source": "/Users/moyinoluwa/Documents/SwiftaAndroidStudioProjects/mfisaApk/app/src/main/res/menu/activity_main_drawer.xml"
+    },
+    {
+        "merged": "/Users/moyinoluwa/Documents/SwiftaAndroidStudioProjects/mfisaApk/app/build/intermediates/res/merged/debug/menu/main.xml",
+        "source": "/Users/moyinoluwa/Documents/SwiftaAndroidStudioProjects/mfisaApk/app/src/main/res/menu/main.xml"
+    },
+    {
+        "merged": "/Users/moyinoluwa/Documents/SwiftaAndroidStudioProjects/mfisaApk/app/build/intermediates/res/merged/debug/menu/account.xml",
+        "source": "/Users/moyinoluwa/Documents/SwiftaAndroidStudioProjects/mfisaApk/app/src/main/res/menu/account.xml"
+    },
+    {
+        "merged": "/Users/moyinoluwa/Documents/SwiftaAndroidStudioProjects/mfisaApk/app/build/intermediates/res/merged/debug/menu/mini_statement.xml",
+        "source": "/Users/moyinoluwa/Documents/SwiftaAndroidStudioProjects/mfisaApk/app/src/main/res/menu/mini_statement.xml"
+    },
+    {
+        "merged": "/Users/moyinoluwa/Documents/SwiftaAndroidStudioProjects/mfisaApk/app/build/intermediates/res/merged/debug/menu/float_transfer.xml",
+        "source": "/Users/moyinoluwa/Documents/SwiftaAndroidStudioProjects/mfisaApk/app/src/main/res/menu/float_transfer.xml"
+    },
+    {
+        "merged": "/Users/moyinoluwa/Documents/SwiftaAndroidStudioProjects/mfisaApk/app/build/intermediates/res/merged/debug/menu/home.xml",
+        "source": "/Users/moyinoluwa/Documents/SwiftaAndroidStudioProjects/mfisaApk/app/src/main/res/menu/home.xml"
+    },
+    {
+        "merged": "/Users/moyinoluwa/Documents/SwiftaAndroidStudioProjects/mfisaApk/app/build/intermediates/res/merged/debug/menu/deposit_float.xml",
+        "source": "/Users/moyinoluwa/Documents/SwiftaAndroidStudioProjects/mfisaApk/app/src/main/res/menu/deposit_float.xml"
+    },
+    {
+        "merged": "/Users/moyinoluwa/Documents/SwiftaAndroidStudioProjects/mfisaApk/app/build/intermediates/res/merged/debug/menu/cable.xml",
+        "source": "/Users/moyinoluwa/Documents/SwiftaAndroidStudioProjects/mfisaApk/app/src/main/res/menu/cable.xml"
+    }
+]

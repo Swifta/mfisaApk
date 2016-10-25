@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.swifta.mats"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="15"
+        android:targetSdkVersion="24" />
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.swifta.mats.LoginActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <service
+            android:name="com.swifta.mats.service.BackgroundServices"
+            android:icon="@drawable/ic_launcher"
+            android:label="@string/service_name" />
+
+        <activity
+            android:name="com.swifta.mats.HomeFragment"
+            android:label="@string/title_activity_home" />
+        <activity
+            android:name="com.swifta.mats.WithdrawalFragment"
+            android:label="@string/title_activity_withdrawal"
+            android:parentActivityName="com.swifta.mats.HomeFragment" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".HomeFragment" />
+        </activity>
+        <activity
+            android:name="com.swifta.mats.MMOperatorsFragment"
+            android:label="@string/title_activity_mmoperators"
+            android:parentActivityName="com.swifta.mats.WithdrawalFragment" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".WithdrawalFragment" />
+        </activity>
+        <activity
+            android:name="com.swifta.mats.forms.WithdrawMMActivity"
+            android:label="@string/title_activity_withdraw_mm"
+            android:parentActivityName="com.swifta.mats.MMOperatorsFragment" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MMOperatorsFragment" />
+        </activity>
+        <activity
+            android:name="com.swifta.mats.FloatTransferFragment"
+            android:label="@string/title_activity_float_transfer"
+            android:parentActivityName="com.swifta.mats.HomeFragment" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".HomeFragment" />
+        </activity>
+        <activity
+            android:name="com.swifta.mats.forms.DepositFloatActivity"
+            android:label="@string/title_activity_deposit_float"
+            android:parentActivityName="com.swifta.mats.FloatTransferFragment" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".FloatTransferFragment" />
+        </activity>
+        <activity
+            android:name="com.swifta.mats.forms.CompleteDepositFloatActivity"
+            android:label="@string/title_activity_complete_deposit_float"
+            android:parentActivityName="com.swifta.mats.FloatTransferFragment" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".FloatTransferFragment" />
+        </activity>
+        <activity
+            android:name="com.swifta.mats.AccountActivity"
+            android:label="@string/title_activity_account" />
+        <activity
+            android:name="com.swifta.mats.MiniStatementFragment"
+            android:label="@string/title_activity_mini_statement" />
+        <activity android:name="com.swifta.mats.forms.CashInActivity" />
+        <activity android:name="com.swifta.mats.forms.CompleteCashOutActivity" />
+        <activity android:name="com.swifta.mats.forms.CashOutUnregisteredCustomerActivity" />
+        <activity android:name="com.swifta.mats.BillPaymentFragment" />
+        <activity android:name="com.swifta.mats.ServiceProviderDetailsActivity" />
+        <activity android:name="com.swifta.mats.forms.ProcessServiceProviderActivity" />
+        <activity android:name="com.swifta.mats.TransactionActivity" />
+        <activity
+            android:name="com.swifta.mats.MainActivity"
+            android:label="@string/title_activity_main2"
+            android:theme="@style/AppTheme.NoActionBar" />
+    </application>
+
+</manifest>

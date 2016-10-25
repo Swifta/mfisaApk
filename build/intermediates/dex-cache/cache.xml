@@ -2,130 +2,184 @@
 <items version="2" >
 
     <item
-        jar="/Users/moyinoluwa/Documents/SwiftaAndroidStudioProjects/mfisaApk/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.2.0/jars/libs/internal_impl-23.2.0.jar"
-        jumboMode="false"
-        revision="23.0.2"
-        sha1="6e239441500605809818997dd63b62a947195f8c">
-        <dex dex="/Users/moyinoluwa/Documents/SwiftaAndroidStudioProjects/mfisaApk/app/build/intermediates/pre-dexed/debug/internal_impl-23.2.0_5eb56b0181056c6b42dda2c32c0c48b4e0a63cee.jar" />
+        is-multidex="true"
+        jar="/Users/moyinoluwa/Documents/SwiftaAndroidStudioProjects/mfisaApk/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/24.2.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="7521486d9bfd2cd9e756e0cf75ed7d97f2ce2d3b">
+        <dex dex="/Users/moyinoluwa/Documents/SwiftaAndroidStudioProjects/mfisaApk/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-recyclerview-v7-24.2.1_4d5868720ab2ffbaea7dfb0740176d69bfcc8e9d/classes.dex" />
     </item>
     <item
-        jar="/Users/moyinoluwa/Documents/SwiftaAndroidStudioProjects/mfisaApk/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/23.2.0/jars/classes.jar"
-        jumboMode="false"
-        revision="23.0.3"
-        sha1="d4c936aa8c7d2522c82e3f1829c791d9e367f009">
-        <dex dex="/Users/moyinoluwa/Documents/SwiftaAndroidStudioProjects/mfisaApk/app/build/intermediates/pre-dexed/debug/com.android.support-recyclerview-v7-23.2.0_d3a90ffc0ab923c79a8cbe01754ea5023bb58f07.jar" />
+        is-multidex="true"
+        jar="/Users/moyinoluwa/Documents/SwiftaAndroidStudioProjects/mfisaApk/app/build/intermediates/exploded-aar/com.android.support/support-core-ui/24.2.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="e7f3132168957eefc46229fc32c3bd464642b71e">
+        <dex dex="/Users/moyinoluwa/Documents/SwiftaAndroidStudioProjects/mfisaApk/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-core-ui-24.2.1_d2ea7cefdb2f35a243e1f54277814016312088a4/classes.dex" />
     </item>
     <item
-        jar="/Users/moyinoluwa/Documents/SwiftaAndroidStudioProjects/mfisaApk/app/build/intermediates/exploded-aar/com.android.support/cardview-v7/23.2.0/jars/classes.jar"
-        jumboMode="false"
-        revision="23.0.3"
-        sha1="bc599eb9531da9d18bc58ec4eb0b1a1d895f6839">
-        <dex dex="/Users/moyinoluwa/Documents/SwiftaAndroidStudioProjects/mfisaApk/app/build/intermediates/pre-dexed/debug/com.android.support-cardview-v7-23.2.0_2bcc347a1a3b8726f2ccb19435461744b9c9a030.jar" />
+        is-multidex="true"
+        jar="/Users/moyinoluwa/Documents/SwiftaAndroidStudioProjects/mfisaApk/app/build/intermediates/exploded-aar/com.android.support/support-core-utils/24.2.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="9c4c3bc902450c39ed54de170db4fb12aea20a35">
+        <dex dex="/Users/moyinoluwa/Documents/SwiftaAndroidStudioProjects/mfisaApk/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-core-utils-24.2.1_8d751f9ac897d040021ab34914dc85cad64ff0fa/classes.dex" />
     </item>
     <item
-        jar="/Users/moyinoluwa/Documents/SwiftaAndroidStudioProjects/mfisaApk/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.2.0/jars/libs/internal_impl-23.2.0.jar"
-        jumboMode="false"
-        revision="23.0.3"
-        sha1="6e239441500605809818997dd63b62a947195f8c">
-        <dex dex="/Users/moyinoluwa/Documents/SwiftaAndroidStudioProjects/mfisaApk/app/build/intermediates/pre-dexed/debug/internal_impl-23.2.0_5eb56b0181056c6b42dda2c32c0c48b4e0a63cee.jar" />
+        is-multidex="true"
+        jar="/Users/moyinoluwa/Documents/SwiftaAndroidStudioProjects/mfisaApk/app/build/intermediates/exploded-aar/com.android.support/support-media-compat/24.2.1/jars/libs/internal_impl-24.2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="fbf8da429efd5ad21e02e3e5ecaa1efc4167878d">
+        <dex dex="/Users/moyinoluwa/Documents/SwiftaAndroidStudioProjects/mfisaApk/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-24.2.1_6ca7bedf2fb2fb256457bda81d265744013e443b/classes.dex" />
     </item>
     <item
-        jar="/Users/moyinoluwa/Documents/SwiftaAndroidStudioProjects/mfisaApk/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/23.2.0/jars/classes.jar"
-        jumboMode="false"
-        revision="23.0.2"
-        sha1="8c108c22c99e794eff255bb34d2a461200c4cbb0">
-        <dex dex="/Users/moyinoluwa/Documents/SwiftaAndroidStudioProjects/mfisaApk/app/build/intermediates/pre-dexed/debug/com.android.support-animated-vector-drawable-23.2.0_63ed051be49324007e875f9c7e53d9449cd842ae.jar" />
+        is-multidex="true"
+        jar="/Users/moyinoluwa/Documents/SwiftaAndroidStudioProjects/mfisaApk/app/build/intermediates/exploded-aar/com.android.support/support-core-utils/24.2.1/jars/libs/internal_impl-24.2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="935a969265b2a166b2d20415423f5f6e90fe16e0">
+        <dex dex="/Users/moyinoluwa/Documents/SwiftaAndroidStudioProjects/mfisaApk/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-24.2.1_87c1bf58e222a626bb5bcb0e46ac12041d4c4c8a/classes.dex" />
     </item>
     <item
-        jar="/Users/moyinoluwa/Documents/SwiftaAndroidStudioProjects/mfisaApk/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/23.2.0/jars/classes.jar"
-        jumboMode="false"
-        revision="23.0.2"
-        sha1="d4c936aa8c7d2522c82e3f1829c791d9e367f009">
-        <dex dex="/Users/moyinoluwa/Documents/SwiftaAndroidStudioProjects/mfisaApk/app/build/intermediates/pre-dexed/debug/com.android.support-recyclerview-v7-23.2.0_d3a90ffc0ab923c79a8cbe01754ea5023bb58f07.jar" />
+        is-multidex="true"
+        jar="/Users/moyinoluwa/Documents/SwiftaAndroidStudioProjects/mfisaApk/app/build/intermediates/exploded-aar/com.android.support/support-core-ui/24.2.1/jars/libs/internal_impl-24.2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="867dad63c33388ff8c7644b236579355036d075f">
+        <dex dex="/Users/moyinoluwa/Documents/SwiftaAndroidStudioProjects/mfisaApk/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-24.2.1_8f289aced38f90ae2b7ad9c3f630a80442c5e68e/classes.dex" />
     </item>
     <item
-        jar="/Users/moyinoluwa/Documents/SwiftaAndroidStudioProjects/mfisaApk/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.2.0/jars/classes.jar"
-        jumboMode="false"
-        revision="23.0.2"
-        sha1="e5f32fa48a3eb2de0c987025c11b6e3864b634d9">
-        <dex dex="/Users/moyinoluwa/Documents/SwiftaAndroidStudioProjects/mfisaApk/app/build/intermediates/pre-dexed/debug/com.android.support-support-v4-23.2.0_7612c45a10f1f1f6d4e37ceb04a6121ff6826420.jar" />
+        is-multidex="true"
+        jar="/Users/moyinoluwa/Documents/SwiftaAndroidStudioProjects/mfisaApk/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/24.2.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="d5c731fc64c03dfe04d51134955b483551c35849">
+        <dex dex="/Users/moyinoluwa/Documents/SwiftaAndroidStudioProjects/mfisaApk/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-vector-drawable-24.2.1_87e2ea71763c6136f391dee0039f438bfb5c1c38/classes.dex" />
     </item>
     <item
-        jar="/Users/moyinoluwa/Documents/SwiftaAndroidStudioProjects/mfisaApk/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/23.2.0/jars/classes.jar"
-        jumboMode="false"
-        revision="23.0.3"
-        sha1="292a9fa091757208efa65e77eef63088247e51f3">
-        <dex dex="/Users/moyinoluwa/Documents/SwiftaAndroidStudioProjects/mfisaApk/app/build/intermediates/pre-dexed/debug/com.android.support-support-vector-drawable-23.2.0_3a43bccc456228ace97f8fd83a2cbda80449e1c6.jar" />
+        is-multidex="true"
+        jar="/Users/moyinoluwa/Documents/SwiftaAndroidStudioProjects/mfisaApk/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="1b0d33e2a66cef530eacf311219012a615b120cb">
+        <dex dex="/Users/moyinoluwa/Documents/SwiftaAndroidStudioProjects/mfisaApk/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_6e985dd1f02fc1924a805f2c3e4868b5e1f30bbd/classes.dex" />
     </item>
     <item
-        jar="/Users/moyinoluwa/Documents/SwiftaAndroidStudioProjects/mfisaApk/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.2.0/jars/classes.jar"
-        jumboMode="false"
-        revision="23.0.3"
-        sha1="e5f32fa48a3eb2de0c987025c11b6e3864b634d9">
-        <dex dex="/Users/moyinoluwa/Documents/SwiftaAndroidStudioProjects/mfisaApk/app/build/intermediates/pre-dexed/debug/com.android.support-support-v4-23.2.0_7612c45a10f1f1f6d4e37ceb04a6121ff6826420.jar" />
+        is-multidex="true"
+        jar="/Users/moyinoluwa/Documents/SwiftaAndroidStudioProjects/mfisaApk/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/24.2.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="94bc1dfb84dcc8b6f6f8f7cc726d7b2dd39c1574">
+        <dex dex="/Users/moyinoluwa/Documents/SwiftaAndroidStudioProjects/mfisaApk/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-animated-vector-drawable-24.2.1_678398e8adfd905e3db96b663b5101f8b9faa827/classes.dex" />
     </item>
     <item
-        jar="/Users/moyinoluwa/Documents/SwiftaAndroidStudioProjects/mfisaApk/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/23.2.0/jars/classes.jar"
-        jumboMode="false"
-        revision="23.0.2"
-        sha1="292a9fa091757208efa65e77eef63088247e51f3">
-        <dex dex="/Users/moyinoluwa/Documents/SwiftaAndroidStudioProjects/mfisaApk/app/build/intermediates/pre-dexed/debug/com.android.support-support-vector-drawable-23.2.0_3a43bccc456228ace97f8fd83a2cbda80449e1c6.jar" />
+        is-multidex="true"
+        jar="/Users/moyinoluwa/Documents/SwiftaAndroidStudioProjects/mfisaApk/app/build/intermediates/exploded-aar/com.android.support/support-media-compat/24.2.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="09b462bbcb77650284bd6614f1a32f360ef369f8">
+        <dex dex="/Users/moyinoluwa/Documents/SwiftaAndroidStudioProjects/mfisaApk/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-media-compat-24.2.1_e7e7095090ffb92a5952041f6a99d79978d07f4e/classes.dex" />
     </item>
     <item
-        jar="/Users/moyinoluwa/Documents/SwiftaAndroidStudioProjects/mfisaApk/app/build/intermediates/exploded-aar/com.android.support/design/23.2.0/jars/classes.jar"
-        jumboMode="false"
-        revision="23.0.3"
-        sha1="1aa5b025efe97f5006f5be16d6ca67c6c3c0c0d8">
-        <dex dex="/Users/moyinoluwa/Documents/SwiftaAndroidStudioProjects/mfisaApk/app/build/intermediates/pre-dexed/debug/com.android.support-design-23.2.0_1934dc8c1a8424f57b5b6a0947f905c5085a501c.jar" />
+        is-multidex="true"
+        jar="/Users/moyinoluwa/Documents/SwiftaAndroidStudioProjects/mfisaApk/app/build/intermediates/exploded-aar/com.android.support/support-fragment/24.2.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="b9a1ac78ad7ef3abedc4a4b30cd92bcacb939d1f">
+        <dex dex="/Users/moyinoluwa/Documents/SwiftaAndroidStudioProjects/mfisaApk/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-fragment-24.2.1_8b01f79413d6814a72ea2f97cc80c01005fe715a/classes.dex" />
     </item>
     <item
-        jar="/Users/moyinoluwa/Documents/SwiftaAndroidStudioProjects/mfisaApk/app/build/intermediates/exploded-aar/com.android.support/cardview-v7/23.2.0/jars/classes.jar"
-        jumboMode="false"
-        revision="23.0.2"
-        sha1="bc599eb9531da9d18bc58ec4eb0b1a1d895f6839">
-        <dex dex="/Users/moyinoluwa/Documents/SwiftaAndroidStudioProjects/mfisaApk/app/build/intermediates/pre-dexed/debug/com.android.support-cardview-v7-23.2.0_2bcc347a1a3b8726f2ccb19435461744b9c9a030.jar" />
+        is-multidex="true"
+        jar="/Users/moyinoluwa/Documents/SwiftaAndroidStudioProjects/mfisaApk/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="4eb09456f627e8043b74611858c755722048e31b">
+        <dex dex="/Users/moyinoluwa/Documents/SwiftaAndroidStudioProjects/mfisaApk/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_847f8531927f66389b7e5828c4a809f14f11cf32/classes.dex" />
     </item>
     <item
-        jar="/Users/moyinoluwa/Documents/SwiftaAndroidStudioProjects/mfisaApk/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.2.0/jars/classes.jar"
-        jumboMode="false"
-        revision="23.0.2"
-        sha1="6e3578f92f7462d1a935a1d36173e3bdd1234976">
-        <dex dex="/Users/moyinoluwa/Documents/SwiftaAndroidStudioProjects/mfisaApk/app/build/intermediates/pre-dexed/debug/com.android.support-appcompat-v7-23.2.0_4f61d26d37b7ad52152ee71643ef54b564fe104d.jar" />
+        is-multidex="true"
+        jar="/Users/moyinoluwa/Documents/SwiftaAndroidStudioProjects/mfisaApk/app/build/intermediates/exploded-aar/com.android.support/support-fragment/24.2.1/jars/libs/internal_impl-24.2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="5f64d657e838e8375135c0f6057a7ff8fab6a50e">
+        <dex dex="/Users/moyinoluwa/Documents/SwiftaAndroidStudioProjects/mfisaApk/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-24.2.1_3251322a39d184d18941c7d31452a82294d3a0f5/classes.dex" />
     </item>
     <item
-        jar="/Users/moyinoluwa/Documents/SwiftaAndroidStudioProjects/mfisaApk/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/23.2.0/jars/classes.jar"
-        jumboMode="false"
-        revision="23.0.3"
-        sha1="8c108c22c99e794eff255bb34d2a461200c4cbb0">
-        <dex dex="/Users/moyinoluwa/Documents/SwiftaAndroidStudioProjects/mfisaApk/app/build/intermediates/pre-dexed/debug/com.android.support-animated-vector-drawable-23.2.0_63ed051be49324007e875f9c7e53d9449cd842ae.jar" />
+        is-multidex="true"
+        jar="/Users/moyinoluwa/Documents/SwiftaAndroidStudioProjects/mfisaApk/app/build/intermediates/exploded-aar/com.android.support/support-compat/24.2.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="0ecb4b595fa0f0f8018a149ace3ea6525624f94e">
+        <dex dex="/Users/moyinoluwa/Documents/SwiftaAndroidStudioProjects/mfisaApk/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-compat-24.2.1_05f3dde29fa0acd7cc2461761d8e9dacc3a099de/classes.dex" />
     </item>
     <item
-        jar="/Users/moyinoluwa/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/23.2.0/support-annotations-23.2.0.jar"
-        jumboMode="false"
-        revision="23.0.3"
-        sha1="c5bf571bb10462bd90e5419ade67793f71acbc87">
-        <dex dex="/Users/moyinoluwa/Documents/SwiftaAndroidStudioProjects/mfisaApk/app/build/intermediates/pre-dexed/debug/support-annotations-23.2.0_1f00fd6c30f666b2da252a73be07adefe3ef4746.jar" />
+        is-multidex="true"
+        jar="/Users/moyinoluwa/Documents/SwiftaAndroidStudioProjects/mfisaApk/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.2.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="/Users/moyinoluwa/Documents/SwiftaAndroidStudioProjects/mfisaApk/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-v4-24.2.1_4575ce9a77d7fa4fe3185439cc37863be714db18/classes.dex" />
     </item>
     <item
-        jar="/Users/moyinoluwa/Documents/SwiftaAndroidStudioProjects/mfisaApk/app/build/intermediates/exploded-aar/com.android.support/design/23.2.0/jars/classes.jar"
-        jumboMode="false"
-        revision="23.0.2"
-        sha1="1aa5b025efe97f5006f5be16d6ca67c6c3c0c0d8">
-        <dex dex="/Users/moyinoluwa/Documents/SwiftaAndroidStudioProjects/mfisaApk/app/build/intermediates/pre-dexed/debug/com.android.support-design-23.2.0_1934dc8c1a8424f57b5b6a0947f905c5085a501c.jar" />
+        is-multidex="true"
+        jar="/Users/moyinoluwa/Documents/SwiftaAndroidStudioProjects/mfisaApk/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.2.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="43b2dba6b5a0b14527961b75329d0b90025f15ea">
+        <dex dex="/Users/moyinoluwa/Documents/SwiftaAndroidStudioProjects/mfisaApk/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-appcompat-v7-24.2.1_06d086647dd2403dbd030096e00cb87d9a563275/classes.dex" />
     </item>
     <item
-        jar="/Users/moyinoluwa/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/23.2.0/support-annotations-23.2.0.jar"
-        jumboMode="false"
-        revision="23.0.2"
-        sha1="c5bf571bb10462bd90e5419ade67793f71acbc87">
-        <dex dex="/Users/moyinoluwa/Documents/SwiftaAndroidStudioProjects/mfisaApk/app/build/intermediates/pre-dexed/debug/support-annotations-23.2.0_1f00fd6c30f666b2da252a73be07adefe3ef4746.jar" />
+        is-multidex="true"
+        jar="/Users/moyinoluwa/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/24.2.1/support-annotations-24.2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="8de3aafecbdf98a61db6427f008f2d515bcd2544">
+        <dex dex="/Users/moyinoluwa/Documents/SwiftaAndroidStudioProjects/mfisaApk/app/build/intermediates/transforms/dex/debug/folders/1000/10/support-annotations-24.2.1_8d5499ae49d3ca7248f47f46727cc5c1fb6fe9a0/classes.dex" />
     </item>
     <item
-        jar="/Users/moyinoluwa/Documents/SwiftaAndroidStudioProjects/mfisaApk/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.2.0/jars/classes.jar"
-        jumboMode="false"
-        revision="23.0.3"
-        sha1="6e3578f92f7462d1a935a1d36173e3bdd1234976">
-        <dex dex="/Users/moyinoluwa/Documents/SwiftaAndroidStudioProjects/mfisaApk/app/build/intermediates/pre-dexed/debug/com.android.support-appcompat-v7-23.2.0_4f61d26d37b7ad52152ee71643ef54b564fe104d.jar" />
+        is-multidex="true"
+        jar="/Users/moyinoluwa/Documents/SwiftaAndroidStudioProjects/mfisaApk/app/build/intermediates/exploded-aar/com.android.support/support-compat/24.2.1/jars/libs/internal_impl-24.2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="7e4389bd133359a2ff88623ff1e4ff93d6e6f780">
+        <dex dex="/Users/moyinoluwa/Documents/SwiftaAndroidStudioProjects/mfisaApk/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-24.2.1_64a7a6699885689c92ac0d9ba6af2b1503a3d5f1/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/moyinoluwa/Documents/SwiftaAndroidStudioProjects/mfisaApk/app/build/intermediates/exploded-aar/com.android.support/design/24.2.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="e03f47f3d1017a093bb3239d4ec47c3447f40744">
+        <dex dex="/Users/moyinoluwa/Documents/SwiftaAndroidStudioProjects/mfisaApk/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-design-24.2.1_8ffc56e0ff25f1760782a2f2f93c35eea77b94a0/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/moyinoluwa/Documents/SwiftaAndroidStudioProjects/mfisaApk/app/build/intermediates/exploded-aar/com.android.support/cardview-v7/24.2.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="c5e6490573cd2cc8018417f60ddd251138b6ed61">
+        <dex dex="/Users/moyinoluwa/Documents/SwiftaAndroidStudioProjects/mfisaApk/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-cardview-v7-24.2.1_13b23945e07f8c53252ba2636045f198ae5dfd43/classes.dex" />
     </item>
 
 </items>

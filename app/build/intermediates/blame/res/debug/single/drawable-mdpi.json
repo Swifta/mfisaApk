@@ -1,0 +1,62 @@
+[
+    {
+        "merged": "/Users/moyinoluwa/Documents/SwiftaAndroidStudioProjects/mfisaApk/app/build/intermediates/res/merged/debug/drawable-mdpi/ic_acccount_white.png",
+        "source": "/Users/moyinoluwa/Documents/SwiftaAndroidStudioProjects/mfisaApk/app/src/main/res/drawable-mdpi/ic_acccount_white.png"
+    },
+    {
+        "merged": "/Users/moyinoluwa/Documents/SwiftaAndroidStudioProjects/mfisaApk/app/build/intermediates/res/merged/debug/drawable-mdpi/ic_lock_black_24dp.png",
+        "source": "/Users/moyinoluwa/Documents/SwiftaAndroidStudioProjects/mfisaApk/app/src/main/res/drawable-mdpi/ic_lock_black_24dp.png"
+    },
+    {
+        "merged": "/Users/moyinoluwa/Documents/SwiftaAndroidStudioProjects/mfisaApk/app/build/intermediates/res/merged/debug/drawable-mdpi/ic_payment_black_24dp.png",
+        "source": "/Users/moyinoluwa/Documents/SwiftaAndroidStudioProjects/mfisaApk/app/src/main/res/drawable-mdpi/ic_payment_black_24dp.png"
+    },
+    {
+        "merged": "/Users/moyinoluwa/Documents/SwiftaAndroidStudioProjects/mfisaApk/app/build/intermediates/res/merged/debug/drawable-mdpi/ic_perm_identity_black_24dp.png",
+        "source": "/Users/moyinoluwa/Documents/SwiftaAndroidStudioProjects/mfisaApk/app/src/main/res/drawable-mdpi/ic_perm_identity_black_24dp.png"
+    },
+    {
+        "merged": "/Users/moyinoluwa/Documents/SwiftaAndroidStudioProjects/mfisaApk/app/build/intermediates/res/merged/debug/drawable-mdpi/ic_settings_white.png",
+        "source": "/Users/moyinoluwa/Documents/SwiftaAndroidStudioProjects/mfisaApk/app/src/main/res/drawable-mdpi/ic_settings_white.png"
+    },
+    {
+        "merged": "/Users/moyinoluwa/Documents/SwiftaAndroidStudioProjects/mfisaApk/app/build/intermediates/res/merged/debug/drawable-mdpi/ic_action_home.png",
+        "source": "/Users/moyinoluwa/Documents/SwiftaAndroidStudioProjects/mfisaApk/app/src/main/res/drawable-mdpi/ic_action_home.png"
+    },
+    {
+        "merged": "/Users/moyinoluwa/Documents/SwiftaAndroidStudioProjects/mfisaApk/app/build/intermediates/res/merged/debug/drawable-mdpi/ic_action_transfer.png",
+        "source": "/Users/moyinoluwa/Documents/SwiftaAndroidStudioProjects/mfisaApk/app/src/main/res/drawable-mdpi/ic_action_transfer.png"
+    },
+    {
+        "merged": "/Users/moyinoluwa/Documents/SwiftaAndroidStudioProjects/mfisaApk/app/build/intermediates/res/merged/debug/drawable-mdpi/ic_subject_black_24dp.png",
+        "source": "/Users/moyinoluwa/Documents/SwiftaAndroidStudioProjects/mfisaApk/app/src/main/res/drawable-mdpi/ic_subject_black_24dp.png"
+    },
+    {
+        "merged": "/Users/moyinoluwa/Documents/SwiftaAndroidStudioProjects/mfisaApk/app/build/intermediates/res/merged/debug/drawable-mdpi/ic_person_pin_black_24dp.png",
+        "source": "/Users/moyinoluwa/Documents/SwiftaAndroidStudioProjects/mfisaApk/app/src/main/res/drawable-mdpi/ic_person_pin_black_24dp.png"
+    },
+    {
+        "merged": "/Users/moyinoluwa/Documents/SwiftaAndroidStudioProjects/mfisaApk/app/build/intermediates/res/merged/debug/drawable-mdpi/ic_action_cash_in.png",
+        "source": "/Users/moyinoluwa/Documents/SwiftaAndroidStudioProjects/mfisaApk/app/src/main/res/drawable-mdpi/ic_action_cash_in.png"
+    },
+    {
+        "merged": "/Users/moyinoluwa/Documents/SwiftaAndroidStudioProjects/mfisaApk/app/build/intermediates/res/merged/debug/drawable-mdpi/ic_action_receipt.png",
+        "source": "/Users/moyinoluwa/Documents/SwiftaAndroidStudioProjects/mfisaApk/app/src/main/res/drawable-mdpi/ic_action_receipt.png"
+    },
+    {
+        "merged": "/Users/moyinoluwa/Documents/SwiftaAndroidStudioProjects/mfisaApk/app/build/intermediates/res/merged/debug/drawable-mdpi/ic_action_payment.png",
+        "source": "/Users/moyinoluwa/Documents/SwiftaAndroidStudioProjects/mfisaApk/app/src/main/res/drawable-mdpi/ic_action_payment.png"
+    },
+    {
+        "merged": "/Users/moyinoluwa/Documents/SwiftaAndroidStudioProjects/mfisaApk/app/build/intermediates/res/merged/debug/drawable-mdpi/ic_launcher.png",
+        "source": "/Users/moyinoluwa/Documents/SwiftaAndroidStudioProjects/mfisaApk/app/src/main/res/drawable-mdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/Users/moyinoluwa/Documents/SwiftaAndroidStudioProjects/mfisaApk/app/build/intermediates/res/merged/debug/drawable-mdpi/ic_action_cash_out.png",
+        "source": "/Users/moyinoluwa/Documents/SwiftaAndroidStudioProjects/mfisaApk/app/src/main/res/drawable-mdpi/ic_action_cash_out.png"
+    },
+    {
+        "merged": "/Users/moyinoluwa/Documents/SwiftaAndroidStudioProjects/mfisaApk/app/build/intermediates/res/merged/debug/drawable-mdpi/mfisa.png",
+        "source": "/Users/moyinoluwa/Documents/SwiftaAndroidStudioProjects/mfisaApk/app/src/main/res/drawable-mdpi/mfisa.png"
+    }
+]
