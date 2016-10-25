@@ -48,6 +48,7 @@ public class BillPaymentFragment extends Fragment {
 
     private ProgressDialog progressDialog;
     public static String vendorId;
+    public static String vendorservicename = "airtime";
 
     private BroadcastReceiver receiver = new BroadcastReceiver() {
         @Override
@@ -59,15 +60,20 @@ public class BillPaymentFragment extends Fragment {
                 if (responseJson.getInt("request") == Constants.GET_SERVICE_PROVIDER_DETAILS) {
                     if (responseJson.getBoolean("success")) {
                         JSONObject psaResponse = responseJson.getJSONObject("psa");
-                        JSONObject psaTranResponse = psaResponse.getJSONObject("getserviceproviderdetails");
-                        Object json = psaTranResponse.get("getserviceproviderdetail");
-
+                        Object json = null;
+                        JSONObject psaTranResponse = null;
+                        if(!responseJson.getJSONObject("psa").isNull("getserviceproviderdetails")){
+                          psaTranResponse = psaResponse.getJSONObject("getserviceproviderdetails");
+                           json = psaTranResponse.get("getserviceproviderdetail");
+                        }else {
+                            json = new JSONObject();
+                        }
                         // If the service provider is a telco, go straight to the form
                         if (json instanceof JSONObject) {
                             Intent objectIntent = new Intent(getActivity(), ProcessServiceProviderActivity.class);
                             objectIntent.putExtra("type", "telco");
                             objectIntent.putExtra("vendorid", vendorId);
-                            objectIntent.putExtra("servicename", psaTranResponse.getJSONObject("getserviceproviderdetail").getString("servicename"));
+                            objectIntent.putExtra("servicename", vendorservicename);
                             startActivity(objectIntent);
                         } else if (json instanceof JSONArray) {
                             // If not, open up a list of searchable service names with prefixed prices
@@ -267,6 +273,7 @@ public class BillPaymentFragment extends Fragment {
                     try {
                         vendorId = Constants.MTN_VENDOR_ID;
                         data.put(Constants.VENDOR_ID, vendorId);
+                        //data.put(Constants.VENDOR_SERVICENAME,vendorservicename);
                     } catch (JSONException e) {
                         // TODO Auto-generated catch block
                         e.printStackTrace();
@@ -297,6 +304,7 @@ public class BillPaymentFragment extends Fragment {
                     try {
                         vendorId = Constants.GLO_VENDOR_ID;
                         data.put(Constants.VENDOR_ID, vendorId);
+                        //data.put(Constants.VENDOR_SERVICENAME,vendorservicename);
                     } catch (JSONException e) {
                         // TODO Auto-generated catch block
                         e.printStackTrace();
@@ -327,6 +335,7 @@ public class BillPaymentFragment extends Fragment {
                     try {
                         vendorId = Constants.ETISALAT_VENDOR_ID;
                         data.put(Constants.VENDOR_ID, vendorId);
+                       // data.put(Constants.VENDOR_SERVICENAME,vendorservicename);
                     } catch (JSONException e) {
                         // TODO Auto-generated catch block
                         e.printStackTrace();
@@ -357,6 +366,7 @@ public class BillPaymentFragment extends Fragment {
                     try {
                         vendorId = Constants.AIRTEL_VENDOR_ID;
                         data.put(Constants.VENDOR_ID, vendorId);
+                        //data.put(Constants.VENDOR_SERVICENAME,vendorservicename);
                     } catch (JSONException e) {
                         // TODO Auto-generated catch block
                         e.printStackTrace();

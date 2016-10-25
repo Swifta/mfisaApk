@@ -100,9 +100,12 @@ public class BackgroundServices extends IntentService {
         httpclient = new DefaultHttpClient(httpParameters);
 
         try {
+
+            HttpClient httpClient = ExSSLSocketFactory.getHttpsClient(new DefaultHttpClient());
+
             url += "username=" + obj.getString("username") + "&password=" + obj.getString("password");
             HttpPost httpPost = new HttpPost(url);
-            HttpResponse response = httpclient.execute(httpPost);
+            HttpResponse response = httpClient.execute(httpPost);
 
             int status = response.getStatusLine().getStatusCode();
             String result = "";
@@ -123,6 +126,8 @@ public class BackgroundServices extends IntentService {
     @SuppressLint("DefaultLocale")
     @SuppressWarnings("deprecation")
     private void withdrawalDealerAccount(JSONObject obj) {
+        HttpClient httpClient = ExSSLSocketFactory.getHttpsClient(new DefaultHttpClient());
+
         String url = Constants.API_URL + "service/cashoutrequest";
         HttpParams httpParameters = new BasicHttpParams();
         int timeoutConnection = 15000;
@@ -143,7 +148,7 @@ public class BackgroundServices extends IntentService {
                     "&teasypin=" + obj.getString("teasypin");
 
             HttpPost httpPost = new HttpPost(url);
-            HttpResponse response = httpclient.execute(httpPost);
+            HttpResponse response = httpClient.execute(httpPost);
 
             int status = response.getStatusLine().getStatusCode();
             String result = "";
@@ -172,6 +177,7 @@ public class BackgroundServices extends IntentService {
     @SuppressLint("DefaultLocale")
     @SuppressWarnings("deprecation")
     private void performCompleteDepositFloat(JSONObject obj) {
+        HttpClient httpClient = ExSSLSocketFactory.getHttpsClient(new DefaultHttpClient());
         String url = Constants.API_URL + "service/floatrequestcompleted";
         try {
             url += "?orginatingresourceid=" + obj.getString("username").toLowerCase() + "&destinationresourceid=" +
@@ -189,7 +195,7 @@ public class BackgroundServices extends IntentService {
             httpclient = new DefaultHttpClient(httpParameters);
 
             HttpPost httpPost = new HttpPost(url);
-            HttpResponse response = httpclient.execute(httpPost);
+            HttpResponse response = httpClient.execute(httpPost);
 
             int status = response.getStatusLine().getStatusCode();
             String result = "";
@@ -217,6 +223,10 @@ public class BackgroundServices extends IntentService {
 
     @SuppressWarnings("deprecation")
     private void performDepositFloat(JSONObject obj) {
+
+        HttpClient httpClient = ExSSLSocketFactory.getHttpsClient(new DefaultHttpClient());
+
+
         String url = Constants.API_URL + "service/floattransfer";
 
         try {
@@ -235,7 +245,7 @@ public class BackgroundServices extends IntentService {
 
             httpclient = new DefaultHttpClient(httpParameters);
             HttpPost httpPost = new HttpPost(url);
-            HttpResponse response = httpclient.execute(httpPost);
+            HttpResponse response = httpClient.execute(httpPost);
 
             int status = response.getStatusLine().getStatusCode();
             String result = "";
@@ -263,6 +273,8 @@ public class BackgroundServices extends IntentService {
 
     @SuppressWarnings("deprecation")
     private void changePassword(JSONObject obj) {
+        HttpClient httpClient = ExSSLSocketFactory.getHttpsClient(new DefaultHttpClient());
+
         String url = Constants.API_URL + "service/changepassword";
         HttpParams httpParameters = new BasicHttpParams();
         int timeoutConnection = 10000;
@@ -278,7 +290,7 @@ public class BackgroundServices extends IntentService {
                     + "&oldpassword=" + obj.getString("oldpassword");
 
             HttpPost httpPost = new HttpPost(url);
-            HttpResponse response = httpclient.execute(httpPost);
+            HttpResponse response = httpClient.execute(httpPost);
 
             int status = response.getStatusLine().getStatusCode();
             String result = "";
@@ -298,6 +310,8 @@ public class BackgroundServices extends IntentService {
 
     @SuppressWarnings("deprecation")
     private void getMiniStatement(JSONObject obj) {
+        HttpClient httpClient = ExSSLSocketFactory.getHttpsClient(new DefaultHttpClient());
+
         String url = Constants.API_URL + "service/getministatement";
         HttpParams httpParameters = new BasicHttpParams();
         int timeoutConnection = 10000;
@@ -310,7 +324,7 @@ public class BackgroundServices extends IntentService {
         try {
             url += "?orginatingresourceid=" + obj.getString("username");
             HttpPost httpPost = new HttpPost(url);
-            HttpResponse response = httpclient.execute(httpPost);
+            HttpResponse response = httpClient.execute(httpPost);
 
             int status = response.getStatusLine().getStatusCode();
             String result = "";
@@ -330,6 +344,8 @@ public class BackgroundServices extends IntentService {
 
     @SuppressWarnings("deprecation")
     private void processCashInRequest(JSONObject obj) {
+        HttpClient httpClient = ExSSLSocketFactory.getHttpsClient(new DefaultHttpClient());
+
         String url = Constants.API_URL + "service/cashinrequest";
         HttpParams httpParameters = new BasicHttpParams();
         int timeoutConnection = 10000;
@@ -349,7 +365,7 @@ public class BackgroundServices extends IntentService {
                     "&paymentreference=" + obj.getString("paymentreference");
 
             HttpPost httpPost = new HttpPost(url);
-            HttpResponse response = httpclient.execute(httpPost);
+            HttpResponse response = httpClient.execute(httpPost);
 
             int status = response.getStatusLine().getStatusCode();
             String result = "";
@@ -377,6 +393,8 @@ public class BackgroundServices extends IntentService {
 
     @SuppressWarnings("deprecation")
     private void processCompleteCashOutRequest(JSONObject obj) {
+        HttpClient httpClient = ExSSLSocketFactory.getHttpsClient(new DefaultHttpClient());
+
         String url = Constants.API_URL + "service/verifycashoutcompleted";
         HttpParams httpParameters = new BasicHttpParams();
         int timeoutConnection = 10000;
@@ -396,7 +414,7 @@ public class BackgroundServices extends IntentService {
                     "&referencenumber=" + obj.getInt("referencenumber");
 
             HttpPost httpPost = new HttpPost(url);
-            HttpResponse response = httpclient.execute(httpPost);
+            HttpResponse response = httpClient.execute(httpPost);
 
             int status = response.getStatusLine().getStatusCode();
             String result = "";
@@ -424,6 +442,8 @@ public class BackgroundServices extends IntentService {
 
     @SuppressWarnings("deprecation")
     private void processUnregisteredCashout(JSONObject obj) {
+        HttpClient httpClient = ExSSLSocketFactory.getHttpsClient(new DefaultHttpClient());
+
         String url = Constants.API_URL + "service/cashoutunregisteredcustomer";
         HttpParams httpParameters = new BasicHttpParams();
         int timeoutConnection = 10000;
@@ -443,7 +463,7 @@ public class BackgroundServices extends IntentService {
                     "&referencenumber=" + obj.getString("referencenumber");
 
             HttpPost httpPost = new HttpPost(url);
-            HttpResponse response = httpclient.execute(httpPost);
+            HttpResponse response = httpClient.execute(httpPost);
 
             int status = response.getStatusLine().getStatusCode();
             String result = "";
@@ -471,6 +491,8 @@ public class BackgroundServices extends IntentService {
 
     @SuppressWarnings("deprecation")
     private void getServiceProviderDetails(JSONObject obj) {
+        HttpClient httpClient = ExSSLSocketFactory.getHttpsClient(new DefaultHttpClient());
+
         String url = Constants.API_URL + "service/getserviceproviderdetails";
         HttpParams httpParameters = new BasicHttpParams();
         int timeoutConnection = 10000;
@@ -484,7 +506,7 @@ public class BackgroundServices extends IntentService {
             url += "?serviceprovidercode=" + obj.getString(Constants.VENDOR_ID);
 
             HttpPost httpPost = new HttpPost(url);
-            HttpResponse response = httpclient.execute(httpPost);
+            HttpResponse response = httpClient.execute(httpPost);
 
             int status = response.getStatusLine().getStatusCode();
             String result = "";
@@ -512,6 +534,8 @@ public class BackgroundServices extends IntentService {
 
     @SuppressWarnings("deprecation")
     private void payBillRequest(JSONObject obj) {
+        HttpClient httpClient = ExSSLSocketFactory.getHttpsClient(new DefaultHttpClient());
+
         String url = Constants.API_URL + "service/paybillrequest";
         HttpParams httpParameters = new BasicHttpParams();
         int timeoutConnection = 10000;
@@ -532,7 +556,7 @@ public class BackgroundServices extends IntentService {
                     "&vendorparam2=" + obj.getString("vendorparam2");
 
             HttpPost httpPost = new HttpPost(url);
-            HttpResponse response = httpclient.execute(httpPost);
+            HttpResponse response = httpClient.execute(httpPost);
 
             int status = response.getStatusLine().getStatusCode();
             String result = "";

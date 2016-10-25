@@ -21,7 +21,6 @@ import android.widget.ScrollView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.swifta.mats.BillPaymentFragment;
 import com.swifta.mats.LoginActivity;
 import com.swifta.mats.R;
 import com.swifta.mats.adapters.PreviewListAdapter;
@@ -192,7 +191,7 @@ public class ProcessServiceProviderActivity extends AppCompatActivity {
                         case "telco":
                             // TODO Auto-generated method stub
                             left = new String[]{"Amount", "Phone Number", "Description"};
-                            right = new String[]{servicePhoneNumberValue, servicePhoneNumberValue,
+                            right = new String[]{serviceAmountValue, servicePhoneNumberValue,
                                     serviceDescriptionValue};
                             adapter = new PreviewListAdapter(self, left, right);
                             preview_list.setAdapter(adapter);
@@ -204,8 +203,8 @@ public class ProcessServiceProviderActivity extends AppCompatActivity {
                             break;
                         case "cable":
                             // TODO Auto-generated method stub
-                            left = new String[]{"Phone number", "Account Number", "First name", "Last name", "Description"};
-                            right = new String[]{servicePhoneNumberValue, serviceAccNumberValue,
+                            left = new String[]{"Amount","Phone number", "Account Number", "First name", "Last name", "Description"};
+                            right = new String[]{serviceamount,servicePhoneNumberValue, serviceAccNumberValue,
                                     serviceFirstnameValue, serviceLastnameValue, serviceDescriptionValue};
                             adapter = new PreviewListAdapter(self, left, right);
                             preview_list.setAdapter(adapter);
