@@ -1,4 +1,0 @@
-#Tue Oct 25 11:29:30 WAT 2016
-base.0=/Users/moyinoluwa/Documents/SwiftaAndroidStudioProjects/mfisaApk/app/build/intermediates/transforms/dex/debug/folders/1000/1f/main
-renamed.0=classes.dex
-file.0=/Users/moyinoluwa/Documents/SwiftaAndroidStudioProjects/mfisaApk/app/build/intermediates/transforms/dex/debug/folders/1000/1f/main/classes.dex
