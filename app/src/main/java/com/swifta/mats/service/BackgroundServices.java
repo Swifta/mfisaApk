@@ -11,18 +11,27 @@ import com.swifta.mats.util.Constants;
 import org.apache.http.HttpResponse;
 import org.apache.http.client.HttpClient;
 import org.apache.http.client.methods.HttpPost;
+import org.apache.http.conn.scheme.Scheme;
+import org.apache.http.conn.scheme.SchemeRegistry;
+import org.apache.http.conn.ssl.SSLSocketFactory;
+import org.apache.http.conn.ssl.X509HostnameVerifier;
 import org.apache.http.impl.client.DefaultHttpClient;
+import org.apache.http.impl.conn.SingleClientConnManager;
 import org.apache.http.params.BasicHttpParams;
 import org.apache.http.params.HttpConnectionParams;
 import org.apache.http.params.HttpParams;
+import org.apache.http.protocol.HTTP;
 import org.apache.http.util.EntityUtils;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import javax.net.ssl.HostnameVerifier;
+import javax.net.ssl.HttpsURLConnection;
+
 public class BackgroundServices extends IntentService {
 
     @SuppressWarnings("deprecation")
-    private HttpClient httpclient;
+    private DefaultHttpClient httpclient;
     private String reponseContent = "";
 
     public BackgroundServices() {
@@ -97,17 +106,25 @@ public class BackgroundServices extends IntentService {
         int timeoutSocket = 10000;
         HttpConnectionParams.setSoTimeout(httpParameters, timeoutSocket);
 
-        httpclient = new DefaultHttpClient(httpParameters);
+        // THis bypasses expired SSL
+        byPassSSL(httpParameters);
+
 
         try {
             url += "username=" + obj.getString("username") + "&password=" + obj.getString("password");
             HttpPost httpPost = new HttpPost(url);
+            httpPost.setHeader(HTTP.CONTENT_TYPE,
+                    "application/x-www-form-urlencoded;charset=UTF-8");
+
             HttpResponse response = httpclient.execute(httpPost);
 
             int status = response.getStatusLine().getStatusCode();
             String result = "";
+
             if (status == 200) {
                 result = EntityUtils.toString(response.getEntity());
+            } else if (status == 500) {
+                result = getResources().getString(R.string.server_error);
             } else {
                 result = getResources().getString(R.string.unprocessed_request);
             }
@@ -120,6 +137,22 @@ public class BackgroundServices extends IntentService {
         }
     }
 
+    private void byPassSSL(HttpParams httpParameters) {
+        HostnameVerifier hostnameVerifier = SSLSocketFactory.ALLOW_ALL_HOSTNAME_VERIFIER;
+
+        DefaultHttpClient client = new DefaultHttpClient(httpParameters);
+
+        SchemeRegistry registry = new SchemeRegistry();
+        SSLSocketFactory socketFactory = SSLSocketFactory.getSocketFactory();
+        socketFactory.setHostnameVerifier((X509HostnameVerifier) hostnameVerifier);
+        registry.register(new Scheme("https", socketFactory, 443));
+        SingleClientConnManager mgr = new SingleClientConnManager(client.getParams(), registry);
+        httpclient = new DefaultHttpClient(mgr, client.getParams());
+
+        // Set verifier
+        HttpsURLConnection.setDefaultHostnameVerifier(hostnameVerifier);
+    }
+
     @SuppressLint("DefaultLocale")
     @SuppressWarnings("deprecation")
     private void withdrawalDealerAccount(JSONObject obj) {
@@ -130,7 +163,8 @@ public class BackgroundServices extends IntentService {
         int timeoutSocket = 15000;
         HttpConnectionParams.setSoTimeout(httpParameters, timeoutSocket);
 
-        httpclient = new DefaultHttpClient(httpParameters);
+        // THis bypasses expired SSL
+        byPassSSL(httpParameters);
 
         try {
             url += "?orginatingresourceid=" + obj.getString("agentId").toLowerCase() +
@@ -186,7 +220,8 @@ public class BackgroundServices extends IntentService {
             int timeoutSocket = 5000;
             HttpConnectionParams.setSoTimeout(httpParameters, timeoutSocket);
 
-            httpclient = new DefaultHttpClient(httpParameters);
+            // THis bypasses expired SSL
+            byPassSSL(httpParameters);
 
             HttpPost httpPost = new HttpPost(url);
             HttpResponse response = httpclient.execute(httpPost);
@@ -233,7 +268,9 @@ public class BackgroundServices extends IntentService {
             int timeoutSocket = 5000;
             HttpConnectionParams.setSoTimeout(httpParameters, timeoutSocket);
 
-            httpclient = new DefaultHttpClient(httpParameters);
+            // THis bypasses expired SSL
+            byPassSSL(httpParameters);
+
             HttpPost httpPost = new HttpPost(url);
             HttpResponse response = httpclient.execute(httpPost);
 
@@ -270,7 +307,8 @@ public class BackgroundServices extends IntentService {
         int timeoutSocket = 5000;
         HttpConnectionParams.setSoTimeout(httpParameters, timeoutSocket);
 
-        httpclient = new DefaultHttpClient(httpParameters);
+        // THis bypasses expired SSL
+        byPassSSL(httpParameters);
 
         try {
             url += "?orginatingresourceid=" + obj.getString("username")
@@ -305,7 +343,8 @@ public class BackgroundServices extends IntentService {
         int timeoutSocket = 5000;
         HttpConnectionParams.setSoTimeout(httpParameters, timeoutSocket);
 
-        httpclient = new DefaultHttpClient(httpParameters);
+        // THis bypasses expired SSL
+        byPassSSL(httpParameters);
 
         try {
             url += "?orginatingresourceid=" + obj.getString("username");
@@ -337,7 +376,8 @@ public class BackgroundServices extends IntentService {
         int timeoutSocket = 5000;
         HttpConnectionParams.setSoTimeout(httpParameters, timeoutSocket);
 
-        httpclient = new DefaultHttpClient(httpParameters);
+        // THis bypasses expired SSL
+        byPassSSL(httpParameters);
 
         try {
             url += "?orginatingresourceid=" + obj.getString("orginatingresourceid").toLowerCase() +
@@ -384,7 +424,8 @@ public class BackgroundServices extends IntentService {
         int timeoutSocket = 5000;
         HttpConnectionParams.setSoTimeout(httpParameters, timeoutSocket);
 
-        httpclient = new DefaultHttpClient(httpParameters);
+        // THis bypasses expired SSL
+        byPassSSL(httpParameters);
 
         try {
             url += "?orginatingresourceid=" + obj.getString("orginatingresourceid").toLowerCase() +
@@ -431,7 +472,8 @@ public class BackgroundServices extends IntentService {
         int timeoutSocket = 5000;
         HttpConnectionParams.setSoTimeout(httpParameters, timeoutSocket);
 
-        httpclient = new DefaultHttpClient(httpParameters);
+        // THis bypasses expired SSL
+        byPassSSL(httpParameters);
 
         try {
             url += "?orginatingresourceid=" + obj.getString("orginatingresourceid").toLowerCase() +
@@ -478,7 +520,8 @@ public class BackgroundServices extends IntentService {
         int timeoutSocket = 5000;
         HttpConnectionParams.setSoTimeout(httpParameters, timeoutSocket);
 
-        httpclient = new DefaultHttpClient(httpParameters);
+        // THis bypasses expired SSL
+        byPassSSL(httpParameters);
 
         try {
             url += "?serviceprovidercode=" + obj.getString(Constants.VENDOR_ID);
@@ -519,7 +562,8 @@ public class BackgroundServices extends IntentService {
         int timeoutSocket = 5000;
         HttpConnectionParams.setSoTimeout(httpParameters, timeoutSocket);
 
-        httpclient = new DefaultHttpClient(httpParameters);
+        // THis bypasses expired SSL
+        byPassSSL(httpParameters);
 
         try {
             url += "?orginatingresourceid=" + obj.getString("orginatingresourceid").toLowerCase() +

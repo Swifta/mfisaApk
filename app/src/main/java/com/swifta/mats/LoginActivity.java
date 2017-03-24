@@ -10,6 +10,7 @@ import android.content.SharedPreferences.Editor;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.text.InputType;
+import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.Window;
@@ -49,6 +50,7 @@ public class LoginActivity extends AppCompatActivity {
                 Bundle bundle = intent.getExtras();
 
                 JSONObject responseJson = new JSONObject(bundle.getString(Constants.JOB_RESPONSE, "{}"));
+
                 JSONObject responseJson2 = responseJson.getJSONObject("TransactionResponses");
                 JSONObject finalJson = responseJson2.getJSONObject("TransactionResponse");
                 status = finalJson.getBoolean("responsemessage");

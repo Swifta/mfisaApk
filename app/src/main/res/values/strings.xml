@@ -91,6 +91,7 @@ Your new password is &#160;</string>
     <string name="error_resuming_transactions">Error resuming previous transactions</string>
     <string name="logout_confirmation">Do you want to logout?</string>
     <string name="unprocessed_request">We cannot process your request, please try again.</string>
+    <string name="server_error">Please bear with us </string>
     <string name="request_rejection_reason">Your request was rejected because &#160;</string>
     <string name="confirm_float_transfer">Confirm Float Transfer Transaction</string>
     <string name="empty_reference_number">Please fill in the reference number.</string>
