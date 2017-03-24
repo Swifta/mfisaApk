@@ -3,6 +3,7 @@ package com.swifta.mats.service;
 import android.annotation.SuppressLint;
 import android.app.IntentService;
 import android.content.Intent;
+import android.util.Log;
 
 import com.swifta.mats.R;
 import com.swifta.mats.util.ApiJobs;
@@ -15,8 +16,10 @@ import org.apache.http.conn.scheme.Scheme;
 import org.apache.http.conn.scheme.SchemeRegistry;
 import org.apache.http.conn.ssl.SSLSocketFactory;
 import org.apache.http.conn.ssl.X509HostnameVerifier;
+import org.apache.http.entity.StringEntity;
 import org.apache.http.impl.client.DefaultHttpClient;
 import org.apache.http.impl.conn.SingleClientConnManager;
+import org.apache.http.message.BasicHeader;
 import org.apache.http.params.BasicHttpParams;
 import org.apache.http.params.HttpConnectionParams;
 import org.apache.http.params.HttpParams;
@@ -109,7 +112,6 @@ public class BackgroundServices extends IntentService {
         // THis bypasses expired SSL
         byPassSSL(httpParameters);
 
-
         try {
             url += "username=" + obj.getString("username") + "&password=" + obj.getString("password");
             HttpPost httpPost = new HttpPost(url);
@@ -177,6 +179,8 @@ public class BackgroundServices extends IntentService {
                     "&teasypin=" + obj.getString("teasypin");
 
             HttpPost httpPost = new HttpPost(url);
+            httpPost.setHeader(HTTP.CONTENT_TYPE,
+                    "application/x-www-form-urlencoded;charset=UTF-8");
             HttpResponse response = httpclient.execute(httpPost);
 
             int status = response.getStatusLine().getStatusCode();
@@ -224,6 +228,8 @@ public class BackgroundServices extends IntentService {
             byPassSSL(httpParameters);
 
             HttpPost httpPost = new HttpPost(url);
+            httpPost.setHeader(HTTP.CONTENT_TYPE,
+                    "application/x-www-form-urlencoded;charset=UTF-8");
             HttpResponse response = httpclient.execute(httpPost);
 
             int status = response.getStatusLine().getStatusCode();
@@ -272,6 +278,8 @@ public class BackgroundServices extends IntentService {
             byPassSSL(httpParameters);
 
             HttpPost httpPost = new HttpPost(url);
+            httpPost.setHeader(HTTP.CONTENT_TYPE,
+                    "application/x-www-form-urlencoded;charset=UTF-8");
             HttpResponse response = httpclient.execute(httpPost);
 
             int status = response.getStatusLine().getStatusCode();
@@ -316,6 +324,8 @@ public class BackgroundServices extends IntentService {
                     + "&oldpassword=" + obj.getString("oldpassword");
 
             HttpPost httpPost = new HttpPost(url);
+            httpPost.setHeader(HTTP.CONTENT_TYPE,
+                    "application/x-www-form-urlencoded;charset=UTF-8");
             HttpResponse response = httpclient.execute(httpPost);
 
             int status = response.getStatusLine().getStatusCode();
@@ -349,10 +359,18 @@ public class BackgroundServices extends IntentService {
         try {
             url += "?orginatingresourceid=" + obj.getString("username");
             HttpPost httpPost = new HttpPost(url);
+
+            httpPost.setHeader(HTTP.CONTENT_TYPE,
+                    "application/x-www-form-urlencoded;charset=UTF-8");
+
+            httpPost.setEntity(new StringEntity("orginatingresourceid="+obj.getString("username")));
+
             HttpResponse response = httpclient.execute(httpPost);
 
             int status = response.getStatusLine().getStatusCode();
             String result = "";
+
+            Log.e("result",result +  String.valueOf(status));
             if (status == 200) {
                 result = EntityUtils.toString(response.getEntity());
             } else {
@@ -389,6 +407,8 @@ public class BackgroundServices extends IntentService {
                     "&paymentreference=" + obj.getString("paymentreference");
 
             HttpPost httpPost = new HttpPost(url);
+            httpPost.setHeader(HTTP.CONTENT_TYPE,
+                    "application/x-www-form-urlencoded;charset=UTF-8");
             HttpResponse response = httpclient.execute(httpPost);
 
             int status = response.getStatusLine().getStatusCode();
@@ -437,6 +457,8 @@ public class BackgroundServices extends IntentService {
                     "&referencenumber=" + obj.getInt("referencenumber");
 
             HttpPost httpPost = new HttpPost(url);
+            httpPost.setHeader(HTTP.CONTENT_TYPE,
+                    "application/x-www-form-urlencoded;charset=UTF-8");
             HttpResponse response = httpclient.execute(httpPost);
 
             int status = response.getStatusLine().getStatusCode();
@@ -485,6 +507,8 @@ public class BackgroundServices extends IntentService {
                     "&referencenumber=" + obj.getString("referencenumber");
 
             HttpPost httpPost = new HttpPost(url);
+            httpPost.setHeader(HTTP.CONTENT_TYPE,
+                    "application/x-www-form-urlencoded;charset=UTF-8");
             HttpResponse response = httpclient.execute(httpPost);
 
             int status = response.getStatusLine().getStatusCode();
@@ -527,6 +551,9 @@ public class BackgroundServices extends IntentService {
             url += "?serviceprovidercode=" + obj.getString(Constants.VENDOR_ID);
 
             HttpPost httpPost = new HttpPost(url);
+            httpPost.setHeader(HTTP.CONTENT_TYPE,
+                    "application/x-www-form-urlencoded;charset=UTF-8");
+
             HttpResponse response = httpclient.execute(httpPost);
 
             int status = response.getStatusLine().getStatusCode();
@@ -576,6 +603,8 @@ public class BackgroundServices extends IntentService {
                     "&vendorparam2=" + obj.getString("vendorparam2");
 
             HttpPost httpPost = new HttpPost(url);
+            httpPost.setHeader(HTTP.CONTENT_TYPE,
+                    "application/x-www-form-urlencoded;charset=UTF-8");
             HttpResponse response = httpclient.execute(httpPost);
 
             int status = response.getStatusLine().getStatusCode();
