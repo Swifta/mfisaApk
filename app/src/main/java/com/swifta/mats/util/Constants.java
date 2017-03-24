@@ -5,7 +5,7 @@ public class Constants {
     public static final String JOB_IDENTITY = "com.swifta.mats.jobs.identity";
     public static final String JOB_DATA = "com.swifta.mats.jobs.data";
     public static final String JOB_RESPONSE = "com.swifta.mats.jobs.response";
-    public static final String API_URL = "http://54.173.157.210:8283/";
+    public static final String API_URL = "https://portal.mfisa.com/";
     public static final String SERVICE_NOTIFICATION = "com.swifta.mats.service.notification";
     public static final String STORE_USERNAME_KEY = "com.swifta.mats.store.username";
     public static final String STORE_CASHOUT_DATA = "com.swifta.mats.cashoutdata";
