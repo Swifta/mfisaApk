@@ -10,7 +10,6 @@ import com.swifta.mats.util.ApiJobs;
 import com.swifta.mats.util.Constants;
 
 import org.apache.http.HttpResponse;
-import org.apache.http.client.HttpClient;
 import org.apache.http.client.methods.HttpPost;
 import org.apache.http.conn.scheme.Scheme;
 import org.apache.http.conn.scheme.SchemeRegistry;
@@ -19,7 +18,6 @@ import org.apache.http.conn.ssl.X509HostnameVerifier;
 import org.apache.http.entity.StringEntity;
 import org.apache.http.impl.client.DefaultHttpClient;
 import org.apache.http.impl.conn.SingleClientConnManager;
-import org.apache.http.message.BasicHeader;
 import org.apache.http.params.BasicHttpParams;
 import org.apache.http.params.HttpConnectionParams;
 import org.apache.http.params.HttpParams;
@@ -181,6 +179,16 @@ public class BackgroundServices extends IntentService {
             HttpPost httpPost = new HttpPost(url);
             httpPost.setHeader(HTTP.CONTENT_TYPE,
                     "application/x-www-form-urlencoded;charset=UTF-8");
+
+            httpPost.setEntity(new StringEntity("orginatingresourceid=" + obj.getString("agentId").toLowerCase() +
+                    "&destinationresourceid=" + obj.getString("dealerId") +
+                    "&amount=" + obj.getString("amount") +
+                    "&agentpassword=" + obj.getString("agentPin") +
+                    "&transactionid=" + Constants.TRANSACTION_ID +
+                    "&mmo=" + obj.getString("mmo") +
+                    "&paymentreference=" + obj.getString("receiver") +
+                    "&teasypin=" + obj.getString("teasypin")));
+
             HttpResponse response = httpclient.execute(httpPost);
 
             int status = response.getStatusLine().getStatusCode();
@@ -230,6 +238,13 @@ public class BackgroundServices extends IntentService {
             HttpPost httpPost = new HttpPost(url);
             httpPost.setHeader(HTTP.CONTENT_TYPE,
                     "application/x-www-form-urlencoded;charset=UTF-8");
+
+            httpPost.setEntity(new StringEntity("orginatingresourceid=" + obj.getString("username").toLowerCase() + "&destinationresourceid=" +
+                    obj.getString("dealer") + "&amount=" + obj.getString("amount") +
+                    "&agentpassword=" + obj.getString("password") +
+                    "&transactionid=" + obj.getInt("transaction_id") +
+                    "&otp=" + obj.getInt("otp")));
+
             HttpResponse response = httpclient.execute(httpPost);
 
             int status = response.getStatusLine().getStatusCode();
@@ -280,6 +295,14 @@ public class BackgroundServices extends IntentService {
             HttpPost httpPost = new HttpPost(url);
             httpPost.setHeader(HTTP.CONTENT_TYPE,
                     "application/x-www-form-urlencoded;charset=UTF-8");
+
+            httpPost.setEntity(new StringEntity("orginatingresourceid=" + obj.getString("username").toLowerCase() + "&destinationresourceid=" +
+                    obj.getString("dealer") + "&amount=" + obj.getString("amount") + "&sendingdescription=" +
+                    obj.getString("description").replace(" ", "%20") + "&receivingdescription=" +
+                    Constants.RECEIVING_DESCRIPTION.replace(" ", "%20") + "&agentpassword=" + obj.getString("password") +
+                    "&transactiontypeid=" + Constants.TRANSACTION_TYPE_ID + "&transactionid=" + Constants.TRANSACTION_ID +
+                    "&transactionchannelid=" + Constants.TRANSACTION_CHANNEL_ID + "&transactionstatusid=" + Constants.TRANSACTION_STATUS_ID));
+
             HttpResponse response = httpclient.execute(httpPost);
 
             int status = response.getStatusLine().getStatusCode();
@@ -363,14 +386,14 @@ public class BackgroundServices extends IntentService {
             httpPost.setHeader(HTTP.CONTENT_TYPE,
                     "application/x-www-form-urlencoded;charset=UTF-8");
 
-            httpPost.setEntity(new StringEntity("orginatingresourceid="+obj.getString("username")));
+            httpPost.setEntity(new StringEntity("orginatingresourceid=" + obj.getString("username")));
 
             HttpResponse response = httpclient.execute(httpPost);
 
             int status = response.getStatusLine().getStatusCode();
             String result = "";
 
-            Log.e("result",result +  String.valueOf(status));
+            Log.e("result", result + String.valueOf(status));
             if (status == 200) {
                 result = EntityUtils.toString(response.getEntity());
             } else {
@@ -410,6 +433,14 @@ public class BackgroundServices extends IntentService {
             httpPost.setHeader(HTTP.CONTENT_TYPE,
                     "application/x-www-form-urlencoded;charset=UTF-8");
             HttpResponse response = httpclient.execute(httpPost);
+
+            httpPost.setEntity(new StringEntity("orginatingresourceid=" + obj.getString("orginatingresourceid").toLowerCase() +
+                    "&destinationresourceid=" + obj.getString("destinationresourceid") +
+                    "&amount=" + obj.getInt("amount") +
+                    "&frommessage=" + obj.getString("frommessage") +
+                    "&transactionid=" + obj.getString("transactionid") +
+                    "&mmo=" + obj.getString("mmo") +
+                    "&paymentreference=" + obj.getString("paymentreference")));
 
             int status = response.getStatusLine().getStatusCode();
             String result = "";
@@ -459,6 +490,16 @@ public class BackgroundServices extends IntentService {
             HttpPost httpPost = new HttpPost(url);
             httpPost.setHeader(HTTP.CONTENT_TYPE,
                     "application/x-www-form-urlencoded;charset=UTF-8");
+
+            httpPost.setEntity(new StringEntity("orginatingresourceid=" + obj.getString("orginatingresourceid").toLowerCase() +
+                    "&destinationresourceid=" + obj.getString("destinationresourceid") +
+                    "&amount=" + obj.getInt("amount") +
+                    "&agentpassword=" + obj.getString("agentpassword") +
+                    "&mmo=" + obj.getString("mmo") +
+                    "&paymentreference=" + obj.getString("paymentreference") +
+                    "&referencenumber=" + obj.getInt("referencenumber")));
+
+
             HttpResponse response = httpclient.execute(httpPost);
 
             int status = response.getStatusLine().getStatusCode();
@@ -554,6 +595,8 @@ public class BackgroundServices extends IntentService {
             httpPost.setHeader(HTTP.CONTENT_TYPE,
                     "application/x-www-form-urlencoded;charset=UTF-8");
 
+            httpPost.setEntity(new StringEntity("serviceprovidercode=" + obj.getString(Constants.VENDOR_ID)));
+
             HttpResponse response = httpclient.execute(httpPost);
 
             int status = response.getStatusLine().getStatusCode();
@@ -605,6 +648,16 @@ public class BackgroundServices extends IntentService {
             HttpPost httpPost = new HttpPost(url);
             httpPost.setHeader(HTTP.CONTENT_TYPE,
                     "application/x-www-form-urlencoded;charset=UTF-8");
+
+            httpPost.setEntity(new StringEntity("orginatingresourceid=" + obj.getString("orginatingresourceid").toLowerCase() +
+                    "&amount=" + obj.getString("amount") +
+                    "&frommessage=" + obj.getString("frommessage") +
+                    "&vendorid=" + obj.getString("vendorid") +
+                    "&vendoraccount=" + obj.getString("vendoraccount") +
+                    "&vendorservicename=" + obj.getString("vendorservicename") +
+                    "&vendorparam1=" + obj.getString("vendorparam1") +
+                    "&vendorparam2=" + obj.getString("vendorparam2")));
+
             HttpResponse response = httpclient.execute(httpPost);
 
             int status = response.getStatusLine().getStatusCode();

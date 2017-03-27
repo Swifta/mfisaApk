@@ -11,6 +11,7 @@ import android.content.SharedPreferences;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -59,6 +60,9 @@ public class BillPaymentFragment extends Fragment {
                 if (responseJson.getInt("request") == Constants.GET_SERVICE_PROVIDER_DETAILS) {
                     if (responseJson.getBoolean("success")) {
                         JSONObject psaResponse = responseJson.getJSONObject("psa");
+
+                        Log.e("psa",psaResponse.toString());
+
                         JSONObject psaTranResponse = psaResponse.getJSONObject("getserviceproviderdetails");
                         Object json = psaTranResponse.get("getserviceproviderdetail");
 
